@@ -6,6 +6,7 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
+import AiIcon from '@/components/AiIcon';
 
 const Index = () => {
   const [seatsLeft, setSeatsLeft] = useState(25);
@@ -59,6 +60,9 @@ const Index = () => {
               { value: '+150%', label: 'Доход за 12 месяцев' }
             ].map((metric, idx) => (
               <div key={idx} className="animate-fade-in" style={{ animationDelay: `${idx * 0.1}s` }}>
+                <div className="flex justify-center mb-4">
+                  <AiIcon type={['brain', 'shield', 'rocket'][idx] as any} className="w-16 h-16" />
+                </div>
                 <div className="text-5xl font-heading font-black text-primary mb-2">{metric.value}</div>
                 <div className="text-lg text-secondary font-semibold">{metric.label}</div>
               </div>
@@ -111,8 +115,15 @@ const Index = () => {
             ].map((problem, idx) => (
               <Card key={idx} className="border-l-4 border-l-primary hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
-                  <h3 className="font-heading text-xl font-black text-primary mb-3">{problem.title}</h3>
-                  <p className="text-secondary">{problem.description}</p>
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0">
+                      <AiIcon type={['shield', 'search', 'automation'][idx] as any} className="w-16 h-16" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-heading text-xl font-black text-primary mb-3">{problem.title}</h3>
+                      <p className="text-secondary">{problem.description}</p>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -137,7 +148,9 @@ const Index = () => {
             ].map((tool, idx) => (
               <Card key={idx} className="hover:scale-105 transition-transform duration-300 border-2 hover:border-primary">
                 <CardContent className="p-6">
-                  <div className="text-5xl mb-4 text-center">{tool.icon}</div>
+                  <div className="flex justify-center mb-4">
+                    <AiIcon type={['search', 'video', 'podcast', 'design', 'globe', 'automation'][idx] as any} className="w-20 h-20" />
+                  </div>
                   <h3 className="font-heading text-xl font-black text-secondary text-center mb-3">{tool.name}</h3>
                   <div className="space-y-2 text-sm">
                     <div className="flex items-start gap-2">
