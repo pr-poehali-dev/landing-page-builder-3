@@ -208,12 +208,12 @@ const Index = () => {
 
       <section id="registration" className="py-16 px-6 bg-transparent relative z-10">
         <div className="max-w-2xl mx-auto">
-          <Card className="border-4 border-primary shadow-2xl cyber-card">
+          <Card className="border-4 border-primary shadow-2xl bg-background/95 backdrop-blur-md">
             <CardContent className="p-8">
               <h2 className="font-heading text-3xl font-black text-center mb-6 text-primary neon-text">
                 ЗАБРОНИРОВАТЬ МЕСТО
               </h2>
-              <div className="bg-black/40 border border-secondary/30 rounded-lg p-6 mb-6">
+              <div className="bg-black/60 border-2 border-secondary/50 rounded-lg p-6 mb-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center mb-4">
                   <div>
                     <div className="text-sm text-muted-foreground">Дата</div>
