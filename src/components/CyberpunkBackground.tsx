@@ -38,7 +38,7 @@ const CyberpunkBackground = () => {
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       gridLines.forEach(line => {
-        line.y += 0.2;
+        line.y += 0.067;
         if (line.y > canvas.height) line.y = 0;
         
         ctx.strokeStyle = `rgba(255, 68, 68, ${line.opacity})`;
@@ -68,7 +68,7 @@ const CyberpunkBackground = () => {
         if (y > canvas.height && Math.random() > 0.975) {
           drops[i] = 0;
         }
-        drops[i] += 0.4;
+        drops[i] += 0.133;
       }
 
       glitchTimer++;
