@@ -8,6 +8,7 @@ import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 import AiIcon from '@/components/AiIcon';
 import Particles from '@/components/Particles';
+import CyberpunkBackground from '@/components/CyberpunkBackground';
 
 const Index = () => {
   const [seatsLeft, setSeatsLeft] = useState(25);
@@ -22,30 +23,31 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      <section className="relative bg-gradient-to-br from-primary via-primary to-secondary text-white py-20 px-6 overflow-hidden">
+    <div className="min-h-screen bg-background relative scanline">
+      <CyberpunkBackground />
+      <section className="relative bg-gradient-to-br from-black/80 via-primary/30 to-secondary/30 text-white py-20 px-6 overflow-hidden z-10 border-b-2 border-primary/50">
         <Particles />
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnoiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4xIi8+PC9nPjwvc3ZnPg==')] opacity-10"></div>
         <div className="max-w-5xl mx-auto relative z-10 animate-fade-in">
           <div className="text-center mb-8">
-            <h1 className="font-heading text-4xl md:text-6xl font-black mb-6 leading-tight">
+            <h1 className="font-heading text-4xl md:text-6xl font-black mb-6 leading-tight neon-text text-primary">
               6 AI-ИНСТРУМЕНТОВ, КОТОРЫЕ СДЕЛАЮТ ТЕБЯ В 3 РАЗА ПРОДУКТИВНЕЕ
             </h1>
-            <p className="text-xl md:text-2xl font-semibold mb-8 text-white/95">
+            <p className="text-xl md:text-2xl font-semibold mb-8 text-secondary font-mono">
               Конференция про инструменты, которые реально зарабатывают деньги: Kimi AI, HeyGen, NotebookLM, Freepik, Perplexity и n8n
             </p>
             <Button 
               size="lg" 
               onClick={scrollToForm}
-              className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 h-auto font-bold shadow-2xl animate-pulse-scale"
+              className="bg-primary text-black hover:bg-primary/80 text-lg px-8 py-6 h-auto font-bold shadow-2xl animate-pulse-scale cyber-border neon-text relative overflow-hidden"
             >
               📌 ЗАБРОНИРОВАТЬ МЕСТО
             </Button>
             <div className="mt-6 flex items-center justify-center gap-4 flex-wrap">
-              <Badge variant="secondary" className="text-base px-4 py-2 bg-white/20 text-white border-white/30">
+              <Badge variant="secondary" className="text-base px-4 py-2 bg-black/40 text-secondary border-secondary/50 font-mono">
                 Осталось {seatsLeft} мест из 100
               </Badge>
-              <Badge variant="secondary" className="text-base px-4 py-2 bg-accent text-white border-none">
+              <Badge variant="secondary" className="text-base px-4 py-2 bg-accent/80 text-white border border-accent font-mono neon-text">
                 Цена: 2,500 ₽
               </Badge>
             </div>
@@ -53,7 +55,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-transparent relative z-10">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             {[
@@ -65,17 +67,17 @@ const Index = () => {
                 <div className="flex justify-center mb-4 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
                   <AiIcon type={['brain', 'shield', 'rocket'][idx] as any} className="w-16 h-16" />
                 </div>
-                <div className="text-5xl font-heading font-black text-primary mb-2 transition-all duration-300 group-hover:scale-110">{metric.value}</div>
-                <div className="text-lg text-secondary font-semibold">{metric.label}</div>
+                <div className="text-5xl font-heading font-black text-primary mb-2 transition-all duration-300 group-hover:scale-110 neon-text">{metric.value}</div>
+                <div className="text-lg text-secondary font-semibold font-mono">{metric.label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-16 px-6 bg-muted">
+      <section className="py-16 px-6 bg-transparent relative z-10">
         <div className="max-w-6xl mx-auto">
-          <h2 className="font-heading text-3xl md:text-4xl font-black text-center mb-12 text-secondary">
+          <h2 className="font-heading text-3xl md:text-4xl font-black text-center mb-12 text-secondary neon-text">
             РЕЗУЛЬТАТЫ СТУДЕНТОВ
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -84,7 +86,7 @@ const Index = () => {
               { name: 'Мария В.', role: 'Фрилансер', quote: 'Заказов в 2 раза больше', result: '+120,000 ₽/месяц за 6 месяцев' },
               { name: 'Петя Л.', role: 'E-commerce', quote: 'Автоматизировал 80% рутины', result: '40 часов свободных + +300% продажи' }
             ].map((review, idx) => (
-              <Card key={idx} className="hover:shadow-xl transition-all duration-500 border-2 group hover:-translate-y-2 hover:scale-105 cursor-pointer" style={{ perspective: '1000px' }}>
+              <Card key={idx} className="hover:shadow-xl transition-all duration-500 border-2 border-primary/30 group hover:-translate-y-2 hover:scale-105 cursor-pointer cyber-card" style={{ perspective: '1000px' }}>
                 <CardContent className="p-6 transition-transform duration-500 group-hover:[transform:rotateY(5deg)]">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-2xl">
@@ -104,9 +106,9 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-16 px-6 bg-white">
+      <section className="py-16 px-6 bg-transparent relative z-10">
         <div className="max-w-5xl mx-auto">
-          <h2 className="font-heading text-3xl md:text-4xl font-black text-center mb-12 text-secondary">
+          <h2 className="font-heading text-3xl md:text-4xl font-black text-center mb-12 text-secondary neon-text">
             ТВОИ ПРОБЛЕМЫ
           </h2>
           <div className="space-y-6">
@@ -115,7 +117,7 @@ const Index = () => {
               { title: 'ТЫ НЕ ЗНАЕШЬ О СПЕЦИАЛЬНЫХ ИНСТРУМЕНТАХ', description: 'Не знаешь: Kimi AI (15x больше текста), Perplexity (поиск+источники), HeyGen (видео за 2мин), n8n (автоматизация), NotebookLM (подкасты)' },
               { title: 'У ТЕБЯ НЕТ СИСТЕМЫ', description: 'Результаты случайны (20K, 50K, 15K в разные месяцы). Нужна система для стабильного дохода' }
             ].map((problem, idx) => (
-              <Card key={idx} className="border-l-4 border-l-primary hover:shadow-2xl transition-all duration-500 group hover:-translate-y-1 hover:scale-[1.02] cursor-pointer">
+              <Card key={idx} className="border-l-4 border-l-primary hover:shadow-2xl transition-all duration-500 group hover:-translate-y-1 hover:scale-[1.02] cursor-pointer cyber-card">
                 <CardContent className="p-6 transition-all duration-500">
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-12">
@@ -133,7 +135,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-16 px-6 bg-gradient-to-b from-muted to-white">
+      <section className="py-16 px-6 bg-transparent relative z-10">
         <div className="max-w-6xl mx-auto">
           <h2 className="font-heading text-3xl md:text-4xl font-black text-center mb-4 text-secondary">
             6 AI-ИНСТРУМЕНТОВ ДЛЯ ТЕБЯ
@@ -148,7 +150,7 @@ const Index = () => {
               { name: 'PERPLEXITY', icon: '🌐', what: 'Google с AI и источниками', benefit: 'Контент с данными выше авторитета', saving: '+40% качество' },
               { name: 'N8N', icon: '⚙️', what: 'Автоматизация приложений', benefit: 'YouTube→Telegram, Заказ→Email', saving: '20-30 часов/неделю' }
             ].map((tool, idx) => (
-              <Card key={idx} className="transition-all duration-500 border-2 hover:border-primary group cursor-pointer hover:shadow-2xl hover:-translate-y-3" style={{ perspective: '1000px' }}>
+              <Card key={idx} className="transition-all duration-500 border-2 border-secondary/30 hover:border-secondary group cursor-pointer hover:shadow-2xl hover:-translate-y-3 cyber-card" style={{ perspective: '1000px' }}>
                 <CardContent className="p-6 transition-transform duration-500 group-hover:[transform:rotateY(10deg)_rotateX(5deg)]">
                   <div className="flex justify-center mb-4 transition-transform duration-500 group-hover:scale-125 group-hover:rotate-12">
                     <AiIcon type={['search', 'video', 'podcast', 'design', 'globe', 'automation'][idx] as any} className="w-20 h-20" />
@@ -173,16 +175,16 @@ const Index = () => {
             ))}
           </div>
           <div className="mt-12 text-center">
-            <div className="inline-block bg-accent text-white px-8 py-4 rounded-lg">
+            <div className="inline-block bg-accent/20 border-2 border-accent text-accent px-8 py-4 rounded-lg cyber-border neon-text">
               <div className="text-3xl font-heading font-black">ДОХОД: +50-200% за 3-6 месяцев</div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 px-6 bg-secondary text-white">
+      <section className="py-16 px-6 bg-black/50 border-y-2 border-secondary/50 text-white relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-heading text-3xl md:text-4xl font-black mb-6">
+          <h2 className="font-heading text-3xl md:text-4xl font-black mb-6 neon-text text-secondary">
             СЕРГЕЙ ЧЕРНИКОВ
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
@@ -204,14 +206,14 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="registration" className="py-16 px-6 bg-white">
+      <section id="registration" className="py-16 px-6 bg-transparent relative z-10">
         <div className="max-w-2xl mx-auto">
-          <Card className="border-4 border-primary shadow-2xl">
+          <Card className="border-4 border-primary shadow-2xl cyber-card">
             <CardContent className="p-8">
-              <h2 className="font-heading text-3xl font-black text-center mb-6 text-secondary">
+              <h2 className="font-heading text-3xl font-black text-center mb-6 text-primary neon-text">
                 ЗАБРОНИРОВАТЬ МЕСТО
               </h2>
-              <div className="bg-muted rounded-lg p-6 mb-6">
+              <div className="bg-black/40 border border-secondary/30 rounded-lg p-6 mb-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center mb-4">
                   <div>
                     <div className="text-sm text-muted-foreground">Дата</div>
@@ -228,8 +230,8 @@ const Index = () => {
                 </div>
                 <div className="flex items-center justify-center gap-4">
                   <span className="text-2xl line-through text-muted-foreground">5,990 ₽</span>
-                  <span className="text-4xl font-heading font-black text-primary">2,500 ₽</span>
-                  <Badge className="bg-accent text-white text-lg px-3 py-1">-58%</Badge>
+                  <span className="text-4xl font-heading font-black text-primary neon-text">2,500 ₽</span>
+                  <Badge className="bg-accent/80 border border-accent text-white text-lg px-3 py-1 neon-text">-58%</Badge>
                 </div>
               </div>
               
@@ -267,7 +269,7 @@ const Index = () => {
                 <Button 
                   type="submit" 
                   size="lg" 
-                  className="w-full text-lg py-6 h-auto font-bold"
+                  className="w-full text-lg py-6 h-auto font-bold cyber-border neon-text bg-primary text-black hover:bg-primary/80"
                   disabled={!formData.name || !formData.email || !formData.phone || !formData.agree}
                 >
                   ОПЛАТИТЬ И ЗАБРОНИРОВАТЬ
@@ -297,9 +299,9 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-16 px-6 bg-muted">
+      <section className="py-16 px-6 bg-transparent relative z-10">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-heading text-3xl md:text-4xl font-black text-center mb-12 text-secondary">
+          <h2 className="font-heading text-3xl md:text-4xl font-black text-center mb-12 text-secondary neon-text">
             ЧАСТЫЕ ВОПРОСЫ
           </h2>
           <Accordion type="single" collapsible className="space-y-4">
@@ -312,7 +314,7 @@ const Index = () => {
               { q: 'Какой результат?', a: 'Умение использовать 6 инструментов, +50-200% доход за 3-6мес' },
               { q: 'Есть ли бонусы?', a: 'PDF-гайды, 5 шаблонов n8n, скидка 50%, чат 30 дней' }
             ].map((faq, idx) => (
-              <AccordionItem key={idx} value={`item-${idx}`} className="bg-white border-2 rounded-lg px-6">
+              <AccordionItem key={idx} value={`item-${idx}`} className="cyber-card border-2 border-secondary/30 rounded-lg px-6">
                 <AccordionTrigger className="text-left font-bold text-secondary hover:no-underline">
                   {faq.q}
                 </AccordionTrigger>
@@ -325,9 +327,9 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-16 px-6 bg-gradient-to-r from-primary to-secondary text-white text-center">
+      <section className="py-16 px-6 bg-gradient-to-r from-black/80 via-primary/40 to-secondary/40 border-t-2 border-primary/50 text-white text-center relative z-10">
         <div className="max-w-3xl mx-auto">
-          <h2 className="font-heading text-3xl md:text-5xl font-black mb-6">
+          <h2 className="font-heading text-3xl md:text-5xl font-black mb-6 neon-text text-primary glitch">
             ОСТАЛОСЬ {seatsLeft} МЕСТ
           </h2>
           <p className="text-xl mb-8">
@@ -336,7 +338,7 @@ const Index = () => {
           <Button 
             size="lg" 
             onClick={scrollToForm}
-            className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 h-auto font-bold shadow-2xl animate-pulse-scale"
+            className="bg-primary text-black hover:bg-primary/80 text-lg px-8 py-6 h-auto font-bold shadow-2xl animate-pulse-scale cyber-border neon-text"
           >
             ЗАБРОНИРОВАТЬ МЕСТО СЕЙЧАС
           </Button>
@@ -347,7 +349,7 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="bg-secondary text-white py-8 px-6 text-center text-sm">
+      <footer className="bg-black/80 border-t-2 border-primary/50 text-white py-8 px-6 text-center text-sm relative z-10 font-mono">
         <div className="max-w-4xl mx-auto">
           <p>© 2026 Хакни Нейросети. Все права защищены.</p>
           <p className="mt-2 opacity-70">Владивосток • Россия</p>

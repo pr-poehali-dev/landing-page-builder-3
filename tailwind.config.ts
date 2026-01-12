@@ -69,8 +69,9 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			fontFamily: {
-				sans: ['Open Sans', 'sans-serif'],
-				heading: ['Montserrat', 'sans-serif']
+				sans: ['Rajdhani', 'sans-serif'],
+				heading: ['Orbitron', 'sans-serif'],
+				mono: ['Share Tech Mono', 'monospace']
 			},
 			keyframes: {
 				'accordion-down': {
