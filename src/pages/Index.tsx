@@ -39,9 +39,9 @@ const Index = () => {
             <Button 
               size="lg" 
               onClick={scrollToForm}
-              className="bg-primary text-black hover:bg-primary/80 text-lg px-8 py-6 h-auto font-bold shadow-2xl animate-pulse-scale cyber-border neon-text relative overflow-hidden"
+              className="bg-primary text-black hover:bg-primary/80 text-lg px-8 py-6 h-auto font-bold shadow-2xl animate-pulse-scale cyber-border relative overflow-hidden"
             >
-              📌 ЗАБРОНИРОВАТЬ МЕСТО
+              <span className="text-white font-black">📌 ЗАБРОНИРОВАТЬ МЕСТО</span>
             </Button>
             <div className="mt-6 flex items-center justify-center gap-4 flex-wrap">
               <Badge variant="secondary" className="text-base px-4 py-2 bg-black/40 text-secondary border-secondary/50 font-mono">
@@ -338,9 +338,9 @@ const Index = () => {
           <Button 
             size="lg" 
             onClick={scrollToForm}
-            className="bg-primary text-black hover:bg-primary/80 text-lg px-8 py-6 h-auto font-bold shadow-2xl animate-pulse-scale cyber-border neon-text"
+            className="bg-primary text-black hover:bg-primary/80 text-lg px-8 py-6 h-auto font-bold shadow-2xl animate-pulse-scale cyber-border"
           >
-            ЗАБРОНИРОВАТЬ МЕСТО СЕЙЧАС
+            <span className="text-white font-black">ЗАБРОНИРОВАТЬ МЕСТО СЕЙЧАС</span>
           </Button>
           <div className="mt-8 text-sm opacity-80">
             <p>Контакт: @SergeyChernikov</p>
