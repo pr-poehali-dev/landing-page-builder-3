@@ -112,3 +112,25 @@
     font-weight: 800;
   }
 }
+
+@layer utilities {
+  .hover-3d {
+    transition: transform 0.5s ease;
+    transform-style: preserve-3d;
+  }
+
+  .hover-3d:hover {
+    transform: perspective(1000px) rotateY(10deg) rotateX(5deg);
+  }
+
+  .glow {
+    box-shadow: 0 0 20px rgba(255, 68, 68, 0.3);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .glow:hover {
+    box-shadow:
+      0 0 40px rgba(255, 68, 68, 0.6),
+      0 0 60px rgba(255, 68, 68, 0.4);
+  }
+}

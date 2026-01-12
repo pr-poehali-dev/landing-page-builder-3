@@ -7,6 +7,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 import AiIcon from '@/components/AiIcon';
+import Particles from '@/components/Particles';
 
 const Index = () => {
   const [seatsLeft, setSeatsLeft] = useState(25);
@@ -23,6 +24,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <section className="relative bg-gradient-to-br from-primary via-primary to-secondary text-white py-20 px-6 overflow-hidden">
+        <Particles />
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnoiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4xIi8+PC9nPjwvc3ZnPg==')] opacity-10"></div>
         <div className="max-w-5xl mx-auto relative z-10 animate-fade-in">
           <div className="text-center mb-8">
@@ -59,11 +61,11 @@ const Index = () => {
               { value: '4.9/5', label: 'Из 2,140 отзывов' },
               { value: '+150%', label: 'Доход за 12 месяцев' }
             ].map((metric, idx) => (
-              <div key={idx} className="animate-fade-in" style={{ animationDelay: `${idx * 0.1}s` }}>
-                <div className="flex justify-center mb-4">
+              <div key={idx} className="animate-fade-in group cursor-pointer" style={{ animationDelay: `${idx * 0.1}s` }}>
+                <div className="flex justify-center mb-4 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
                   <AiIcon type={['brain', 'shield', 'rocket'][idx] as any} className="w-16 h-16" />
                 </div>
-                <div className="text-5xl font-heading font-black text-primary mb-2">{metric.value}</div>
+                <div className="text-5xl font-heading font-black text-primary mb-2 transition-all duration-300 group-hover:scale-110">{metric.value}</div>
                 <div className="text-lg text-secondary font-semibold">{metric.label}</div>
               </div>
             ))}
@@ -82,8 +84,8 @@ const Index = () => {
               { name: 'Мария В.', role: 'Фрилансер', quote: 'Заказов в 2 раза больше', result: '+120,000 ₽/месяц за 6 месяцев' },
               { name: 'Петя Л.', role: 'E-commerce', quote: 'Автоматизировал 80% рутины', result: '40 часов свободных + +300% продажи' }
             ].map((review, idx) => (
-              <Card key={idx} className="hover:shadow-xl transition-shadow duration-300 border-2">
-                <CardContent className="p-6">
+              <Card key={idx} className="hover:shadow-xl transition-all duration-500 border-2 group hover:-translate-y-2 hover:scale-105 cursor-pointer" style={{ perspective: '1000px' }}>
+                <CardContent className="p-6 transition-transform duration-500 group-hover:[transform:rotateY(5deg)]">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-2xl">
                       👤
@@ -113,10 +115,10 @@ const Index = () => {
               { title: 'ТЫ НЕ ЗНАЕШЬ О СПЕЦИАЛЬНЫХ ИНСТРУМЕНТАХ', description: 'Не знаешь: Kimi AI (15x больше текста), Perplexity (поиск+источники), HeyGen (видео за 2мин), n8n (автоматизация), NotebookLM (подкасты)' },
               { title: 'У ТЕБЯ НЕТ СИСТЕМЫ', description: 'Результаты случайны (20K, 50K, 15K в разные месяцы). Нужна система для стабильного дохода' }
             ].map((problem, idx) => (
-              <Card key={idx} className="border-l-4 border-l-primary hover:shadow-lg transition-shadow">
-                <CardContent className="p-6">
+              <Card key={idx} className="border-l-4 border-l-primary hover:shadow-2xl transition-all duration-500 group hover:-translate-y-1 hover:scale-[1.02] cursor-pointer">
+                <CardContent className="p-6 transition-all duration-500">
                   <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0">
+                    <div className="flex-shrink-0 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-12">
                       <AiIcon type={['shield', 'search', 'automation'][idx] as any} className="w-16 h-16" />
                     </div>
                     <div className="flex-1">
@@ -146,9 +148,9 @@ const Index = () => {
               { name: 'PERPLEXITY', icon: '🌐', what: 'Google с AI и источниками', benefit: 'Контент с данными выше авторитета', saving: '+40% качество' },
               { name: 'N8N', icon: '⚙️', what: 'Автоматизация приложений', benefit: 'YouTube→Telegram, Заказ→Email', saving: '20-30 часов/неделю' }
             ].map((tool, idx) => (
-              <Card key={idx} className="hover:scale-105 transition-transform duration-300 border-2 hover:border-primary">
-                <CardContent className="p-6">
-                  <div className="flex justify-center mb-4">
+              <Card key={idx} className="transition-all duration-500 border-2 hover:border-primary group cursor-pointer hover:shadow-2xl hover:-translate-y-3" style={{ perspective: '1000px' }}>
+                <CardContent className="p-6 transition-transform duration-500 group-hover:[transform:rotateY(10deg)_rotateX(5deg)]">
+                  <div className="flex justify-center mb-4 transition-transform duration-500 group-hover:scale-125 group-hover:rotate-12">
                     <AiIcon type={['search', 'video', 'podcast', 'design', 'globe', 'automation'][idx] as any} className="w-20 h-20" />
                   </div>
                   <h3 className="font-heading text-xl font-black text-secondary text-center mb-3">{tool.name}</h3>
