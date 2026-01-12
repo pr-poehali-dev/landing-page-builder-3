@@ -269,10 +269,10 @@ const Index = () => {
                 <Button 
                   type="submit" 
                   size="lg" 
-                  className="w-full text-lg py-6 h-auto font-bold cyber-border neon-text bg-primary text-black hover:bg-primary/80"
+                  className="w-full text-lg py-6 h-auto font-bold cyber-border bg-primary hover:bg-primary/80"
                   disabled={!formData.name || !formData.email || !formData.phone || !formData.agree}
                 >
-                  ОПЛАТИТЬ И ЗАБРОНИРОВАТЬ
+                  <span className="text-white font-black">ОПЛАТИТЬ И ЗАБРОНИРОВАТЬ</span>
                 </Button>
               </form>
 
