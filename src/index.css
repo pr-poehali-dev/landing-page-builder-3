@@ -113,9 +113,6 @@
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    text-shadow:
-      0 0 20px rgba(255, 68, 68, 0.5),
-      0 0 40px rgba(255, 68, 68, 0.3);
   }
 }
 
@@ -142,33 +139,8 @@
 
   .neon-text {
     text-shadow:
-      0 0 5px currentColor,
       0 0 10px currentColor,
-      0 0 20px currentColor,
-      0 0 40px currentColor;
-    animation: neon-flicker 3s infinite alternate;
-  }
-
-  @keyframes neon-flicker {
-    0%,
-    100% {
-      text-shadow:
-        0 0 5px currentColor,
-        0 0 10px currentColor,
-        0 0 20px currentColor,
-        0 0 40px currentColor;
-    }
-    10%,
-    30%,
-    50%,
-    70%,
-    90% {
-      text-shadow:
-        0 0 2px currentColor,
-        0 0 5px currentColor,
-        0 0 10px currentColor,
-        0 0 20px currentColor;
-    }
+      0 0 20px rgba(255, 68, 68, 0.4);
   }
 
   .cyber-border {
