@@ -56,7 +56,7 @@ export default function Index() {
         
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="max-w-5xl mx-auto text-center space-y-8 animate-fade-in">
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight uppercase tracking-tight">
               6 AI-инструментов, которые <span className="text-primary">удвоят твой доход</span> уже в этом месяце
             </h1>
             
@@ -65,7 +65,7 @@ export default function Index() {
               На конференции ты узнаешь, как их применять для заработка прямо сейчас.
             </p>
 
-            <div className="bg-card/80 backdrop-blur-sm border rounded-2xl p-8 max-w-3xl mx-auto shadow-xl">
+            <div className="bg-card/50 backdrop-blur-sm border border-primary/20 rounded-3xl p-8 max-w-3xl mx-auto shadow-2xl">
               <p className="text-lg leading-relaxed mb-6">
                 Представь: ты приходишь на конференцию и за 8 часов узнаёшь, как автоматизировать 80% своей работы, 
                 сэкономить 20+ часов в неделю и увеличить доход на 30–100%. Уходишь с готовым playbook, который внедришь 
@@ -94,7 +94,7 @@ export default function Index() {
 
               <Button 
                 size="lg" 
-                className="w-full md:w-auto px-12 py-7 text-xl font-bold bg-primary hover:bg-primary/90 text-white animate-pulse-scale"
+                className="w-full md:w-auto px-12 py-7 text-xl font-bold bg-primary hover:bg-primary/90 text-white animate-pulse-scale rounded-full"
                 onClick={scrollToRegistration}
               >
                 <Icon name="Rocket" className="mr-2" size={24} />
@@ -111,7 +111,7 @@ export default function Index() {
       <section className="py-20 bg-destructive/5">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-8">
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-12 uppercase tracking-tight">
               Ты тратишь часы на то, что AI может сделать за минуты
             </h2>
 
@@ -169,7 +169,7 @@ export default function Index() {
             </div>
 
             <div className="text-center mt-12">
-              <Button size="lg" className="px-10 py-6 text-lg" onClick={scrollToRegistration}>
+              <Button size="lg" className="px-10 py-6 text-lg rounded-full" onClick={scrollToRegistration}>
                 <Icon name="Info" className="mr-2" />
                 Узнать подробнее про каждый инструмент
               </Button>
@@ -269,7 +269,7 @@ export default function Index() {
               Видишь? Каждый инструмент решает свою задачу. А если связать их вместе через n8n? 
               Ты получаешь идеальную систему, которая работает за тебя.
             </p>
-            <Button size="lg" className="px-10 py-6 text-lg" onClick={scrollToRegistration}>
+            <Button size="lg" className="px-10 py-6 text-lg rounded-full" onClick={scrollToRegistration}>
               <Icon name="Sparkles" className="mr-2" />
               Узнать, как это работает на конференции
             </Button>
@@ -281,7 +281,7 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="bg-gradient-to-br from-destructive/20 to-primary/20 border-2 border-primary rounded-2xl p-8 mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-6 uppercase tracking-tight">
                 Это предложение ограничено по времени и местам
               </h2>
               
@@ -352,7 +352,7 @@ export default function Index() {
                 </div>
                 <Button 
                   size="lg" 
-                  className="w-full py-7 text-xl font-bold bg-primary hover:bg-primary/90 text-white animate-pulse-scale"
+                  className="w-full py-7 text-xl font-bold bg-primary hover:bg-primary/90 text-white animate-pulse-scale rounded-full"
                   onClick={scrollToRegistration}
                 >
                   <Icon name="Rocket" className="mr-2" size={24} />
@@ -369,7 +369,7 @@ export default function Index() {
 
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-4 uppercase tracking-tight">
             Часто задаваемые вопросы
           </h2>
           <p className="text-center text-muted-foreground mb-12 text-lg">Ответы на самые популярные вопросы</p>
@@ -423,7 +423,7 @@ export default function Index() {
       <section className="py-20 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <h2 className="text-4xl md:text-6xl font-bold">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold uppercase tracking-tight">
               Не жди идеального момента. Создавай его.
             </h2>
             
@@ -465,7 +465,7 @@ export default function Index() {
 
             <Button 
               size="lg" 
-              className="w-full md:w-auto px-16 py-8 text-2xl font-bold bg-primary hover:bg-primary/90 text-white animate-pulse-scale"
+              className="w-full md:w-auto px-16 py-8 text-2xl font-bold bg-primary hover:bg-primary/90 text-white animate-pulse-scale rounded-full"
               onClick={scrollToRegistration}
             >
               <Icon name="Rocket" className="mr-3" size={28} />
