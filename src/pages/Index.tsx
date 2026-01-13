@@ -54,11 +54,11 @@ export default function Index() {
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/10 via-background to-secondary/10 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.1),rgba(255,255,255,0))]"></div>
         <div 
-          className="absolute inset-0 opacity-20 bg-center bg-no-repeat bg-contain"
+          className="absolute inset-0 opacity-30 bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/files/3437a9e0-f409-4697-a235-2e932b11f992.jpg')",
+            backgroundImage: "url('https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/files/860b8a02-d51a-4e0b-b5d0-1b3caf9e232d.jpg')",
             backgroundPosition: 'center bottom',
-            backgroundSize: '100% auto'
+            backgroundSize: 'cover'
           }}
         ></div>
         
