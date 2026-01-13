@@ -53,6 +53,14 @@ export default function Index() {
     <div className="min-h-screen bg-background">
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/10 via-background to-secondary/10 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.1),rgba(255,255,255,0))]"></div>
+        <div 
+          className="absolute inset-0 opacity-20 bg-center bg-no-repeat bg-contain"
+          style={{
+            backgroundImage: "url('https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/files/3437a9e0-f409-4697-a235-2e932b11f992.jpg')",
+            backgroundPosition: 'center bottom',
+            backgroundSize: '100% auto'
+          }}
+        ></div>
         
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="max-w-5xl mx-auto text-center space-y-8 animate-fade-in">
