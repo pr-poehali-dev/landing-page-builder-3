@@ -53,15 +53,57 @@ export default function Index() {
     <div className="min-h-screen bg-background">
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/10 via-background to-secondary/10 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.1),rgba(255,255,255,0))]"></div>
-        <div 
-          className="absolute inset-0 opacity-40 bg-center bg-no-repeat"
-          style={{
-            backgroundImage: "url('https://cdn.poehali.dev/files/i.jpg')",
-            backgroundPosition: 'center 70%',
-            backgroundSize: '80% auto',
-            filter: 'brightness(0.3) saturate(100%) contrast(200%)'
-          }}
-        ></div>
+        
+        <svg className="absolute bottom-0 left-0 w-full h-1/2 opacity-20" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMax slice">
+          <defs>
+            <linearGradient id="bridgeGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" style={{stopColor: 'hsl(18, 100%, 58%)', stopOpacity: 0.6}} />
+              <stop offset="100%" style={{stopColor: 'hsl(275, 70%, 19%)', stopOpacity: 0.3}} />
+            </linearGradient>
+          </defs>
+          
+          <g fill="url(#bridgeGradient)">
+            <rect x="50" y="280" width="30" height="80" />
+            <rect x="120" y="260" width="40" height="100" />
+            <rect x="180" y="270" width="35" height="90" />
+            <rect x="240" y="250" width="50" height="110" />
+            <rect x="310" y="265" width="30" height="95" />
+            
+            <polygon points="400,150 410,150 415,360 405,360" fill="hsl(18, 100%, 58%)" opacity="0.8" />
+            <line x1="410" y1="160" x2="350" y2="280" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.4" />
+            <line x1="410" y1="170" x2="360" y2="280" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.4" />
+            <line x1="410" y1="180" x2="370" y2="280" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.4" />
+            <line x1="410" y1="190" x2="380" y2="280" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.4" />
+            <line x1="410" y1="200" x2="390" y2="280" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.4" />
+            <line x1="410" y1="160" x2="470" y2="280" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.4" />
+            <line x1="410" y1="170" x2="460" y2="280" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.4" />
+            <line x1="410" y1="180" x2="450" y2="280" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.4" />
+            <line x1="410" y1="190" x2="440" y2="280" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.4" />
+            <line x1="410" y1="200" x2="430" y2="280" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.4" />
+            
+            <rect x="340" y="280" width="140" height="5" fill="hsl(18, 100%, 58%)" opacity="0.6" />
+            
+            <polygon points="750,180 760,180 765,360 755,360" fill="hsl(18, 100%, 58%)" opacity="0.8" />
+            <line x1="760" y1="190" x2="700" y2="280" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.4" />
+            <line x1="760" y1="200" x2="710" y2="280" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.4" />
+            <line x1="760" y1="210" x2="720" y2="280" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.4" />
+            <line x1="760" y1="220" x2="730" y2="280" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.4" />
+            <line x1="760" y1="230" x2="740" y2="280" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.4" />
+            <line x1="760" y1="190" x2="820" y2="280" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.4" />
+            <line x1="760" y1="200" x2="810" y2="280" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.4" />
+            <line x1="760" y1="210" x2="800" y2="280" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.4" />
+            <line x1="760" y1="220" x2="790" y2="280" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.4" />
+            <line x1="760" y1="230" x2="780" y2="280" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.4" />
+            
+            <rect x="480" y="282" width="400" height="5" fill="hsl(18, 100%, 58%)" opacity="0.6" />
+            
+            <rect x="850" y="265" width="35" height="95" />
+            <rect x="900" y="255" width="45" height="105" />
+            <rect x="960" y="275" width="30" height="85" />
+            <rect x="1010" y="240" width="55" height="120" />
+            <rect x="1080" y="270" width="40" height="90" />
+          </g>
+        </svg>
         
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="max-w-5xl mx-auto text-center space-y-8 animate-fade-in">
