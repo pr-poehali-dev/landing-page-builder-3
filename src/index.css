@@ -1,40 +1,38 @@
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&family=Share+Tech+Mono&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 270 30% 8%;
-    --foreground: 0 0% 95%;
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
 
-    --card: 270 20% 12%;
-    --card-foreground: 0 0% 95%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 206 75% 15%;
+    --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 0 100% 63%;
-    --primary-foreground: 270 30% 8%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: 180 100% 50%;
-    --secondary-foreground: 270 30% 8%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
 
-    --muted: 270 20% 15%;
-    --muted-foreground: 0 0% 70%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 270 100% 60%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 0 100% 63%;
+    --ring: 222.2 84% 4.9%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -99,121 +97,5 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: "Rajdhani", sans-serif;
-    background: linear-gradient(135deg, #0a0014 0%, #1a0a2e 50%, #0a0014 100%);
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: "Orbitron", sans-serif;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-}
-
-@layer utilities {
-  .hover-3d {
-    transition: transform 0.5s ease;
-    transform-style: preserve-3d;
-  }
-
-  .hover-3d:hover {
-    transform: perspective(1000px) rotateY(10deg) rotateX(5deg);
-  }
-
-  .glow {
-    box-shadow: 0 0 20px rgba(255, 68, 68, 0.3);
-    transition: box-shadow 0.3s ease;
-  }
-
-  .glow:hover {
-    box-shadow:
-      0 0 40px rgba(255, 68, 68, 0.6),
-      0 0 60px rgba(255, 68, 68, 0.4);
-  }
-
-  .neon-text {
-    text-shadow:
-      0 0 10px currentColor,
-      0 0 20px rgba(255, 68, 68, 0.4);
-  }
-
-  .cyber-border {
-    position: relative;
-    border: 2px solid transparent;
-    background:
-      linear-gradient(#0a0014, #0a0014) padding-box,
-      linear-gradient(45deg, #ff4444, #00ffff, #ff4444) border-box;
-    border-radius: 8px;
-  }
-
-  .cyber-card {
-    background: linear-gradient(
-      135deg,
-      rgba(255, 68, 68, 0.1) 0%,
-      rgba(0, 255, 255, 0.05) 100%
-    );
-    border: 1px solid rgba(255, 68, 68, 0.3);
-    box-shadow:
-      0 0 20px rgba(255, 68, 68, 0.2),
-      inset 0 0 20px rgba(0, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-  }
-
-  .scanline {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .scanline::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(0, 255, 255, 0.8),
-      transparent
-    );
-    animation: scan 3s linear infinite;
-    z-index: 100;
-  }
-
-  @keyframes scan {
-    0% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(100vh);
-    }
-  }
-
-  .scanline::before {
-    animation-duration: 9s;
-  }
-
-  .glitch {
-    animation: glitch 2s infinite;
-  }
-
-  @keyframes glitch {
-    0%,
-    100% {
-      transform: translate(0);
-    }
-    33% {
-      transform: translate(-2px, 2px);
-    }
-    66% {
-      transform: translate(2px, -2px);
-    }
   }
 }
