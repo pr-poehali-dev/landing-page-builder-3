@@ -7,8 +7,10 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 export default function Index() {
+  useScrollAnimation();
   const [timeLeft, setTimeLeft] = useState({
     days: 3,
     hours: 12,
@@ -129,7 +131,7 @@ export default function Index() {
               уже внедрили AI и работают в 3 раза быстрее, зарабатывая больше при меньших усилиях.
             </p>
 
-            <div className="bg-card border rounded-xl p-8 space-y-4">
+            <div className="bg-card border rounded-xl p-8 space-y-4 animate-on-scroll">
               {[
                 'Нехватка времени — работаешь 10+ часов в день, но доход не растёт',
                 'Конкуренция опережает — коллеги с AI-инструментами предлагают услуги дешевле',
@@ -138,7 +140,7 @@ export default function Index() {
                 'Не знаешь, где начать — информации про AI слишком много, всё кажется сложным',
                 'Скепсис к новым инструментам — пробовал ранее, не помогло, может это очередной хайп?'
               ].map((pain, index) => (
-                <div key={index} className="flex items-start gap-3 animate-slide-up" style={{animationDelay: `${index * 0.1}s`}}>
+                <div key={index} className="flex items-start gap-3 animate-slide-up animate-on-scroll" style={{animationDelay: `${index * 0.1}s`}}>
                   <Icon name="X" className="text-destructive flex-shrink-0 mt-1 animate-icon-shake animate-icon-glow-primary" size={20} />
                   <p className="text-lg">{pain}</p>
                 </div>
@@ -165,7 +167,7 @@ export default function Index() {
                   { icon: 'Search', text: 'Perplexity находит инсайты из интернета' },
                   { icon: 'Network', text: 'n8n связывает всё в одну систему' }
                 ].map((tool, index) => (
-                  <div key={index} className="flex items-start gap-3 bg-card p-4 rounded-lg border">
+                  <div key={index} className={`flex items-start gap-3 bg-card p-4 rounded-lg border ${index % 2 === 0 ? 'animate-on-scroll-left' : 'animate-on-scroll-right'}`}>
                     <Icon name={tool.icon as any} className="text-primary flex-shrink-0 mt-1 animate-icon-float animate-icon-glow-secondary" size={24} />
                     <p className="font-medium">{tool.text}</p>
                   </div>
@@ -249,7 +251,7 @@ export default function Index() {
                 color: 'primary'
               }
             ].map((tool, index) => (
-              <div key={index} className="bg-card border rounded-2xl p-8 hover:shadow-lg transition-shadow">
+              <div key={index} className={`bg-card border rounded-2xl p-8 hover:shadow-lg transition-shadow ${index % 2 === 0 ? 'animate-on-scroll-left' : 'animate-on-scroll-right'}`}>
                 <div className="flex items-start gap-6 mb-6">
                   <div className={`p-4 rounded-xl bg-${tool.color}/10`}>
                     <Icon name={tool.icon as any} className={`text-${tool.color} animate-icon-float animate-icon-glow-secondary`} size={40} />
@@ -288,7 +290,7 @@ export default function Index() {
       <section className="py-20 bg-muted/30" id="registration">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-gradient-to-br from-destructive/20 to-primary/20 border-2 border-primary rounded-2xl p-8 mb-12">
+            <div className="bg-gradient-to-br from-destructive/20 to-primary/20 border-2 border-primary rounded-2xl p-8 mb-12 animate-on-scroll-scale">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-6 uppercase tracking-tight">
                 Это предложение ограничено по времени и местам
               </h2>
@@ -383,7 +385,7 @@ export default function Index() {
           <p className="text-center text-muted-foreground mb-12 text-lg">Ответы на самые популярные вопросы</p>
 
           <div className="max-w-4xl mx-auto">
-            <Accordion type="single" collapsible className="space-y-4">
+            <Accordion type="single" collapsible className="space-y-4 animate-on-scroll">
               {[
                 {
                   q: 'Нужна ли мне подготовка к конференции?',
@@ -430,7 +432,7 @@ export default function Index() {
 
       <section className="py-20 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
+          <div className="max-w-4xl mx-auto text-center space-y-8 animate-on-scroll">
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold uppercase tracking-tight">
               Не жди идеального момента. Создавай его.
             </h2>
