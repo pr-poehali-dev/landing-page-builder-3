@@ -102,3 +102,139 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  @keyframes icon-float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  @keyframes icon-pulse-glow {
+    0%,
+    100% {
+      filter: drop-shadow(0 0 2px hsl(18, 100%, 58%))
+        drop-shadow(0 0 8px hsl(18, 100%, 58%, 0.3));
+    }
+    50% {
+      filter: drop-shadow(0 0 8px hsl(18, 100%, 58%))
+        drop-shadow(0 0 16px hsl(18, 100%, 58%, 0.5));
+    }
+  }
+
+  @keyframes icon-spin-slow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes icon-bounce-subtle {
+    0%,
+    100% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(-5px) scale(1.05);
+    }
+  }
+
+  @keyframes icon-shake {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-3px);
+    }
+    75% {
+      transform: translateX(3px);
+    }
+  }
+
+  @keyframes icon-glow-primary {
+    0%,
+    100% {
+      filter: drop-shadow(0 0 4px hsl(18, 100%, 58%));
+    }
+    50% {
+      filter: drop-shadow(0 0 12px hsl(18, 100%, 58%))
+        drop-shadow(0 0 20px hsl(18, 100%, 58%, 0.6));
+    }
+  }
+
+  @keyframes icon-glow-secondary {
+    0%,
+    100% {
+      filter: drop-shadow(0 0 4px hsl(220, 70%, 50%));
+    }
+    50% {
+      filter: drop-shadow(0 0 12px hsl(220, 70%, 50%))
+        drop-shadow(0 0 20px hsl(220, 70%, 50%, 0.6));
+    }
+  }
+
+  @keyframes icon-glow-success {
+    0%,
+    100% {
+      filter: drop-shadow(0 0 4px hsl(142, 76%, 45%));
+    }
+    50% {
+      filter: drop-shadow(0 0 12px hsl(142, 76%, 45%))
+        drop-shadow(0 0 20px hsl(142, 76%, 45%, 0.6));
+    }
+  }
+
+  @keyframes icon-glow-accent {
+    0%,
+    100% {
+      filter: drop-shadow(0 0 4px hsl(45, 100%, 50%));
+    }
+    50% {
+      filter: drop-shadow(0 0 12px hsl(45, 100%, 50%))
+        drop-shadow(0 0 20px hsl(45, 100%, 50%, 0.6));
+    }
+  }
+
+  .animate-icon-float {
+    animation: icon-float 3s ease-in-out infinite;
+  }
+
+  .animate-icon-pulse-glow {
+    animation: icon-pulse-glow 2s ease-in-out infinite;
+  }
+
+  .animate-icon-spin-slow {
+    animation: icon-spin-slow 8s linear infinite;
+  }
+
+  .animate-icon-bounce {
+    animation: icon-bounce-subtle 2.5s ease-in-out infinite;
+  }
+
+  .animate-icon-shake {
+    animation: icon-shake 3s ease-in-out infinite;
+  }
+
+  .animate-icon-glow-primary {
+    animation: icon-glow-primary 2s ease-in-out infinite;
+  }
+
+  .animate-icon-glow-secondary {
+    animation: icon-glow-secondary 2s ease-in-out infinite;
+  }
+
+  .animate-icon-glow-success {
+    animation: icon-glow-success 2s ease-in-out infinite;
+  }
+
+  .animate-icon-glow-accent {
+    animation: icon-glow-accent 2s ease-in-out infinite;
+  }
+}

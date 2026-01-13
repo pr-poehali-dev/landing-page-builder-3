@@ -105,7 +105,7 @@ export default function Index() {
                 className="w-full md:w-auto px-12 py-7 text-xl font-bold bg-primary hover:bg-primary/90 text-white animate-pulse-scale rounded-full"
                 onClick={scrollToRegistration}
               >
-                <Icon name="Rocket" className="mr-2" size={24} />
+                <Icon name="Rocket" className="mr-2 animate-icon-float animate-icon-glow-primary" size={24} />
                 Зарегистрироваться и получить гайд
               </Button>
               <p className="text-sm text-muted-foreground mt-4">
@@ -139,7 +139,7 @@ export default function Index() {
                 'Скепсис к новым инструментам — пробовал ранее, не помогло, может это очередной хайп?'
               ].map((pain, index) => (
                 <div key={index} className="flex items-start gap-3 animate-slide-up" style={{animationDelay: `${index * 0.1}s`}}>
-                  <Icon name="X" className="text-destructive flex-shrink-0 mt-1" size={20} />
+                  <Icon name="X" className="text-destructive flex-shrink-0 mt-1 animate-icon-shake animate-icon-glow-primary" size={20} />
                   <p className="text-lg">{pain}</p>
                 </div>
               ))}
@@ -166,7 +166,7 @@ export default function Index() {
                   { icon: 'Network', text: 'n8n связывает всё в одну систему' }
                 ].map((tool, index) => (
                   <div key={index} className="flex items-start gap-3 bg-card p-4 rounded-lg border">
-                    <Icon name={tool.icon as any} className="text-primary flex-shrink-0 mt-1" size={24} />
+                    <Icon name={tool.icon as any} className="text-primary flex-shrink-0 mt-1 animate-icon-float animate-icon-glow-secondary" size={24} />
                     <p className="font-medium">{tool.text}</p>
                   </div>
                 ))}
@@ -252,7 +252,7 @@ export default function Index() {
               <div key={index} className="bg-card border rounded-2xl p-8 hover:shadow-lg transition-shadow">
                 <div className="flex items-start gap-6 mb-6">
                   <div className={`p-4 rounded-xl bg-${tool.color}/10`}>
-                    <Icon name={tool.icon as any} className={`text-${tool.color}`} size={40} />
+                    <Icon name={tool.icon as any} className={`text-${tool.color} animate-icon-float animate-icon-glow-secondary`} size={40} />
                   </div>
                   <div className="flex-1">
                     <h3 className="text-3xl font-bold mb-2">{tool.name}</h3>
@@ -278,7 +278,7 @@ export default function Index() {
               Ты получаешь идеальную систему, которая работает за тебя.
             </p>
             <Button size="lg" className="px-10 py-6 text-lg rounded-full" onClick={scrollToRegistration}>
-              <Icon name="Sparkles" className="mr-2" />
+              <Icon name="Sparkles" className="mr-2 animate-icon-float animate-icon-glow-primary" />
               Узнать, как это работает на конференции
             </Button>
           </div>
@@ -295,17 +295,17 @@ export default function Index() {
               
               <div className="grid md:grid-cols-3 gap-6 mb-8">
                 <div className="bg-card rounded-xl p-6 text-center">
-                  <Icon name="Users" className="mx-auto mb-3 text-primary" size={40} />
+                  <Icon name="Users" className="mx-auto mb-3 text-primary animate-icon-bounce animate-icon-glow-primary" size={40} />
                   <div className="text-3xl font-bold mb-2">150</div>
                   <div className="text-muted-foreground">мест в зале</div>
                 </div>
                 <div className="bg-card rounded-xl p-6 text-center">
-                  <Icon name="CheckCircle2" className="mx-auto mb-3 text-success" size={40} />
+                  <Icon name="CheckCircle2" className="mx-auto mb-3 text-success animate-icon-bounce animate-icon-glow-success" size={40} />
                   <div className="text-3xl font-bold mb-2">78</div>
                   <div className="text-muted-foreground">уже забронировано</div>
                 </div>
                 <div className="bg-card rounded-xl p-6 text-center">
-                  <Icon name="AlertCircle" className="mx-auto mb-3 text-destructive" size={40} />
+                  <Icon name="AlertCircle" className="mx-auto mb-3 text-destructive animate-icon-shake animate-icon-glow-primary" size={40} />
                   <div className="text-3xl font-bold mb-2">72</div>
                   <div className="text-muted-foreground">осталось</div>
                 </div>
@@ -363,7 +363,7 @@ export default function Index() {
                   className="w-full py-7 text-xl font-bold bg-primary hover:bg-primary/90 text-white animate-pulse-scale rounded-full"
                   onClick={scrollToRegistration}
                 >
-                  <Icon name="Rocket" className="mr-2" size={24} />
+                  <Icon name="Rocket" className="mr-2 animate-icon-float animate-icon-glow-primary" size={24} />
                   ЗАНЯТЬ МЕСТО ПО СПЕЦПРЕДЛОЖЕНИЮ
                 </Button>
                 <p className="text-center text-sm text-muted-foreground mt-4">
@@ -448,21 +448,21 @@ export default function Index() {
               <h3 className="text-2xl font-bold mb-4">Информация о конференции</h3>
               <div className="grid md:grid-cols-3 gap-6 text-left">
                 <div className="flex items-start gap-3">
-                  <Icon name="Calendar" className="text-primary flex-shrink-0 mt-1" size={24} />
+                  <Icon name="Calendar" className="text-primary flex-shrink-0 mt-1 animate-icon-spin-slow animate-icon-glow-secondary" size={24} />
                   <div>
                     <div className="font-semibold">Дата</div>
                     <div className="text-muted-foreground">15 февраля 2026</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Icon name="Clock" className="text-primary flex-shrink-0 mt-1" size={24} />
+                  <Icon name="Clock" className="text-primary flex-shrink-0 mt-1 animate-icon-spin-slow animate-icon-glow-secondary" size={24} />
                   <div>
                     <div className="font-semibold">Время</div>
                     <div className="text-muted-foreground">10:00–18:00</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Icon name="MapPin" className="text-primary flex-shrink-0 mt-1" size={24} />
+                  <Icon name="MapPin" className="text-primary flex-shrink-0 mt-1 animate-icon-bounce animate-icon-glow-primary" size={24} />
                   <div>
                     <div className="font-semibold">Место</div>
                     <div className="text-muted-foreground">Москва, ул. Ленина 1</div>
@@ -476,7 +476,7 @@ export default function Index() {
               className="w-full md:w-auto px-16 py-8 text-2xl font-bold bg-primary hover:bg-primary/90 text-white animate-pulse-scale rounded-full"
               onClick={scrollToRegistration}
             >
-              <Icon name="Rocket" className="mr-3" size={28} />
+              <Icon name="Rocket" className="mr-3 animate-icon-float animate-icon-glow-primary" size={28} />
               ПОЛУЧИТЬ МЕСТО НА КОНФЕРЕНЦИИ
             </Button>
 
@@ -486,15 +486,15 @@ export default function Index() {
 
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2">
-                <Icon name="CheckCircle2" className="text-success" size={16} />
+                <Icon name="CheckCircle2" className="text-success animate-icon-bounce animate-icon-glow-success" size={16} />
                 <span>Зарегистрируйся за 60 секунд</span>
               </div>
               <div className="flex items-center gap-2">
-                <Icon name="CheckCircle2" className="text-success" size={16} />
+                <Icon name="CheckCircle2" className="text-success animate-icon-bounce animate-icon-glow-success" size={16} />
                 <span>Получишь письмо сразу</span>
               </div>
               <div className="flex items-center gap-2">
-                <Icon name="CheckCircle2" className="text-success" size={16} />
+                <Icon name="CheckCircle2" className="text-success animate-icon-bounce animate-icon-glow-success" size={16} />
                 <span>Никакого спама</span>
               </div>
             </div>
