@@ -55,7 +55,7 @@ export default function Index() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.1),rgba(255,255,255,0))]"></div>
         
         <div 
-          className="absolute top-1/2 left-0 w-full h-[40%] bg-cover bg-center bg-no-repeat opacity-20 -translate-y-1/2"
+          className="absolute top-[25%] left-0 w-full h-[40%] bg-cover bg-center bg-no-repeat opacity-20"
           style={{
             backgroundImage: "url('https://cdn.poehali.dev/files/freepik__-__61917.png')",
             filter: 'hue-rotate(15deg) saturate(1.5) brightness(0.8)'
