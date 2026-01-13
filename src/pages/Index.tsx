@@ -54,56 +54,184 @@ export default function Index() {
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/10 via-background to-secondary/10 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.1),rgba(255,255,255,0))]"></div>
         
-        <svg className="absolute bottom-0 left-0 w-full h-1/2 opacity-20" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMax slice">
-          <defs>
-            <linearGradient id="bridgeGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" style={{stopColor: 'hsl(18, 100%, 58%)', stopOpacity: 0.6}} />
-              <stop offset="100%" style={{stopColor: 'hsl(275, 70%, 19%)', stopOpacity: 0.3}} />
-            </linearGradient>
-          </defs>
-          
-          <g fill="url(#bridgeGradient)">
-            <rect x="50" y="280" width="30" height="80" />
-            <rect x="120" y="260" width="40" height="100" />
-            <rect x="180" y="270" width="35" height="90" />
-            <rect x="240" y="250" width="50" height="110" />
-            <rect x="310" y="265" width="30" height="95" />
+        <div className="absolute bottom-0 left-0 w-full h-[60%] overflow-hidden opacity-25">
+          <svg className="w-full h-full" viewBox="0 0 1600 600" preserveAspectRatio="xMidYMax meet">
+            <defs>
+              <linearGradient id="cityGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style={{stopColor: 'hsl(18, 100%, 58%)', stopOpacity: 0.9}} />
+                <stop offset="100%" style={{stopColor: 'hsl(275, 70%, 19%)', stopOpacity: 0.7}} />
+              </linearGradient>
+              <linearGradient id="reflectionGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style={{stopColor: 'hsl(275, 70%, 19%)', stopOpacity: 0.4}} />
+                <stop offset="100%" style={{stopColor: 'hsl(18, 100%, 58%)', stopOpacity: 0.2}} />
+              </linearGradient>
+            </defs>
             
-            <polygon points="400,150 410,150 415,360 405,360" fill="hsl(18, 100%, 58%)" opacity="0.8" />
-            <line x1="410" y1="160" x2="350" y2="280" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.4" />
-            <line x1="410" y1="170" x2="360" y2="280" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.4" />
-            <line x1="410" y1="180" x2="370" y2="280" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.4" />
-            <line x1="410" y1="190" x2="380" y2="280" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.4" />
-            <line x1="410" y1="200" x2="390" y2="280" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.4" />
-            <line x1="410" y1="160" x2="470" y2="280" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.4" />
-            <line x1="410" y1="170" x2="460" y2="280" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.4" />
-            <line x1="410" y1="180" x2="450" y2="280" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.4" />
-            <line x1="410" y1="190" x2="440" y2="280" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.4" />
-            <line x1="410" y1="200" x2="430" y2="280" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.4" />
+            <g fill="url(#cityGradient)">
+              <ellipse cx="300" cy="230" rx="80" ry="40" opacity="0.3" />
+              <ellipse cx="600" cy="220" rx="100" ry="50" opacity="0.3" />
+              <ellipse cx="1000" cy="230" rx="120" ry="45" opacity="0.3" />
+              <ellipse cx="1300" cy="225" rx="90" ry="42" opacity="0.3" />
+              
+              <rect x="40" y="250" width="15" height="50" />
+              <polygon points="40,250 47,240 55,250" />
+              
+              <path d="M 80 290 L 85 255 L 95 255 L 100 265 L 110 265 L 115 255 L 125 255 L 130 290 Z" />
+              <line x1="90" y1="255" x2="80" y2="290" stroke="hsl(18, 100%, 58%)" strokeWidth="0.5" />
+              <line x1="95" y1="255" x2="85" y2="290" stroke="hsl(18, 100%, 58%)" strokeWidth="0.5" />
+              <line x1="120" y1="255" x2="130" y2="290" stroke="hsl(18, 100%, 58%)" strokeWidth="0.5" />
+              <line x1="115" y1="255" x2="125" y2="290" stroke="hsl(18, 100%, 58%)" strokeWidth="0.5" />
+              
+              <rect x="140" y="270" width="25" height="20" />
+              <polygon points="140,270 152,260 165,270" />
+              
+              <rect x="175" y="260" width="30" height="30" />
+              <rect x="185" y="255" width="10" height="5" />
+              
+              <rect x="215" y="275" width="20" height="15" />
+              
+              <polygon points="250,180 255,180 260,290 245,290" />
+              <circle cx="252" cy="175" r="6" fill="hsl(18, 100%, 58%)" />
+              
+              <rect x="270" y="265" width="25" height="25" />
+              
+              <rect x="305" y="240" width="35" height="50" />
+              <rect x="312" y="235" width="3" height="8" />
+              
+              <rect x="350" y="255" width="28" height="35" />
+              
+              <rect x="390" y="230" width="45" height="60" />
+              <rect x="400" y="225" width="25" height="8" />
+              
+              <rect x="445" y="245" width="30" height="45" />
+              
+              <path d="M 490 290 Q 520 210 550 290" stroke="hsl(18, 100%, 58%)" strokeWidth="3" fill="none" />
+              <line x1="495" y1="285" x2="520" y2="220" stroke="hsl(18, 100%, 58%)" strokeWidth="0.8" opacity="0.6" />
+              <line x1="500" y1="280" x2="520" y2="230" stroke="hsl(18, 100%, 58%)" strokeWidth="0.8" opacity="0.6" />
+              <line x1="505" y1="275" x2="520" y2="240" stroke="hsl(18, 100%, 58%)" strokeWidth="0.8" opacity="0.6" />
+              <line x1="510" y1="270" x2="520" y2="250" stroke="hsl(18, 100%, 58%)" strokeWidth="0.8" opacity="0.6" />
+              <line x1="545" y1="285" x2="520" y2="220" stroke="hsl(18, 100%, 58%)" strokeWidth="0.8" opacity="0.6" />
+              <line x1="540" y1="280" x2="520" y2="230" stroke="hsl(18, 100%, 58%)" strokeWidth="0.8" opacity="0.6" />
+              <line x1="535" y1="275" x2="520" y2="240" stroke="hsl(18, 100%, 58%)" strokeWidth="0.8" opacity="0.6" />
+              <line x1="530" y1="270" x2="520" y2="250" stroke="hsl(18, 100%, 58%)" strokeWidth="0.8" opacity="0.6" />
+              <rect x="515" y="288" width="10" height="2" fill="hsl(18, 100%, 58%)" />
+              
+              <rect x="560" y="250" width="32" height="40" />
+              
+              <polygon points="600,200 605,200 608,290 597,290" />
+              <polygon points="600,200 602,195 605,200" />
+              
+              <rect x="620" y="270" width="25" height="20" />
+              <circle cx="632" cy="268" r="4" fill="hsl(18, 100%, 58%)" />
+              
+              <rect x="655" y="235" width="40" height="55" />
+              <rect x="670" y="230" width="10" height="8" />
+              
+              <rect x="705" y="260" width="30" height="30" />
+              
+              <rect x="745" y="245" width="35" height="45" />
+              
+              <path d="M 790 290 Q 850 150 910 290" stroke="hsl(18, 100%, 58%)" strokeWidth="4" fill="none" />
+              <line x1="800" y1="285" x2="850" y2="170" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.6" />
+              <line x1="810" y1="280" x2="850" y2="180" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.6" />
+              <line x1="820" y1="275" x2="850" y2="190" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.6" />
+              <line x1="830" y1="270" x2="850" y2="200" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.6" />
+              <line x1="840" y1="265" x2="850" y2="210" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.6" />
+              <line x1="900" y1="285" x2="850" y2="170" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.6" />
+              <line x1="890" y1="280" x2="850" y2="180" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.6" />
+              <line x1="880" y1="275" x2="850" y2="190" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.6" />
+              <line x1="870" y1="270" x2="850" y2="200" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.6" />
+              <line x1="860" y1="265" x2="850" y2="210" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.6" />
+              <rect x="845" y="288" width="10" height="2" fill="hsl(18, 100%, 58%)" />
+              
+              <circle cx="940" cy="270" r="25" fill="none" stroke="hsl(18, 100%, 58%)" strokeWidth="2" />
+              <circle cx="940" cy="270" r="20" fill="none" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.5" />
+              <line x1="940" y1="245" x2="940" y2="290" stroke="hsl(18, 100%, 58%)" strokeWidth="1.5" />
+              <line x1="915" y1="270" x2="965" y2="270" stroke="hsl(18, 100%, 58%)" strokeWidth="1.5" />
+              
+              <rect x="980" y="265" width="30" height="25" />
+              
+              <rect x="1020" y="240" width="40" height="50" />
+              <rect x="1032" y="235" width="16" height="8" />
+              
+              <rect x="1070" y="255" width="35" height="35" />
+              
+              <polygon points="1120,190 1127,190 1132,290 1115,290" />
+              <polygon points="1115,190 1123,160 1132,190" />
+              <line x1="1123" y1="170" x2="1115" y2="185" stroke="hsl(18, 100%, 58%)" strokeWidth="1" />
+              <line x1="1123" y1="170" x2="1132" y2="185" stroke="hsl(18, 100%, 58%)" strokeWidth="1" />
+              
+              <rect x="1145" y="260" width="28" height="30" />
+              
+              <rect x="1185" y="230" width="50" height="60" />
+              <rect x="1200" y="225" width="20" height="8" />
+              
+              <polygon points="1250,210 1256,210 1262,290 1244,290" />
+              <polygon points="1244,210 1253,195 1262,210" />
+              <path d="M 1250 205 L 1253 180 L 1256 205" stroke="hsl(18, 100%, 58%)" strokeWidth="1" fill="none" />
+              
+              <rect x="1275" y="245" width="32" height="45" />
+              
+              <rect x="1320" y="235" width="45" height="55" />
+              <rect x="1335" y="230" width="15" height="8" />
+              
+              <rect x="1375" y="265" width="30" height="25" />
+              
+              <polygon points="1420,220 1425,220 1428,290 1417,290" />
+              <path d="M 1420 218 L 1422 200 L 1428 218" fill="hsl(18, 100%, 58%)" />
+              
+              <rect x="1440" y="270" width="25" height="20" />
+              
+              <polygon points="1480,250 1487,245 1495,250 1495,290 1480,290" />
+              
+              <rect x="1510" y="275" width="20" height="15" />
+            </g>
             
-            <rect x="340" y="280" width="140" height="5" fill="hsl(18, 100%, 58%)" opacity="0.6" />
+            <line x1="0" y1="290" x2="1600" y2="290" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.3" />
             
-            <polygon points="750,180 760,180 765,360 755,360" fill="hsl(18, 100%, 58%)" opacity="0.8" />
-            <line x1="760" y1="190" x2="700" y2="280" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.4" />
-            <line x1="760" y1="200" x2="710" y2="280" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.4" />
-            <line x1="760" y1="210" x2="720" y2="280" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.4" />
-            <line x1="760" y1="220" x2="730" y2="280" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.4" />
-            <line x1="760" y1="230" x2="740" y2="280" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.4" />
-            <line x1="760" y1="190" x2="820" y2="280" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.4" />
-            <line x1="760" y1="200" x2="810" y2="280" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.4" />
-            <line x1="760" y1="210" x2="800" y2="280" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.4" />
-            <line x1="760" y1="220" x2="790" y2="280" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.4" />
-            <line x1="760" y1="230" x2="780" y2="280" stroke="hsl(18, 100%, 58%)" strokeWidth="1" opacity="0.4" />
-            
-            <rect x="480" y="282" width="400" height="5" fill="hsl(18, 100%, 58%)" opacity="0.6" />
-            
-            <rect x="850" y="265" width="35" height="95" />
-            <rect x="900" y="255" width="45" height="105" />
-            <rect x="960" y="275" width="30" height="85" />
-            <rect x="1010" y="240" width="55" height="120" />
-            <rect x="1080" y="270" width="40" height="90" />
-          </g>
-        </svg>
+            <g fill="url(#reflectionGradient)" opacity="0.5" transform="translate(0, 290) scale(1, -0.7)">
+              <ellipse cx="300" cy="230" rx="80" ry="40" opacity="0.3" />
+              <ellipse cx="600" cy="220" rx="100" ry="50" opacity="0.3" />
+              <ellipse cx="1000" cy="230" rx="120" ry="45" opacity="0.3" />
+              <ellipse cx="1300" cy="225" rx="90" ry="42" opacity="0.3" />
+              
+              <rect x="40" y="250" width="15" height="50" />
+              <path d="M 80 290 L 85 255 L 95 255 L 100 265 L 110 265 L 115 255 L 125 255 L 130 290 Z" />
+              <rect x="140" y="270" width="25" height="20" />
+              <rect x="175" y="260" width="30" height="30" />
+              <rect x="215" y="275" width="20" height="15" />
+              <polygon points="250,180 255,180 260,290 245,290" />
+              <rect x="270" y="265" width="25" height="25" />
+              <rect x="305" y="240" width="35" height="50" />
+              <rect x="350" y="255" width="28" height="35" />
+              <rect x="390" y="230" width="45" height="60" />
+              <rect x="445" y="245" width="30" height="45" />
+              <path d="M 490 290 Q 520 210 550 290" stroke="hsl(18, 100%, 58%)" strokeWidth="2" fill="none" opacity="0.4" />
+              <rect x="560" y="250" width="32" height="40" />
+              <polygon points="600,200 605,200 608,290 597,290" />
+              <rect x="620" y="270" width="25" height="20" />
+              <rect x="655" y="235" width="40" height="55" />
+              <rect x="705" y="260" width="30" height="30" />
+              <rect x="745" y="245" width="35" height="45" />
+              <path d="M 790 290 Q 850 150 910 290" stroke="hsl(18, 100%, 58%)" strokeWidth="3" fill="none" opacity="0.4" />
+              <circle cx="940" cy="270" r="25" fill="none" stroke="hsl(18, 100%, 58%)" strokeWidth="1.5" opacity="0.3" />
+              <rect x="980" y="265" width="30" height="25" />
+              <rect x="1020" y="240" width="40" height="50" />
+              <rect x="1070" y="255" width="35" height="35" />
+              <polygon points="1120,190 1127,190 1132,290 1115,290" />
+              <rect x="1145" y="260" width="28" height="30" />
+              <rect x="1185" y="230" width="50" height="60" />
+              <polygon points="1250,210 1256,210 1262,290 1244,290" />
+              <rect x="1275" y="245" width="32" height="45" />
+              <rect x="1320" y="235" width="45" height="55" />
+              <rect x="1375" y="265" width="30" height="25" />
+              <polygon points="1420,220 1425,220 1428,290 1417,290" />
+              <rect x="1440" y="270" width="25" height="20" />
+              <polygon points="1480,250 1487,245 1495,250 1495,290 1480,290" />
+              <rect x="1510" y="275" width="20" height="15" />
+            </g>
+          </svg>
+        </div>
         
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="max-w-5xl mx-auto text-center space-y-8 animate-fade-in">
