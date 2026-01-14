@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&family=Share+Tech+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,35 +6,35 @@
 
 @layer base {
   :root {
-    --background: 270 30% 8%;
-    --foreground: 0 0% 95%;
+    --background: 38 42% 88%;
+    --foreground: 0 0% 16%;
 
-    --card: 270 20% 12%;
-    --card-foreground: 0 0% 95%;
+    --card: 38 42% 92%;
+    --card-foreground: 0 0% 16%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 206 75% 15%;
+    --popover-foreground: 0 0% 16%;
 
-    --primary: 0 100% 63%;
-    --primary-foreground: 270 30% 8%;
+    --primary: 5 79% 52%;
+    --primary-foreground: 38 42% 88%;
 
-    --secondary: 180 100% 50%;
-    --secondary-foreground: 270 30% 8%;
+    --secondary: 0 0% 16%;
+    --secondary-foreground: 38 42% 88%;
 
-    --muted: 270 20% 15%;
-    --muted-foreground: 0 0% 70%;
+    --muted: 38 25% 80%;
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 270 100% 60%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 5 79% 52%;
+    --accent-foreground: 38 42% 88%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 5 79% 52%;
+    --destructive-foreground: 38 42% 88%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 0 100% 63%;
+    --border: 38 30% 85%;
+    --input: 38 30% 85%;
+    --ring: 5 79% 52%;
 
-    --radius: 0.75rem;
+    --radius: 0rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -99,8 +99,8 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: "Rajdhani", sans-serif;
-    background: linear-gradient(135deg, #0a0014 0%, #1a0a2e 50%, #0a0014 100%);
+    font-family: "Roboto", sans-serif;
+    background: #ede3c0;
   }
 
   h1,
@@ -109,111 +109,38 @@
   h4,
   h5,
   h6 {
-    font-family: "Orbitron", sans-serif;
-    font-weight: 900;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.02em;
   }
 }
 
 @layer utilities {
-  .hover-3d {
-    transition: transform 0.5s ease;
-    transform-style: preserve-3d;
+  .synergy-button {
+    border: 1px solid #ede0be;
+    background: transparent;
+    transition: all 0.3s ease;
   }
 
-  .hover-3d:hover {
-    transform: perspective(1000px) rotateY(10deg) rotateX(5deg);
+  .synergy-button:hover {
+    background: #e52d1e;
+    border-color: #e52d1e;
+    color: #ede3c0;
   }
 
-  .glow {
-    box-shadow: 0 0 20px rgba(255, 68, 68, 0.3);
-    transition: box-shadow 0.3s ease;
+  .synergy-card {
+    background: #282828;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
   }
 
-  .glow:hover {
-    box-shadow:
-      0 0 40px rgba(255, 68, 68, 0.6),
-      0 0 60px rgba(255, 68, 68, 0.4);
+  .synergy-text-accent {
+    color: #e52d1e;
   }
 
-  .neon-text {
-    text-shadow:
-      0 0 10px currentColor,
-      0 0 20px rgba(255, 68, 68, 0.4);
-  }
-
-  .cyber-border {
-    position: relative;
-    border: 2px solid transparent;
-    background:
-      linear-gradient(#0a0014, #0a0014) padding-box,
-      linear-gradient(45deg, #ff4444, #00ffff, #ff4444) border-box;
-    border-radius: 8px;
-  }
-
-  .cyber-card {
-    background: linear-gradient(
-      135deg,
-      rgba(255, 68, 68, 0.1) 0%,
-      rgba(0, 255, 255, 0.05) 100%
-    );
-    border: 1px solid rgba(255, 68, 68, 0.3);
-    box-shadow:
-      0 0 20px rgba(255, 68, 68, 0.2),
-      inset 0 0 20px rgba(0, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-  }
-
-  .scanline {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .scanline::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(0, 255, 255, 0.8),
-      transparent
-    );
-    animation: scan 3s linear infinite;
-    z-index: 100;
-  }
-
-  @keyframes scan {
-    0% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(100vh);
-    }
-  }
-
-  .scanline::before {
-    animation-duration: 9s;
-  }
-
-  .glitch {
-    animation: glitch 2s infinite;
-  }
-
-  @keyframes glitch {
-    0%,
-    100% {
-      transform: translate(0);
-    }
-    33% {
-      transform: translate(-2px, 2px);
-    }
-    66% {
-      transform: translate(2px, -2px);
-    }
+  .synergy-bg-dark {
+    background: #282828;
   }
 }

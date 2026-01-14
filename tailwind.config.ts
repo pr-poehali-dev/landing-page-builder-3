@@ -61,6 +61,12 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				synergy: {
+					beige: '#EDE3C0',
+					dark: '#282828',
+					red: '#E52D1E',
+					'beige-border': '#EDE0BE'
 				}
 			},
 			borderRadius: {
@@ -69,9 +75,8 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			fontFamily: {
-				sans: ['Rajdhani', 'sans-serif'],
-				heading: ['Orbitron', 'sans-serif'],
-				mono: ['Share Tech Mono', 'monospace']
+				sans: ['Roboto', 'sans-serif'],
+				heading: ['Roboto', 'sans-serif']
 			},
 			keyframes: {
 				'accordion-down': {
