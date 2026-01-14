@@ -1,41 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&family=Share+Tech+Mono&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 275 85% 13%;
-    --foreground: 0 0% 98%;
+    --background: 270 30% 8%;
+    --foreground: 0 0% 95%;
 
-    --card: 275 70% 19%;
-    --card-foreground: 0 0% 98%;
+    --card: 270 20% 12%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 275 85% 13%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 206 75% 15%;
 
-    --primary: 18 100% 58%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 0 100% 63%;
+    --primary-foreground: 270 30% 8%;
 
-    --secondary: 220 70% 50%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 180 100% 50%;
+    --secondary-foreground: 270 30% 8%;
 
-    --muted: 275 60% 25%;
-    --muted-foreground: 275 20% 75%;
+    --muted: 270 20% 15%;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 45 100% 50%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 270 100% 60%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --success: 142 76% 45%;
-    --success-foreground: 0 0% 100%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 0 100% 63%;
 
-    --border: 275 40% 30%;
-    --input: 275 40% 30%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,217 +99,121 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: "Rajdhani", sans-serif;
+    background: linear-gradient(135deg, #0a0014 0%, #1a0a2e 50%, #0a0014 100%);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Orbitron", sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
   }
 }
 
 @layer utilities {
-  @keyframes icon-float {
-    0%,
-    100% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-8px);
-    }
+  .hover-3d {
+    transition: transform 0.5s ease;
+    transform-style: preserve-3d;
   }
 
-  @keyframes icon-pulse-glow {
-    0%,
-    100% {
-      filter: drop-shadow(0 0 2px hsl(18, 100%, 58%))
-        drop-shadow(0 0 8px hsl(18, 100%, 58%, 0.3));
-    }
-    50% {
-      filter: drop-shadow(0 0 8px hsl(18, 100%, 58%))
-        drop-shadow(0 0 16px hsl(18, 100%, 58%, 0.5));
-    }
+  .hover-3d:hover {
+    transform: perspective(1000px) rotateY(10deg) rotateX(5deg);
   }
 
-  @keyframes icon-spin-slow {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+  .glow {
+    box-shadow: 0 0 20px rgba(255, 68, 68, 0.3);
+    transition: box-shadow 0.3s ease;
   }
 
-  @keyframes icon-bounce-subtle {
-    0%,
-    100% {
-      transform: translateY(0) scale(1);
-    }
-    50% {
-      transform: translateY(-5px) scale(1.05);
-    }
+  .glow:hover {
+    box-shadow:
+      0 0 40px rgba(255, 68, 68, 0.6),
+      0 0 60px rgba(255, 68, 68, 0.4);
   }
 
-  @keyframes icon-shake {
-    0%,
-    100% {
-      transform: translateX(0);
-    }
-    25% {
-      transform: translateX(-3px);
-    }
-    75% {
-      transform: translateX(3px);
-    }
+  .neon-text {
+    text-shadow:
+      0 0 10px currentColor,
+      0 0 20px rgba(255, 68, 68, 0.4);
   }
 
-  @keyframes icon-glow-primary {
-    0%,
-    100% {
-      filter: drop-shadow(0 0 4px hsl(18, 100%, 58%));
-    }
-    50% {
-      filter: drop-shadow(0 0 12px hsl(18, 100%, 58%))
-        drop-shadow(0 0 20px hsl(18, 100%, 58%, 0.6));
-    }
+  .cyber-border {
+    position: relative;
+    border: 2px solid transparent;
+    background:
+      linear-gradient(#0a0014, #0a0014) padding-box,
+      linear-gradient(45deg, #ff4444, #00ffff, #ff4444) border-box;
+    border-radius: 8px;
   }
 
-  @keyframes icon-glow-secondary {
-    0%,
-    100% {
-      filter: drop-shadow(0 0 4px hsl(220, 70%, 50%));
-    }
-    50% {
-      filter: drop-shadow(0 0 12px hsl(220, 70%, 50%))
-        drop-shadow(0 0 20px hsl(220, 70%, 50%, 0.6));
-    }
+  .cyber-card {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 68, 68, 0.1) 0%,
+      rgba(0, 255, 255, 0.05) 100%
+    );
+    border: 1px solid rgba(255, 68, 68, 0.3);
+    box-shadow:
+      0 0 20px rgba(255, 68, 68, 0.2),
+      inset 0 0 20px rgba(0, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
   }
 
-  @keyframes icon-glow-success {
-    0%,
-    100% {
-      filter: drop-shadow(0 0 4px hsl(142, 76%, 45%));
-    }
-    50% {
-      filter: drop-shadow(0 0 12px hsl(142, 76%, 45%))
-        drop-shadow(0 0 20px hsl(142, 76%, 45%, 0.6));
-    }
+  .scanline {
+    position: relative;
+    overflow: hidden;
   }
 
-  @keyframes icon-glow-accent {
-    0%,
-    100% {
-      filter: drop-shadow(0 0 4px hsl(45, 100%, 50%));
-    }
-    50% {
-      filter: drop-shadow(0 0 12px hsl(45, 100%, 50%))
-        drop-shadow(0 0 20px hsl(45, 100%, 50%, 0.6));
-    }
+  .scanline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(0, 255, 255, 0.8),
+      transparent
+    );
+    animation: scan 3s linear infinite;
+    z-index: 100;
   }
 
-  .animate-icon-float {
-    animation: icon-float 3s ease-in-out infinite;
-  }
-
-  .animate-icon-pulse-glow {
-    animation: icon-pulse-glow 2s ease-in-out infinite;
-  }
-
-  .animate-icon-spin-slow {
-    animation: icon-spin-slow 8s linear infinite;
-  }
-
-  .animate-icon-bounce {
-    animation: icon-bounce-subtle 2.5s ease-in-out infinite;
-  }
-
-  .animate-icon-shake {
-    animation: icon-shake 3s ease-in-out infinite;
-  }
-
-  .animate-icon-glow-primary {
-    animation: icon-glow-primary 2s ease-in-out infinite;
-  }
-
-  .animate-icon-glow-secondary {
-    animation: icon-glow-secondary 2s ease-in-out infinite;
-  }
-
-  .animate-icon-glow-success {
-    animation: icon-glow-success 2s ease-in-out infinite;
-  }
-
-  .animate-icon-glow-accent {
-    animation: icon-glow-accent 2s ease-in-out infinite;
-  }
-
-  @keyframes fade-in-up {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
+  @keyframes scan {
+    0% {
       transform: translateY(0);
     }
-  }
-
-  @keyframes fade-in-left {
-    from {
-      opacity: 0;
-      transform: translateX(-30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
+    100% {
+      transform: translateY(100vh);
     }
   }
 
-  @keyframes fade-in-right {
-    from {
-      opacity: 0;
-      transform: translateX(30px);
+  .scanline::before {
+    animation-duration: 9s;
+  }
+
+  .glitch {
+    animation: glitch 2s infinite;
+  }
+
+  @keyframes glitch {
+    0%,
+    100% {
+      transform: translate(0);
     }
-    to {
-      opacity: 1;
-      transform: translateX(0);
+    33% {
+      transform: translate(-2px, 2px);
     }
-  }
-
-  @keyframes scale-in {
-    from {
-      opacity: 0;
-      transform: scale(0.9);
+    66% {
+      transform: translate(2px, -2px);
     }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-
-  .animate-on-scroll {
-    opacity: 0;
-  }
-
-  .animate-on-scroll.visible {
-    animation: fade-in-up 0.6s ease-out forwards;
-  }
-
-  .animate-on-scroll-left {
-    opacity: 0;
-  }
-
-  .animate-on-scroll-left.visible {
-    animation: fade-in-left 0.6s ease-out forwards;
-  }
-
-  .animate-on-scroll-right {
-    opacity: 0;
-  }
-
-  .animate-on-scroll-right.visible {
-    animation: fade-in-right 0.6s ease-out forwards;
-  }
-
-  .animate-on-scroll-scale {
-    opacity: 0;
-  }
-
-  .animate-on-scroll-scale.visible {
-    animation: scale-in 0.6s ease-out forwards;
   }
 }
