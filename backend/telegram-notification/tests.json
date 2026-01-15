@@ -1,13 +1,13 @@
 {
   "tests": [
     {
-      "name": "Test successful notification",
+      "name": "Test successful notification - LIVE TEST",
       "method": "POST",
       "path": "/",
       "body": {
-        "name": "Иван Иванов",
-        "email": "ivan@example.com",
-        "phone": "+7 (999) 123-45-67"
+        "name": "Тестовая Заявка",
+        "email": "test@example.com",
+        "phone": "+7 (999) 888-77-66"
       },
       "expectedStatus": 200,
       "expectedBody": {
