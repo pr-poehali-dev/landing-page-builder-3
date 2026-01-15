@@ -306,9 +306,17 @@ const Index = () => {
               <p className="text-lg text-synergy-dark/80 leading-relaxed mb-6">
                 Единственная офлайн-школа в городе Владивостоке, где преподаватель и студенты создают это событие. 
               </p>
-              <p className="text-xl font-bold text-synergy-red">
+              <p className="text-xl font-bold text-synergy-red mb-6">
                 Это не теория — это практика от тех, кто уже зарабатывает на ИИ.
               </p>
+              <Button 
+                size="lg" 
+                onClick={() => window.open('https://chernikovgpt.ru', '_blank')}
+                className="bg-synergy-red text-synergy-beige hover:bg-synergy-red/90 font-bold uppercase"
+              >
+                <Icon name="ExternalLink" size={20} className="mr-2" />
+                Узнать больше о школе
+              </Button>
             </CardContent>
           </Card>
         </div>
