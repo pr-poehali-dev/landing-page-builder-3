@@ -6,6 +6,7 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Badge } from '@/components/ui/badge';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
+import { useToast } from '@/hooks/use-toast';
 import Icon from '@/components/ui/icon';
 
 interface RegistrationSectionProps {
@@ -17,6 +18,57 @@ const RegistrationSection = ({ seatsLeft, scrollToForm }: RegistrationSectionPro
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', agree: false });
   const [showPrivacy, setShowPrivacy] = useState(false);
   const [showOffer, setShowOffer] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!formData.name || !formData.email || !formData.phone || !formData.agree) {
+      toast({
+        title: 'Ошибка',
+        description: 'Пожалуйста, заполните все поля и примите соглашение',
+        variant: 'destructive',
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('https://functions.poehali.dev/1bd67ebf-4078-4be6-ae31-280ee878794e', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        toast({
+          title: '🎉 Заявка отправлена!',
+          description: 'Мы свяжемся с вами в ближайшее время для подтверждения участия.',
+        });
+        setFormData({ name: '', email: '', phone: '', agree: false });
+      } else {
+        throw new Error(data.error || 'Не удалось отправить заявку');
+      }
+    } catch (error) {
+      toast({
+        title: 'Ошибка отправки',
+        description: error instanceof Error ? error.message : 'Попробуйте позже или свяжитесь с нами по телефону',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <>
@@ -35,7 +87,7 @@ const RegistrationSection = ({ seatsLeft, scrollToForm }: RegistrationSectionPro
           
           <Card className="bg-synergy-dark">
             <CardContent className="p-4 sm:p-6 md:p-8">
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div>
                   <label className="block text-sm font-bold mb-2 text-synergy-beige">Имя *</label>
                   <Input 
@@ -95,9 +147,9 @@ const RegistrationSection = ({ seatsLeft, scrollToForm }: RegistrationSectionPro
                   type="submit" 
                   size="lg" 
                   className="w-full bg-synergy-red text-synergy-beige hover:bg-synergy-red/90 font-bold uppercase text-base sm:text-lg py-5 sm:py-6"
-                  disabled={!formData.name || !formData.email || !formData.phone || !formData.agree}
+                  disabled={!formData.name || !formData.email || !formData.phone || !formData.agree || isSubmitting}
                 >
-                  Купить билет от 1,000 ₽
+                  {isSubmitting ? 'Отправка...' : 'Купить билет от 1,000 ₽'}
                 </Button>
               </form>
             </CardContent>
