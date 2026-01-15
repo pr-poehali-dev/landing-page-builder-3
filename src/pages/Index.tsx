@@ -54,7 +54,7 @@ const Index = () => {
             <div className="mb-8 space-y-2 text-synergy-beige/80">
               <div className="flex items-center justify-center gap-2 text-lg">
                 <Icon name="Calendar" size={20} />
-                <span className="font-semibold">18 апреля 2025, 10:00–18:00</span>
+                <span className="font-semibold">18 апреля 2026, 10:00–18:00</span>
               </div>
               <div className="flex items-center justify-center gap-2 text-lg">
                 <Icon name="MapPin" size={20} />
@@ -427,7 +427,7 @@ const Index = () => {
               },
               {
                 q: 'Можно ли вернуть билет?',
-                a: 'Да, до 10 апреля 2025 года можно вернуть билет и получить полный возврат средств. После этой даты возврат не производится, так как средства уже переданы в благотворительную организацию.'
+                a: 'Да, до 10 апреля 2026 года можно вернуть билет и получить полный возврат средств. После этой даты возврат не производится, так как средства уже переданы в благотворительную организацию.'
               },
               {
                 q: 'Где точно проходит мероприятие?',
@@ -470,7 +470,7 @@ const Index = () => {
       </section>
 
       <footer className="py-8 px-6 bg-synergy-dark text-synergy-beige/60 text-center text-sm">
-        <p>© 2025 Школа «Хакни нейросети» | Владивосток</p>
+        <p>© 2026 Школа «Хакни нейросети» | Владивосток</p>
         <p className="mt-2">Благотворительное мероприятие в поддержку Центра «Живая Надежда»</p>
       </footer>
     </div>
