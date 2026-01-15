@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import NeuralBackground from '@/components/NeuralBackground';
 import HeroSection from '@/components/sections/HeroSection';
 import AboutSection from '@/components/sections/AboutSection';
 import ProgramSection from '@/components/sections/ProgramSection';
@@ -34,6 +35,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-synergy-beige relative">
+      <NeuralBackground />
       <HeroSection seatsLeft={seatsLeft} scrollToForm={scrollToForm} />
       <AboutSection />
       <ProgramSection />
