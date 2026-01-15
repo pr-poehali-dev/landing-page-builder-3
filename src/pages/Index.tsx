@@ -19,6 +19,20 @@ const Index = () => {
     document.title = 'ИИ ШОУ БЕЗ ШИРМЫ | Владивосток';
   }, []);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSeatsLeft((prev) => {
+        if (prev <= 1) {
+          clearInterval(interval);
+          return prev;
+        }
+        return prev - 1;
+      });
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   const scrollToForm = () => {
     document.getElementById('registration')?.scrollIntoView({ behavior: 'smooth' });
   };
