@@ -4,6 +4,7 @@ import NeuralBackground from '@/components/NeuralBackground';
 import HeroSection from '@/components/sections/HeroSection';
 import AboutSection from '@/components/sections/AboutSection';
 import ProgramSection from '@/components/sections/ProgramSection';
+import SpeakersSection from '@/components/sections/SpeakersSection';
 import RegistrationSection from '@/components/sections/RegistrationSection';
 
 const Index = () => {
@@ -39,6 +40,7 @@ const Index = () => {
       <HeroSection seatsLeft={seatsLeft} scrollToForm={scrollToForm} />
       <AboutSection />
       <ProgramSection />
+      <SpeakersSection />
       <RegistrationSection seatsLeft={seatsLeft} scrollToForm={scrollToForm} />
     </div>
   );
