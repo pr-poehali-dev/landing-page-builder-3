@@ -8,7 +8,7 @@ const SpeakersSection = () => {
       name: 'Имя Спикера 1',
       role: 'Должность / Специализация',
       description: 'Краткое описание опыта и достижений спикера. Что он расскажет на мероприятии.',
-      photo: 'https://via.placeholder.com/300x300/1a1a1a/00d4ff?text=Спикер+1',
+      photo: 'https://cdn.poehali.dev/files/freepik__70s-a-medium-shot-of-a-man-riding-a-black-horse-th__67582.png',
       topic: 'Тема выступления'
     },
     {
@@ -16,7 +16,7 @@ const SpeakersSection = () => {
       name: 'Имя Спикера 2',
       role: 'Должность / Специализация',
       description: 'Краткое описание опыта и достижений спикера. Что он расскажет на мероприятии.',
-      photo: 'https://via.placeholder.com/300x300/1a1a1a/a855f7?text=Спикер+2',
+      photo: 'https://cdn.poehali.dev/files/freepik__-__85177.png',
       topic: 'Тема выступления'
     },
     {
@@ -24,7 +24,7 @@ const SpeakersSection = () => {
       name: 'Имя Спикера 3',
       role: 'Должность / Специализация',
       description: 'Краткое описание опыта и достижений спикера. Что он расскажет на мероприятии.',
-      photo: 'https://via.placeholder.com/300x300/1a1a1a/ef4444?text=Спикер+3',
+      photo: 'https://cdn.poehali.dev/files/freepik__-__85176.png',
       topic: 'Тема выступления'
     },
     {
@@ -32,7 +32,7 @@ const SpeakersSection = () => {
       name: 'Имя Спикера 4',
       role: 'Должность / Специализация',
       description: 'Краткое описание опыта и достижений спикера. Что он расскажет на мероприятии.',
-      photo: 'https://via.placeholder.com/300x300/1a1a1a/00d4ff?text=Спикер+4',
+      photo: 'https://cdn.poehali.dev/files/freepik__qweyd-closeup-a-man-smelling-of-gasoline-and-sin-l__16411.png',
       topic: 'Тема выступления'
     },
     {
@@ -40,7 +40,7 @@ const SpeakersSection = () => {
       name: 'Имя Спикера 5',
       role: 'Должность / Специализация',
       description: 'Краткое описание опыта и достижений спикера. Что он расскажет на мероприятии.',
-      photo: 'https://via.placeholder.com/300x300/1a1a1a/a855f7?text=Спикер+5',
+      photo: 'https://cdn.poehali.dev/files/freepik__qweyd-closeup-portrait-of-a-rugged-man-with-thick-__69510.png',
       topic: 'Тема выступления'
     }
   ];
