@@ -35,8 +35,8 @@ const NeuralBackground = () => {
     let animationFrameId: number;
     let nodes: Node[] = [];
     let dataParticles: DataParticle[] = [];
-    const mouseX = -1000;
-    const mouseY = -1000;
+    let mouseX = -1000;
+    let mouseY = -1000;
 
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
