@@ -159,12 +159,11 @@ const ProgramSection = () => {
           </div>
         </div>
       </section>
+    </>
+  );
+};
 
-      <section className="py-16 px-6 bg-synergy-dark relative z-10 animate-on-scroll">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-5xl font-black text-center mb-8 sm:mb-12 text-synergy-beige px-4">
-            ДЛЯ КОГО ЭТО МЕРОПРИЯТИЕ?
-          </h2>
+export default ProgramSection;
           <Accordion type="single" collapsible className="space-y-4 mb-16">
             {[
               {
