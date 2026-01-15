@@ -1,7 +1,6 @@
 import json
 import os
-import urllib.request
-import urllib.parse
+import requests
 from datetime import datetime
 
 
@@ -84,20 +83,13 @@ def handler(event: dict, context) -> dict:
         
         # Отправляем в Telegram
         url = f'https://api.telegram.org/bot{bot_token}/sendMessage'
-        data = {
+        payload = {
             'chat_id': chat_id,
-            'text': message,
-            'parse_mode': 'HTML'
+            'text': message
         }
         
-        req = urllib.request.Request(
-            url,
-            data=json.dumps(data).encode('utf-8'),
-            headers={'Content-Type': 'application/json'}
-        )
-        
-        with urllib.request.urlopen(req) as response:
-            telegram_response = json.loads(response.read().decode('utf-8'))
+        response = requests.post(url, json=payload, timeout=10)
+        telegram_response = response.json()
         
         if not telegram_response.get('ok'):
             return {
@@ -106,7 +98,10 @@ def handler(event: dict, context) -> dict:
                     'Content-Type': 'application/json',
                     'Access-Control-Allow-Origin': '*'
                 },
-                'body': json.dumps({'error': 'Failed to send Telegram message'}),
+                'body': json.dumps({
+                    'error': 'Failed to send Telegram message',
+                    'details': telegram_response.get('description', 'Unknown error')
+                }),
                 'isBase64Encoded': False
             }
         
