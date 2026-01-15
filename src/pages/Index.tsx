@@ -13,7 +13,7 @@ const Index = () => {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', agree: false });
 
   useEffect(() => {
-    document.title = '6 AI-Инструментов для Продуктивности';
+    document.title = 'ИИ ШОУ БЕЗ ШИРМЫ | Владивосток';
   }, []);
 
   const scrollToForm = () => {
@@ -25,76 +25,91 @@ const Index = () => {
       <section className="relative bg-synergy-dark text-synergy-beige py-20 px-6 overflow-hidden z-10">
         <div className="max-w-5xl mx-auto relative z-10 animate-fade-in">
           <div className="text-center mb-8">
+            <div className="inline-block mb-4 px-4 py-2 bg-synergy-red text-synergy-beige font-bold text-sm uppercase">
+              Благотворительное мероприятие
+            </div>
             <h1 className="font-heading text-4xl md:text-6xl font-black mb-6 leading-tight text-synergy-beige">
-              6 AI-ИНСТРУМЕНТОВ, КОТОРЫЕ СДЕЛАЮТ ТЕБЯ В 3 РАЗА ПРОДУКТИВНЕЕ
+              ИИ ШОУ БЕЗ ШИРМЫ
             </h1>
-            <p className="text-xl md:text-2xl font-semibold mb-8 text-synergy-beige/90">
-              Конференция про инструменты, которые реально зарабатывают деньги: Kimi AI, HeyGen, NotebookLM, Freepik, Perplexity и n8n
+            <p className="text-xl md:text-2xl font-semibold mb-8 text-synergy-beige/90 max-w-3xl mx-auto">
+              Не красивые истории, а реальные результаты. Увидишь, как ИИ работает в реальности, и сам попробуешь инструменты, которые твои конкуренты уже используют
             </p>
+            <div className="mb-8 space-y-2 text-synergy-beige/80">
+              <div className="flex items-center justify-center gap-2 text-lg">
+                <Icon name="Calendar" size={20} />
+                <span className="font-semibold">25 января 2025, 11:00–18:00</span>
+              </div>
+              <div className="flex items-center justify-center gap-2 text-lg">
+                <Icon name="MapPin" size={20} />
+                <span className="font-semibold">Владивосток</span>
+              </div>
+            </div>
             <Button 
               size="lg" 
               onClick={scrollToForm}
               variant="outline"
-              className="text-lg px-8 py-6 h-auto font-bold"
+              className="text-lg px-8 py-6 h-auto font-bold mb-4"
             >
-              <span className="font-black uppercase">ЗАБРОНИРОВАТЬ МЕСТО</span>
+              <span className="font-black uppercase">Купить билет</span>
             </Button>
             <div className="mt-6 flex items-center justify-center gap-4 flex-wrap">
-              <Badge className="text-base px-4 py-2 bg-synergy-dark text-synergy-beige">
+              <Badge className="text-base px-4 py-2 bg-synergy-dark border-2 border-synergy-beige text-synergy-beige">
                 Осталось {seatsLeft} мест из 100
               </Badge>
               <Badge className="text-base px-4 py-2 bg-synergy-red text-synergy-beige">
                 Цена: 2,500 ₽
               </Badge>
             </div>
+            <p className="mt-6 text-synergy-beige/70 text-sm max-w-2xl mx-auto">
+              100% средств передаются в Центр «Ковчег надежды» — помощь одиноким матерям в Приморье
+            </p>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-synergy-beige relative z-10">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            {[
-              { value: '500+', label: 'Студентов обучены' },
-              { value: '4.9/5', label: 'Из 2,140 отзывов' },
-              { value: '+150%', label: 'Доход за 12 месяцев' }
-            ].map((metric, idx) => (
-              <div key={idx} className="animate-fade-in group cursor-pointer" style={{ animationDelay: `${idx * 0.1}s` }}>
-                <div className="flex justify-center mb-4">
-                  <AiIcon type={['brain', 'shield', 'rocket'][idx] as any} className="w-16 h-16" />
-                </div>
-                <div className="text-5xl font-heading font-black text-synergy-dark mb-2">{metric.value}</div>
-                <div className="text-lg text-synergy-dark font-semibold">{metric.label}</div>
-              </div>
-            ))}
+      <section className="py-16 bg-synergy-red relative z-10">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <Icon name="Heart" size={48} className="mx-auto mb-6 text-synergy-beige" />
+          <h2 className="font-heading text-3xl md:text-5xl font-black mb-6 text-synergy-beige">
+            ЭТО БЛАГОТВОРИТЕЛЬНОЕ МЕРОПРИЯТИЕ
+          </h2>
+          <p className="text-lg md:text-xl text-synergy-beige/90 mb-8 leading-relaxed">
+            Все собранные средства полностью передаются в <span className="font-bold">Центр «Ковчег надежды»</span> — организацию, которая помогает одиноким матерям в Приморье.
+          </p>
+          <div className="bg-synergy-dark p-8 text-synergy-beige">
+            <h3 className="font-heading text-2xl font-black mb-4 text-synergy-beige">О центре «Ковчег надежды»</h3>
+            <p className="text-synergy-beige/90 leading-relaxed mb-4">
+              Центр работает с одинокими матерями в Приморье, предоставляя психологическую поддержку, обучение, помощь в трудоустройстве и создании семейного благополучия.
+            </p>
+            <p className="text-synergy-beige font-semibold">
+              Для девушек, оставшихся без поддержки близких, это часто единственная возможность остаться мамой для своего ребенка и обеспечить ему достойное будущее.
+            </p>
           </div>
+          <p className="mt-8 text-synergy-beige text-lg font-bold">
+            Ты не просто посещаешь мероприятие — ты помогаешь конкретным людям, которые в этом нуждаются прямо сейчас.
+          </p>
         </div>
       </section>
 
       <section className="py-16 px-6 bg-synergy-beige relative z-10">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="font-heading text-3xl md:text-4xl font-black text-center mb-12 text-synergy-dark">
-            РЕЗУЛЬТАТЫ СТУДЕНТОВ
+        <div className="max-w-5xl mx-auto">
+          <h2 className="font-heading text-3xl md:text-5xl font-black text-center mb-6 text-synergy-dark">
+            ИИ БЕЗ ШИРМЫ
           </h2>
+          <p className="text-center text-xl text-synergy-dark/80 mb-12 max-w-3xl mx-auto leading-relaxed">
+            Мы не скрываем, как работают нейросети. Мы показываем технологию в действии, разбираем конкретные кейсы и даём тебе инструменты, которые работают прямо сейчас.
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { name: 'Саша К.', role: 'YouTube-блогер', quote: 'Заработал 100K на первый месяц', result: 'Рост с 5K на 500K просмотров' },
-              { name: 'Мария В.', role: 'Фрилансер', quote: 'Заказов в 2 раза больше', result: '+120,000 ₽/месяц за 6 месяцев' },
-              { name: 'Петя Л.', role: 'E-commerce', quote: 'Автоматизировал 80% рутины', result: '40 часов свободных + +300% продажи' }
-            ].map((review, idx) => (
-              <Card key={idx} className="bg-synergy-dark text-synergy-beige hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-synergy-beige/10 flex items-center justify-center text-2xl">
-                      👤
-                    </div>
-                    <div>
-                      <div className="font-bold text-synergy-beige">{review.name}</div>
-                      <div className="text-sm text-synergy-beige/70">{review.role}</div>
-                    </div>
-                  </div>
-                  <div className="text-lg font-bold text-synergy-red mb-2">"{review.quote}"</div>
-                  <div className="text-sm text-synergy-beige/90 font-semibold">{review.result}</div>
+              { icon: 'Lightbulb', title: 'Практика', text: 'Не теория, а живые примеры и реальные кейсы' },
+              { icon: 'TrendingUp', title: 'Результаты', text: 'От людей, которые зарабатывают на ИИ сейчас' },
+              { icon: 'Users', title: 'Сообщество', text: 'Нетворкинг с предпринимателями и экспертами' }
+            ].map((item, idx) => (
+              <Card key={idx} className="bg-synergy-dark text-synergy-beige text-center">
+                <CardContent className="p-8">
+                  <Icon name={item.icon as any} size={48} className="mx-auto mb-4 text-synergy-red" />
+                  <h3 className="font-heading text-xl font-black mb-3 text-synergy-beige">{item.title}</h3>
+                  <p className="text-synergy-beige/80">{item.text}</p>
                 </CardContent>
               </Card>
             ))}
@@ -102,95 +117,112 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-16 px-6 bg-synergy-beige relative z-10">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="font-heading text-3xl md:text-4xl font-black text-center mb-12 text-synergy-dark">
-            ТВОИ ПРОБЛЕМЫ
-          </h2>
-          <div className="space-y-6">
-            {[
-              { title: 'ТЫ ИСПОЛЬЗУЕШЬ ТОЛЬКО CHATGPT', description: 'Специальные инструменты экономят часы работы. HeyGen вместо съемки (4ч→30мин), Freepik вместо Photoshop (3ч→5мин)' },
-              { title: 'ТЫ НЕ ЗНАЕШЬ О СПЕЦИАЛЬНЫХ ИНСТРУМЕНТАХ', description: 'Не знаешь: Kimi AI (15x больше текста), Perplexity (поиск+источники), HeyGen (видео за 2мин), n8n (автоматизация), NotebookLM (подкасты)' },
-              { title: 'У ТЕБЯ НЕТ СИСТЕМЫ', description: 'Результаты случайны (20K, 50K, 15K в разные месяцы). Нужна система для стабильного дохода' }
-            ].map((problem, idx) => (
-              <Card key={idx} className="bg-synergy-dark text-synergy-beige border-l-4 border-l-synergy-red hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0">
-                      <AiIcon type={['shield', 'search', 'automation'][idx] as any} className="w-16 h-16" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="font-heading text-xl font-black text-synergy-red mb-3">{problem.title}</h3>
-                      <p className="text-synergy-beige/90">{problem.description}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 px-6 bg-synergy-beige relative z-10">
+      <section className="py-16 px-6 bg-synergy-dark relative z-10">
         <div className="max-w-6xl mx-auto">
-          <h2 className="font-heading text-3xl md:text-4xl font-black text-center mb-4 text-synergy-dark">
-            6 AI-ИНСТРУМЕНТОВ ДЛЯ ТЕБЯ
+          <h2 className="font-heading text-3xl md:text-5xl font-black text-center mb-12 text-synergy-beige">
+            ПРОГРАММА МЕРОПРИЯТИЯ
           </h2>
-          <p className="text-center text-lg text-synergy-dark/70 mb-12">Которые изменят твою работу навсегда</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { name: 'KIMI AI', icon: '🔍', what: 'Анализирует 2млн символов за 5сек', benefit: '2ч анализа → 5сек в Kimi', saving: '8 часов/неделю' },
-              { name: 'HEYGEN', icon: '🎬', what: 'Видео с аватаром за 2 минуты', benefit: '30+ видео вместо 5 в месяц', saving: '40 часов/месяц' },
-              { name: 'NOTEBOOKLM', icon: '🎙️', what: 'Подкаст из любого контента', benefit: 'Превращает PDF/контент в подкаст', saving: '20 часов/месяц' },
-              { name: 'FREEPIK', icon: '🎨', what: 'AI-дизайн и картинки за секунды', benefit: 'Дизайнер не нужен', saving: '15 часов/месяц' },
-              { name: 'PERPLEXITY', icon: '🔎', what: 'Поиск + источники + анализ', benefit: 'Google с источниками', saving: '10 часов/месяц' },
-              { name: 'N8N', icon: '⚙️', what: 'Автоматизация всех процессов', benefit: 'Автопилот для бизнеса', saving: '30 часов/месяц' }
-            ].map((tool, idx) => (
-              <Card key={idx} className="bg-synergy-dark text-synergy-beige hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="text-4xl mb-4 text-center">{tool.icon}</div>
-                  <h3 className="font-heading text-xl font-black mb-3 text-center text-synergy-beige">{tool.name}</h3>
-                  <div className="space-y-3 text-sm">
-                    <div>
-                      <span className="font-bold text-synergy-red">Что:</span>
-                      <p className="text-synergy-beige/90">{tool.what}</p>
-                    </div>
-                    <div>
-                      <span className="font-bold text-synergy-red">Польза:</span>
-                      <p className="text-synergy-beige/90">{tool.benefit}</p>
-                    </div>
-                    <div className="pt-2 border-t border-synergy-beige/20">
-                      <Badge className="bg-synergy-red text-synergy-beige text-xs">{tool.saving}</Badge>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="mb-8 flex flex-wrap justify-center gap-4 text-synergy-beige/90">
+            <div className="flex items-center gap-2">
+              <Icon name="Clock" size={20} />
+              <span className="font-semibold">Сбор гостей: 10:30</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Icon name="PlayCircle" size={20} />
+              <span className="font-semibold">Начало: 11:00</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Icon name="Coffee" size={20} />
+              <span className="font-semibold">Обед: 14:00–15:00</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Icon name="Clock" size={20} />
+              <span className="font-semibold">Конец: 18:00</span>
+            </div>
           </div>
-        </div>
-      </section>
-
-      <section className="py-16 px-6 bg-synergy-dark text-synergy-beige relative z-10">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="font-heading text-3xl md:text-4xl font-black text-center mb-12 text-synergy-beige">
-            ПРОГРАММА КОНФЕРЕНЦИИ
-          </h2>
+          
           <div className="space-y-4">
             {[
-              { time: '10:00-11:00', title: 'KIMI AI: Анализ миллионов символов', content: 'Как заменить 2 часа анализа на 5 секунд. Обработка документов, конкурентов, рынков' },
-              { time: '11:00-12:00', title: 'HEYGEN: Видео без камеры', content: 'Создание видео с аватаром за 2 минуты. 30+ видео в месяц вместо 5' },
-              { time: '12:00-13:00', title: 'NOTEBOOKLM: Подкасты из всего', content: 'Превращаем PDF, статьи, контент в подкасты за минуты' },
-              { time: '14:00-15:00', title: 'FREEPIK: AI-дизайн', content: 'Создание дизайна и картинок за секунды. Экономия на дизайнере' },
-              { time: '15:00-16:00', title: 'PERPLEXITY: Умный поиск', content: 'Поиск + источники + анализ. Замена Google с проверенными данными' },
-              { time: '16:00-17:30', title: 'N8N: Автоматизация всего', content: 'Автопилот для бизнеса. Связываем все инструменты в единую систему' }
-            ].map((session, idx) => (
-              <Card key={idx} className="bg-synergy-beige text-synergy-dark hover:shadow-xl transition-all duration-300">
+              {
+                time: '10:50',
+                title: 'Вступление ведущего',
+                desc: 'Приветствие и начало события'
+              },
+              {
+                time: '11:00–11:30',
+                title: 'Блок 1: Почему ИИ важен для современного человека и бизнеса',
+                desc: 'Почему ИИ — это не будущее, а настоящее? Как он меняет экономику, профессии и возможности заработка? За 30 минут ты поймёшь, почему твой конкурент уже зарабатывает больше.',
+                highlight: true
+              },
+              {
+                time: '11:30–12:00',
+                title: 'Блок 2: Perplexity — Сбор и анализ данных',
+                desc: 'Практический разбор инструмента, который экономит часы на исследованиях. Мы покажем, как собирать, анализировать и структурировать данные для бизнеса, маркетинга и продаж.',
+                highlight: true
+              },
+              {
+                time: '12:00–12:30',
+                title: 'Блок 3: Презентации через KIMI',
+                desc: 'Как создавать охуительные слайды. Забудь о скучных презентациях — нейросеть помогает создавать визуально красивые, убедительные и продающие презентации за минуты.',
+                highlight: true
+              },
+              {
+                time: '12:30–14:00',
+                title: 'Блок 4: Нейро-фотосессия + видео',
+                desc: 'Помни себя не таким, как ты есть. Помни себя таким, каким тебя видит ИИ. Интерактивный блок, где каждый может пройти нейро-фотосессию и снять видео с помощью искусственного интеллекта.',
+                highlight: true
+              },
+              {
+                time: '14:00–15:00',
+                title: 'Обед',
+                desc: 'Перерыв, нетворкинг, общение'
+              },
+              {
+                time: '15:00–16:00',
+                title: 'Блок 5: Разбор бизнеса — 3 ниши, 3 истории',
+                desc: 'Три предпринимателя, три разные ниши, один инструмент — ИИ. Как они удвоили свой доход, какие ошибки совершали, что сработало? Конкретные цифры, конкретные стратегии, конкретные результаты.',
+                highlight: true
+              },
+              {
+                time: '16:00–16:15',
+                title: 'Блок 6: Кейс от школы «Хакни нейросети»',
+                desc: 'Живой пример того, как наши студенты применяют ИИ в своих проектах. История успеха от Цибульского — от идеи до результата.',
+                highlight: true
+              },
+              {
+                time: '16:15–16:30',
+                title: 'Блок 7: Видео о цифровых аватарах от Hey Gen',
+                desc: 'Мировая звезда технологий показывает будущее. Как создавать персонажей и аватары, которые работают вместо тебя?',
+                highlight: true
+              },
+              {
+                time: '16:30–17:00',
+                title: 'Блок 8: White Coding — Создание сайтов через ИИ',
+                desc: 'Не нужно учиться кодировать 6 месяцев. Покажем, как создавать рабочие сайты с помощью нейросетей за часы вместо недель.',
+                highlight: true
+              },
+              {
+                time: '17:00–18:00',
+                title: 'Блок 9: ФИНАЛ',
+                desc: '🎁 Розыгрыши призов от спонсоров | 💚 Благотворительный перевод | 📸 Совместное фото',
+                highlight: true
+              }
+            ].map((block, idx) => (
+              <Card key={idx} className={`${block.highlight ? 'bg-synergy-beige text-synergy-dark border-l-4 border-l-synergy-red' : 'bg-synergy-dark/50 text-synergy-beige'}`}>
                 <CardContent className="p-6">
-                  <div className="flex flex-col md:flex-row md:items-center gap-4">
-                    <Badge className="bg-synergy-red text-synergy-beige text-sm w-fit">{session.time}</Badge>
+                  <div className="flex flex-col md:flex-row md:items-start gap-4">
+                    <div className="flex-shrink-0">
+                      <Badge className={`${block.highlight ? 'bg-synergy-red text-synergy-beige' : 'bg-synergy-beige/20 text-synergy-beige'} px-3 py-1 font-mono font-bold`}>
+                        {block.time}
+                      </Badge>
+                    </div>
                     <div className="flex-1">
-                      <h3 className="font-heading text-lg font-black mb-2 text-synergy-dark">{session.title}</h3>
-                      <p className="text-synergy-dark/80">{session.content}</p>
+                      <h3 className={`font-heading text-lg md:text-xl font-black mb-2 ${block.highlight ? 'text-synergy-dark' : 'text-synergy-beige'}`}>
+                        {block.title}
+                      </h3>
+                      <p className={`${block.highlight ? 'text-synergy-dark/80' : 'text-synergy-beige/80'} leading-relaxed`}>
+                        {block.desc}
+                      </p>
                     </div>
                   </div>
                 </CardContent>
@@ -201,23 +233,183 @@ const Index = () => {
       </section>
 
       <section className="py-16 px-6 bg-synergy-beige relative z-10">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="font-heading text-3xl md:text-5xl font-black text-center mb-12 text-synergy-dark">
+            ЗАЧЕМ ИДТИ НА ЭТО МЕРОПРИЯТИЕ?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              { 
+                icon: 'Zap', 
+                title: 'Практика, а не теория', 
+                desc: 'Все блоки с живыми примерами и инструментами, которые можно использовать сразу' 
+              },
+              { 
+                icon: 'TrendingUp', 
+                title: 'От людей, которые зарабатывают', 
+                desc: 'Кейсы успеха, которые работают сейчас, а не истории из учебников' 
+              },
+              { 
+                icon: 'Heart', 
+                title: 'Помощь реальным людям', 
+                desc: 'Твой билет помогает матерям в Приморье через Центр «Ковчег надежды»' 
+              },
+              { 
+                icon: 'Users', 
+                title: 'Сетевое взаимодействие', 
+                desc: 'Встреча с предпринимателями, студентами и экспертами из твоего города' 
+              },
+              { 
+                icon: 'Rocket', 
+                title: 'Уникальные инструменты', 
+                desc: 'Узнаешь про сервисы, которые увеличивают доход в 2 раза' 
+              },
+              { 
+                icon: 'Target', 
+                title: 'Реальные результаты', 
+                desc: 'Конкретные цифры, конкретные стратегии, конкретные инструменты' 
+              }
+            ].map((reason, idx) => (
+              <Card key={idx} className="bg-synergy-dark text-synergy-beige">
+                <CardContent className="p-6">
+                  <Icon name={reason.icon as any} size={40} className="mb-4 text-synergy-red" />
+                  <h3 className="font-heading text-xl font-black mb-2 text-synergy-beige">{reason.title}</h3>
+                  <p className="text-synergy-beige/80">{reason.desc}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 px-6 bg-synergy-dark relative z-10">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="font-heading text-3xl md:text-5xl font-black mb-6 text-synergy-beige">
+            ОБ ОРГАНИЗАТОРАХ
+          </h2>
+          <Card className="bg-synergy-beige text-synergy-dark">
+            <CardContent className="p-8">
+              <h3 className="font-heading text-2xl md:text-3xl font-black mb-4 text-synergy-dark">
+                Школа «Хакни нейросети»
+              </h3>
+              <p className="text-lg text-synergy-dark/80 leading-relaxed mb-6">
+                Единственная офлайн-школа в городе Владивостоке, где преподаватель и студенты создают это событие. 
+              </p>
+              <p className="text-xl font-bold text-synergy-red">
+                Это не теория — это практика от тех, кто уже зарабатывает на ИИ.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      <section id="registration" className="py-16 px-6 bg-synergy-beige relative z-10">
+        <div className="max-w-2xl mx-auto">
+          <h2 className="font-heading text-3xl md:text-5xl font-black text-center mb-6 text-synergy-dark">
+            ЗАБРОНИРОВАТЬ МЕСТО
+          </h2>
+          <div className="text-center mb-8">
+            <Badge className="text-lg px-6 py-3 bg-synergy-red text-synergy-beige mb-4">
+              Осталось {seatsLeft} мест из 100
+            </Badge>
+            <p className="text-synergy-dark/70 mb-2">Стоимость билета: <span className="font-bold text-2xl text-synergy-red">2,500 ₽</span></p>
+            <p className="text-synergy-dark/60 text-sm">100% средств передаются в «Ковчег надежды»</p>
+          </div>
+          
+          <Card className="bg-synergy-dark">
+            <CardContent className="p-8">
+              <form className="space-y-6">
+                <div>
+                  <label className="block text-sm font-bold mb-2 text-synergy-beige">Имя *</label>
+                  <Input 
+                    placeholder="Введите ваше имя" 
+                    value={formData.name}
+                    onChange={(e) => setFormData({...formData, name: e.target.value})}
+                    className="bg-synergy-beige text-synergy-dark border-synergy-beige-border"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-bold mb-2 text-synergy-beige">Email *</label>
+                  <Input 
+                    type="email" 
+                    placeholder="your@email.com" 
+                    value={formData.email}
+                    onChange={(e) => setFormData({...formData, email: e.target.value})}
+                    className="bg-synergy-beige text-synergy-dark border-synergy-beige-border"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-bold mb-2 text-synergy-beige">Телефон *</label>
+                  <Input 
+                    type="tel" 
+                    placeholder="+7 (___) ___-__-__" 
+                    value={formData.phone}
+                    onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                    className="bg-synergy-beige text-synergy-dark border-synergy-beige-border"
+                  />
+                </div>
+                <div className="flex items-start gap-3">
+                  <Checkbox 
+                    id="agree" 
+                    checked={formData.agree}
+                    onCheckedChange={(checked) => setFormData({...formData, agree: checked as boolean})}
+                    className="border-synergy-beige"
+                  />
+                  <label htmlFor="agree" className="text-sm text-synergy-beige/80 leading-relaxed cursor-pointer">
+                    Я согласен на обработку персональных данных и понимаю, что все средства передаются в благотворительную организацию
+                  </label>
+                </div>
+                <Button 
+                  type="submit" 
+                  size="lg" 
+                  className="w-full bg-synergy-red text-synergy-beige hover:bg-synergy-red/90 font-bold uppercase text-lg py-6"
+                  disabled={!formData.name || !formData.email || !formData.phone || !formData.agree}
+                >
+                  Купить билет за 2,500 ₽
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      <section className="py-16 px-6 bg-synergy-dark relative z-10">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-heading text-3xl md:text-4xl font-black text-center mb-12 text-synergy-dark">
-            ВОПРОСЫ И ОТВЕТЫ
+          <h2 className="font-heading text-3xl md:text-4xl font-black text-center mb-8 text-synergy-beige">
+            ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ
           </h2>
           <Accordion type="single" collapsible className="space-y-4">
             {[
-              { q: 'Нужен ли опыт работы с AI?', a: 'Нет, мы начинаем с нуля. Покажем каждый инструмент пошагово' },
-              { q: 'Будут ли записи?', a: 'Да, все участники получат записи на 7 дней' },
-              { q: 'Что если не смогу прийти?', a: 'Вернём деньги или перенесём на следующую конференцию' },
-              { q: 'Сколько времени займёт обучение?', a: '7.5 часов (с перерывами). Один день инвестиций' },
-              { q: 'Подходит ли для моей ниши?', a: 'Да. Инструменты универсальны: бизнес, фриланс, контент, e-commerce' }
+              {
+                q: 'Куда идут деньги?',
+                a: '100% средств от продажи билетов полностью передаются в Центр «Ковчег надежды» — организацию, которая помогает одиноким матерям в Приморье. Это благотворительное мероприятие.'
+              },
+              {
+                q: 'Нужен ли опыт работы с ИИ?',
+                a: 'Нет, мероприятие подходит для всех уровней. Мы покажем инструменты в действии и объясним, как их использовать, даже если ты никогда не работал с нейросетями.'
+              },
+              {
+                q: 'Что я получу на мероприятии?',
+                a: 'Практические знания о 8+ ИИ-инструментах, живые кейсы от предпринимателей, нетворкинг, нейро-фотосессию, шанс выиграть призы от спонсоров и осознание, что помог реальным людям.'
+              },
+              {
+                q: 'Можно ли вернуть билет?',
+                a: 'Да, до 20 января 2025 года можно вернуть билет и получить полный возврат средств. После этой даты возврат не производится, так как средства уже переданы в благотворительную организацию.'
+              },
+              {
+                q: 'Где точно проходит мероприятие?',
+                a: 'Мероприятие проходит во Владивостоке. Точный адрес и схема проезда будут отправлены на email после покупки билета.'
+              },
+              {
+                q: 'Будет ли запись мероприятия?',
+                a: 'Нет, это живое мероприятие с интерактивными блоками и нейро-фотосессией. Запись не передаст всю атмосферу и практику.'
+              }
             ].map((faq, idx) => (
-              <AccordionItem key={idx} value={`item-${idx}`} className="bg-synergy-dark text-synergy-beige px-6">
-                <AccordionTrigger className="font-bold text-synergy-beige hover:text-synergy-red">
+              <AccordionItem key={idx} value={`item-${idx}`} className="bg-synergy-beige border-none">
+                <AccordionTrigger className="px-6 py-4 text-left font-heading font-bold text-synergy-dark hover:text-synergy-red">
                   {faq.q}
                 </AccordionTrigger>
-                <AccordionContent className="text-synergy-beige/90">
+                <AccordionContent className="px-6 pb-4 text-synergy-dark/80 leading-relaxed">
                   {faq.a}
                 </AccordionContent>
               </AccordionItem>
@@ -226,85 +418,27 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="registration" className="py-16 px-6 bg-synergy-dark text-synergy-beige relative z-10">
-        <div className="max-w-2xl mx-auto">
-          <h2 className="font-heading text-3xl md:text-4xl font-black text-center mb-4 text-synergy-beige">
-            ЗАБРОНИРОВАТЬ МЕСТО
+      <section className="py-12 px-6 bg-synergy-red relative z-10">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="font-heading text-3xl md:text-4xl font-black mb-4 text-synergy-beige">
+            НЕ УПУСТИ ВОЗМОЖНОСТЬ
           </h2>
-          <p className="text-center mb-8 text-synergy-beige/90">Осталось {seatsLeft} мест из 100</p>
-          <Card className="bg-synergy-beige text-synergy-dark">
-            <CardContent className="p-8">
-              <div className="space-y-6">
-                <div>
-                  <label className="block font-bold mb-2 text-synergy-dark">Имя</label>
-                  <Input 
-                    placeholder="Ваше имя"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="bg-white border-synergy-dark/20"
-                  />
-                </div>
-                <div>
-                  <label className="block font-bold mb-2 text-synergy-dark">Email</label>
-                  <Input 
-                    type="email"
-                    placeholder="your@email.com"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="bg-white border-synergy-dark/20"
-                  />
-                </div>
-                <div>
-                  <label className="block font-bold mb-2 text-synergy-dark">Телефон</label>
-                  <Input 
-                    type="tel"
-                    placeholder="+7 (999) 123-45-67"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="bg-white border-synergy-dark/20"
-                  />
-                </div>
-                <div className="flex items-start gap-3">
-                  <Checkbox 
-                    checked={formData.agree}
-                    onCheckedChange={(checked) => setFormData({ ...formData, agree: checked as boolean })}
-                  />
-                  <label className="text-sm text-synergy-dark/80">
-                    Я согласен с обработкой персональных данных и получением информационных рассылок
-                  </label>
-                </div>
-                <Button 
-                  size="lg" 
-                  className="w-full bg-synergy-red text-synergy-beige hover:bg-synergy-red/90 font-bold uppercase"
-                  disabled={!formData.name || !formData.email || !formData.phone || !formData.agree}
-                >
-                  ОПЛАТИТЬ 2,500 ₽
-                </Button>
-                <p className="text-center text-sm text-synergy-dark/70">
-                  После оплаты вы получите письмо с деталями конференции
-                </p>
-              </div>
-            </CardContent>
-          </Card>
+          <p className="text-lg md:text-xl text-synergy-beige/90 mb-8">
+            Всего {seatsLeft} мест из 100. Присоединяйся к тем, кто уже понял, что ИИ — это не будущее, а настоящее.
+          </p>
+          <Button 
+            size="lg" 
+            onClick={scrollToForm}
+            className="bg-synergy-dark text-synergy-beige hover:bg-synergy-dark/90 font-bold uppercase text-lg px-12 py-6"
+          >
+            Купить билет сейчас
+          </Button>
         </div>
       </section>
 
-      <footer className="py-12 px-6 bg-synergy-beige text-synergy-dark relative z-10">
-        <div className="max-w-6xl mx-auto text-center">
-          <div className="mb-8">
-            <h3 className="font-heading text-2xl font-black mb-4 text-synergy-dark">SYNERGY EMBA</h3>
-            <p className="text-synergy-dark/80">Трансформируем профессионалов через инновационное образование</p>
-          </div>
-          <div className="flex flex-wrap justify-center gap-8 mb-8">
-            <a href="#" className="text-synergy-dark hover:text-synergy-red transition-colors">О нас</a>
-            <a href="#" className="text-synergy-dark hover:text-synergy-red transition-colors">Контакты</a>
-            <a href="#" className="text-synergy-dark hover:text-synergy-red transition-colors">Политика конфиденциальности</a>
-            <a href="#" className="text-synergy-dark hover:text-synergy-red transition-colors">Договор оферты</a>
-          </div>
-          <div className="text-sm text-synergy-dark/70">
-            © 2026 Synergy EMBA. Все права защищены.
-          </div>
-        </div>
+      <footer className="py-8 px-6 bg-synergy-dark text-synergy-beige/60 text-center text-sm">
+        <p>© 2025 Школа «Хакни нейросети» | Владивосток</p>
+        <p className="mt-2">Благотворительное мероприятие в поддержку Центра «Ковчег надежды»</p>
       </footer>
     </div>
   );
