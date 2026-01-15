@@ -244,7 +244,11 @@ const Index = () => {
                 highlight: true
               }
             ].map((block, idx) => (
-              <Card key={idx} className={`${block.highlight ? 'bg-synergy-beige text-synergy-dark border-l-4 border-l-synergy-red' : 'bg-synergy-dark/50 text-synergy-beige'}`}>
+              <Card 
+                key={idx} 
+                className={`${block.highlight ? 'bg-synergy-beige text-synergy-dark border-l-4 border-l-synergy-red' : 'bg-synergy-dark/50 text-synergy-beige'} animate-on-scroll`}
+                style={{ transitionDelay: `${idx * 0.08}s` }}
+              >
                 <CardContent className="p-6">
                   <div className="flex flex-col md:flex-row md:items-start gap-4">
                     <div className="flex-shrink-0 flex flex-col items-center gap-3">
