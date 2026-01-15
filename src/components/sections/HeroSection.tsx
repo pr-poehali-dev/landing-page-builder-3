@@ -31,13 +31,18 @@ const HeroSection = ({ seatsLeft, scrollToForm }: HeroSectionProps) => {
               <span className="font-semibold">Владивосток</span>
             </div>
           </div>
-          <Button 
-            size="lg" 
-            onClick={scrollToForm}
-            className="text-lg px-8 py-6 h-auto font-bold mb-4 bg-synergy-red text-synergy-beige hover:bg-synergy-red/90 border-2 border-synergy-red hover:border-synergy-red/90"
-          >
-            <span className="font-black uppercase">Купить билет</span>
-          </Button>
+          <div className="relative inline-block mb-4">
+            <div className="btn-glow-pulse" />
+            <Button 
+              size="lg" 
+              onClick={scrollToForm}
+              className="hero-cta-button relative z-10 text-xl md:text-2xl px-12 py-8 h-auto font-black bg-synergy-red text-synergy-beige hover:bg-synergy-red border-4 border-synergy-beige shadow-2xl"
+            >
+              <Icon name="Zap" size={28} className="mr-3 animate-pulse" />
+              <span className="uppercase tracking-wider">Купить билет</span>
+              <Icon name="ArrowRight" size={28} className="ml-3" />
+            </Button>
+          </div>
           <div className="mt-6 flex items-center justify-center gap-4 flex-wrap">
             <Badge className="text-base px-4 py-2 bg-synergy-dark border-2 border-synergy-beige text-synergy-beige">
               Осталось {seatsLeft} мест из 300
