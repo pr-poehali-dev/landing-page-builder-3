@@ -53,11 +53,11 @@ const Index = () => {
             </p>
             <div className="mb-8 space-y-2 text-synergy-beige/80">
               <div className="flex items-center justify-center gap-2 text-lg">
-                <Icon name="Calendar" size={20} />
+                <Icon name="Calendar" size={20} className="icon-float" />
                 <span className="font-semibold">18 апреля 2026, 10:00–18:00</span>
               </div>
               <div className="flex items-center justify-center gap-2 text-lg">
-                <Icon name="MapPin" size={20} />
+                <Icon name="MapPin" size={20} className="icon-float" />
                 <span className="font-semibold">Владивосток</span>
               </div>
             </div>
@@ -86,7 +86,7 @@ const Index = () => {
 
       <section className="py-16 bg-synergy-red relative z-10 animate-on-scroll">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <Icon name="Heart" size={48} className="mx-auto mb-6 text-synergy-beige" />
+          <Icon name="Heart" size={48} className="mx-auto mb-6 text-synergy-beige icon-pulse" />
           <h2 className="font-heading text-3xl md:text-5xl font-black mb-6 text-synergy-beige">
             ЭТО БЛАГОТВОРИТЕЛЬНОЕ МЕРОПРИЯТИЕ
           </h2>
@@ -132,7 +132,7 @@ const Index = () => {
             ].map((item, idx) => (
               <Card key={idx} className="bg-synergy-dark text-synergy-beige text-center" style={{ transitionDelay: `${idx * 0.1}s` }}>
                 <CardContent className="p-8">
-                  <Icon name={item.icon as any} size={48} className="mx-auto mb-4 text-synergy-red" />
+                  <Icon name={item.icon as any} size={48} className="mx-auto mb-4 text-synergy-red icon-glow" />
                   <h3 className="font-heading text-xl font-black mb-3 text-synergy-beige">{item.title}</h3>
                   <p className="text-synergy-beige/80">{item.text}</p>
                 </CardContent>
@@ -149,19 +149,19 @@ const Index = () => {
           </h2>
           <div className="mb-8 flex flex-wrap justify-center gap-4 text-synergy-beige/90">
             <div className="flex items-center gap-2">
-              <Icon name="Clock" size={20} />
+              <Icon name="Clock" size={20} className="icon-rotate-hover" />
               <span className="font-semibold">Сбор гостей: 09:30</span>
             </div>
             <div className="flex items-center gap-2">
-              <Icon name="PlayCircle" size={20} />
+              <Icon name="PlayCircle" size={20} className="icon-rotate-hover" />
               <span className="font-semibold">Начало: 10:00</span>
             </div>
             <div className="flex items-center gap-2">
-              <Icon name="Coffee" size={20} />
+              <Icon name="Coffee" size={20} className="icon-rotate-hover" />
               <span className="font-semibold">Обед: 14:00–15:00</span>
             </div>
             <div className="flex items-center gap-2">
-              <Icon name="Clock" size={20} />
+              <Icon name="Clock" size={20} className="icon-rotate-hover" />
               <span className="font-semibold">Конец: 18:00</span>
             </div>
           </div>
@@ -297,7 +297,7 @@ const Index = () => {
             ].map((reason, idx) => (
               <Card key={idx} className="bg-synergy-dark text-synergy-beige" style={{ transitionDelay: `${idx * 0.1}s` }}>
                 <CardContent className="p-6">
-                  <Icon name={reason.icon as any} size={40} className="mb-4 text-synergy-red" />
+                  <Icon name={reason.icon as any} size={40} className="mb-4 text-synergy-red icon-glow" />
                   <h3 className="font-heading text-xl font-black mb-2 text-synergy-beige">{reason.title}</h3>
                   <p className="text-synergy-beige/80">{reason.desc}</p>
                 </CardContent>

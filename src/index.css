@@ -196,4 +196,56 @@
     opacity: 1;
     transform: scale(1);
   }
+
+  /* Icon animations */
+  .icon-glow {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: drop-shadow(0 0 0px transparent);
+  }
+
+  .icon-glow:hover {
+    transform: scale(1.15) rotate(5deg);
+    filter: drop-shadow(0 0 12px currentColor)
+      drop-shadow(0 0 20px currentColor);
+  }
+
+  .icon-pulse {
+    animation: icon-pulse-animation 3s ease-in-out infinite;
+  }
+
+  @keyframes icon-pulse-animation {
+    0%,
+    100% {
+      transform: scale(1);
+      filter: drop-shadow(0 0 4px currentColor);
+    }
+    50% {
+      transform: scale(1.08);
+      filter: drop-shadow(0 0 16px currentColor)
+        drop-shadow(0 0 24px currentColor);
+    }
+  }
+
+  .icon-float {
+    animation: icon-float-animation 4s ease-in-out infinite;
+  }
+
+  @keyframes icon-float-animation {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  .icon-rotate-hover {
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .icon-rotate-hover:hover {
+    transform: rotate(360deg) scale(1.2);
+    filter: drop-shadow(0 0 10px currentColor);
+  }
 }
