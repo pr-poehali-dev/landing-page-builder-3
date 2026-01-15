@@ -35,6 +35,8 @@ const NeuralBackground = () => {
     let animationFrameId: number;
     let nodes: Node[] = [];
     let dataParticles: DataParticle[] = [];
+    const mouseX = -1000;
+    const mouseY = -1000;
 
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
@@ -43,6 +45,20 @@ const NeuralBackground = () => {
 
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
+
+    const handleMouseMove = (e: MouseEvent) => {
+      const rect = canvas.getBoundingClientRect();
+      mouseX = e.clientX - rect.left;
+      mouseY = e.clientY - rect.top;
+    };
+
+    const handleMouseLeave = () => {
+      mouseX = -1000;
+      mouseY = -1000;
+    };
+
+    canvas.addEventListener('mousemove', handleMouseMove);
+    canvas.addEventListener('mouseleave', handleMouseLeave);
 
     const initNodes = () => {
       nodes = [];
@@ -100,6 +116,11 @@ const NeuralBackground = () => {
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       nodes.forEach(node => {
+        const dx = mouseX - node.x;
+        const dy = mouseY - node.y;
+        const distanceToMouse = Math.sqrt(dx * dx + dy * dy);
+        const isNearMouse = distanceToMouse < 100;
+        const hoverBoost = isNearMouse ? 1 - (distanceToMouse / 100) : 0;
         node.x += node.vx;
         node.y += node.vy;
 
@@ -111,8 +132,8 @@ const NeuralBackground = () => {
           node.brightnessSpeed *= -1;
         }
 
-        const gradient = ctx.createRadialGradient(node.x, node.y, 0, node.x, node.y, node.radius * 4);
-        const alpha = 0.2 + node.brightness * 0.5;
+        const gradient = ctx.createRadialGradient(node.x, node.y, 0, node.x, node.y, node.radius * (4 + hoverBoost * 2));
+        const alpha = 0.2 + node.brightness * 0.5 + hoverBoost * 0.4;
         
         gradient.addColorStop(0, `${node.color}${Math.floor(alpha * 255).toString(16).padStart(2, '0')}`);
         gradient.addColorStop(0.4, `${node.color}44`);
@@ -120,11 +141,11 @@ const NeuralBackground = () => {
 
         ctx.fillStyle = gradient;
         ctx.beginPath();
-        ctx.arc(node.x, node.y, node.radius * 4, 0, Math.PI * 2);
+        ctx.arc(node.x, node.y, node.radius * (4 + hoverBoost * 2), 0, Math.PI * 2);
         ctx.fill();
 
         ctx.fillStyle = node.color;
-        ctx.shadowBlur = 10;
+        ctx.shadowBlur = 10 + hoverBoost * 20;
         ctx.shadowColor = node.color;
         ctx.beginPath();
         ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
@@ -139,7 +160,14 @@ const NeuralBackground = () => {
           const distance = Math.sqrt(dx * dx + dy * dy);
 
           if (distance < 160) {
-            const opacity = (1 - distance / 160) * 0.4;
+            const dxMouse1 = mouseX - nodes[i].x;
+            const dyMouse1 = mouseY - nodes[i].y;
+            const distToMouse1 = Math.sqrt(dxMouse1 * dxMouse1 + dyMouse1 * dyMouse1);
+            const dxMouse2 = mouseX - nodes[j].x;
+            const dyMouse2 = mouseY - nodes[j].y;
+            const distToMouse2 = Math.sqrt(dxMouse2 * dxMouse2 + dyMouse2 * dyMouse2);
+            const lineHoverBoost = (distToMouse1 < 100 || distToMouse2 < 100) ? 0.3 : 0;
+            const opacity = (1 - distance / 160) * 0.4 + lineHoverBoost;
             
             const gradient = ctx.createLinearGradient(
               nodes[i].x, nodes[i].y,
@@ -150,7 +178,7 @@ const NeuralBackground = () => {
             gradient.addColorStop(1, `rgba(0, 212, 255, ${opacity})`);
 
             ctx.strokeStyle = gradient;
-            ctx.lineWidth = 1.5;
+            ctx.lineWidth = 1.5 + lineHoverBoost * 2;
             ctx.beginPath();
             ctx.moveTo(nodes[i].x, nodes[i].y);
             ctx.lineTo(nodes[j].x, nodes[j].y);
@@ -183,6 +211,8 @@ const NeuralBackground = () => {
 
     return () => {
       window.removeEventListener('resize', resizeCanvas);
+      canvas.removeEventListener('mousemove', handleMouseMove);
+      canvas.removeEventListener('mouseleave', handleMouseLeave);
       cancelAnimationFrame(animationFrameId);
     };
   }, []);
@@ -190,7 +220,7 @@ const NeuralBackground = () => {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed top-0 left-0 w-full h-full pointer-events-none"
+      className="fixed top-0 left-0 w-full h-full"
       style={{ zIndex: 0 }}
     />
   );
