@@ -108,7 +108,7 @@ const Index = () => {
               { icon: 'TrendingUp', title: 'Результаты', text: 'От людей, которые зарабатывают на ИИ сейчас' },
               { icon: 'Users', title: 'Сообщество', text: 'Нетворкинг с предпринимателями и экспертами' }
             ].map((item, idx) => (
-              <Card key={idx} className="bg-synergy-dark text-synergy-beige text-center" style={{ transitionDelay: `${idx * 0.1}s` }}>}
+              <Card key={idx} className="bg-synergy-dark text-synergy-beige text-center" style={{ transitionDelay: `${idx * 0.1}s` }}>
                 <CardContent className="p-8">
                   <Icon name={item.icon as any} size={48} className="mx-auto mb-4 text-synergy-red" />
                   <h3 className="font-heading text-xl font-black mb-3 text-synergy-beige">{item.title}</h3>
