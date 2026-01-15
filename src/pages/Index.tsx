@@ -64,7 +64,7 @@ const Index = () => {
               </Badge>
             </div>
             <p className="mt-6 text-synergy-beige/70 text-sm max-w-2xl mx-auto">
-              100% средств передаются в Центр «Ковчег надежды» — помощь одиноким матерям в Приморье
+              100% средств передаются в Центр «Живая Надежда» — помощь одиноким матерям в Приморье
             </p>
           </div>
         </div>
@@ -77,10 +77,10 @@ const Index = () => {
             ЭТО БЛАГОТВОРИТЕЛЬНОЕ МЕРОПРИЯТИЕ
           </h2>
           <p className="text-lg md:text-xl text-synergy-beige/90 mb-8 leading-relaxed">
-            Все собранные средства полностью передаются в <span className="font-bold">Центр «Ковчег надежды»</span> — организацию, которая помогает одиноким матерям в Приморье.
+            Все собранные средства полностью передаются в <span className="font-bold">Центр «Живая Надежда»</span> — организацию, которая помогает одиноким матерям в Приморье.
           </p>
-          <div className="bg-synergy-dark p-8 text-synergy-beige">
-            <h3 className="font-heading text-2xl font-black mb-4 text-synergy-beige">О центре «Ковчег надежды»</h3>
+          <div className="bg-synergy-dark p-8 text-synergy-beige mb-6">
+            <h3 className="font-heading text-2xl font-black mb-4 text-synergy-beige">О центре «Живая Надежда»</h3>
             <p className="text-synergy-beige/90 leading-relaxed mb-4">
               Центр работает с одинокими матерями в Приморье, предоставляя психологическую поддержку, обучение, помощь в трудоустройстве и создании семейного благополучия.
             </p>
@@ -88,6 +88,14 @@ const Index = () => {
               Для девушек, оставшихся без поддержки близких, это часто единственная возможность остаться мамой для своего ребенка и обеспечить ему достойное будущее.
             </p>
           </div>
+          <Button 
+            size="lg" 
+            onClick={() => window.open('https://living-hope.ru', '_blank')}
+            className="bg-synergy-beige text-synergy-dark hover:bg-synergy-beige/90 font-bold uppercase"
+          >
+            <Icon name="ExternalLink" size={20} className="mr-2" />
+            Узнать больше о центре
+          </Button>
           <p className="mt-8 text-synergy-beige text-lg font-bold">
             Ты не просто посещаешь мероприятие — ты помогаешь конкретным людям, которые в этом нуждаются прямо сейчас.
           </p>
@@ -255,7 +263,7 @@ const Index = () => {
               { 
                 icon: 'Heart', 
                 title: 'Помощь реальным людям', 
-                desc: 'Твой билет помогает матерям в Приморье через Центр «Ковчег надежды»' 
+                desc: 'Твой билет помогает матерям в Приморье через Центр «Живая Надежда»' 
               },
               { 
                 icon: 'Users', 
@@ -316,7 +324,7 @@ const Index = () => {
               Осталось {seatsLeft} мест из 100
             </Badge>
             <p className="text-synergy-dark/70 mb-2">Стоимость билета: <span className="font-bold text-2xl text-synergy-red">2,500 ₽</span></p>
-            <p className="text-synergy-dark/60 text-sm">100% средств передаются в «Ковчег надежды»</p>
+            <p className="text-synergy-dark/60 text-sm">100% средств передаются в «Живая Надежда»</p>
           </div>
           
           <Card className="bg-synergy-dark">
@@ -385,7 +393,7 @@ const Index = () => {
             {[
               {
                 q: 'Куда идут деньги?',
-                a: '100% средств от продажи билетов полностью передаются в Центр «Ковчег надежды» — организацию, которая помогает одиноким матерям в Приморье. Это благотворительное мероприятие.'
+                a: '100% средств от продажи билетов полностью передаются в Центр «Живая Надежда» — организацию, которая помогает одиноким матерям в Приморье. Это благотворительное мероприятие.'
               },
               {
                 q: 'Нужен ли опыт работы с ИИ?',
@@ -441,7 +449,7 @@ const Index = () => {
 
       <footer className="py-8 px-6 bg-synergy-dark text-synergy-beige/60 text-center text-sm">
         <p>© 2025 Школа «Хакни нейросети» | Владивосток</p>
-        <p className="mt-2">Благотворительное мероприятие в поддержку Центра «Ковчег надежды»</p>
+        <p className="mt-2">Благотворительное мероприятие в поддержку Центра «Живая Надежда»</p>
       </footer>
     </div>
   );
