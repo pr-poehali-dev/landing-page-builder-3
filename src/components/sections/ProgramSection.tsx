@@ -12,7 +12,7 @@ const ProgramSection = () => {
           <h2 className="font-heading text-3xl md:text-5xl font-black text-center mb-12 text-synergy-beige">
             ПРОГРАММА МЕРОПРИЯТИЯ
           </h2>
-          <div className="mb-8 flex flex-wrap justify-center gap-4 text-synergy-beige/90">
+          <div className="mb-8 flex flex-wrap justify-center gap-2 sm:gap-4 text-synergy-beige/90 text-sm sm:text-base px-4">
             <div className="flex items-center gap-2">
               <Icon name="Clock" size={20} className="icon-rotate-hover" />
               <span className="font-semibold">Сбор гостей: 09:30</span>
@@ -130,25 +130,25 @@ const ProgramSection = () => {
                 className={`${block.highlight ? 'bg-synergy-beige text-synergy-dark border-l-4 border-l-synergy-red' : 'bg-synergy-dark/50 text-synergy-beige'} animate-on-scroll`}
                 style={{ transitionDelay: `${idx * 0.08}s` }}
               >
-                <CardContent className="p-6">
+                <CardContent className="p-4 sm:p-6">
                   <div className="flex flex-col md:flex-row md:items-start gap-4">
                     <div className="flex-shrink-0 flex flex-col items-center gap-3">
-                      <Badge className={`${block.highlight ? 'bg-synergy-red text-synergy-beige' : 'bg-synergy-beige/20 text-synergy-beige'} px-3 py-1 font-mono font-bold`}>
+                      <Badge className={`${block.highlight ? 'bg-synergy-red text-synergy-beige' : 'bg-synergy-beige/20 text-synergy-beige'} px-2 sm:px-3 py-1 font-mono text-xs sm:text-sm font-bold`}>
                         {block.time}
                       </Badge>
                       {block.icon && (
                         <Icon 
                           name={block.icon as any} 
-                          size={32} 
+                          size={28} 
                           className={`${block.highlight ? 'text-synergy-red' : 'text-synergy-beige'} icon-glow`} 
                         />
                       )}
                     </div>
                     <div className="flex-1">
-                      <h3 className={`font-heading text-lg md:text-xl font-black mb-2 ${block.highlight ? 'text-synergy-dark' : 'text-synergy-beige'}`}>
+                      <h3 className={`font-heading text-base sm:text-lg md:text-xl font-black mb-2 ${block.highlight ? 'text-synergy-dark' : 'text-synergy-beige'}`}>
                         {block.title}
                       </h3>
-                      <p className={`${block.highlight ? 'text-synergy-dark/80' : 'text-synergy-beige/80'} leading-relaxed`}>
+                      <p className={`${block.highlight ? 'text-synergy-dark/80' : 'text-synergy-beige/80'} text-sm sm:text-base leading-relaxed`}>
                         {block.desc}
                       </p>
                     </div>
@@ -162,7 +162,7 @@ const ProgramSection = () => {
 
       <section className="py-16 px-6 bg-synergy-dark relative z-10 animate-on-scroll">
         <div className="max-w-5xl mx-auto">
-          <h2 className="font-heading text-3xl md:text-5xl font-black text-center mb-12 text-synergy-beige">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-5xl font-black text-center mb-8 sm:mb-12 text-synergy-beige px-4">
             ДЛЯ КОГО ЭТО МЕРОПРИЯТИЕ?
           </h2>
           <Accordion type="single" collapsible className="space-y-4 mb-16">
@@ -201,10 +201,10 @@ const ProgramSection = () => {
               <AccordionItem 
                 key={idx} 
                 value={`item-${idx}`}
-                className="border-synergy-beige/20 bg-synergy-dark/50 rounded-lg px-6 animate-on-scroll"
+                className="border-synergy-beige/20 bg-synergy-dark/50 rounded-lg px-4 sm:px-6 animate-on-scroll"
                 style={{ transitionDelay: `${idx * 0.08}s` }}
               >
-                <AccordionTrigger className="text-synergy-beige hover:text-synergy-red font-heading text-lg md:text-xl font-bold hover:no-underline">
+                <AccordionTrigger className="text-synergy-beige hover:text-synergy-red font-heading text-base sm:text-lg md:text-xl font-bold hover:no-underline py-4 text-left">
                   {item.title}
                 </AccordionTrigger>
                 <AccordionContent className="text-synergy-beige/90 space-y-4">

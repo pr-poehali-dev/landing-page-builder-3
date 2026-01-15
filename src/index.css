@@ -257,16 +257,18 @@
     overflow: visible;
   }
 
-  .hero-cta-button:hover {
-    transform: scale(1.08) translateY(-4px);
-    box-shadow:
-      0 20px 60px rgba(239, 68, 68, 0.6),
-      0 0 40px rgba(239, 68, 68, 0.4),
-      inset 0 0 20px rgba(255, 255, 255, 0.2);
+  @media (min-width: 640px) {
+    .hero-cta-button:hover {
+      transform: scale(1.08) translateY(-4px);
+      box-shadow:
+        0 20px 60px rgba(239, 68, 68, 0.6),
+        0 0 40px rgba(239, 68, 68, 0.4),
+        inset 0 0 20px rgba(255, 255, 255, 0.2);
+    }
   }
 
   .hero-cta-button:active {
-    transform: scale(1.02) translateY(-2px);
+    transform: scale(0.98);
   }
 
   @keyframes hero-button-float {

@@ -8,14 +8,14 @@ const AboutSection = () => {
       <section className="py-16 bg-synergy-red relative z-10 animate-on-scroll">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <Icon name="Heart" size={48} className="mx-auto mb-6 text-synergy-beige icon-pulse" />
-          <h2 className="font-heading text-3xl md:text-5xl font-black mb-6 text-synergy-beige">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-5xl font-black mb-6 text-synergy-beige">
             ЭТО БЛАГОТВОРИТЕЛЬНОЕ МЕРОПРИЯТИЕ
           </h2>
           <p className="text-lg md:text-xl text-synergy-beige/90 mb-8 leading-relaxed">
             Все собранные средства полностью передаются в <span className="font-bold">Центр «Живая Надежда»</span> — организацию, которая помогает одиноким матерям в Приморье.
           </p>
-          <div className="bg-synergy-dark p-8 text-synergy-beige mb-6">
-            <h3 className="font-heading text-2xl font-black mb-4 text-synergy-beige">О центре «Живая Надежда»</h3>
+          <div className="bg-synergy-dark p-4 sm:p-6 md:p-8 text-synergy-beige mb-6">
+            <h3 className="font-heading text-xl sm:text-2xl font-black mb-4 text-synergy-beige">О центре «Живая Надежда»</h3>
             <p className="text-synergy-beige/90 leading-relaxed mb-4">
               Центр работает с одинокими матерями в Приморье, предоставляя психологическую поддержку, обучение, помощь в трудоустройстве и создании семейного благополучия.
             </p>
@@ -39,10 +39,10 @@ const AboutSection = () => {
 
       <section className="py-16 px-6 bg-synergy-beige relative z-10 animate-on-scroll">
         <div className="max-w-5xl mx-auto">
-          <h2 className="font-heading text-3xl md:text-5xl font-black text-center mb-6 text-synergy-dark">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-5xl font-black text-center mb-6 text-synergy-dark">
             ИИ БЕЗ ШИРМЫ
           </h2>
-          <p className="text-center text-xl text-synergy-dark/80 mb-12 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-center text-base sm:text-lg md:text-xl text-synergy-dark/80 mb-12 max-w-3xl mx-auto leading-relaxed px-4">
             Мы не скрываем, как работают нейросети. Мы показываем технологию в действии, разбираем конкретные кейсы и даём тебе инструменты, которые работают прямо сейчас.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -52,7 +52,7 @@ const AboutSection = () => {
               { icon: 'Users', title: 'Сообщество', text: 'Нетворкинг с предпринимателями и экспертами' }
             ].map((item, idx) => (
               <Card key={idx} className="bg-synergy-dark text-synergy-beige text-center" style={{ transitionDelay: `${idx * 0.1}s` }}>
-                <CardContent className="p-8">
+                <CardContent className="p-6 sm:p-8">
                   <Icon name={item.icon as any} size={48} className="mx-auto mb-4 text-synergy-red icon-glow" />
                   <h3 className="font-heading text-xl font-black mb-3 text-synergy-beige">{item.title}</h3>
                   <p className="text-synergy-beige/80">{item.text}</p>
@@ -65,7 +65,7 @@ const AboutSection = () => {
 
       <section className="py-16 px-6 bg-synergy-beige relative z-10 animate-on-scroll">
         <div className="max-w-5xl mx-auto">
-          <h2 className="font-heading text-3xl md:text-5xl font-black text-center mb-12 text-synergy-dark">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-5xl font-black text-center mb-8 sm:mb-12 text-synergy-dark px-4">
             ЗАЧЕМ ИДТИ НА ЭТО МЕРОПРИЯТИЕ?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

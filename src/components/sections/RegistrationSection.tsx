@@ -18,19 +18,19 @@ const RegistrationSection = ({ seatsLeft, scrollToForm }: RegistrationSectionPro
     <>
       <section id="registration" className="py-16 px-6 bg-synergy-beige relative z-10 animate-on-scroll-scale">
         <div className="max-w-2xl mx-auto">
-          <h2 className="font-heading text-3xl md:text-5xl font-black text-center mb-6 text-synergy-dark">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-5xl font-black text-center mb-6 text-synergy-dark px-4">
             ЗАБРОНИРОВАТЬ МЕСТО
           </h2>
           <div className="text-center mb-8">
-            <Badge className="text-lg px-6 py-3 bg-synergy-red text-synergy-beige mb-4">
+            <Badge className="text-base sm:text-lg px-4 sm:px-6 py-2 sm:py-3 bg-synergy-red text-synergy-beige mb-4">
               Осталось {seatsLeft} мест из 300
             </Badge>
-            <p className="text-synergy-dark/70 mb-2">Стоимость билета: <span className="font-bold text-2xl text-synergy-red">от 1,000 ₽</span></p>
+            <p className="text-synergy-dark/70 mb-2 text-sm sm:text-base">Стоимость билета: <span className="font-bold text-xl sm:text-2xl text-synergy-red">от 1,000 ₽</span></p>
             <p className="text-synergy-dark/60 text-sm">100% средств передаются в «Живая Надежда»</p>
           </div>
           
           <Card className="bg-synergy-dark">
-            <CardContent className="p-8">
+            <CardContent className="p-4 sm:p-6 md:p-8">
               <form className="space-y-6">
                 <div>
                   <label className="block text-sm font-bold mb-2 text-synergy-beige">Имя *</label>
@@ -75,7 +75,7 @@ const RegistrationSection = ({ seatsLeft, scrollToForm }: RegistrationSectionPro
                 <Button 
                   type="submit" 
                   size="lg" 
-                  className="w-full bg-synergy-red text-synergy-beige hover:bg-synergy-red/90 font-bold uppercase text-lg py-6"
+                  className="w-full bg-synergy-red text-synergy-beige hover:bg-synergy-red/90 font-bold uppercase text-base sm:text-lg py-5 sm:py-6"
                   disabled={!formData.name || !formData.email || !formData.phone || !formData.agree}
                 >
                   Купить билет от 1,000 ₽
@@ -88,7 +88,7 @@ const RegistrationSection = ({ seatsLeft, scrollToForm }: RegistrationSectionPro
 
       <section className="py-16 px-6 bg-synergy-dark relative z-10 animate-on-scroll">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-heading text-3xl md:text-4xl font-black text-center mb-8 text-synergy-beige">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-black text-center mb-8 text-synergy-beige px-4">
             ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ
           </h2>
           <Accordion type="single" collapsible className="space-y-4">
@@ -119,10 +119,10 @@ const RegistrationSection = ({ seatsLeft, scrollToForm }: RegistrationSectionPro
               }
             ].map((faq, idx) => (
               <AccordionItem key={idx} value={`item-${idx}`} className="bg-synergy-beige border-none">
-                <AccordionTrigger className="px-6 py-4 text-left font-heading font-bold text-synergy-dark hover:text-synergy-red">
+                <AccordionTrigger className="px-4 sm:px-6 py-4 text-left font-heading text-base sm:text-lg font-bold text-synergy-dark hover:text-synergy-red">
                   {faq.q}
                 </AccordionTrigger>
-                <AccordionContent className="px-6 pb-4 text-synergy-dark/80 leading-relaxed">
+                <AccordionContent className="px-4 sm:px-6 pb-4 text-sm sm:text-base text-synergy-dark/80 leading-relaxed">
                   {faq.a}
                 </AccordionContent>
               </AccordionItem>
@@ -133,10 +133,10 @@ const RegistrationSection = ({ seatsLeft, scrollToForm }: RegistrationSectionPro
 
       <section className="py-12 px-6 bg-synergy-red relative z-10 animate-on-scroll-scale">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-heading text-3xl md:text-4xl font-black mb-4 text-synergy-beige">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-black mb-4 text-synergy-beige px-4">
             НЕ УПУСТИ ВОЗМОЖНОСТЬ
           </h2>
-          <p className="text-lg md:text-xl text-synergy-beige/90 mb-8">
+          <p className="text-base sm:text-lg md:text-xl text-synergy-beige/90 mb-8 px-4">
             Всего {seatsLeft} мест из 100. Присоединяйся к тем, кто уже понял, что ИИ — это не будущее, а настоящее.
           </p>
           <Button 
