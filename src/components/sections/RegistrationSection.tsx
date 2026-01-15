@@ -5,6 +5,8 @@ import { Input } from '@/components/ui/input';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Badge } from '@/components/ui/badge';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
+import Icon from '@/components/ui/icon';
 
 interface RegistrationSectionProps {
   seatsLeft: number;
@@ -13,6 +15,8 @@ interface RegistrationSectionProps {
 
 const RegistrationSection = ({ seatsLeft, scrollToForm }: RegistrationSectionProps) => {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', agree: false });
+  const [showPrivacy, setShowPrivacy] = useState(false);
+  const [showOffer, setShowOffer] = useState(false);
 
   return (
     <>
@@ -69,7 +73,22 @@ const RegistrationSection = ({ seatsLeft, scrollToForm }: RegistrationSectionPro
                     className="border-synergy-beige"
                   />
                   <label htmlFor="agree" className="text-sm text-synergy-beige/80 leading-relaxed cursor-pointer">
-                    Я согласен на обработку персональных данных и понимаю, что все средства передаются в благотворительную организацию
+                    Я согласен на{' '}
+                    <button
+                      type="button"
+                      onClick={() => setShowPrivacy(true)}
+                      className="text-synergy-red hover:underline font-semibold"
+                    >
+                      обработку персональных данных
+                    </button>
+                    {' '}и принимаю условия{' '}
+                    <button
+                      type="button"
+                      onClick={() => setShowOffer(true)}
+                      className="text-synergy-red hover:underline font-semibold"
+                    >
+                      Договора оферты
+                    </button>
                   </label>
                 </div>
                 <Button 
@@ -153,6 +172,52 @@ const RegistrationSection = ({ seatsLeft, scrollToForm }: RegistrationSectionPro
         <p>© 2026 Школа «Хакни нейросети» | Владивосток</p>
         <p className="mt-2">Благотворительное мероприятие в поддержку Центра «Живая Надежда»</p>
       </footer>
+
+      {/* Модальное окно политики конфиденциальности */}
+      <Dialog open={showPrivacy} onOpenChange={setShowPrivacy}>
+        <DialogContent className="bg-synergy-beige text-synergy-dark max-w-3xl max-h-[80vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="font-heading text-2xl font-black text-synergy-red flex items-center gap-2">
+              <Icon name="Shield" size={28} />
+              Политика конфиденциальности
+            </DialogTitle>
+            <DialogDescription className="text-synergy-dark/70">
+              Обработка и защита персональных данных
+            </DialogDescription>
+          </DialogHeader>
+          <div className="space-y-4 text-synergy-dark/90 leading-relaxed">
+            <p className="text-center text-synergy-dark/60 italic">
+              Здесь будет размещена политика конфиденциальности
+            </p>
+            <p>
+              Текст политики конфиденциальности будет добавлен позже.
+            </p>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      {/* Модальное окно договора оферты */}
+      <Dialog open={showOffer} onOpenChange={setShowOffer}>
+        <DialogContent className="bg-synergy-beige text-synergy-dark max-w-3xl max-h-[80vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="font-heading text-2xl font-black text-synergy-red flex items-center gap-2">
+              <Icon name="FileText" size={28} />
+              Договор оферты
+            </DialogTitle>
+            <DialogDescription className="text-synergy-dark/70">
+              Условия предоставления услуг
+            </DialogDescription>
+          </DialogHeader>
+          <div className="space-y-4 text-synergy-dark/90 leading-relaxed">
+            <p className="text-center text-synergy-dark/60 italic">
+              Здесь будет размещен договор оферты
+            </p>
+            <p>
+              Текст договора оферты будет добавлен позже.
+            </p>
+          </div>
+        </DialogContent>
+      </Dialog>
     </>
   );
 };
