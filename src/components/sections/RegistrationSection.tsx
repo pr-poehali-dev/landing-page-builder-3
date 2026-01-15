@@ -18,6 +18,7 @@ const RegistrationSection = ({ seatsLeft, scrollToForm }: RegistrationSectionPro
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', agree: false });
   const [showPrivacy, setShowPrivacy] = useState(false);
   const [showOffer, setShowOffer] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
@@ -51,10 +52,7 @@ const RegistrationSection = ({ seatsLeft, scrollToForm }: RegistrationSectionPro
       const data = await response.json();
 
       if (response.ok && data.success) {
-        toast({
-          title: '🎉 Заявка отправлена!',
-          description: 'Мы свяжемся с вами в ближайшее время для подтверждения участия.',
-        });
+        setShowSuccess(true);
         setFormData({ name: '', email: '', phone: '', agree: false });
       } else {
         throw new Error(data.error || 'Не удалось отправить заявку');
@@ -224,6 +222,33 @@ const RegistrationSection = ({ seatsLeft, scrollToForm }: RegistrationSectionPro
         <p>© 2026 Школа «Хакни нейросети» | Владивосток</p>
         <p className="mt-2">Благотворительное мероприятие в поддержку Центра «Живая Надежда»</p>
       </footer>
+
+      {/* Модальное окно успешной заявки */}
+      <Dialog open={showSuccess} onOpenChange={setShowSuccess}>
+        <DialogContent className="bg-synergy-dark border-synergy-red border-4 max-w-md text-center">
+          <div className="py-8 px-4 space-y-6">
+            <div className="flex justify-center">
+              <div className="w-20 h-20 rounded-full bg-synergy-red flex items-center justify-center animate-bounce">
+                <Icon name="CheckCircle" size={48} className="text-synergy-beige" />
+              </div>
+            </div>
+            <div className="space-y-4">
+              <h2 className="font-heading text-3xl md:text-4xl font-black text-synergy-beige uppercase">
+                ВАША ЗАЯВКА ПРИНЯТА
+              </h2>
+              <p className="text-2xl md:text-3xl font-bold text-synergy-red">
+                Спасибо БРО
+              </p>
+            </div>
+            <Button
+              onClick={() => setShowSuccess(false)}
+              className="w-full bg-synergy-red text-synergy-beige hover:bg-synergy-red/90 font-bold uppercase text-lg py-6 mt-6"
+            >
+              Закрыть
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
 
       {/* Модальное окно политики конфиденциальности */}
       <Dialog open={showPrivacy} onOpenChange={setShowPrivacy}>
