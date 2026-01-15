@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 
 const StudentsWorksSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
   const works = [
     {
@@ -51,6 +52,19 @@ const StudentsWorksSection = () => {
     setCurrentIndex(index);
   };
 
+  useEffect(() => {
+    if (isPaused) return;
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % works.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [isPaused, works.length]);
+
+  const handleMouseEnter = () => setIsPaused(true);
+  const handleMouseLeave = () => setIsPaused(false);
+
   return (
     <section className="py-16 px-6 bg-synergy-dark relative z-10 animate-on-scroll">
       <div className="max-w-6xl mx-auto">
@@ -64,7 +78,7 @@ const StudentsWorksSection = () => {
           </p>
         </div>
 
-        <div className="relative">
+        <div className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
           {/* Main carousel */}
           <div className="relative overflow-hidden rounded-lg mb-8">
             <div 
