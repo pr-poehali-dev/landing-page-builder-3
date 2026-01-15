@@ -64,8 +64,7 @@ const Index = () => {
             <Button 
               size="lg" 
               onClick={scrollToForm}
-              variant="outline"
-              className="text-lg px-8 py-6 h-auto font-bold mb-4"
+              className="text-lg px-8 py-6 h-auto font-bold mb-4 bg-synergy-red text-synergy-beige hover:bg-synergy-red/90 border-2 border-synergy-red hover:border-synergy-red/90"
             >
               <span className="font-black uppercase">Купить билет</span>
             </Button>
