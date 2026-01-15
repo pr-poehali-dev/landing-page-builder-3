@@ -7,10 +7,13 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 import AiIcon from '@/components/AiIcon';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const Index = () => {
   const [seatsLeft, setSeatsLeft] = useState(25);
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', agree: false });
+
+  useScrollAnimation();
 
   useEffect(() => {
     document.title = 'ИИ ШОУ БЕЗ ШИРМЫ | Владивосток';
@@ -67,7 +70,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-16 bg-synergy-red relative z-10">
+      <section className="py-16 bg-synergy-red relative z-10 animate-on-scroll">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <Icon name="Heart" size={48} className="mx-auto mb-6 text-synergy-beige" />
           <h2 className="font-heading text-3xl md:text-5xl font-black mb-6 text-synergy-beige">
@@ -91,7 +94,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-16 px-6 bg-synergy-beige relative z-10">
+      <section className="py-16 px-6 bg-synergy-beige relative z-10 animate-on-scroll">
         <div className="max-w-5xl mx-auto">
           <h2 className="font-heading text-3xl md:text-5xl font-black text-center mb-6 text-synergy-dark">
             ИИ БЕЗ ШИРМЫ
@@ -105,7 +108,7 @@ const Index = () => {
               { icon: 'TrendingUp', title: 'Результаты', text: 'От людей, которые зарабатывают на ИИ сейчас' },
               { icon: 'Users', title: 'Сообщество', text: 'Нетворкинг с предпринимателями и экспертами' }
             ].map((item, idx) => (
-              <Card key={idx} className="bg-synergy-dark text-synergy-beige text-center">
+              <Card key={idx} className="bg-synergy-dark text-synergy-beige text-center" style={{ transitionDelay: `${idx * 0.1}s` }}>}
                 <CardContent className="p-8">
                   <Icon name={item.icon as any} size={48} className="mx-auto mb-4 text-synergy-red" />
                   <h3 className="font-heading text-xl font-black mb-3 text-synergy-beige">{item.title}</h3>
@@ -117,7 +120,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-16 px-6 bg-synergy-dark relative z-10">
+      <section className="py-16 px-6 bg-synergy-dark relative z-10 animate-on-scroll">
         <div className="max-w-6xl mx-auto">
           <h2 className="font-heading text-3xl md:text-5xl font-black text-center mb-12 text-synergy-beige">
             ПРОГРАММА МЕРОПРИЯТИЯ
@@ -232,7 +235,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-16 px-6 bg-synergy-beige relative z-10">
+      <section className="py-16 px-6 bg-synergy-beige relative z-10 animate-on-scroll">
         <div className="max-w-5xl mx-auto">
           <h2 className="font-heading text-3xl md:text-5xl font-black text-center mb-12 text-synergy-dark">
             ЗАЧЕМ ИДТИ НА ЭТО МЕРОПРИЯТИЕ?
@@ -270,7 +273,7 @@ const Index = () => {
                 desc: 'Конкретные цифры, конкретные стратегии, конкретные инструменты' 
               }
             ].map((reason, idx) => (
-              <Card key={idx} className="bg-synergy-dark text-synergy-beige">
+              <Card key={idx} className="bg-synergy-dark text-synergy-beige" style={{ transitionDelay: `${idx * 0.1}s` }}>
                 <CardContent className="p-6">
                   <Icon name={reason.icon as any} size={40} className="mb-4 text-synergy-red" />
                   <h3 className="font-heading text-xl font-black mb-2 text-synergy-beige">{reason.title}</h3>
@@ -282,7 +285,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-16 px-6 bg-synergy-dark relative z-10">
+      <section className="py-16 px-6 bg-synergy-dark relative z-10 animate-on-scroll">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-heading text-3xl md:text-5xl font-black mb-6 text-synergy-beige">
             ОБ ОРГАНИЗАТОРАХ
@@ -303,7 +306,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="registration" className="py-16 px-6 bg-synergy-beige relative z-10">
+      <section id="registration" className="py-16 px-6 bg-synergy-beige relative z-10 animate-on-scroll-scale">
         <div className="max-w-2xl mx-auto">
           <h2 className="font-heading text-3xl md:text-5xl font-black text-center mb-6 text-synergy-dark">
             ЗАБРОНИРОВАТЬ МЕСТО
@@ -373,7 +376,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-16 px-6 bg-synergy-dark relative z-10">
+      <section className="py-16 px-6 bg-synergy-dark relative z-10 animate-on-scroll">
         <div className="max-w-4xl mx-auto">
           <h2 className="font-heading text-3xl md:text-4xl font-black text-center mb-8 text-synergy-beige">
             ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ
@@ -418,7 +421,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-12 px-6 bg-synergy-red relative z-10">
+      <section className="py-12 px-6 bg-synergy-red relative z-10 animate-on-scroll-scale">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-heading text-3xl md:text-4xl font-black mb-4 text-synergy-beige">
             НЕ УПУСТИ ВОЗМОЖНОСТЬ
