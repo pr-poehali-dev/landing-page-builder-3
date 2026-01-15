@@ -65,7 +65,7 @@ export default {
 				synergy: {
 					beige: '#EDE3C0',
 					dark: '#282828',
-					red: '#E52D1E',
+					red: '#EF4444',
 					'beige-border': '#EDE0BE'
 				}
 			},
