@@ -234,6 +234,9 @@ def send_telegram_message(bot_token: str, chat_id: int, text: str) -> bool:
             'parse_mode': 'Markdown'
         }
         
+        print(f'Sending to Telegram API: {url}')
+        print(f'Data: chat_id={chat_id}, text_length={len(text)}')
+        
         req = urllib.request.Request(
             url,
             data=json.dumps(data).encode('utf-8'),
@@ -241,7 +244,9 @@ def send_telegram_message(bot_token: str, chat_id: int, text: str) -> bool:
         )
         
         with urllib.request.urlopen(req) as response:
-            response.read()
+            result = response.read()
+            print(f'Telegram API response: {result.decode("utf-8")}')
         return True
-    except Exception:
+    except Exception as e:
+        print(f'ERROR sending message: {type(e).__name__}: {str(e)}')
         return False
