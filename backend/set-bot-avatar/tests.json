@@ -1,0 +1,10 @@
+{
+  "tests": [
+    {
+      "name": "Test set avatar endpoint",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200
+    }
+  ]
+}
