@@ -1,3 +1,7 @@
 {
+  "telegram-webhook-setup": "https://functions.poehali.dev/d01992e0-3c37-444e-bf54-e6ef46f380b8",
+  "telegram-support": "https://functions.poehali.dev/cf3bba50-639f-49e2-99ef-cf77a431ccfa",
+  "telegram-setup": "https://functions.poehali.dev/b33b5af3-bd77-4efa-8e8b-fb8b3bcbe98a",
+  "telegram-bot": "https://functions.poehali.dev/3da0d85c-964a-4ecf-93ed-584fe1bfd3fe",
   "telegram-notification": "https://functions.poehali.dev/1bd67ebf-4078-4be6-ae31-280ee878794e"
 }
