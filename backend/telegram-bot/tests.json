@@ -1,0 +1,31 @@
+{
+  "tests": [
+    {
+      "name": "Test OPTIONS request for CORS",
+      "method": "OPTIONS",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedHeaders": {
+        "Access-Control-Allow-Origin": "*"
+      }
+    },
+    {
+      "name": "Test webhook accepts message",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "message": {
+          "chat": {
+            "id": 123456789
+          },
+          "text": "/start"
+        }
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "ok": true
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
