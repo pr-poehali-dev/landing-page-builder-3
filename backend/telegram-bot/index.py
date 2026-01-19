@@ -28,21 +28,29 @@ def handler(event: dict, context) -> dict:
     
     try:
         body = json.loads(event.get('body', '{}'))
+        print(f'Received body: {json.dumps(body)}')
+        
         message = body.get('message', {})
         chat_id = message.get('chat', {}).get('id')
         text = message.get('text', '').strip().lower()
         
+        print(f'Chat ID: {chat_id}, Text: {text}')
+        
         if not chat_id:
+            print('No chat_id, returning ok')
             return {'statusCode': 200, 'body': json.dumps({'ok': True})}
         
-        bot_token = os.environ.get('TELEGRAM_BOT_TOKEN')
+        bot_token = os.environ.get('TELEGRAM_BOT_TOKEN_NEW') or os.environ.get('TELEGRAM_BOT_TOKEN')
         
         if not bot_token:
+            print('ERROR: Bot token not found in environment')
             return {
                 'statusCode': 200,
                 'headers': {'Content-Type': 'application/json'},
                 'body': json.dumps({'ok': True, 'message': 'Bot token not configured'})
             }
+        
+        print(f'Bot token found, sending message to chat {chat_id}')
         
         if text == '/start':
             response_text = '''👋 Привет! Я бот мероприятия **ИИ ШОУ БЕЗ ШИРМЫ**
