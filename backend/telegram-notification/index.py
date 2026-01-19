@@ -2,10 +2,11 @@ import json
 import os
 import requests
 from datetime import datetime
+import psycopg2
 
 
 def handler(event: dict, context) -> dict:
-    """Отправляет уведомление о новой заявке в Telegram бот"""
+    """Сохраняет заявку в БД и отправляет уведомление в Telegram"""
     
     method = event.get('httpMethod', 'POST')
     
@@ -51,6 +52,27 @@ def handler(event: dict, context) -> dict:
                 'body': json.dumps({'error': 'Все поля обязательны'}),
                 'isBase64Encoded': False
             }
+        
+        # Сохраняем заявку в базу данных
+        database_url = os.environ.get('DATABASE_URL')
+        schema_name = os.environ.get('MAIN_DB_SCHEMA')
+        
+        if database_url and schema_name:
+            try:
+                conn = psycopg2.connect(database_url)
+                cur = conn.cursor()
+                
+                cur.execute(
+                    f"INSERT INTO {schema_name}.registrations (name, email, phone, status) VALUES (%s, %s, %s, %s) RETURNING id",
+                    (name, email, phone, 'new')
+                )
+                registration_id = cur.fetchone()[0]
+                
+                conn.commit()
+                cur.close()
+                conn.close()
+            except Exception as db_error:
+                print(f"Database error: {db_error}")
         
         # Telegram bot token и chat ID из переменных окружения
         bot_token = os.environ.get('TELEGRAM_BOT_TOKEN')
