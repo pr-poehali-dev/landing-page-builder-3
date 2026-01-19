@@ -2,7 +2,7 @@ import Icon from '@/components/ui/icon';
 
 const TelegramButton = () => {
   const handleClick = () => {
-    window.open('https://t.me/chernikovgpt', '_blank');
+    window.open('https://t.me/ShowAiVl_bot', '_blank');
   };
 
   return (
