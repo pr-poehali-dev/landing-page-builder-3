@@ -6,7 +6,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { Icon } from "@/components/ui/icon";
+import Icon from "@/components/ui/icon";
 
 interface PolicyDialogsProps {
   showSuccess: boolean;
