@@ -3,6 +3,9 @@ import os
 import requests
 from datetime import datetime
 import psycopg2
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 
 
 def handler(event: dict, context) -> dict:
@@ -104,28 +107,61 @@ def handler(event: dict, context) -> dict:
 18 апреля 2026, Владивосток"""
         
         # Отправляем в Telegram
-        url = f'https://api.telegram.org/bot{bot_token}/sendMessage'
-        payload = {
-            'chat_id': chat_id,
-            'text': message
-        }
+        telegram_sent = False
+        if bot_token and chat_id:
+            try:
+                url = f'https://api.telegram.org/bot{bot_token}/sendMessage'
+                payload = {
+                    'chat_id': chat_id,
+                    'text': message
+                }
+                
+                response = requests.post(url, json=payload, timeout=10)
+                telegram_response = response.json()
+                telegram_sent = telegram_response.get('ok', False)
+            except Exception as tg_error:
+                print(f"Telegram error: {tg_error}")
         
-        response = requests.post(url, json=payload, timeout=10)
-        telegram_response = response.json()
-        
-        if not telegram_response.get('ok'):
-            return {
-                'statusCode': 500,
-                'headers': {
-                    'Content-Type': 'application/json',
-                    'Access-Control-Allow-Origin': '*'
-                },
-                'body': json.dumps({
-                    'error': 'Failed to send Telegram message',
-                    'details': telegram_response.get('description', 'Unknown error')
-                }),
-                'isBase64Encoded': False
-            }
+        # Отправляем на email
+        email_sent = False
+        email_password = os.environ.get('EMAIL_PASSWORD')
+        if email_password:
+            try:
+                msg = MIMEMultipart('alternative')
+                msg['Subject'] = 'Новая заявка на ИИ ШОУ БЕЗ ШИРМЫ'
+                msg['From'] = 'chernikovgt@gmail.com'
+                msg['To'] = 'chernikovgt@gmail.com'
+                
+                html_body = f"""
+                <html>
+                <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+                    <h2 style="color: #d63031;">🎯 Новая заявка на мероприятие</h2>
+                    <div style="background: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                        <p><strong>👤 Имя:</strong> {name}</p>
+                        <p><strong>📧 Email:</strong> {email}</p>
+                        <p><strong>📱 Телефон:</strong> {phone}</p>
+                        <p><strong>⏰ Дата:</strong> {current_time}</p>
+                    </div>
+                    <hr style="border: 1px solid #ddd; margin: 20px 0;">
+                    <p style="color: #666;">
+                        <strong>Мероприятие:</strong> ИИ ШОУ БЕЗ ШИРМЫ<br>
+                        <strong>Дата события:</strong> 18 апреля 2026, Владивосток
+                    </p>
+                </body>
+                </html>
+                """
+                
+                html_part = MIMEText(html_body, 'html')
+                msg.attach(html_part)
+                
+                with smtplib.SMTP('smtp.gmail.com', 587) as server:
+                    server.starttls()
+                    server.login('chernikovgt@gmail.com', email_password)
+                    server.send_message(msg)
+                
+                email_sent = True
+            except Exception as email_error:
+                print(f"Email error: {email_error}")
         
         return {
             'statusCode': 200,
@@ -135,7 +171,9 @@ def handler(event: dict, context) -> dict:
             },
             'body': json.dumps({
                 'success': True,
-                'message': 'Заявка успешно отправлена'
+                'message': 'Заявка успешно отправлена',
+                'telegram_sent': telegram_sent,
+                'email_sent': email_sent
             }),
             'isBase64Encoded': False
         }
