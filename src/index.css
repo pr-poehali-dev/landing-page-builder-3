@@ -226,6 +226,22 @@
     }
   }
 
+  .charity-icon-pulse {
+    animation: charity-pulse 2.5s ease-in-out infinite;
+  }
+
+  @keyframes charity-pulse {
+    0%,
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.12);
+      opacity: 0.9;
+    }
+  }
+
   .icon-float {
     animation: icon-float-animation 4s ease-in-out infinite;
   }
