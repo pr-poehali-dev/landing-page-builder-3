@@ -7,11 +7,7 @@ const AboutSection = () => {
     <>
       <section className="py-16 bg-synergy-red relative z-10 animate-on-scroll">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <img 
-            src="https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/47ea0d91-3206-4fba-9a7f-195167a453ea.png" 
-            alt="Charity icon" 
-            className="w-16 h-16 mx-auto mb-6 charity-icon-pulse"
-          />
+          <Icon name="Heart" size={48} className="mx-auto mb-6 text-synergy-beige icon-pulse" />
           <h2 className="font-heading text-2xl sm:text-3xl md:text-5xl font-black mb-6 text-synergy-beige">
             ЭТО БЛАГОТВОРИТЕЛЬНОЕ МЕРОПРИЯТИЕ
           </h2>
