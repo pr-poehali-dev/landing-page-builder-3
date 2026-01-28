@@ -13,10 +13,11 @@ const HeroSection = ({ seatsLeft, scrollToForm }: HeroSectionProps) => {
       className="relative text-synergy-beige py-20 px-6 overflow-hidden bg-cover bg-center bg-no-repeat" 
       style={{ 
         zIndex: 10,
-        backgroundImage: 'url(https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/files/64ec7f96-ec06-4838-96b6-8d696eae08ef.jpg)'
+        backgroundImage: 'url(https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/files/8992a838-8595-4b47-bb21-71399037b29c.jpg)'
       }}
     >
-      <div className="max-w-5xl mx-auto relative z-10 animate-fade-in">
+      <div className="absolute inset-0 bg-synergy-dark/60 backdrop-blur-sm" style={{ zIndex: 1 }} />
+      <div className="max-w-5xl mx-auto relative animate-fade-in" style={{ zIndex: 2 }}>
         <div className="text-center mb-8">
           <div className="inline-block mb-4 px-4 py-2 bg-synergy-red text-synergy-beige font-bold text-sm uppercase">
             Благотворительное мероприятие
