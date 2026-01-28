@@ -24,7 +24,6 @@ const AboutSection = () => {
             </p>
           </div>
           <div className="text-center">
-            <p className="text-synergy-beige text-xl font-black mb-2">✅ 100% средств от продажи билетов идут в Центр</p>
             <Button 
               size="lg" 
               onClick={() => window.open('https://living-hope.ru', '_blank')}
