@@ -313,4 +313,22 @@
       transform: translate(-50%, -50%) scale(1.15);
     }
   }
+
+  /* Sponsors carousel animation */
+  .animate-scroll-right {
+    animation: scroll-right 40s linear infinite;
+  }
+
+  @keyframes scroll-right {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-33.333%);
+    }
+  }
+
+  .hover\:pause-animation:hover {
+    animation-play-state: paused;
+  }
 }
