@@ -38,20 +38,6 @@ const HeroSection = ({ seatsLeft, scrollToForm }: HeroSectionProps) => {
               <span className="font-semibold">Владивосток, Седанка, ул. Менделеева, 14</span>
             </div>
           </div>
-          <div className="mb-8 max-w-4xl mx-auto px-4">
-            <p className="text-sm sm:text-base text-synergy-beige/70 leading-relaxed">
-              Это не просто лекции про ИИ. Это реальная демонстрация того, как инструменты работают в бизнесе:
-            </p>
-            <ul className="mt-4 text-left text-sm sm:text-base text-synergy-beige/80 space-y-2 max-w-2xl mx-auto">
-              <li>• Как удвоить прибыль через автоматизацию продаж</li>
-              <li>• Как создавать контент за 10 минут вместо часов</li>
-              <li>• Как делать дизайн, видео и сайты в 3 раза быстрее</li>
-              <li>• Как создать цифровой клон себя, который работает вместо тебя</li>
-            </ul>
-            <p className="mt-4 text-sm sm:text-base text-synergy-beige font-semibold">
-              И главное: ты не просто смотришь — ты сам пробуешь инструменты в деле.
-            </p>
-          </div>
           <div className="relative inline-block mb-4 w-full max-w-md mx-auto px-4">
             <div className="btn-glow-pulse" />
             <Button 
