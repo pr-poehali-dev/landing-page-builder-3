@@ -147,6 +147,17 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
               </Card>
             ))}
           </div>
+
+          <div className="mt-8 flex justify-center">
+            <Card className="bg-synergy-red border-4 border-synergy-beige max-w-3xl w-full">
+              <CardContent className="p-6 sm:p-8 text-center">
+                <Icon name="RefreshCw" size={36} className="sm:w-12 sm:h-12 mx-auto mb-4 text-synergy-beige icon-rotate-hover" />
+                <p className="font-heading text-lg sm:text-xl md:text-2xl lg:text-3xl font-black text-synergy-beige leading-tight">
+                  ПРОГРАММА МЕРОПРИЯТИЯ В ПРОЦЕССЕ ДОРАБОТКИ
+                </p>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
     </>
