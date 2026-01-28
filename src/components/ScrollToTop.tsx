@@ -32,14 +32,15 @@ const ScrollToTop = () => {
   if (!isVisible) return null;
 
   return (
-    <Button
-      onClick={scrollToTop}
-      variant="outline"
-      size="icon"
-      className="fixed bottom-6 right-6 z-40 bg-synergy-dark border-synergy-beige text-synergy-beige hover:bg-synergy-red hover:border-synergy-red w-14 h-14 animate-bounce"
-    >
-      <Icon name="Mouse" size={28} />
-    </Button>
+    <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-40">
+      <button
+        onClick={scrollToTop}
+        className="group flex items-center justify-center w-12 h-12 rounded-full bg-synergy-beige/10 backdrop-blur-sm border border-synergy-beige/30 text-synergy-beige hover:bg-synergy-beige/20 hover:border-synergy-beige/50 transition-all duration-300 animate-bounce"
+        aria-label="Наверх"
+      >
+        <Icon name="Mouse" size={20} className="opacity-70 group-hover:opacity-100 transition-opacity" />
+      </button>
+    </div>
   );
 };
 
