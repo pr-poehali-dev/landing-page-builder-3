@@ -5,7 +5,6 @@ import HeroSection from '@/components/sections/HeroSection';
 import AboutSection from '@/components/sections/AboutSection';
 import ProgramSection from '@/components/sections/ProgramSection';
 import SpeakersSection from '@/components/sections/SpeakersSection';
-import StudentsWorksSection from '@/components/sections/StudentsWorksSection';
 import AudienceSection from '@/components/sections/AudienceSection';
 import RegistrationSection from '@/components/sections/RegistrationSection';
 
@@ -43,7 +42,6 @@ const Index = () => {
       <AboutSection />
       <ProgramSection />
       <SpeakersSection />
-      <StudentsWorksSection />
       <AudienceSection />
       <RegistrationSection seatsLeft={seatsLeft} scrollToForm={scrollToForm} />
     </div>
