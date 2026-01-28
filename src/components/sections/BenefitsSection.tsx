@@ -1,0 +1,68 @@
+import { Card, CardContent } from '@/components/ui/card';
+import Icon from '@/components/ui/icon';
+
+const BenefitsSection = () => {
+  const benefits = [
+    {
+      icon: 'TrendingUp',
+      text: 'Как удвоить прибыль через автоматизацию продаж'
+    },
+    {
+      icon: 'Zap',
+      text: 'Как создавать контент за 10 минут вместо часов'
+    },
+    {
+      icon: 'Palette',
+      text: 'Как делать дизайн, видео и сайты в 3 раза быстрее'
+    },
+    {
+      icon: 'Bot',
+      text: 'Как создать цифровой клон себя, который работает вместо тебя'
+    }
+  ];
+
+  return (
+    <section className="py-16 px-6 bg-synergy-beige relative z-10 animate-on-scroll">
+      <div className="max-w-5xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-black mb-4 text-synergy-dark">
+            Это не просто лекции про ИИ.
+          </h2>
+          <p className="text-lg md:text-xl text-synergy-dark/80 max-w-3xl mx-auto">
+            Это реальная демонстрация того, как инструменты работают в бизнесе:
+          </p>
+        </div>
+
+        <div className="space-y-4 mb-8">
+          {benefits.map((benefit, index) => (
+            <Card 
+              key={index}
+              className="bg-white border-2 border-synergy-dark/10 hover:border-synergy-red transition-all duration-300 hover:shadow-lg"
+            >
+              <CardContent className="p-6">
+                <div className="flex items-center gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-synergy-red rounded-full flex items-center justify-center">
+                    <Icon name={benefit.icon} size={24} className="text-synergy-beige" />
+                  </div>
+                  <p className="text-base md:text-lg font-semibold text-synergy-dark">
+                    {benefit.text}
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        <Card className="bg-synergy-dark border-4 border-synergy-red">
+          <CardContent className="p-8 text-center">
+            <p className="text-xl md:text-2xl font-black text-synergy-beige">
+              И главное: ты не просто смотришь — ты сам пробуешь инструменты в деле.
+            </p>
+          </CardContent>
+        </Card>
+      </div>
+    </section>
+  );
+};
+
+export default BenefitsSection;
