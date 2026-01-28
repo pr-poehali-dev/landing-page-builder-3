@@ -35,10 +35,15 @@ const ScrollToTop = () => {
     <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-40">
       <button
         onClick={scrollToTop}
-        className="group flex items-center justify-center w-12 h-12 rounded-full bg-synergy-beige/10 backdrop-blur-sm border border-synergy-beige/30 text-synergy-beige hover:bg-synergy-beige/20 hover:border-synergy-beige/50 transition-all duration-300 animate-bounce"
+        className="group flex flex-col items-center gap-2"
         aria-label="Наверх"
       >
-        <Icon name="Mouse" size={20} className="opacity-70 group-hover:opacity-100 transition-opacity" />
+        <div className="flex items-center justify-center w-16 h-16 rounded-full bg-synergy-red border-2 border-synergy-beige shadow-lg hover:shadow-2xl hover:scale-110 transition-all duration-300 scroll-to-top-float">
+          <Icon name="Mouse" size={28} className="text-synergy-beige" />
+        </div>
+        <span className="text-synergy-beige text-xs font-bold uppercase tracking-wider opacity-80 group-hover:opacity-100 transition-opacity">
+          Наверх
+        </span>
       </button>
     </div>
   );

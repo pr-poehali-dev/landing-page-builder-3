@@ -327,4 +327,19 @@
       transform: translateX(-33.333%);
     }
   }
+
+  /* Scroll to top button animation */
+  .scroll-to-top-float {
+    animation: scroll-float 3s ease-in-out infinite;
+  }
+
+  @keyframes scroll-float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+  }
 }
