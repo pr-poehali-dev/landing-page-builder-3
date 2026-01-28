@@ -9,11 +9,11 @@ const SpeakersSection = ({ id }: SpeakersSectionProps) => {
   const speakers = [
     {
       id: 1,
-      name: 'Имя Спикера 1',
-      role: 'Должность / Специализация',
-      description: 'Краткое описание опыта и достижений спикера. Что он расскажет на мероприятии.',
-      photo: 'https://cdn.poehali.dev/files/freepik__70s-a-medium-shot-of-a-man-riding-a-black-horse-th__67582.png',
-      topic: 'Тема выступления'
+      name: 'Сергей Черников',
+      role: 'Основатель школы ИИ',
+      description: 'Как заставить ИИ продавать потенциальным клиентам 24/7 практически без бюджета.',
+      photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/f5bba851-01ee-4117-aa70-aa74ccb2b6a1.png',
+      topic: 'Автоматизация отдела продаж'
     },
     {
       id: 2,
