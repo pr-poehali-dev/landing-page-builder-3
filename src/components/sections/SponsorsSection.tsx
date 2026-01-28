@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Icon from '@/components/ui/icon';
 import { Button } from '@/components/ui/button';
 
 const SponsorsSection = () => {
   const [isPaused, setIsPaused] = useState(false);
-  const [translateX, setTranslateX] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
   const sponsors = [
     {
       name: 'SUPER-SMM',
@@ -30,6 +31,62 @@ const SponsorsSection = () => {
 
   const allSponsors = [...sponsors, ...sponsors, ...sponsors];
 
+  const scrollToIndex = (index: number) => {
+    if (containerRef.current) {
+      const scrollAmount = index * (250 + 48);
+      containerRef.current.style.transform = `translateX(-${scrollAmount}px)`;
+    }
+  };
+
+  const handlePrev = () => {
+    setIsPaused(true);
+    setCurrentIndex(prev => {
+      const newIndex = prev - 1;
+      scrollToIndex(newIndex);
+      return newIndex;
+    });
+  };
+
+  const handleNext = () => {
+    setIsPaused(true);
+    setCurrentIndex(prev => {
+      const newIndex = prev + 1;
+      scrollToIndex(newIndex);
+      return newIndex;
+    });
+  };
+
+  useEffect(() => {
+    if (currentIndex >= sponsors.length) {
+      setTimeout(() => {
+        if (containerRef.current) {
+          containerRef.current.style.transition = 'none';
+          containerRef.current.style.transform = 'translateX(0px)';
+          setCurrentIndex(0);
+          setTimeout(() => {
+            if (containerRef.current) {
+              containerRef.current.style.transition = 'transform 0.5s ease';
+            }
+          }, 50);
+        }
+      }, 500);
+    } else if (currentIndex < 0) {
+      setTimeout(() => {
+        if (containerRef.current) {
+          containerRef.current.style.transition = 'none';
+          const resetIndex = sponsors.length - 1;
+          containerRef.current.style.transform = `translateX(-${resetIndex * (250 + 48)}px)`;
+          setCurrentIndex(resetIndex);
+          setTimeout(() => {
+            if (containerRef.current) {
+              containerRef.current.style.transition = 'transform 0.5s ease';
+            }
+          }, 50);
+        }
+      }, 500);
+    }
+  }, [currentIndex, sponsors.length]);
+
   return (
     <section className="py-16 px-6 bg-synergy-dark relative z-10 overflow-hidden animate-on-scroll">
       <div className="max-w-6xl mx-auto">
@@ -43,11 +100,13 @@ const SponsorsSection = () => {
         <div className="relative">
           <div className="overflow-hidden">
             <div 
-              className="flex gap-12 animate-scroll-right-fast"
+              ref={containerRef}
+              className={isPaused ? '' : 'animate-scroll-right-fast'}
               style={{ 
-                animationPlayState: isPaused ? 'paused' : 'running',
-                transform: `translateX(${translateX}px)`,
-                transition: isPaused ? 'transform 0.5s ease' : 'none'
+                display: 'flex',
+                gap: '48px',
+                transition: 'transform 0.5s ease',
+                animationPlayState: isPaused ? 'paused' : 'running'
               }}
               onMouseEnter={() => setIsPaused(true)}
               onMouseLeave={() => setIsPaused(false)}
@@ -72,7 +131,7 @@ const SponsorsSection = () => {
             variant="outline"
             size="icon"
             className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-synergy-dark/90 border-synergy-beige/50 text-synergy-beige hover:bg-synergy-red hover:border-synergy-red hover:text-synergy-beige"
-            onClick={() => setTranslateX(prev => prev + 300)}
+            onClick={handlePrev}
           >
             <Icon name="ChevronLeft" size={24} />
           </Button>
@@ -81,7 +140,7 @@ const SponsorsSection = () => {
             variant="outline"
             size="icon"
             className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-synergy-dark/90 border-synergy-beige/50 text-synergy-beige hover:bg-synergy-red hover:border-synergy-red hover:text-synergy-beige"
-            onClick={() => setTranslateX(prev => prev - 300)}
+            onClick={handleNext}
           >
             <Icon name="ChevronRight" size={24} />
           </Button>
