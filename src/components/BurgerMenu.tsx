@@ -28,14 +28,14 @@ const BurgerMenu = () => {
 
   return (
     <>
-      <div className="fixed top-6 right-6 z-50">
+      <div className="fixed top-4 right-4 sm:top-6 sm:right-6 z-50">
         <Button
           variant="outline"
           size="icon"
-          className="bg-synergy-dark border-synergy-beige text-synergy-beige hover:bg-synergy-red hover:border-synergy-red w-14 h-14"
+          className="bg-synergy-dark border-synergy-beige text-synergy-beige hover:bg-synergy-red hover:border-synergy-red w-12 h-12 sm:w-14 sm:h-14"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <Icon name={isOpen ? 'X' : 'Menu'} size={28} />
+          <Icon name={isOpen ? 'X' : 'Menu'} size={24} className="sm:w-7 sm:h-7" />
         </Button>
       </div>
 
@@ -49,13 +49,13 @@ const BurgerMenu = () => {
       <div className={`fixed top-0 right-0 h-full w-full sm:w-96 bg-synergy-dark z-40 shadow-2xl transform transition-transform duration-500 ease-out ${
         isOpen ? 'translate-x-0' : 'translate-x-full'
       }`}>
-        <div className="flex flex-col h-full p-8 pt-24">
+        <div className="flex flex-col h-full p-6 sm:p-8 pt-20 sm:pt-24">
           <nav className="flex-1 space-y-4">
             {menuItems.map((item, idx) => (
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className={`block w-full text-left text-synergy-beige hover:text-synergy-red font-heading text-xl font-bold uppercase transition-all py-3 border-b border-synergy-beige/20 ${
+                className={`block w-full text-left text-synergy-beige hover:text-synergy-red font-heading text-lg sm:text-xl font-bold uppercase transition-all py-3 border-b border-synergy-beige/20 ${
                   isOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
                 }`}
                 style={{ 
@@ -70,7 +70,7 @@ const BurgerMenu = () => {
 
           <Button
             onClick={scrollToRegistration}
-            className={`w-full bg-synergy-red hover:bg-synergy-red/90 text-synergy-beige font-heading text-lg font-black uppercase py-6 mt-6 transition-all duration-500 ${
+            className={`w-full bg-synergy-red hover:bg-synergy-red/90 text-synergy-beige font-heading text-base sm:text-lg font-black uppercase py-5 sm:py-6 mt-6 transition-all duration-500 flex items-center justify-center ${
               isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
             style={{ transitionDelay: isOpen ? '600ms' : '0ms' }}

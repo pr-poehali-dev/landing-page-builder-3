@@ -52,12 +52,12 @@ const SpeakersSection = ({ id }: SpeakersSectionProps) => {
   return (
     <section id={id} className="py-16 px-6 bg-synergy-beige relative z-10 animate-on-scroll">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <Icon name="Users" size={48} className="mx-auto mb-6 text-synergy-red icon-pulse" />
-          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-black mb-4 text-synergy-dark">
+        <div className="text-center mb-12 px-4">
+          <Icon name="Users" size={36} className="sm:w-12 sm:h-12 mx-auto mb-6 text-synergy-red icon-pulse" />
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-4 text-synergy-dark">
             СПИКЕРЫ МЕРОПРИЯТИЯ
           </h2>
-          <p className="text-lg md:text-xl text-synergy-dark/80 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-synergy-dark/80 max-w-3xl mx-auto leading-relaxed">
             Эксперты-практики, которые уже зарабатывают на ИИ и готовы поделиться своим опытом
           </p>
         </div>
@@ -80,22 +80,22 @@ const SpeakersSection = ({ id }: SpeakersSectionProps) => {
                     Спикер
                   </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="font-heading text-xl md:text-2xl font-black mb-2 text-synergy-beige">
+                <div className="p-4 sm:p-5 md:p-6">
+                  <h3 className="font-heading text-lg sm:text-xl md:text-2xl font-black mb-2 text-synergy-beige">
                     {speaker.name}
                   </h3>
-                  <p className="text-synergy-red font-bold mb-3 text-sm uppercase tracking-wide">
+                  <p className="text-synergy-red font-bold mb-3 text-xs sm:text-sm uppercase tracking-wide">
                     {speaker.role}
                   </p>
                   <div className="mb-4 pb-4 border-b border-synergy-beige/20">
                     <div className="flex items-start gap-2 mb-2">
-                      <Icon name="Mic" size={16} className="text-synergy-red mt-1 flex-shrink-0" />
-                      <p className="text-synergy-beige/90 text-sm font-semibold">
+                      <Icon name="Mic" size={14} className="sm:w-4 sm:h-4 text-synergy-red mt-1 flex-shrink-0" />
+                      <p className="text-synergy-beige/90 text-xs sm:text-sm font-semibold">
                         {speaker.topic}
                       </p>
                     </div>
                   </div>
-                  <p className="text-synergy-beige/80 text-sm leading-relaxed">
+                  <p className="text-synergy-beige/80 text-xs sm:text-sm leading-relaxed">
                     {speaker.description}
                   </p>
                 </div>

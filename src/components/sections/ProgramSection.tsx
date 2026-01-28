@@ -13,7 +13,7 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
     <>
       <section id={id} className="py-16 px-6 bg-synergy-dark relative z-10 animate-on-scroll">
         <div className="max-w-6xl mx-auto">
-          <h2 className="font-heading text-3xl md:text-5xl font-black text-center mb-12 text-synergy-beige">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-center mb-12 text-synergy-beige px-4">
             ПРОГРАММА МЕРОПРИЯТИЯ
           </h2>
           <div className="mb-8 flex flex-wrap justify-center gap-2 sm:gap-4 text-synergy-beige/90 text-sm sm:text-base px-4">
@@ -120,25 +120,25 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
                 className={`${block.highlight ? 'bg-synergy-beige text-synergy-dark border-l-4 border-l-synergy-red' : 'bg-synergy-dark/50 text-synergy-beige'} animate-on-scroll`}
                 style={{ transitionDelay: `${idx * 0.08}s` }}
               >
-                <CardContent className="p-4 sm:p-6">
-                  <div className="flex flex-col md:flex-row md:items-start gap-4">
-                    <div className="flex-shrink-0 flex flex-col items-center gap-3">
-                      <Badge className={`${block.highlight ? 'bg-synergy-red text-synergy-beige' : 'bg-synergy-beige/20 text-synergy-beige'} px-2 sm:px-3 py-1 font-mono text-xs sm:text-sm font-bold`}>
+                <CardContent className="p-4 sm:p-5 md:p-6">
+                  <div className="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-4">
+                    <div className="flex-shrink-0 flex flex-row sm:flex-col items-center sm:items-center gap-3">
+                      <Badge className={`${block.highlight ? 'bg-synergy-red text-synergy-beige' : 'bg-synergy-beige/20 text-synergy-beige'} px-2 sm:px-3 py-1 font-mono text-xs sm:text-sm font-bold whitespace-nowrap`}>
                         {block.time}
                       </Badge>
                       {block.icon && (
                         <Icon 
                           name={block.icon as any} 
-                          size={28} 
-                          className={`${block.highlight ? 'text-synergy-red' : 'text-synergy-beige'} icon-glow`} 
+                          size={24} 
+                          className={`sm:w-7 sm:h-7 ${block.highlight ? 'text-synergy-red' : 'text-synergy-beige'} icon-glow flex-shrink-0`} 
                         />
                       )}
                     </div>
-                    <div className="flex-1">
-                      <h3 className={`font-heading text-base sm:text-lg md:text-xl font-black mb-2 ${block.highlight ? 'text-synergy-dark' : 'text-synergy-beige'}`}>
+                    <div className="flex-1 min-w-0">
+                      <h3 className={`font-heading text-sm sm:text-base md:text-lg lg:text-xl font-black mb-2 ${block.highlight ? 'text-synergy-dark' : 'text-synergy-beige'}`}>
                         {block.title}
                       </h3>
-                      <p className={`${block.highlight ? 'text-synergy-dark/80' : 'text-synergy-beige/80'} text-sm sm:text-base leading-relaxed`}>
+                      <p className={`${block.highlight ? 'text-synergy-dark/80' : 'text-synergy-beige/80'} text-xs sm:text-sm md:text-base leading-relaxed`}>
                         {block.desc}
                       </p>
                     </div>

@@ -66,15 +66,17 @@ const RegistrationSection = ({ seatsLeft, scrollToForm }: RegistrationSectionPro
 
   return (
     <>
-      <RegistrationForm
-        seatsLeft={seatsLeft}
-        formData={formData}
-        setFormData={setFormData}
-        onSubmit={handleSubmit}
-        isSubmitting={isSubmitting}
-        onShowPrivacy={() => setShowPrivacy(true)}
-        onShowOffer={() => setShowOffer(true)}
-      />
+      <div id="registration">
+        <RegistrationForm
+          seatsLeft={seatsLeft}
+          formData={formData}
+          setFormData={setFormData}
+          onSubmit={handleSubmit}
+          isSubmitting={isSubmitting}
+          onShowPrivacy={() => setShowPrivacy(true)}
+          onShowOffer={() => setShowOffer(true)}
+        />
+      </div>
 
       <FAQSection />
 

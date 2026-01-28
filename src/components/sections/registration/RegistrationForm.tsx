@@ -24,17 +24,21 @@ const RegistrationForm = ({
   onShowOffer,
 }: RegistrationFormProps) => {
   return (
-    <section id="registration" className="py-16 px-6 bg-synergy-beige relative z-10 animate-on-scroll-scale">
+    <section className="py-16 px-6 bg-synergy-beige relative z-10 animate-on-scroll-scale">
       <div className="max-w-2xl mx-auto">
-        <h2 className="font-heading text-2xl sm:text-3xl md:text-5xl font-black text-center mb-6 text-synergy-dark px-4">
+        <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-center mb-6 text-synergy-dark px-4">
           ЗАБРОНИРОВАТЬ МЕСТО
         </h2>
-        <div className="text-center mb-8">
-          <Badge className="text-base sm:text-lg px-4 sm:px-6 py-2 sm:py-3 bg-synergy-red text-synergy-beige mb-4">
-            Осталось {seatsLeft} мест из 300
-          </Badge>
-          <p className="text-synergy-dark/70 mb-2 text-sm sm:text-base">Стоимость билета: <span className="font-bold text-xl sm:text-2xl text-synergy-red">от 1,000 ₽</span></p>
-          <p className="text-synergy-dark/60 text-sm">100% средств передаются в «Живая Надежда»</p>
+        <div className="text-center mb-8 space-y-3">
+          <div className="flex justify-center">
+            <Badge className="text-sm sm:text-base md:text-lg px-4 sm:px-6 py-2 sm:py-3 bg-synergy-red text-synergy-beige">
+              Осталось {seatsLeft} мест из 300
+            </Badge>
+          </div>
+          <p className="text-synergy-dark/70 mb-2 text-sm sm:text-base px-2">
+            Стоимость билета: <span className="font-bold text-lg sm:text-xl md:text-2xl text-synergy-red">от 1,000 ₽</span>
+          </p>
+          <p className="text-synergy-dark/60 text-xs sm:text-sm px-2">100% средств передаются в «Живая Надежда»</p>
         </div>
         
         <Card className="bg-synergy-dark">
@@ -95,14 +99,16 @@ const RegistrationForm = ({
                   </button>
                 </label>
               </div>
-              <Button 
-                type="submit" 
-                size="lg" 
-                className="w-full bg-synergy-red text-synergy-beige hover:bg-synergy-red/90 font-bold uppercase text-base sm:text-lg py-5 sm:py-6"
-                disabled={!formData.name || !formData.email || !formData.phone || !formData.agree || isSubmitting}
-              >
-                {isSubmitting ? 'Отправка...' : 'Купить билет от 1,000 ₽'}
-              </Button>
+              <div className="flex justify-center">
+                <Button 
+                  type="submit" 
+                  size="lg" 
+                  className="w-full bg-synergy-red text-synergy-beige hover:bg-synergy-red/90 font-bold uppercase text-sm sm:text-base md:text-lg py-5 sm:py-6 flex items-center justify-center"
+                  disabled={!formData.name || !formData.email || !formData.phone || !formData.agree || isSubmitting}
+                >
+                  {isSubmitting ? 'Отправка...' : 'Купить билет от 1,000 ₽'}
+                </Button>
+              </div>
             </form>
           </CardContent>
         </Card>

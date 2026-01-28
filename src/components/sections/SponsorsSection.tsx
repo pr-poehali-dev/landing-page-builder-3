@@ -37,7 +37,7 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
 
   const scrollToIndex = (index: number) => {
     if (containerRef.current) {
-      const scrollAmount = index * (250 + 48);
+      const scrollAmount = index * (200 + 48);
       containerRef.current.style.transform = `translateX(-${scrollAmount}px)`;
     }
   };
@@ -79,7 +79,7 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
         if (containerRef.current) {
           containerRef.current.style.transition = 'none';
           const resetIndex = sponsors.length - 1;
-          containerRef.current.style.transform = `translateX(-${resetIndex * (250 + 48)}px)`;
+          containerRef.current.style.transform = `translateX(-${resetIndex * (200 + 48)}px)`;
           setCurrentIndex(resetIndex);
           setTimeout(() => {
             if (containerRef.current) {
@@ -94,9 +94,9 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
   return (
     <section id={id} className="py-16 px-6 bg-synergy-dark relative z-10 overflow-hidden animate-on-scroll">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <Icon name="Award" size={48} className="mx-auto mb-6 text-synergy-red icon-pulse" />
-          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-black text-synergy-beige">
+        <div className="text-center mb-12 px-4">
+          <Icon name="Award" size={36} className="sm:w-12 sm:h-12 mx-auto mb-6 text-synergy-red icon-pulse" />
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-synergy-beige">
             СПОНСОРЫ МЕРОПРИЯТИЯ
           </h2>
         </div>
@@ -118,8 +118,8 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
               {allSponsors.map((sponsor, index) => (
                 <div
                   key={index}
-                  className="flex-shrink-0 flex items-center justify-center bg-white rounded-lg p-6"
-                  style={{ width: '250px', height: '140px' }}
+                  className="flex-shrink-0 flex items-center justify-center bg-white rounded-lg p-4 sm:p-6"
+                  style={{ width: '200px', height: '120px', minWidth: '200px' }}
                 >
                   <img
                     src={sponsor.logo}

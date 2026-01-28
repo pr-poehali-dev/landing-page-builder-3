@@ -24,11 +24,11 @@ const BenefitsSection = () => {
   return (
     <section className="py-16 px-6 bg-synergy-beige relative z-10 animate-on-scroll">
       <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-black mb-4 text-synergy-dark">
+        <div className="text-center mb-12 px-4">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-4 text-synergy-dark">
             Это не просто лекции про ИИ.
           </h2>
-          <p className="text-lg md:text-xl text-synergy-dark/80 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-synergy-dark/80 max-w-3xl mx-auto leading-relaxed">
             Это реальная демонстрация того, как инструменты работают в бизнесе:
           </p>
         </div>
@@ -39,12 +39,12 @@ const BenefitsSection = () => {
               key={index}
               className="bg-white border-2 border-synergy-dark/10 hover:border-synergy-red transition-all duration-300 hover:shadow-lg"
             >
-              <CardContent className="p-6">
-                <div className="flex items-center gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-synergy-red rounded-full flex items-center justify-center">
-                    <Icon name={benefit.icon} size={24} className="text-synergy-beige icon-float" />
+              <CardContent className="p-4 sm:p-6">
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-synergy-red rounded-full flex items-center justify-center">
+                    <Icon name={benefit.icon} size={20} className="sm:w-6 sm:h-6 text-synergy-beige icon-float" />
                   </div>
-                  <p className="text-base md:text-lg font-semibold text-synergy-dark">
+                  <p className="text-sm sm:text-base md:text-lg font-semibold text-synergy-dark leading-relaxed">
                     {benefit.text}
                   </p>
                 </div>
@@ -53,9 +53,9 @@ const BenefitsSection = () => {
           ))}
         </div>
 
-        <Card className="bg-synergy-dark border-4 border-synergy-red">
-          <CardContent className="p-8 text-center">
-            <p className="text-xl md:text-2xl font-black text-synergy-beige">
+        <Card className="bg-synergy-dark border-2 sm:border-4 border-synergy-red">
+          <CardContent className="p-6 sm:p-8 text-center">
+            <p className="text-lg sm:text-xl md:text-2xl font-black text-synergy-beige leading-relaxed">
               И главное: ты не просто смотришь — ты сам пробуешь инструменты в деле.
             </p>
           </CardContent>
