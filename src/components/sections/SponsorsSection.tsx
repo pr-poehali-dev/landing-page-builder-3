@@ -8,15 +8,23 @@ const SponsorsSection = () => {
   const sponsors = [
     {
       name: 'SUPER-SMM',
-      logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/ab7917b5-7a15-4ab0-a9d0-afc6b480603f.png'
-    },
-    {
-      name: 'Опора России',
-      logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/e6ecf693-7cbe-4946-a21c-2ea6861cd801.png'
+      logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/d8ff5f6e-ffaa-480f-8783-9d2b5d6622b3.png'
     },
     {
       name: 'ЭКО',
-      logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/7daf5386-35e4-40db-8590-e6510fddf461.png'
+      logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/87e2c5a0-456d-4c76-b91f-ffdfef1ba22f.png'
+    },
+    {
+      name: 'Опора России',
+      logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/b30d4627-edea-4d2b-8320-b463b2f8e429.png'
+    },
+    {
+      name: 'Центр Развития Предпринимательства',
+      logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/9c3835e7-37dc-461d-9d7b-fbbef265cdd4.png'
+    },
+    {
+      name: 'БЗ 2022',
+      logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/85bb1b0d-2e8f-45b8-89e4-d071c01f7ddf.png'
     }
   ];
 
