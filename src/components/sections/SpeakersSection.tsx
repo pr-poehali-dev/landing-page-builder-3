@@ -33,19 +33,19 @@ const SpeakersSection = ({ id }: SpeakersSectionProps) => {
     },
     {
       id: 4,
-      name: 'Имя Спикера 4',
-      role: 'Должность / Специализация',
-      description: 'Краткое описание опыта и достижений спикера. Что он расскажет на мероприятии.',
-      photo: 'https://cdn.poehali.dev/files/freepik__qweyd-closeup-a-man-smelling-of-gasoline-and-sin-l__16411.png',
-      topic: 'Тема выступления'
+      name: 'Секретный спикер',
+      role: 'Специальный гость',
+      description: 'Создание рабочего сайта за 30 минут live на глазах аудитории.',
+      photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/054fe890-b97a-4f98-a25b-430318291f09.png',
+      topic: 'САЙТЫ ЧЕРЕЗ ИИ'
     },
     {
       id: 5,
-      name: 'Имя Спикера 5',
-      role: 'Должность / Специализация',
-      description: 'Краткое описание опыта и достижений спикера. Что он расскажет на мероприятии.',
-      photo: 'https://cdn.poehali.dev/files/freepik__qweyd-closeup-portrait-of-a-rugged-man-with-thick-__69510.png',
-      topic: 'Тема выступления'
+      name: 'Секретный спикер',
+      role: 'Специальный гость',
+      description: 'Live-демонстрация создания 3 типов контента за минимум времени.',
+      photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/054fe890-b97a-4f98-a25b-430318291f09.png',
+      topic: 'КОНТЕНТ ЗАВОД'
     }
   ];
 
