@@ -148,16 +148,27 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
             ))}
           </div>
 
-          <div className="mt-8 flex justify-center">
-            <Card className="bg-synergy-red border-4 border-synergy-beige max-w-3xl w-full">
-              <CardContent className="p-6 sm:p-8 text-center">
-                <Icon name="RefreshCw" size={36} className="sm:w-12 sm:h-12 mx-auto mb-4 text-synergy-beige icon-rotate-hover" />
-                <p className="font-heading text-lg sm:text-xl md:text-2xl lg:text-3xl font-black text-synergy-beige leading-tight">
-                  ПРОГРАММА МЕРОПРИЯТИЯ В ПРОЦЕССЕ ДОРАБОТКИ
-                </p>
-              </CardContent>
-            </Card>
-          </div>
+          <Card className="mt-6 bg-synergy-red text-synergy-beige border-l-4 border-l-synergy-beige animate-on-scroll">
+            <CardContent className="p-4 sm:p-5 md:p-6">
+              <div className="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-4">
+                <div className="flex-shrink-0 flex flex-row sm:flex-col items-center sm:items-center gap-3">
+                  <Icon 
+                    name="RefreshCw" 
+                    size={24} 
+                    className="sm:w-7 sm:h-7 text-synergy-beige icon-rotate-hover flex-shrink-0" 
+                  />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="font-heading text-sm sm:text-base md:text-lg lg:text-xl font-black mb-2 text-synergy-beige">
+                    ПРОГРАММА МЕРОПРИЯТИЯ В ПРОЦЕССЕ ДОРАБОТКИ
+                  </h3>
+                  <p className="text-synergy-beige/80 text-xs sm:text-sm md:text-base leading-relaxed">
+                    Следите за обновлениями — программа дополняется новыми блоками и спикерами.
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
     </>
