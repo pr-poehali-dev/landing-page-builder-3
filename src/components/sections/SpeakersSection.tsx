@@ -25,11 +25,11 @@ const SpeakersSection = ({ id }: SpeakersSectionProps) => {
     },
     {
       id: 3,
-      name: 'Имя Спикера 3',
-      role: 'Должность / Специализация',
-      description: 'Краткое описание опыта и достижений спикера. Что он расскажет на мероприятии.',
-      photo: 'https://cdn.poehali.dev/files/freepik__-__85176.png',
-      topic: 'Тема выступления'
+      name: 'Денис Балюра',
+      role: 'Основатель Tomoru.ru',
+      description: 'Робот для найма, продаж и поддержки клиентов.',
+      photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/59d7440a-9175-40cf-b022-436eed5f9865.png',
+      topic: 'Голосовые роботы'
     },
     {
       id: 4,
