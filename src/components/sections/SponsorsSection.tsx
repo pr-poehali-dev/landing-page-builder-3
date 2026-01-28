@@ -1,6 +1,10 @@
+import { useState } from 'react';
 import Icon from '@/components/ui/icon';
+import { Button } from '@/components/ui/button';
 
 const SponsorsSection = () => {
+  const [isPaused, setIsPaused] = useState(false);
+  const [translateX, setTranslateX] = useState(0);
   const sponsors = [
     {
       name: 'SUPER-SMM',
@@ -30,7 +34,16 @@ const SponsorsSection = () => {
 
         <div className="relative">
           <div className="overflow-hidden">
-            <div className="flex gap-12 animate-scroll-right hover:pause-animation">
+            <div 
+              className="flex gap-12 animate-scroll-right-fast"
+              style={{ 
+                animationPlayState: isPaused ? 'paused' : 'running',
+                transform: `translateX(${translateX}px)`,
+                transition: isPaused ? 'transform 0.5s ease' : 'none'
+              }}
+              onMouseEnter={() => setIsPaused(true)}
+              onMouseLeave={() => setIsPaused(false)}
+            >
               {allSponsors.map((sponsor, index) => (
                 <div
                   key={index}
@@ -46,6 +59,24 @@ const SponsorsSection = () => {
               ))}
             </div>
           </div>
+
+          <Button
+            variant="outline"
+            size="icon"
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-synergy-dark/90 border-synergy-beige/50 text-synergy-beige hover:bg-synergy-red hover:border-synergy-red hover:text-synergy-beige"
+            onClick={() => setTranslateX(prev => prev + 300)}
+          >
+            <Icon name="ChevronLeft" size={24} />
+          </Button>
+          
+          <Button
+            variant="outline"
+            size="icon"
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-synergy-dark/90 border-synergy-beige/50 text-synergy-beige hover:bg-synergy-red hover:border-synergy-red hover:text-synergy-beige"
+            onClick={() => setTranslateX(prev => prev - 300)}
+          >
+            <Icon name="ChevronRight" size={24} />
+          </Button>
 
           <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-synergy-dark to-transparent pointer-events-none z-10" />
           <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-synergy-dark to-transparent pointer-events-none z-10" />
