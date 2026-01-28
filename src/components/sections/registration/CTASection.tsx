@@ -10,19 +10,34 @@ const CTASection = ({ seatsLeft, scrollToForm }: CTASectionProps) => {
     <>
       <section className="py-12 px-6 bg-synergy-red relative z-10 animate-on-scroll-scale">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-black mb-4 text-synergy-beige px-4">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-black mb-6 text-synergy-beige px-4">
             НЕ УПУСТИ ВОЗМОЖНОСТЬ
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-synergy-beige/90 mb-8 px-4">
-            Всего {seatsLeft} мест из 100. Присоединяйся к тем, кто уже понял, что ИИ — это не будущее, а настоящее.
+          <p className="text-base sm:text-lg md:text-xl text-synergy-beige/90 mb-6 px-4 leading-relaxed">
+            Ты можешь потратить день на листание ленты в инсте или посмотреть очередной сериал, а можешь потратить день на то, чтобы выучить инструменты, которые изменят твой доход.
+          </p>
+          <p className="text-lg sm:text-xl text-synergy-beige font-bold mb-6 px-4">
+            Всё это уже используют твои конкуренты.
+          </p>
+          <p className="text-base sm:text-lg text-synergy-beige/90 mb-8 px-4">
+            Вопрос не в том, учить ли ИИ. Вопрос в том, когда.
           </p>
           <Button 
             size="lg" 
             onClick={scrollToForm}
-            className="bg-synergy-dark text-synergy-beige hover:bg-synergy-dark/90 font-bold uppercase text-lg px-12 py-6"
+            className="bg-synergy-dark text-synergy-beige hover:bg-synergy-dark/90 font-bold uppercase text-lg sm:text-xl px-12 py-8 mb-6"
           >
-            Купить билет сейчас
+            Купить билет от 1000 ₽
           </Button>
+          <p className="text-sm text-synergy-beige/80 px-4">
+            + получить чек-лист инструментов ИИ
+          </p>
+          <div className="mt-8 space-y-2 text-synergy-beige/70 text-sm px-4">
+            <p>Или если у тебя есть вопросы:</p>
+            <p>📧 chernikovru@yandex.ru</p>
+            <p>📱 +7 (981) 129-24-99</p>
+            <p>💬 @ChernikovGPT (Telegram)</p>
+          </div>
         </div>
       </section>
 

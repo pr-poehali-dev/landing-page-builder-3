@@ -26,17 +26,31 @@ const HeroSection = ({ seatsLeft, scrollToForm }: HeroSectionProps) => {
             ИИ ШОУ БЕЗ ШИРМЫ
           </h1>
           <p className="text-base sm:text-lg md:text-2xl font-semibold mb-8 text-synergy-beige/90 max-w-3xl mx-auto px-2">
-            Не красивые истории, а реальные результаты. Увидишь, как ИИ работает в реальности, и сам попробуешь инструменты, которые твои конкуренты уже используют
+            180 предпринимателей, 8 инструментов ИИ, 1 день — и ты уже можешь зарабатывать. Без теории. Только реальные кейсы от тех, кто это делает прямо сейчас.
           </p>
-          <div className="mb-8 space-y-2 text-synergy-beige/80">
+          <div className="mb-8 space-y-3 text-synergy-beige/80">
             <div className="flex items-center justify-center gap-2 text-base sm:text-lg">
               <Icon name="Calendar" size={20} className="icon-float" />
               <span className="font-semibold">18 апреля 2026, 10:00–18:00</span>
             </div>
             <div className="flex items-center justify-center gap-2 text-base sm:text-lg">
               <Icon name="MapPin" size={20} className="icon-float" />
-              <span className="font-semibold">Владивосток</span>
+              <span className="font-semibold">Владивосток, Седанка, ул. Менделеева, 14</span>
             </div>
+          </div>
+          <div className="mb-8 max-w-4xl mx-auto px-4">
+            <p className="text-sm sm:text-base text-synergy-beige/70 leading-relaxed">
+              Это не просто лекции про ИИ. Это реальная демонстрация того, как инструменты работают в бизнесе:
+            </p>
+            <ul className="mt-4 text-left text-sm sm:text-base text-synergy-beige/80 space-y-2 max-w-2xl mx-auto">
+              <li>• Как удвоить прибыль через автоматизацию продаж</li>
+              <li>• Как создавать контент за 10 минут вместо часов</li>
+              <li>• Как делать дизайн, видео и сайты в 3 раза быстрее</li>
+              <li>• Как создать цифровой клон себя, который работает вместо тебя</li>
+            </ul>
+            <p className="mt-4 text-sm sm:text-base text-synergy-beige font-semibold">
+              И главное: ты не просто смотришь — ты сам пробуешь инструменты в деле.
+            </p>
           </div>
           <div className="relative inline-block mb-4 w-full max-w-md mx-auto px-4">
             <div className="btn-glow-pulse" />
@@ -52,7 +66,7 @@ const HeroSection = ({ seatsLeft, scrollToForm }: HeroSectionProps) => {
           </div>
           <div className="mt-6 flex items-center justify-center gap-3 sm:gap-4 flex-wrap px-4">
             <Badge className="text-sm sm:text-base px-3 sm:px-4 py-2 bg-synergy-dark border-2 border-synergy-beige text-synergy-beige">
-              Осталось {seatsLeft} мест из 150
+              Осталось {seatsLeft} мест из 180
             </Badge>
             <Badge className="text-sm sm:text-base px-3 sm:px-4 py-2 bg-synergy-red text-synergy-beige">
               Цена: от 1,000 ₽

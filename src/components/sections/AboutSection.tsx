@@ -23,39 +23,44 @@ const AboutSection = () => {
               Для девушек, оставшихся без поддержки близких, это часто единственная возможность остаться мамой для своего ребенка и обеспечить ему достойное будущее.
             </p>
           </div>
-          <Button 
-            size="lg" 
-            onClick={() => window.open('https://living-hope.ru', '_blank')}
-            className="bg-synergy-beige text-synergy-dark hover:bg-synergy-beige/90 font-bold uppercase"
-          >
-            <Icon name="ExternalLink" size={20} className="mr-2" />
-            Узнать больше о центре
-          </Button>
-          <p className="mt-8 text-synergy-beige text-lg font-bold">
-            Ты не просто посещаешь мероприятие — ты помогаешь конкретным людям, которые в этом нуждаются прямо сейчас.
-          </p>
+          <div className="text-center">
+            <p className="text-synergy-beige text-xl font-black mb-2">✅ 100% средств от продажи билетов идут в Центр</p>
+            <Button 
+              size="lg" 
+              onClick={() => window.open('https://living-hope.ru', '_blank')}
+              className="bg-synergy-beige text-synergy-dark hover:bg-synergy-beige/90 font-bold uppercase"
+            >
+              <Icon name="ExternalLink" size={20} className="mr-2" />
+              Узнать больше о центре
+            </Button>
+          </div>
+          <div className="mt-8">
+            <p className="text-synergy-beige text-2xl font-black mb-4">✅ 100% средств от продажи билетов идут в Центр</p>
+            <p className="text-synergy-beige/90 text-lg">
+              Твой билет — это прямая помощь конкретным людям, которые нуждаются в этом прямо сейчас.
+            </p>
+          </div>
         </div>
       </section>
 
       <section className="py-16 px-6 bg-synergy-beige relative z-10 animate-on-scroll">
         <div className="max-w-5xl mx-auto">
           <h2 className="font-heading text-2xl sm:text-3xl md:text-5xl font-black text-center mb-6 text-synergy-dark">
-            ИИ БЕЗ ШИРМЫ
+            ЧТО ПРОИЗОЙДЁТ НА МЕРОПРИЯТИИ
           </h2>
-          <p className="text-center text-base sm:text-lg md:text-xl text-synergy-dark/80 mb-12 max-w-3xl mx-auto leading-relaxed px-4">
-            Мы не скрываем, как работают нейросети. Мы показываем технологию в действии, разбираем конкретные кейсы и даём тебе инструменты, которые работают прямо сейчас.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
-              { icon: 'Lightbulb', title: 'Практика', text: 'Не теория, а живые примеры и реальные кейсы' },
-              { icon: 'TrendingUp', title: 'Результаты', text: 'От людей, которые зарабатывают на ИИ сейчас' },
-              { icon: 'Users', title: 'Сообщество', text: 'Нетворкинг с предпринимателями и экспертами' }
+              { icon: 'Eye', title: 'Ты увидишь живые примеры', text: 'Не слайды из презентаций. Реальные кейсы от предпринимателей, копирайтеров, дизайнеров и маркетологов, которые уже зарабатывают на ИИ' },
+              { icon: 'HandMetal', title: 'Ты сам попробуешь инструменты', text: 'Каждый блок — это не лекция, а практический воркшоп. Ты будешь делать, а не слушать' },
+              { icon: 'Wrench', title: 'Ты получишь инструменты к использованию', text: 'Не теоретические знания. Конкретные сервисы, промты, стратегии, которые ты сможешь применить в день, когда вернёшься домой' },
+              { icon: 'Users', title: 'Ты встретишь единомышленников', text: 'Обед, перерывы, нетворкинг — всё организовано так, чтобы ты познакомился с предпринимателями и экспертами из Владивостока' },
+              { icon: 'Heart', title: 'Ты поддержишь людей', text: '100% средств от продажи билета идут в Центр «Живая Надежда» — организацию, которая помогает одиноким матерям в Приморье' }
             ].map((item, idx) => (
-              <Card key={idx} className="bg-synergy-dark text-synergy-beige text-center" style={{ transitionDelay: `${idx * 0.1}s` }}>
+              <Card key={idx} className="bg-synergy-dark text-synergy-beige" style={{ transitionDelay: `${idx * 0.1}s` }}>
                 <CardContent className="p-6 sm:p-8">
-                  <Icon name={item.icon as any} size={48} className="mx-auto mb-4 text-synergy-red icon-glow" />
+                  <Icon name={item.icon as any} size={48} className="mb-4 text-synergy-red icon-glow" />
                   <h3 className="font-heading text-xl font-black mb-3 text-synergy-beige">{item.title}</h3>
-                  <p className="text-synergy-beige/80">{item.text}</p>
+                  <p className="text-synergy-beige/80 leading-relaxed">{item.text}</p>
                 </CardContent>
               </Card>
             ))}
@@ -66,39 +71,39 @@ const AboutSection = () => {
       <section className="py-16 px-6 bg-synergy-beige relative z-10 animate-on-scroll">
         <div className="max-w-5xl mx-auto">
           <h2 className="font-heading text-2xl sm:text-3xl md:text-5xl font-black text-center mb-8 sm:mb-12 text-synergy-dark px-4">
-            ЗАЧЕМ ИДТИ НА ЭТО МЕРОПРИЯТИЕ?
+            ЧТО ПОЛУЧИШЬ НА МЕРОПРИЯТИИ
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
               { 
-                icon: 'Zap', 
-                title: 'Практика, а не теория', 
-                desc: 'Все блоки с живыми примерами и инструментами, которые можно использовать сразу' 
+                icon: 'Wrench', 
+                title: 'Практические инструменты ИИ', 
+                desc: 'Сервисы, которые используют топовые бизнесмены прямо сейчас' 
               },
               { 
-                icon: 'TrendingUp', 
-                title: 'От людей, которые зарабатывают', 
-                desc: 'Кейсы успеха, которые работают сейчас, а не истории из учебников' 
-              },
-              { 
-                icon: 'Heart', 
-                title: 'Помощь реальным людям', 
-                desc: 'Твой билет помогает матерям в Приморье через Центр «Живая Надежда»' 
-              },
-              { 
-                icon: 'Users', 
-                title: 'Сетевое взаимодействие', 
-                desc: 'Встреча с предпринимателями, студентами и экспертами из твоего города' 
-              },
-              { 
-                icon: 'Rocket', 
-                title: 'Уникальные инструменты', 
-                desc: 'Узнаешь про сервисы, которые увеличивают доход в 2 раза' 
+                icon: 'BarChart3', 
+                title: 'Живые кейсы и цифры', 
+                desc: 'Не историями, а конкретными числами (заработки, экономия времени, прирост клиентов)' 
               },
               { 
                 icon: 'Target', 
-                title: 'Реальные результаты', 
-                desc: 'Конкретные цифры, конкретные стратегии, конкретные инструменты' 
+                title: 'Стратегии для разных ниш', 
+                desc: 'От продаж до контента, от дизайна до видеопроизводства' 
+              },
+              { 
+                icon: 'Users', 
+                title: 'Сообщество экспертов', 
+                desc: 'Контакты людей, которые могут стать партнёрами или коллегами' 
+              },
+              { 
+                icon: 'Award', 
+                title: 'Сертификат участника', 
+                desc: 'Как память и подтверждение того, что ты был в авангарде ИИ-движения' 
+              },
+              { 
+                icon: 'MessageCircle', 
+                title: 'Доступ в закрытый чат', 
+                desc: 'Общение с участниками после мероприятия, обмен опытом' 
               }
             ].map((reason, idx) => (
               <Card 
