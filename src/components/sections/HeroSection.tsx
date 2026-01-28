@@ -13,7 +13,7 @@ const HeroSection = ({ seatsLeft, scrollToForm }: HeroSectionProps) => {
       className="relative text-synergy-beige py-20 px-6 overflow-hidden bg-cover bg-center bg-no-repeat" 
       style={{ 
         zIndex: 10,
-        backgroundImage: 'url(https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/files/19695af5-c467-4fcd-aee2-cc0a4d12acb1.jpg)'
+        backgroundImage: 'url(https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/files/574dafbb-bf08-4558-90df-4114bf60cd04.jpg)'
       }}
     >
       <div className="max-w-5xl mx-auto relative z-10 animate-fade-in">
