@@ -4,10 +4,14 @@ import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 import AiIcon from '@/components/AiIcon';
 
-const ProgramSection = () => {
+interface ProgramSectionProps {
+  id?: string;
+}
+
+const ProgramSection = ({ id }: ProgramSectionProps) => {
   return (
     <>
-      <section className="py-16 px-6 bg-synergy-dark relative z-10 animate-on-scroll">
+      <section id={id} className="py-16 px-6 bg-synergy-dark relative z-10 animate-on-scroll">
         <div className="max-w-6xl mx-auto">
           <h2 className="font-heading text-3xl md:text-5xl font-black text-center mb-12 text-synergy-beige">
             ПРОГРАММА МЕРОПРИЯТИЯ

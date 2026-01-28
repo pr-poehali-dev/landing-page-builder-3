@@ -2,7 +2,11 @@ import { useState, useRef, useEffect } from 'react';
 import Icon from '@/components/ui/icon';
 import { Button } from '@/components/ui/button';
 
-const SponsorsSection = () => {
+interface SponsorsSectionProps {
+  id?: string;
+}
+
+const SponsorsSection = ({ id }: SponsorsSectionProps) => {
   const [isPaused, setIsPaused] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -88,7 +92,7 @@ const SponsorsSection = () => {
   }, [currentIndex, sponsors.length]);
 
   return (
-    <section className="py-16 px-6 bg-synergy-dark relative z-10 overflow-hidden animate-on-scroll">
+    <section id={id} className="py-16 px-6 bg-synergy-dark relative z-10 overflow-hidden animate-on-scroll">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <Icon name="Award" size={48} className="mx-auto mb-6 text-synergy-red icon-pulse" />

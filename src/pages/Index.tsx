@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import NeuralBackground from '@/components/NeuralBackground';
+import BurgerMenu from '@/components/BurgerMenu';
+import ScrollToTop from '@/components/ScrollToTop';
 import HeroSection from '@/components/sections/HeroSection';
 import BenefitsSection from '@/components/sections/BenefitsSection';
 import AboutSection from '@/components/sections/AboutSection';
@@ -40,13 +42,15 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-synergy-beige relative">
       <NeuralBackground />
+      <BurgerMenu />
+      <ScrollToTop />
       <HeroSection seatsLeft={seatsLeft} scrollToForm={scrollToForm} />
       <BenefitsSection />
-      <AboutSection />
-      <ProgramSection />
-      <SpeakersSection />
-      <SponsorsSection />
-      <AudienceSection />
+      <AboutSection id="about" />
+      <ProgramSection id="program" />
+      <SpeakersSection id="speakers" />
+      <SponsorsSection id="sponsors" />
+      <AudienceSection id="audience" />
       <RegistrationSection seatsLeft={seatsLeft} scrollToForm={scrollToForm} />
     </div>
   );

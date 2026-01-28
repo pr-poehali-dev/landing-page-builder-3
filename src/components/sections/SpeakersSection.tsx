@@ -1,7 +1,11 @@
 import { Card, CardContent } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
 
-const SpeakersSection = () => {
+interface SpeakersSectionProps {
+  id?: string;
+}
+
+const SpeakersSection = ({ id }: SpeakersSectionProps) => {
   const speakers = [
     {
       id: 1,
@@ -46,7 +50,7 @@ const SpeakersSection = () => {
   ];
 
   return (
-    <section className="py-16 px-6 bg-synergy-beige relative z-10 animate-on-scroll">
+    <section id={id} className="py-16 px-6 bg-synergy-beige relative z-10 animate-on-scroll">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <Icon name="Users" size={48} className="mx-auto mb-6 text-synergy-red icon-pulse" />

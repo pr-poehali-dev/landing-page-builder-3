@@ -2,10 +2,14 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
 
-const AboutSection = () => {
+interface AboutSectionProps {
+  id?: string;
+}
+
+const AboutSection = ({ id }: AboutSectionProps) => {
   return (
     <>
-      <section className="py-16 bg-synergy-red relative z-10 animate-on-scroll">
+      <section id={id} className="py-16 bg-synergy-red relative z-10 animate-on-scroll">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <Icon name="Heart" size={48} className="mx-auto mb-6 text-synergy-beige icon-pulse" />
           <h2 className="font-heading text-2xl sm:text-3xl md:text-5xl font-black mb-6 text-synergy-beige">
