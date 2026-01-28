@@ -41,7 +41,7 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
                 time: '09:30–10:00',
                 icon: 'Users',
                 title: 'РЕГИСТРАЦИЯ',
-                desc: 'Приход гостей, регистрация, кофе-брейк, нейро-фотосессия',
+                desc: 'Приход гостей, регистрация, кофе-брейк',
                 highlight: false
               },
               {
