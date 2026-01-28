@@ -47,7 +47,7 @@ const Index = () => {
       <HeroSection seatsLeft={seatsLeft} scrollToForm={scrollToForm} />
       <AudienceSection id="audience" />
       <BenefitsSection />
-      <AboutSection id="about" />
+      <AboutSection id="about" scrollToForm={scrollToForm} />
       <ProgramSection id="program" />
       <SpeakersSection id="speakers" />
       <SponsorsSection id="sponsors" />

@@ -4,9 +4,10 @@ import Icon from '@/components/ui/icon';
 
 interface AboutSectionProps {
   id?: string;
+  scrollToForm?: () => void;
 }
 
-const AboutSection = ({ id }: AboutSectionProps) => {
+const AboutSection = ({ id, scrollToForm }: AboutSectionProps) => {
   return (
     <>
       <section id={id} className="py-16 bg-synergy-red relative z-10 animate-on-scroll">
@@ -18,30 +19,15 @@ const AboutSection = ({ id }: AboutSectionProps) => {
           <p className="text-base sm:text-lg md:text-xl text-synergy-beige/90 mb-8 leading-relaxed">
             Все собранные средства полностью передаются в <span className="font-bold">Центр «Живая Надежда»</span> — организацию, которая помогает одиноким матерям в Приморье.
           </p>
-          <div className="bg-synergy-dark p-4 sm:p-6 md:p-8 text-synergy-beige mb-6 rounded-lg">
-            <h3 className="font-heading text-lg sm:text-xl md:text-2xl font-black mb-4 text-synergy-beige">О центре «Живая Надежда»</h3>
-            <p className="text-sm sm:text-base text-synergy-beige/90 leading-relaxed mb-4">
-              Центр работает с одинокими матерями в Приморье, предоставляя психологическую поддержку, обучение, помощь в трудоустройстве и создании семейного благополучия.
-            </p>
-            <p className="text-sm sm:text-base text-synergy-beige font-semibold leading-relaxed">
-              Для девушек, оставшихся без поддержки близких, это часто единственная возможность остаться мамой для своего ребенка и обеспечить ему достойное будущее.
-            </p>
-          </div>
           <div className="flex justify-center">
             <Button 
               size="lg" 
-              onClick={() => window.open('https://living-hope.ru', '_blank')}
-              className="w-full sm:w-auto bg-synergy-beige text-synergy-dark hover:bg-synergy-beige/90 font-bold uppercase px-6 py-4 text-sm sm:text-base"
+              onClick={scrollToForm}
+              className="w-full sm:w-auto bg-synergy-beige text-synergy-dark hover:bg-synergy-beige/90 font-bold uppercase px-8 py-6 text-base sm:text-lg md:text-xl"
             >
-              <Icon name="ExternalLink" size={20} className="mr-2" />
-              Узнать больше о центре
+              <Icon name="Ticket" size={24} className="mr-2" />
+              Купить билет
             </Button>
-          </div>
-          <div className="mt-8">
-            <p className="text-synergy-beige text-lg sm:text-xl md:text-2xl font-black mb-4">✅ 100% средств от продажи билетов идут в Центр</p>
-            <p className="text-synergy-beige/90 text-sm sm:text-base md:text-lg leading-relaxed">
-              Твой билет — это прямая помощь конкретным людям, которые нуждаются в этом прямо сейчас.
-            </p>
           </div>
         </div>
       </section>
