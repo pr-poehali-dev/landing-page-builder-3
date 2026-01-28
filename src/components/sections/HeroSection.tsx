@@ -52,7 +52,7 @@ const HeroSection = ({ seatsLeft, scrollToForm }: HeroSectionProps) => {
           </div>
           <div className="mt-6 flex items-center justify-center gap-3 sm:gap-4 flex-wrap px-4">
             <Badge className="text-sm sm:text-base px-3 sm:px-4 py-2 bg-synergy-dark border-2 border-synergy-beige text-synergy-beige">
-              Осталось {seatsLeft} мест из 300
+              Осталось {seatsLeft} мест из 150
             </Badge>
             <Badge className="text-sm sm:text-base px-3 sm:px-4 py-2 bg-synergy-red text-synergy-beige">
               Цена: от 1,000 ₽

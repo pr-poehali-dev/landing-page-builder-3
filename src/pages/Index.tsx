@@ -10,7 +10,7 @@ import AudienceSection from '@/components/sections/AudienceSection';
 import RegistrationSection from '@/components/sections/RegistrationSection';
 
 const Index = () => {
-  const [seatsLeft, setSeatsLeft] = useState(257);
+  const [seatsLeft, setSeatsLeft] = useState(150);
 
   useScrollAnimation();
 
