@@ -42,7 +42,7 @@ const BenefitsSection = () => {
               <CardContent className="p-6">
                 <div className="flex items-center gap-4">
                   <div className="flex-shrink-0 w-12 h-12 bg-synergy-red rounded-full flex items-center justify-center">
-                    <Icon name={benefit.icon} size={24} className="text-synergy-beige" />
+                    <Icon name={benefit.icon} size={24} className="text-synergy-beige icon-float" />
                   </div>
                   <p className="text-base md:text-lg font-semibold text-synergy-dark">
                     {benefit.text}
