@@ -76,7 +76,7 @@ const BurgerMenu = () => {
             style={{ transitionDelay: isOpen ? '600ms' : '0ms' }}
           >
             <Icon name="Ticket" size={24} className="mr-2" />
-            Купить билет
+            <span className="leading-tight">Купить билет<br />и изменить жизнь</span>
           </Button>
         </div>
       </div>

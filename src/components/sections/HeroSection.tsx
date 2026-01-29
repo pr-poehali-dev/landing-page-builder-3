@@ -47,7 +47,7 @@ const HeroSection = ({ seatsLeft, scrollToForm }: HeroSectionProps) => {
                 className="hero-cta-button relative z-10 w-full text-base sm:text-lg md:text-xl lg:text-2xl px-6 sm:px-8 md:px-12 py-5 sm:py-6 md:py-8 h-auto font-black bg-synergy-red text-synergy-beige hover:bg-synergy-red border-4 border-synergy-beige shadow-2xl flex items-center justify-center"
               >
                 <Icon name="Zap" size={20} className="mr-2 sm:mr-3 animate-pulse flex-shrink-0" />
-                <span className="uppercase tracking-wide sm:tracking-wider">Купить билет</span>
+                <span className="uppercase tracking-wide sm:tracking-wider leading-tight">Купить билет<br />и изменить жизнь</span>
                 <Icon name="ArrowRight" size={20} className="ml-2 sm:ml-3 flex-shrink-0" />
               </Button>
             </div>

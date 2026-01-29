@@ -28,7 +28,7 @@ const CTASection = ({ seatsLeft, scrollToForm }: CTASectionProps) => {
               onClick={scrollToForm}
               className="w-full sm:w-auto bg-synergy-dark text-synergy-beige hover:bg-synergy-dark/90 font-bold uppercase text-base sm:text-lg md:text-xl px-8 sm:px-12 py-6 sm:py-8 mb-6 flex items-center justify-center"
             >
-              Купить билет от 1000 ₽
+              <span className="leading-tight">Купить билет и изменить жизнь<br />от 1000 ₽</span>
             </Button>
           </div>
           <p className="text-xs sm:text-sm text-synergy-beige/80">

@@ -106,7 +106,7 @@ const RegistrationForm = ({
                   className="w-full bg-synergy-red text-synergy-beige hover:bg-synergy-red/90 font-bold uppercase text-sm sm:text-base md:text-lg py-5 sm:py-6 flex items-center justify-center"
                   disabled={!formData.name || !formData.email || !formData.phone || !formData.agree || isSubmitting}
                 >
-                  {isSubmitting ? 'Отправка...' : 'Купить билет от 1,000 ₽'}
+                  {isSubmitting ? 'Отправка...' : <span className="leading-tight">Купить билет и изменить жизнь<br />от 1,000 ₽</span>}
                 </Button>
               </div>
             </form>

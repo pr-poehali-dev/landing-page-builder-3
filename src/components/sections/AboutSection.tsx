@@ -26,7 +26,7 @@ const AboutSection = ({ id, scrollToForm }: AboutSectionProps) => {
               className="w-full sm:w-auto bg-synergy-beige text-synergy-dark hover:bg-synergy-beige/90 font-bold uppercase px-8 py-6 text-base sm:text-lg md:text-xl"
             >
               <Icon name="Ticket" size={24} className="mr-2" />
-              Купить билет
+              <span className="leading-tight">Купить билет<br />и изменить жизнь</span>
             </Button>
           </div>
         </div>
