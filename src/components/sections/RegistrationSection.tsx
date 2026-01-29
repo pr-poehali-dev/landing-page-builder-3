@@ -1,95 +1,33 @@
-import { useState } from 'react';
-import { useToast } from '@/hooks/use-toast';
-import RegistrationForm from './registration/RegistrationForm';
-import FAQSection from './registration/FAQSection';
-import CTASection from './registration/CTASection';
-import PolicyDialogs from './registration/PolicyDialogs';
+import { Button } from '@/components/ui/button';
 
-interface RegistrationSectionProps {
-  seatsLeft: number;
-  scrollToForm: () => void;
-}
-
-const RegistrationSection = ({ seatsLeft, scrollToForm }: RegistrationSectionProps) => {
-  const [formData, setFormData] = useState({ name: '', email: '', phone: '', agree: false });
-  const [showPrivacy, setShowPrivacy] = useState(false);
-  const [showOffer, setShowOffer] = useState(false);
-  const [showSuccess, setShowSuccess] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!formData.name || !formData.email || !formData.phone || !formData.agree) {
-      toast({
-        title: 'Ошибка',
-        description: 'Пожалуйста, заполните все поля и примите соглашение',
-        variant: 'destructive',
-      });
-      return;
-    }
-
-    setIsSubmitting(true);
-
-    try {
-      const response = await fetch('https://functions.poehali.dev/1bd67ebf-4078-4be6-ae31-280ee878794e', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-        }),
-      });
-
-      const data = await response.json();
-
-      if (response.ok && data.success) {
-        setShowSuccess(true);
-        setFormData({ name: '', email: '', phone: '', agree: false });
-      } else {
-        throw new Error(data.error || 'Не удалось отправить заявку');
-      }
-    } catch (error) {
-      toast({
-        title: 'Ошибка отправки',
-        description: error instanceof Error ? error.message : 'Попробуйте позже или свяжитесь с нами по телефону',
-        variant: 'destructive',
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
+const RegistrationSection = () => {
+  const handleBuyTicket = () => {
+    window.open('https://yoomoney.ru/to/410011539621116', '_blank');
   };
 
   return (
     <>
-      <div id="registration">
-        <RegistrationForm
-          seatsLeft={seatsLeft}
-          formData={formData}
-          setFormData={setFormData}
-          onSubmit={handleSubmit}
-          isSubmitting={isSubmitting}
-          onShowPrivacy={() => setShowPrivacy(true)}
-          onShowOffer={() => setShowOffer(true)}
-        />
-      </div>
+      <section id="registration" className="py-16 px-6 bg-synergy-red relative z-10">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-8 text-synergy-beige">
+            ЗАБРОНИРОВАТЬ МЕСТО
+          </h2>
+          <div className="flex justify-center">
+            <Button 
+              size="lg" 
+              onClick={handleBuyTicket}
+              className="w-full sm:w-auto bg-synergy-dark text-synergy-beige hover:bg-synergy-dark/90 font-bold uppercase text-xl sm:text-2xl md:text-3xl px-12 sm:px-16 py-8 sm:py-10 flex items-center justify-center"
+            >
+              <span className="leading-tight">Купить билет и изменить жизнь<br />от 1,000 ₽</span>
+            </Button>
+          </div>
+        </div>
+      </section>
 
-      <FAQSection />
-
-      <CTASection seatsLeft={seatsLeft} scrollToForm={scrollToForm} />
-
-      <PolicyDialogs
-        showSuccess={showSuccess}
-        setShowSuccess={setShowSuccess}
-        showPrivacy={showPrivacy}
-        setShowPrivacy={setShowPrivacy}
-        showOffer={showOffer}
-        setShowOffer={setShowOffer}
-      />
+      <footer className="py-8 px-6 bg-synergy-dark text-synergy-beige/60 text-center text-sm">
+        <p>© 2026 Школа «Хакни нейросети» | Владивосток</p>
+        <p className="mt-2">Благотворительное мероприятие в поддержку Центра «Живая Надежда»</p>
+      </footer>
     </>
   );
 };
