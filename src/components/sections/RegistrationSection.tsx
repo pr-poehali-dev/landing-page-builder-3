@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 
 const RegistrationSection = () => {
   const handleBuyTicket = () => {
-    window.open('https://yoomoney.ru/to/410011539621116', '_blank');
+    window.open('https://torguykriptoy.getcourse.ru/bezshirmy', '_blank');
   };
 
   return (
