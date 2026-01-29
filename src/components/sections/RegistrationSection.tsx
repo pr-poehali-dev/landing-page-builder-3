@@ -19,7 +19,7 @@ const RegistrationSection = () => {
               onClick={handleBuyTicket}
               className="w-full sm:w-auto bg-synergy-dark text-synergy-beige hover:bg-synergy-dark/90 font-bold uppercase text-xl sm:text-2xl md:text-3xl px-12 sm:px-16 py-8 sm:py-10 flex items-center justify-center animate-pulse hover:animate-none transition-all cursor-pointer"
             >
-              <Icon name="MousePointerClick" size={32} className="mr-4 animate-pulse" />
+              <Icon name="MousePointerClick" size={48} className="mr-4 animate-pulse" />
               <span className="leading-tight">УЧАСТВОВАТЬ</span>
             </Button>
           </div>
