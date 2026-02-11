@@ -111,7 +111,7 @@ const AboutSection = ({ id, scrollToForm }: AboutSectionProps) => {
           <Card className="bg-synergy-beige border-none">
             <CardContent className="p-6 sm:p-8">
               <h3 className="font-heading text-xl sm:text-2xl md:text-3xl font-black mb-4 text-synergy-dark">
-                Школа «Хакни нейросети»
+                Организатор события — Школа «Хакни нейросети»
               </h3>
               <p className="text-base sm:text-lg text-synergy-dark/80 leading-relaxed mb-6">
                 Единственная офлайн-школа в городе Владивостоке, где преподаватель и студенты создают это событие. 
