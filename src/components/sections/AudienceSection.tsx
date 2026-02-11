@@ -46,40 +46,40 @@ const AudienceSection = ({ id }: AudienceSectionProps) => {
   ];
 
   return (
-    <section id={id} className="py-16 px-6 bg-synergy-dark relative z-10 animate-on-scroll">
+    <section id={id} className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 bg-synergy-dark relative z-10 animate-on-scroll">
       <div className="max-w-5xl mx-auto">
-        <h2 className="font-heading text-2xl sm:text-3xl md:text-5xl font-black text-center mb-8 sm:mb-12 text-synergy-beige px-4">
+        <h2 className="font-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black text-center mb-6 sm:mb-8 md:mb-12 text-synergy-beige px-2">
           ДЛЯ КОГО ЭТО МЕРОПРИЯТИЕ?
         </h2>
-        <Accordion type="single" collapsible className="space-y-4 mb-16">
+        <Accordion type="single" collapsible className="space-y-3 sm:space-y-4 mb-8 sm:mb-12 md:mb-16">
           {audienceData.map((item, idx) => (
             <AccordionItem 
               key={idx} 
               value={`item-${idx}`}
-              className="border-synergy-beige/20 bg-synergy-dark/50 rounded-lg px-4 sm:px-6 animate-on-scroll group"
+              className="border-synergy-beige/20 bg-synergy-dark/50 rounded-lg px-3 sm:px-4 md:px-6 animate-on-scroll group"
               style={{ transitionDelay: `${idx * 0.08}s` }}
             >
-              <AccordionTrigger className="text-synergy-beige hover:text-synergy-red font-heading text-base sm:text-lg md:text-xl font-bold hover:no-underline py-4 text-left">
-                <div className="flex items-center gap-4 w-full">
-                  <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-synergy-red/20 border-2 border-synergy-red group-hover:bg-synergy-red group-hover:scale-110 transition-all duration-300">
-                    <Icon name={item.icon} size={24} className="text-synergy-red group-hover:text-synergy-beige icon-float transition-colors duration-300" />
+              <AccordionTrigger className="text-synergy-beige hover:text-synergy-red font-heading text-sm sm:text-base md:text-lg lg:text-xl font-bold hover:no-underline py-3 sm:py-4 text-left">
+                <div className="flex items-center gap-2 sm:gap-3 md:gap-4 w-full">
+                  <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-synergy-red/20 border-2 border-synergy-red group-hover:bg-synergy-red group-hover:scale-110 transition-all duration-300">
+                    <Icon name={item.icon} size={18} className="sm:w-5 sm:h-5 md:w-6 md:h-6 text-synergy-red group-hover:text-synergy-beige icon-float transition-colors duration-300" />
                   </div>
                   <span className="flex-1">{item.title}</span>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className="text-synergy-beige/90 space-y-4 pl-16">
-                <div className="flex items-start gap-3">
-                  <Icon name="User" size={16} className="text-synergy-red mt-1 flex-shrink-0 icon-glow" />
+              <AccordionContent className="text-synergy-beige/90 space-y-3 sm:space-y-4 pl-10 sm:pl-13 md:pl-16 text-sm sm:text-base">
+                <div className="flex items-start gap-2 sm:gap-3">
+                  <Icon name="User" size={14} className="sm:w-4 sm:h-4 text-synergy-red mt-1 flex-shrink-0 icon-glow" />
                   <div>
-                    <p className="font-bold text-synergy-red mb-2">Кто это?</p>
-                    <p className="leading-relaxed">{item.who}</p>
+                    <p className="font-bold text-synergy-red mb-1 sm:mb-2 text-sm sm:text-base">Кто это?</p>
+                    <p className="leading-relaxed text-xs sm:text-sm md:text-base">{item.who}</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <Icon name="Target" size={16} className="text-synergy-red mt-1 flex-shrink-0 icon-glow" />
+                <div className="flex items-start gap-2 sm:gap-3">
+                  <Icon name="Target" size={14} className="sm:w-4 sm:h-4 text-synergy-red mt-1 flex-shrink-0 icon-glow" />
                   <div>
-                    <p className="font-bold text-synergy-red mb-2">Зачем идти:</p>
-                    <p className="leading-relaxed">{item.why}</p>
+                    <p className="font-bold text-synergy-red mb-1 sm:mb-2 text-sm sm:text-base">Зачем идти:</p>
+                    <p className="leading-relaxed text-xs sm:text-sm md:text-base">{item.why}</p>
                   </div>
                 </div>
               </AccordionContent>

@@ -46,16 +46,16 @@ const BurgerMenu = () => {
         onClick={() => setIsOpen(false)}
       />
       
-      <div className={`fixed top-0 right-0 h-full w-full sm:w-96 bg-synergy-dark z-40 shadow-2xl transform transition-transform duration-500 ease-out ${
+      <div className={`fixed top-0 right-0 h-full w-full sm:w-80 md:w-96 bg-synergy-dark z-40 shadow-2xl transform transition-transform duration-500 ease-out ${
         isOpen ? 'translate-x-0' : 'translate-x-full'
       }`}>
-        <div className="flex flex-col h-full p-6 sm:p-8 pt-20 sm:pt-24">
-          <nav className="flex-1 space-y-4">
+        <div className="flex flex-col h-full p-4 sm:p-6 md:p-8 pt-16 sm:pt-20 md:pt-24">
+          <nav className="flex-1 space-y-2 sm:space-y-3 md:space-y-4">
             {menuItems.map((item, idx) => (
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className={`block w-full text-left text-synergy-beige hover:text-synergy-red font-heading text-lg sm:text-xl font-bold uppercase transition-all py-3 border-b border-synergy-beige/20 ${
+                className={`block w-full text-left text-synergy-beige hover:text-synergy-red font-heading text-base sm:text-lg md:text-xl font-bold uppercase transition-all py-2 sm:py-3 border-b border-synergy-beige/20 ${
                   isOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
                 }`}
                 style={{ 
@@ -70,13 +70,13 @@ const BurgerMenu = () => {
 
           <Button
             onClick={scrollToRegistration}
-            className={`w-full bg-synergy-red hover:bg-synergy-red/90 text-synergy-beige font-heading text-base sm:text-lg font-black uppercase py-5 sm:py-6 mt-6 transition-all duration-500 flex items-center justify-center ${
+            className={`w-full bg-synergy-red hover:bg-synergy-red/90 text-synergy-beige font-heading text-sm sm:text-base md:text-lg font-black uppercase py-4 sm:py-5 md:py-6 mt-4 sm:mt-6 transition-all duration-500 flex items-center justify-center ${
               isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
             style={{ transitionDelay: isOpen ? '600ms' : '0ms' }}
           >
-            <Icon name="Ticket" size={24} className="mr-2" />
-            <span className="leading-tight">Купить билет<br />и изменить жизнь</span>
+            <Icon name="Ticket" size={20} className="sm:w-6 sm:h-6 mr-2 flex-shrink-0" />
+            <span className="leading-tight text-left">Купить билет<br />и изменить жизнь</span>
           </Button>
         </div>
       </div>

@@ -92,11 +92,11 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
   }, [currentIndex, sponsors.length]);
 
   return (
-    <section id={id} className="py-16 px-6 bg-synergy-dark relative z-10 overflow-hidden animate-on-scroll">
+    <section id={id} className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 bg-synergy-dark relative z-10 overflow-hidden animate-on-scroll">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12 px-4">
-          <Icon name="Award" size={36} className="sm:w-12 sm:h-12 mx-auto mb-6 text-synergy-red icon-pulse" />
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-synergy-beige">
+        <div className="text-center mb-8 sm:mb-12 px-2">
+          <Icon name="Award" size={28} className="sm:w-9 sm:h-9 md:w-12 md:h-12 mx-auto mb-4 sm:mb-6 text-synergy-red icon-pulse" />
+          <h2 className="font-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black text-synergy-beige">
             СПОНСОРЫ МЕРОПРИЯТИЯ
           </h2>
         </div>
@@ -118,8 +118,8 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
               {allSponsors.map((sponsor, index) => (
                 <div
                   key={index}
-                  className="flex-shrink-0 flex items-center justify-center bg-white rounded-lg p-4 sm:p-6"
-                  style={{ width: '200px', height: '120px', minWidth: '200px' }}
+                  className="flex-shrink-0 flex items-center justify-center bg-white rounded-lg p-3 sm:p-4 md:p-6"
+                  style={{ width: '160px', height: '100px', minWidth: '160px' }}
                 >
                   <img
                     src={sponsor.logo}
@@ -134,23 +134,23 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
           <Button
             variant="outline"
             size="icon"
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-synergy-dark/90 border-synergy-beige/50 text-synergy-beige hover:bg-synergy-red hover:border-synergy-red hover:text-synergy-beige"
+            className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-20 bg-synergy-dark/90 border-synergy-beige/50 text-synergy-beige hover:bg-synergy-red hover:border-synergy-red hover:text-synergy-beige w-8 h-8 sm:w-10 sm:h-10"
             onClick={handlePrev}
           >
-            <Icon name="ChevronLeft" size={24} />
+            <Icon name="ChevronLeft" size={20} className="sm:w-6 sm:h-6" />
           </Button>
           
           <Button
             variant="outline"
             size="icon"
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-synergy-dark/90 border-synergy-beige/50 text-synergy-beige hover:bg-synergy-red hover:border-synergy-red hover:text-synergy-beige"
+            className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-20 bg-synergy-dark/90 border-synergy-beige/50 text-synergy-beige hover:bg-synergy-red hover:border-synergy-red hover:text-synergy-beige w-8 h-8 sm:w-10 sm:h-10"
             onClick={handleNext}
           >
-            <Icon name="ChevronRight" size={24} />
+            <Icon name="ChevronRight" size={20} className="sm:w-6 sm:h-6" />
           </Button>
 
-          <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-synergy-dark to-transparent pointer-events-none z-10" />
-          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-synergy-dark to-transparent pointer-events-none z-10" />
+          <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-r from-synergy-dark to-transparent pointer-events-none z-10" />
+          <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-l from-synergy-dark to-transparent pointer-events-none z-10" />
         </div>
       </div>
     </section>

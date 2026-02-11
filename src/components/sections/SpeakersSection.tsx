@@ -50,19 +50,19 @@ const SpeakersSection = ({ id }: SpeakersSectionProps) => {
   ];
 
   return (
-    <section id={id} className="py-16 px-6 bg-synergy-beige relative z-10 animate-on-scroll">
+    <section id={id} className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 bg-synergy-beige relative z-10 animate-on-scroll">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12 px-4">
-          <Icon name="Users" size={36} className="sm:w-12 sm:h-12 mx-auto mb-6 text-synergy-red icon-pulse" />
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-4 text-synergy-dark">
+        <div className="text-center mb-8 sm:mb-12 px-2">
+          <Icon name="Users" size={28} className="sm:w-9 sm:h-9 md:w-12 md:h-12 mx-auto mb-4 sm:mb-6 text-synergy-red icon-pulse" />
+          <h2 className="font-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black mb-3 sm:mb-4 text-synergy-dark">
             СПИКЕРЫ МЕРОПРИЯТИЯ
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-synergy-dark/80 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-synergy-dark/80 max-w-3xl mx-auto leading-relaxed">
             Эксперты-практики, которые уже зарабатывают на ИИ и готовы поделиться своим опытом
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {speakers.map((speaker, idx) => (
             <Card 
               key={speaker.id}
@@ -70,21 +70,21 @@ const SpeakersSection = ({ id }: SpeakersSectionProps) => {
               style={{ transitionDelay: `${idx * 0.1}s` }}
             >
               <CardContent className="p-0">
-                <div className="relative h-64 bg-gradient-to-br from-synergy-red/20 to-synergy-dark overflow-hidden">
+                <div className="relative h-48 sm:h-56 md:h-64 bg-gradient-to-br from-synergy-red/20 to-synergy-dark overflow-hidden">
                   <img 
                     src={speaker.photo} 
                     alt={speaker.name}
                     className="w-full h-full object-cover opacity-90"
                   />
-                  <div className="absolute top-4 right-4 bg-synergy-red px-3 py-1 text-xs font-bold uppercase">
+                  <div className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-synergy-red px-2 sm:px-3 py-1 text-xs font-bold uppercase">
                     Спикер
                   </div>
                 </div>
-                <div className="p-4 sm:p-5 md:p-6">
-                  <h3 className="font-heading text-lg sm:text-xl md:text-2xl font-black mb-2 text-synergy-beige">
+                <div className="p-3 sm:p-4 md:p-5 lg:p-6">
+                  <h3 className="font-heading text-base sm:text-lg md:text-xl lg:text-2xl font-black mb-2 text-synergy-beige">
                     {speaker.name}
                   </h3>
-                  <p className="text-synergy-red font-bold mb-3 text-xs sm:text-sm uppercase tracking-wide">
+                  <p className="text-synergy-red font-bold mb-2 sm:mb-3 text-xs sm:text-sm uppercase tracking-wide">
                     {speaker.role}
                   </p>
                   <div className="mb-4 pb-4 border-b border-synergy-beige/20">
@@ -104,12 +104,12 @@ const SpeakersSection = ({ id }: SpeakersSectionProps) => {
           ))}
         </div>
 
-        <div className="mt-12 text-center">
-          <Card className="bg-synergy-dark border-2 border-synergy-red inline-block">
-            <CardContent className="p-6">
-              <div className="flex items-center gap-3 text-synergy-beige">
-                <Icon name="Star" size={24} className="text-synergy-red" />
-                <p className="text-lg font-bold">
+        <div className="mt-8 sm:mt-12 text-center px-2">
+          <Card className="bg-synergy-dark border-2 border-synergy-red inline-block max-w-full">
+            <CardContent className="p-4 sm:p-6">
+              <div className="flex items-center gap-2 sm:gap-3 text-synergy-beige">
+                <Icon name="Star" size={20} className="sm:w-6 sm:h-6 text-synergy-red flex-shrink-0" />
+                <p className="text-sm sm:text-base md:text-lg font-bold">
                   И еще несколько сюрпризов от специальных гостей!
                 </p>
               </div>

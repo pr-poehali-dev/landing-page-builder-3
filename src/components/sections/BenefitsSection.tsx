@@ -22,18 +22,18 @@ const BenefitsSection = () => {
   ];
 
   return (
-    <section className="py-16 px-6 bg-synergy-beige relative z-10 animate-on-scroll">
+    <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 bg-synergy-beige relative z-10 animate-on-scroll">
       <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-12 px-4">
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-4 text-synergy-dark">
+        <div className="text-center mb-8 sm:mb-12 px-2">
+          <h2 className="font-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black mb-3 sm:mb-4 text-synergy-dark">
             Это не просто лекции про ИИ.
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-synergy-dark/80 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-synergy-dark/80 max-w-3xl mx-auto leading-relaxed">
             Это реальная демонстрация того, как инструменты работают в бизнесе:
           </p>
         </div>
 
-        <div className="space-y-4 mb-8">
+        <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
           {benefits.map((benefit, index) => (
             <Card 
               key={index}
