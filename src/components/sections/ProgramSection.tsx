@@ -19,11 +19,11 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
           <div className="mb-8 flex flex-wrap justify-center gap-2 sm:gap-4 text-synergy-beige/90 text-sm sm:text-base px-4">
             <div className="flex items-center gap-2">
               <Icon name="Clock" size={20} className="icon-rotate-hover" />
-              <span className="font-semibold">Сбор гостей: 09:30</span>
+              <span className="font-semibold">Регистрация: 10:30</span>
             </div>
             <div className="flex items-center gap-2">
               <Icon name="PlayCircle" size={20} className="icon-rotate-hover" />
-              <span className="font-semibold">Начало: 10:00</span>
+              <span className="font-semibold">Начало: 11:00</span>
             </div>
             <div className="flex items-center gap-2">
               <Icon name="Coffee" size={20} className="icon-rotate-hover" />
@@ -38,17 +38,10 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
           <div className="space-y-4">
             {[
               {
-                time: '09:30–10:00',
+                time: '10:30–11:00',
                 icon: 'Users',
                 title: 'РЕГИСТРАЦИЯ',
                 desc: 'Приход гостей, регистрация, кофе-брейк',
-                highlight: false
-              },
-              {
-                time: '10:00–11:00',
-                icon: 'Users',
-                title: 'ОТКРЫТИЕ МЕРОПРИЯТИЯ',
-                desc: 'Приветствие гостей, знакомство с программой',
                 highlight: false
               },
               {
