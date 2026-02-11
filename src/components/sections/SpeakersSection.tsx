@@ -74,7 +74,7 @@ const SpeakersSection = ({ id }: SpeakersSectionProps) => {
                   <img 
                     src={speaker.photo} 
                     alt={speaker.name}
-                    className="w-full h-full object-cover opacity-90"
+                    className="w-full h-full object-contain opacity-90"
                   />
                   <div className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-synergy-red px-2 sm:px-3 py-1 text-xs font-bold uppercase">
                     Спикер
