@@ -46,10 +46,10 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
               },
               {
                 time: '10:00–10:10',
-                icon: 'Play',
-                title: 'ОТКРЫТИЕ',
-                desc: 'Приветствие организаторов + правила мероприятия',
-                highlight: false
+                icon: 'MessageSquare',
+                title: 'ПЛЕНАРНОЕ ЗАСЕДАНИЕ',
+                desc: 'Открытый диалог с Министром экономики и Министром цифрового развития',
+                highlight: true
               },
               {
                 time: '10:15–11:00',
