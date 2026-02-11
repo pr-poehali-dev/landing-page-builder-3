@@ -4,6 +4,7 @@ import NeuralBackground from '@/components/NeuralBackground';
 import BurgerMenu from '@/components/BurgerMenu';
 import ScrollToTop from '@/components/ScrollToTop';
 import HeroSection from '@/components/sections/HeroSection';
+import CoOrganizerSection from '@/components/sections/CoOrganizerSection';
 import BenefitsSection from '@/components/sections/BenefitsSection';
 import AboutSection from '@/components/sections/AboutSection';
 import ProgramSection from '@/components/sections/ProgramSection';
@@ -45,6 +46,7 @@ const Index = () => {
       <BurgerMenu />
       <ScrollToTop />
       <HeroSection seatsLeft={seatsLeft} scrollToForm={scrollToForm} />
+      <CoOrganizerSection />
       <AudienceSection id="audience" />
       <BenefitsSection />
       <AboutSection id="about" scrollToForm={scrollToForm} />
