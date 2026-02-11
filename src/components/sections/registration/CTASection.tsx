@@ -45,7 +45,7 @@ const CTASection = ({ seatsLeft, scrollToForm }: CTASectionProps) => {
 
       <footer className="py-8 px-6 bg-synergy-dark text-synergy-beige/60 text-center text-sm">
         <p>© 2026 Школа «Хакни нейросети» | Владивосток</p>
-        <p className="mt-2">Благотворительное мероприятие в поддержку Центра «Живая Надежда»</p>
+        <p className="mt-2">Благотворительное мероприятие в поддержку КГКУ «Маяк»</p>
       </footer>
     </>
   );

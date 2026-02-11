@@ -38,7 +38,7 @@ const RegistrationForm = ({
           <p className="text-synergy-dark/70 mb-2 text-sm sm:text-base px-2">
             Стоимость билета: <span className="font-bold text-lg sm:text-xl md:text-2xl text-synergy-red">от 1,000 ₽</span>
           </p>
-          <p className="text-synergy-dark/60 text-xs sm:text-sm px-2">100% средств передаются в «Живая Надежда»</p>
+          <p className="text-synergy-dark/60 text-xs sm:text-sm px-2">100% средств передаются в КГКУ «Маяк»</p>
         </div>
         
         <Card className="bg-synergy-dark">

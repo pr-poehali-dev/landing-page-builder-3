@@ -61,7 +61,7 @@ const HeroSection = ({ seatsLeft, scrollToForm }: HeroSectionProps) => {
             </Badge>
           </div>
           <p className="mt-6 text-synergy-beige/70 text-xs sm:text-sm max-w-2xl mx-auto px-4 text-center leading-relaxed">
-            100% средств передаются в Центр «Живая Надежда» — помощь одиноким матерям в Приморье
+            100% средств передаются в КГКУ «Маяк» — комплексный центр помощи семье и детям
           </p>
         </div>
       </div>

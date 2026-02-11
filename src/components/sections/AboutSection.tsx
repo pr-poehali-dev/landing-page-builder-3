@@ -17,7 +17,7 @@ const AboutSection = ({ id, scrollToForm }: AboutSectionProps) => {
             ЭТО БЛАГОТВОРИТЕЛЬНОЕ МЕРОПРИЯТИЕ
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-synergy-beige/90 mb-8 leading-relaxed">
-            Все собранные средства полностью передаются в <span className="font-bold">Центр «Живая Надежда»</span> — организацию, которая помогает одиноким матерям в Приморье.
+            Все собранные средства полностью передаются в <span className="font-bold">КГКУ «Маяк»</span> — комплексный центр помощи семье и детям.
           </p>
           <div className="flex justify-center">
             <Button 
@@ -43,7 +43,7 @@ const AboutSection = ({ id, scrollToForm }: AboutSectionProps) => {
               { icon: 'HandMetal', title: 'Ты сам попробуешь инструменты', text: 'Каждый блок — это не лекция, а практический воркшоп. Ты будешь делать, а не слушать' },
               { icon: 'Wrench', title: 'Ты получишь инструменты к использованию', text: 'Не теоретические знания. Конкретные сервисы, промты, стратегии, которые ты сможешь применить в день, когда вернёшься домой' },
               { icon: 'Users', title: 'Ты встретишь единомышленников', text: 'Обед, перерывы, нетворкинг — всё организовано так, чтобы ты познакомился с предпринимателями и экспертами из Владивостока' },
-              { icon: 'Heart', title: 'Ты поддержишь людей', text: '100% средств от продажи билета идут в Центр «Живая Надежда» — организацию, которая помогает одиноким матерям в Приморье' }
+              { icon: 'Heart', title: 'Ты поддержишь людей', text: '100% средств от продажи билета идут в КГКУ «Маяк» — комплексный центр помощи семье и детям' }
             ].map((item, idx) => (
               <Card key={idx} className="bg-synergy-dark text-synergy-beige" style={{ transitionDelay: `${idx * 0.1}s` }}>
                 <CardContent className="p-4 sm:p-6 md:p-8">
