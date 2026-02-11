@@ -107,7 +107,7 @@ const AboutSection = ({ id, scrollToForm }: AboutSectionProps) => {
       </section>
 
       <section className="py-16 px-6 bg-synergy-dark relative z-10 animate-on-scroll">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto space-y-8">
           <Card className="bg-synergy-beige border-none">
             <CardContent className="p-6 sm:p-8">
               <h3 className="font-heading text-xl sm:text-2xl md:text-3xl font-black mb-4 text-synergy-dark">
@@ -128,6 +128,24 @@ const AboutSection = ({ id, scrollToForm }: AboutSectionProps) => {
                   <Icon name="ExternalLink" size={20} className="mr-2" />
                   Узнать больше о школе
                 </Button>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-synergy-beige border-none">
+            <CardContent className="p-6 sm:p-8">
+              <h3 className="font-heading text-xl sm:text-2xl md:text-3xl font-black mb-6 text-synergy-dark text-center">
+                Соорганизатор мероприятия
+              </h3>
+              <div className="flex flex-col items-center space-y-6">
+                <img 
+                  src="https://cdn.poehali.dev/files/31e2c69f-c334-4e44-81ea-dcff7edecc48.png" 
+                  alt="ОПОРА РОССИИ — Приморское краевое отделение" 
+                  className="w-full max-w-2xl h-auto"
+                />
+                <p className="text-base sm:text-lg text-synergy-dark/80 leading-relaxed text-center max-w-2xl">
+                  Приморское краевое отделение «ОПОРА РОССИИ» — организация, объединяющая предпринимателей региона и поддерживающая развитие бизнеса в Приморье.
+                </p>
               </div>
             </CardContent>
           </Card>
