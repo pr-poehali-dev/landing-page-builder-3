@@ -17,7 +17,7 @@ const AboutSection = ({ id, scrollToForm }: AboutSectionProps) => {
             ЭТО БЛАГОТВОРИТЕЛЬНОЕ МЕРОПРИЯТИЕ
           </h2>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-synergy-beige/90 mb-6 sm:mb-8 leading-relaxed px-2">
-            Все собранные средства полностью передаются в <span className="font-bold">КГКУ «Маяк»</span> — комплексный центр помощи семье и детям.
+            Все собранные средства полностью передаются в <a href="https://ddvl4.ru" target="_blank" rel="noopener noreferrer" className="font-bold underline hover:text-synergy-beige">КГКУ «Маяк»</a> — комплексный центр помощи семье и детям.
           </p>
           <div className="flex justify-center px-2">
             <Button 
@@ -47,7 +47,7 @@ const AboutSection = ({ id, scrollToForm }: AboutSectionProps) => {
             ].map((item, idx) => (
               <Card key={idx} className="bg-synergy-dark text-synergy-beige" style={{ transitionDelay: `${idx * 0.1}s` }}>
                 <CardContent className="p-4 sm:p-6 md:p-8">
-                  <Icon name={item.icon as any} size={36} className="sm:w-12 sm:h-12 mb-4 text-synergy-red icon-glow" />
+                  <Icon name={item.icon} size={36} className="sm:w-12 sm:h-12 mb-4 text-synergy-red icon-glow" />
                   <h3 className="font-heading text-lg sm:text-xl font-black mb-3 text-synergy-beige">{item.title}</h3>
                   <p className="text-sm sm:text-base text-synergy-beige/80 leading-relaxed">{item.text}</p>
                 </CardContent>
@@ -96,7 +96,7 @@ const AboutSection = ({ id, scrollToForm }: AboutSectionProps) => {
                 style={{ transitionDelay: `${idx * 0.08}s` }}
               >
                 <CardContent className="p-4 sm:p-6">
-                  <Icon name={reason.icon as any} size={32} className="sm:w-9 sm:h-9 mb-4 text-synergy-red icon-float" />
+                  <Icon name={reason.icon} size={32} className="sm:w-9 sm:h-9 mb-4 text-synergy-red icon-float" />
                   <h3 className="font-heading text-base sm:text-lg md:text-xl font-black mb-2 text-synergy-beige">{reason.title}</h3>
                   <p className="text-sm sm:text-base text-synergy-beige/80 leading-relaxed">{reason.desc}</p>
                 </CardContent>
