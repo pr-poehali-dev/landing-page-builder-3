@@ -35,7 +35,7 @@ const HeroSection = ({ seatsLeft, scrollToForm }: HeroSectionProps) => {
             </div>
             <div className="flex items-center justify-center gap-2 text-sm sm:text-base md:text-lg flex-wrap">
               <Icon name="MapPin" size={20} className="icon-float flex-shrink-0" />
-              <span className="font-semibold text-center">Владивосток, Седанка, ул. Менделеева, 14</span>
+              <span className="font-semibold text-center">Седанка-Парк, ул. Менделеева, 14</span>
             </div>
           </div>
           <div className="flex justify-center px-4 mb-4">
