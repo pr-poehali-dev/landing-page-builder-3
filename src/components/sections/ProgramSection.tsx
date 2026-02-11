@@ -11,12 +11,12 @@ interface ProgramSectionProps {
 const ProgramSection = ({ id }: ProgramSectionProps) => {
   return (
     <>
-      <section id={id} className="py-16 px-6 bg-synergy-dark relative z-10 animate-on-scroll">
+      <section id={id} className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 bg-synergy-dark relative z-10 animate-on-scroll">
         <div className="max-w-6xl mx-auto">
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-center mb-12 text-synergy-beige px-4">
+          <h2 className="font-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black text-center mb-8 sm:mb-12 text-synergy-beige px-2">
             ПРОГРАММА МЕРОПРИЯТИЯ
           </h2>
-          <div className="mb-8 flex flex-wrap justify-center gap-2 sm:gap-4 text-synergy-beige/90 text-sm sm:text-base px-4">
+          <div className="mb-6 sm:mb-8 flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 text-synergy-beige/90 text-xs sm:text-sm md:text-base px-2">
             <div className="flex items-center gap-2">
               <Icon name="Clock" size={20} className="icon-rotate-hover" />
               <span className="font-semibold">Регистрация: 10:30</span>

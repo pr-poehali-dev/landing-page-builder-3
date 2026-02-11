@@ -10,34 +10,34 @@ interface AboutSectionProps {
 const AboutSection = ({ id, scrollToForm }: AboutSectionProps) => {
   return (
     <>
-      <section id={id} className="py-16 bg-synergy-red relative z-10 animate-on-scroll">
+      <section id={id} className="py-8 sm:py-12 md:py-16 bg-synergy-red relative z-10 animate-on-scroll">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <Icon name="Heart" size={36} className="sm:w-12 sm:h-12 mx-auto mb-6 text-synergy-beige icon-pulse" />
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-6 text-synergy-beige leading-tight">
+          <Icon name="Heart" size={28} className="sm:w-9 sm:h-9 md:w-12 md:h-12 mx-auto mb-4 sm:mb-6 text-synergy-beige icon-pulse" />
+          <h2 className="font-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black mb-4 sm:mb-6 text-synergy-beige leading-tight px-2">
             ЭТО БЛАГОТВОРИТЕЛЬНОЕ МЕРОПРИЯТИЕ
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-synergy-beige/90 mb-8 leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-synergy-beige/90 mb-6 sm:mb-8 leading-relaxed px-2">
             Все собранные средства полностью передаются в <span className="font-bold">КГКУ «Маяк»</span> — комплексный центр помощи семье и детям.
           </p>
-          <div className="flex justify-center">
+          <div className="flex justify-center px-2">
             <Button 
               size="lg" 
               onClick={scrollToForm}
-              className="w-full sm:w-auto bg-synergy-beige text-synergy-dark hover:bg-synergy-beige/90 font-bold uppercase px-8 py-6 text-base sm:text-lg md:text-xl"
+              className="w-full sm:w-auto bg-synergy-beige text-synergy-dark hover:bg-synergy-beige/90 font-bold uppercase px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-base md:text-lg lg:text-xl"
             >
-              <Icon name="Ticket" size={24} className="mr-2" />
+              <Icon name="Ticket" size={20} className="mr-2" />
               <span className="leading-tight">Купить билет<br />и изменить жизнь</span>
             </Button>
           </div>
         </div>
       </section>
 
-      <section className="py-16 px-6 bg-synergy-beige relative z-10 animate-on-scroll">
+      <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 bg-synergy-beige relative z-10 animate-on-scroll">
         <div className="max-w-5xl mx-auto">
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-center mb-6 text-synergy-dark px-4">
+          <h2 className="font-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black text-center mb-6 sm:mb-8 text-synergy-dark px-2">
             ЧТО ПРОИЗОЙДЁТ НА МЕРОПРИЯТИИ
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             {[
               { icon: 'Eye', title: 'Ты увидишь живые примеры', text: 'Не слайды из презентаций. Реальные кейсы от предпринимателей, копирайтеров, дизайнеров и маркетологов, которые уже зарабатывают на ИИ' },
               { icon: 'HandMetal', title: 'Ты сам попробуешь инструменты', text: 'Каждый блок — это не лекция, а практический воркшоп. Ты будешь делать, а не слушать' },

@@ -10,22 +10,22 @@ interface HeroSectionProps {
 const HeroSection = ({ seatsLeft, scrollToForm }: HeroSectionProps) => {
   return (
     <section 
-      className="relative text-synergy-beige py-20 px-6 overflow-hidden bg-cover bg-center bg-no-repeat" 
+      className="relative text-synergy-beige py-12 sm:py-16 md:py-20 px-4 sm:px-6 overflow-hidden bg-cover bg-center bg-no-repeat min-h-screen flex items-center" 
       style={{ 
         zIndex: 10,
         backgroundImage: 'url(https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/files/7884ced3-ed07-4001-9bb1-f9ba36c65ea7.jpg)'
       }}
     >
       <div className="absolute inset-0 bg-synergy-dark/60 backdrop-blur-sm" style={{ zIndex: 1 }} />
-      <div className="max-w-5xl mx-auto relative animate-fade-in" style={{ zIndex: 2 }}>
-        <div className="text-center mb-8">
-          <div className="inline-block mb-4 px-4 py-2 bg-synergy-red text-synergy-beige font-bold text-sm uppercase">
+      <div className="max-w-5xl mx-auto relative animate-fade-in w-full" style={{ zIndex: 2 }}>
+        <div className="text-center mb-6 sm:mb-8">
+          <div className="inline-block mb-3 sm:mb-4 px-3 sm:px-4 py-1.5 sm:py-2 bg-synergy-red text-synergy-beige font-bold text-xs sm:text-sm uppercase">
             Благотворительное мероприятие
           </div>
-          <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight text-synergy-beige px-4">
+          <h1 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-4 sm:mb-6 leading-tight text-synergy-beige px-2 sm:px-4">
             ИИ ШОУ БЕЗ ШИРМЫ
           </h1>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-semibold mb-8 text-synergy-beige/90 max-w-3xl mx-auto px-4 leading-relaxed">
+          <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-semibold mb-6 sm:mb-8 text-synergy-beige/90 max-w-3xl mx-auto px-2 sm:px-4 leading-relaxed">
             180 предпринимателей, 8 инструментов ИИ, 1 день — и ты уже можешь зарабатывать. Без теории. Только реальные кейсы от тех, кто это делает прямо сейчас.
           </p>
           <div className="mb-8 space-y-3 text-synergy-beige/80 px-4">
