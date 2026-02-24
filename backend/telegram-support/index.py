@@ -53,9 +53,7 @@ def handler(event: dict, context) -> dict:
 
 🗓 Дата: 18 апреля 2026 года
 🕐 Время: 10:00 - 18:00
-📍 Город: Владивосток, Приморский край
-
-Точный адрес площадки будет отправлен на email после покупки билета.'''
+📍 Место: Отель «Экватор», ул. Набережная, д. 20, г. Владивосток'''
             send_telegram_message(bot_token, chat_id, response_text)
         
         elif 'цена' in text or 'стоимость' in text or 'билет' in text or 'сколько' in text or 'стоит' in text:

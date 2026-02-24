@@ -104,7 +104,7 @@ def handler(event: dict, context) -> dict:
 
 ---
 Мероприятие: ИИ ШОУ БЕЗ ШИРМЫ
-18 апреля 2026, Владивосток"""
+18 апреля 2026, Отель «Экватор», ул. Набережная, д. 20, Владивосток"""
         
         # Отправляем в Telegram
         telegram_sent = False
@@ -145,7 +145,7 @@ def handler(event: dict, context) -> dict:
                     <hr style="border: 1px solid #ddd; margin: 20px 0;">
                     <p style="color: #666;">
                         <strong>Мероприятие:</strong> ИИ ШОУ БЕЗ ШИРМЫ<br>
-                        <strong>Дата события:</strong> 18 апреля 2026, Владивосток
+                        <strong>Дата события:</strong> 18 апреля 2026, Отель «Экватор», ул. Набережная, д. 20, Владивосток
                     </p>
                 </body>
                 </html>
