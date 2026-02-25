@@ -1,10 +1,19 @@
+import { useState, useRef, useCallback } from 'react';
 import Icon from '@/components/ui/icon';
 
 interface SponsorsSectionProps {
   id?: string;
 }
 
+const CARD_WIDTH = 220;
+const CARD_GAP = 28;
+const STEP = CARD_WIDTH + CARD_GAP;
+
 const SponsorsSection = ({ id }: SponsorsSectionProps) => {
+  const [isPaused, setIsPaused] = useState(false);
+  const row1Ref = useRef<HTMLDivElement>(null);
+  const row2Ref = useRef<HTMLDivElement>(null);
+
   const sponsors = [
     {
       name: 'SUPER-SMM',
@@ -35,10 +44,17 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
   const row1 = [...sponsors, ...sponsors];
   const row2 = [...sponsors, ...sponsors];
 
+  const scroll = useCallback((ref: React.RefObject<HTMLDivElement>, direction: 'left' | 'right') => {
+    if (!ref.current) return;
+    const el = ref.current;
+    const delta = direction === 'left' ? -STEP * 2 : STEP * 2;
+    el.scrollBy({ left: delta, behavior: 'smooth' });
+  }, []);
+
   const SponsorCard = ({ sponsor }: { sponsor: typeof sponsors[0] }) => (
     <div
       className="flex-shrink-0 flex items-center justify-center bg-white rounded-xl p-4"
-      style={{ width: '220px', height: '130px', minWidth: '220px' }}
+      style={{ width: `${CARD_WIDTH}px`, height: '130px', minWidth: `${CARD_WIDTH}px` }}
     >
       <img
         src={sponsor.logo}
@@ -58,26 +74,59 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
           </h2>
         </div>
 
-        <div className="relative overflow-hidden flex flex-col gap-5">
+        <div
+          className="relative flex flex-col gap-5"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
           <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-r from-synergy-dark to-transparent pointer-events-none z-10" />
           <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-l from-synergy-dark to-transparent pointer-events-none z-10" />
 
+          {isPaused && (
+            <>
+              <button
+                onClick={() => { scroll(row1Ref, 'left'); scroll(row2Ref, 'left'); }}
+                className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-synergy-dark/90 border border-synergy-beige/50 text-synergy-beige hover:bg-synergy-red hover:border-synergy-red flex items-center justify-center transition-all duration-200"
+              >
+                <Icon name="ChevronLeft" size={22} />
+              </button>
+              <button
+                onClick={() => { scroll(row1Ref, 'right'); scroll(row2Ref, 'right'); }}
+                className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-synergy-dark/90 border border-synergy-beige/50 text-synergy-beige hover:bg-synergy-red hover:border-synergy-red flex items-center justify-center transition-all duration-200"
+              >
+                <Icon name="ChevronRight" size={22} />
+              </button>
+            </>
+          )}
+
           <div
-            className="animate-scroll-right-fast"
-            style={{ display: 'flex', gap: '28px', width: 'max-content' }}
+            ref={row1Ref}
+            className="overflow-x-auto scrollbar-hide"
+            style={{ scrollbarWidth: 'none' }}
           >
-            {row1.map((sponsor, index) => (
-              <SponsorCard key={index} sponsor={sponsor} />
-            ))}
+            <div
+              className={isPaused ? '' : 'animate-scroll-right-fast'}
+              style={{ display: 'flex', gap: `${CARD_GAP}px`, width: 'max-content', animationPlayState: isPaused ? 'paused' : 'running' }}
+            >
+              {row1.map((sponsor, index) => (
+                <SponsorCard key={index} sponsor={sponsor} />
+              ))}
+            </div>
           </div>
 
           <div
-            className="animate-scroll-left-fast"
-            style={{ display: 'flex', gap: '28px', width: 'max-content' }}
+            ref={row2Ref}
+            className="overflow-x-auto scrollbar-hide"
+            style={{ scrollbarWidth: 'none' }}
           >
-            {row2.map((sponsor, index) => (
-              <SponsorCard key={index} sponsor={sponsor} />
-            ))}
+            <div
+              className={isPaused ? '' : 'animate-scroll-left-fast'}
+              style={{ display: 'flex', gap: `${CARD_GAP}px`, width: 'max-content', animationPlayState: isPaused ? 'paused' : 'running' }}
+            >
+              {row2.map((sponsor, index) => (
+                <SponsorCard key={index} sponsor={sponsor} />
+              ))}
+            </div>
           </div>
         </div>
       </div>
