@@ -32,8 +32,8 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
     }
   ];
 
-  const row1 = [...sponsors, ...sponsors, ...sponsors];
-  const row2 = [...sponsors, ...sponsors, ...sponsors];
+  const row1 = [...sponsors, ...sponsors];
+  const row2 = [...sponsors, ...sponsors];
 
   const SponsorCard = ({ sponsor }: { sponsor: typeof sponsors[0] }) => (
     <div
@@ -62,26 +62,22 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
           <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-r from-synergy-dark to-transparent pointer-events-none z-10" />
           <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-l from-synergy-dark to-transparent pointer-events-none z-10" />
 
-          <div className="overflow-hidden">
-            <div
-              className="animate-scroll-right-fast"
-              style={{ display: 'flex', gap: '28px' }}
-            >
-              {row1.map((sponsor, index) => (
-                <SponsorCard key={index} sponsor={sponsor} />
-              ))}
-            </div>
+          <div
+            className="animate-scroll-right-fast"
+            style={{ display: 'flex', gap: '28px', width: 'max-content' }}
+          >
+            {row1.map((sponsor, index) => (
+              <SponsorCard key={index} sponsor={sponsor} />
+            ))}
           </div>
 
-          <div className="overflow-hidden">
-            <div
-              className="animate-scroll-left-fast"
-              style={{ display: 'flex', gap: '28px' }}
-            >
-              {row2.map((sponsor, index) => (
-                <SponsorCard key={index} sponsor={sponsor} />
-              ))}
-            </div>
+          <div
+            className="animate-scroll-left-fast"
+            style={{ display: 'flex', gap: '28px', width: 'max-content' }}
+          >
+            {row2.map((sponsor, index) => (
+              <SponsorCard key={index} sponsor={sponsor} />
+            ))}
           </div>
         </div>
       </div>
