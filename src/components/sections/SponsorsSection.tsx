@@ -39,9 +39,12 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
 
   const allSponsors = [...sponsors, ...sponsors, ...sponsors];
 
+  const CARD_WIDTH = 240;
+  const CARD_GAP = 32;
+
   const scrollToIndex = (index: number) => {
     if (containerRef.current) {
-      const scrollAmount = index * (200 + 48);
+      const scrollAmount = index * (CARD_WIDTH + CARD_GAP);
       containerRef.current.style.transform = `translateX(-${scrollAmount}px)`;
     }
   };
@@ -83,7 +86,7 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
         if (containerRef.current) {
           containerRef.current.style.transition = 'none';
           const resetIndex = sponsors.length - 1;
-          containerRef.current.style.transform = `translateX(-${resetIndex * (200 + 48)}px)`;
+          containerRef.current.style.transform = `translateX(-${resetIndex * (CARD_WIDTH + CARD_GAP)}px)`;
           setCurrentIndex(resetIndex);
           setTimeout(() => {
             if (containerRef.current) {
@@ -112,7 +115,7 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
               className={isPaused ? '' : 'animate-scroll-right-fast'}
               style={{ 
                 display: 'flex',
-                gap: '48px',
+                gap: `${CARD_GAP}px`,
                 transition: 'transform 0.5s ease',
                 animationPlayState: isPaused ? 'paused' : 'running'
               }}
@@ -122,13 +125,13 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
               {allSponsors.map((sponsor, index) => (
                 <div
                   key={index}
-                  className="flex-shrink-0 flex items-center justify-center bg-white rounded-lg p-3 sm:p-4 md:p-6"
-                  style={{ width: '160px', height: '100px', minWidth: '160px' }}
+                  className="flex-shrink-0 flex items-center justify-center bg-white rounded-xl p-4 sm:p-5"
+                  style={{ width: `${CARD_WIDTH}px`, height: '140px', minWidth: `${CARD_WIDTH}px` }}
                 >
                   <img
                     src={sponsor.logo}
                     alt={sponsor.name}
-                    className="max-w-full max-h-full object-contain"
+                    className="w-full h-full object-contain"
                   />
                 </div>
               ))}
