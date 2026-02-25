@@ -1,15 +1,10 @@
-import { useState, useRef, useEffect } from 'react';
 import Icon from '@/components/ui/icon';
-import { Button } from '@/components/ui/button';
 
 interface SponsorsSectionProps {
   id?: string;
 }
 
 const SponsorsSection = ({ id }: SponsorsSectionProps) => {
-  const [isPaused, setIsPaused] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const containerRef = useRef<HTMLDivElement>(null);
   const sponsors = [
     {
       name: 'SUPER-SMM',
@@ -37,66 +32,21 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
     }
   ];
 
-  const allSponsors = [...sponsors, ...sponsors, ...sponsors];
+  const row1 = [...sponsors, ...sponsors, ...sponsors];
+  const row2 = [...sponsors, ...sponsors, ...sponsors];
 
-  const CARD_WIDTH = 240;
-  const CARD_GAP = 32;
-
-  const scrollToIndex = (index: number) => {
-    if (containerRef.current) {
-      const scrollAmount = index * (CARD_WIDTH + CARD_GAP);
-      containerRef.current.style.transform = `translateX(-${scrollAmount}px)`;
-    }
-  };
-
-  const handlePrev = () => {
-    setIsPaused(true);
-    setCurrentIndex(prev => {
-      const newIndex = prev - 1;
-      scrollToIndex(newIndex);
-      return newIndex;
-    });
-  };
-
-  const handleNext = () => {
-    setIsPaused(true);
-    setCurrentIndex(prev => {
-      const newIndex = prev + 1;
-      scrollToIndex(newIndex);
-      return newIndex;
-    });
-  };
-
-  useEffect(() => {
-    if (currentIndex >= sponsors.length) {
-      setTimeout(() => {
-        if (containerRef.current) {
-          containerRef.current.style.transition = 'none';
-          containerRef.current.style.transform = 'translateX(0px)';
-          setCurrentIndex(0);
-          setTimeout(() => {
-            if (containerRef.current) {
-              containerRef.current.style.transition = 'transform 0.5s ease';
-            }
-          }, 50);
-        }
-      }, 500);
-    } else if (currentIndex < 0) {
-      setTimeout(() => {
-        if (containerRef.current) {
-          containerRef.current.style.transition = 'none';
-          const resetIndex = sponsors.length - 1;
-          containerRef.current.style.transform = `translateX(-${resetIndex * (CARD_WIDTH + CARD_GAP)}px)`;
-          setCurrentIndex(resetIndex);
-          setTimeout(() => {
-            if (containerRef.current) {
-              containerRef.current.style.transition = 'transform 0.5s ease';
-            }
-          }, 50);
-        }
-      }, 500);
-    }
-  }, [currentIndex, sponsors.length]);
+  const SponsorCard = ({ sponsor }: { sponsor: typeof sponsors[0] }) => (
+    <div
+      className="flex-shrink-0 flex items-center justify-center bg-white rounded-xl p-4"
+      style={{ width: '220px', height: '130px', minWidth: '220px' }}
+    >
+      <img
+        src={sponsor.logo}
+        alt={sponsor.name}
+        className="w-full h-full object-contain"
+      />
+    </div>
+  );
 
   return (
     <section id={id} className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 bg-synergy-dark relative z-10 overflow-hidden animate-on-scroll">
@@ -108,56 +58,31 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
           </h2>
         </div>
 
-        <div className="relative">
+        <div className="relative overflow-hidden flex flex-col gap-5">
+          <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-r from-synergy-dark to-transparent pointer-events-none z-10" />
+          <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-l from-synergy-dark to-transparent pointer-events-none z-10" />
+
           <div className="overflow-hidden">
-            <div 
-              ref={containerRef}
-              className={isPaused ? '' : 'animate-scroll-right-fast'}
-              style={{ 
-                display: 'flex',
-                gap: `${CARD_GAP}px`,
-                transition: 'transform 0.5s ease',
-                animationPlayState: isPaused ? 'paused' : 'running'
-              }}
-              onMouseEnter={() => setIsPaused(true)}
-              onMouseLeave={() => setIsPaused(false)}
+            <div
+              className="animate-scroll-right-fast"
+              style={{ display: 'flex', gap: '28px' }}
             >
-              {allSponsors.map((sponsor, index) => (
-                <div
-                  key={index}
-                  className="flex-shrink-0 flex items-center justify-center bg-white rounded-xl p-4 sm:p-5"
-                  style={{ width: `${CARD_WIDTH}px`, height: '140px', minWidth: `${CARD_WIDTH}px` }}
-                >
-                  <img
-                    src={sponsor.logo}
-                    alt={sponsor.name}
-                    className="w-full h-full object-contain"
-                  />
-                </div>
+              {row1.map((sponsor, index) => (
+                <SponsorCard key={index} sponsor={sponsor} />
               ))}
             </div>
           </div>
 
-          <Button
-            variant="outline"
-            size="icon"
-            className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-20 bg-synergy-dark/90 border-synergy-beige/50 text-synergy-beige hover:bg-synergy-red hover:border-synergy-red hover:text-synergy-beige w-8 h-8 sm:w-10 sm:h-10"
-            onClick={handlePrev}
-          >
-            <Icon name="ChevronLeft" size={20} className="sm:w-6 sm:h-6" />
-          </Button>
-          
-          <Button
-            variant="outline"
-            size="icon"
-            className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-20 bg-synergy-dark/90 border-synergy-beige/50 text-synergy-beige hover:bg-synergy-red hover:border-synergy-red hover:text-synergy-beige w-8 h-8 sm:w-10 sm:h-10"
-            onClick={handleNext}
-          >
-            <Icon name="ChevronRight" size={20} className="sm:w-6 sm:h-6" />
-          </Button>
-
-          <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-r from-synergy-dark to-transparent pointer-events-none z-10" />
-          <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-l from-synergy-dark to-transparent pointer-events-none z-10" />
+          <div className="overflow-hidden">
+            <div
+              className="animate-scroll-left-fast"
+              style={{ display: 'flex', gap: '28px' }}
+            >
+              {row2.map((sponsor, index) => (
+                <SponsorCard key={index} sponsor={sponsor} />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
