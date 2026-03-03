@@ -26,7 +26,7 @@ const HeroSection = ({ seatsLeft, scrollToForm }: HeroSectionProps) => {
             ИИ ШОУ БЕЗ ШИРМЫ
           </h1>
           <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-semibold mb-6 sm:mb-8 text-synergy-beige/90 max-w-3xl mx-auto px-2 sm:px-4 leading-relaxed">
-            180 предпринимателей, 8 инструментов ИИ, 1 день — и ты уже можешь зарабатывать. Без теории. Только реальные кейсы от тех, кто это делает прямо сейчас.
+            250 предпринимателей, 8 инструментов ИИ, 1 день — и ты уже можешь зарабатывать. Без теории. Только реальные кейсы от тех, кто это делает прямо сейчас.
           </p>
           <div className="mb-8 space-y-3 text-synergy-beige/80 px-4">
             <div className="flex items-center justify-center gap-2 text-sm sm:text-base md:text-lg flex-wrap">
@@ -54,7 +54,7 @@ const HeroSection = ({ seatsLeft, scrollToForm }: HeroSectionProps) => {
           </div>
           <div className="mt-6 flex items-center justify-center gap-2 sm:gap-3 md:gap-4 flex-wrap px-4">
             <Badge className="text-xs sm:text-sm md:text-base px-3 sm:px-4 py-2 bg-synergy-dark border-2 border-synergy-beige text-synergy-beige whitespace-nowrap">
-              Осталось {seatsLeft} мест из 180
+              Осталось {seatsLeft} мест из 250
             </Badge>
             <Badge className="text-xs sm:text-sm md:text-base px-3 sm:px-4 py-2 bg-synergy-red text-synergy-beige whitespace-nowrap">
               Цена: от 1,000 ₽
