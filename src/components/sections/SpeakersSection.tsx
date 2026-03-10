@@ -9,6 +9,14 @@ const SpeakersSection = ({ id }: SpeakersSectionProps) => {
   const speakers = [
     {
       id: 1,
+      name: 'Иван Трошин',
+      role: 'Директор управления по цифровому развитию клиентов Дальневосточного Сбербанка',
+      description: 'Тема уточняется.',
+      photo: 'https://cdn.poehali.dev/files/d4cd930d-8e30-4cea-baec-79298a385011.png',
+      topic: 'ТЕМА УТОЧНЯЕТСЯ'
+    },
+    {
+      id: 2,
       name: 'Сергей Черников',
       role: 'Основатель школы ИИ',
       description: 'Как заставить ИИ продавать потенциальным клиентам 24/7 практически без бюджета.',
@@ -16,7 +24,7 @@ const SpeakersSection = ({ id }: SpeakersSectionProps) => {
       topic: 'Автоматизация отдела продаж'
     },
     {
-      id: 2,
+      id: 3,
       name: 'Иван Линдберг',
       role: 'Наставник, трекер Сколково',
       description: 'Автоматизация трафика с помощью ИИ. Горячие клиенты ждут вас.',
@@ -24,20 +32,12 @@ const SpeakersSection = ({ id }: SpeakersSectionProps) => {
       topic: 'Клиенты на автомате'
     },
     {
-      id: 3,
+      id: 4,
       name: 'Денис Балюра',
       role: 'Основатель Tomoru.ru',
       description: 'Робот для найма, продаж и поддержки клиентов.',
       photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/59d7440a-9175-40cf-b022-436eed5f9865.png',
       topic: 'Голосовые роботы'
-    },
-    {
-      id: 4,
-      name: 'Секретный спикер',
-      role: 'Специальный гость',
-      description: 'Создание рабочего сайта за 30 минут live на глазах аудитории.',
-      photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/054fe890-b97a-4f98-a25b-430318291f09.png',
-      topic: 'САЙТЫ ЧЕРЕЗ ИИ'
     },
     {
       id: 5,
