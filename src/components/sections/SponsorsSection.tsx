@@ -38,6 +38,10 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
     {
       name: 'Кинотеатр Шахтер',
       logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/f15d2cd4-ebce-4d64-a62b-2f84b45843d5.png'
+    },
+    {
+      name: 'Рейд Паллада',
+      logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/ddec73b2-fe63-456b-a388-642006823c75.jpg'
     }
   ];
 
