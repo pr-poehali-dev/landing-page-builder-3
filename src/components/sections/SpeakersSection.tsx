@@ -41,11 +41,11 @@ const SpeakersSection = ({ id }: SpeakersSectionProps) => {
     },
     {
       id: 5,
-      name: 'Секретный спикер',
-      role: 'Специальный гость',
-      description: 'Live-демонстрация создания 3 типов контента за минимум времени.',
-      photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/054fe890-b97a-4f98-a25b-430318291f09.png',
-      topic: 'КОНТЕНТ ЗАВОД'
+      name: 'Роман Дремлюга',
+      role: 'Зам. директора по развитию Института математики и компьютерных технологий ДВФО РАН',
+      description: 'Тема уточняется.',
+      photo: 'https://cdn.poehali.dev/files/eea8541a-4cc4-4771-944f-6d51a71fd1ae.png',
+      topic: 'ТЕМА УТОЧНЯЕТСЯ'
     }
   ];
 
