@@ -15,7 +15,7 @@ import PlenarySection from '@/components/sections/PlenarySection';
 import RegistrationSection from '@/components/sections/RegistrationSection';
 
 const Index = () => {
-  const [seatsLeft, setSeatsLeft] = useState(165);
+  const [seatsLeft, setSeatsLeft] = useState(187);
 
   useScrollAnimation();
 
