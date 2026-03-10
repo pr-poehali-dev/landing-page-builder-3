@@ -66,14 +66,14 @@ const StudentsWorksSection = () => {
   const handleMouseLeave = () => setIsPaused(false);
 
   return (
-    <section className="py-16 px-6 bg-synergy-dark relative z-10 animate-on-scroll">
+    <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 bg-synergy-dark relative z-10 animate-on-scroll">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <Icon name="Sparkles" size={48} className="mx-auto mb-6 text-synergy-red icon-pulse" />
-          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-black mb-4 text-synergy-beige">
+        <div className="text-center mb-6 sm:mb-8 md:mb-12">
+          <Icon name="Sparkles" size={32} className="sm:w-10 sm:h-10 md:w-12 md:h-12 mx-auto mb-4 sm:mb-6 text-synergy-red icon-pulse" />
+          <h2 className="font-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black mb-3 sm:mb-4 text-synergy-beige px-2">
             РАБОТЫ УЧЕНИКОВ
           </h2>
-          <p className="text-lg md:text-xl text-synergy-beige/80 max-w-3xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-synergy-beige/80 max-w-3xl mx-auto px-2">
             Реальные результаты студентов школы «Хакни нейросети»
           </p>
         </div>
@@ -95,11 +95,11 @@ const StudentsWorksSection = () => {
                           alt={work.title}
                           className="w-full h-full object-cover"
                         />
-                        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-synergy-dark/90 to-transparent p-6">
-                          <h3 className="font-heading text-2xl md:text-3xl font-black text-synergy-beige mb-2">
+                        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-synergy-dark/90 to-transparent p-3 sm:p-4 md:p-6">
+                          <h3 className="font-heading text-lg sm:text-xl md:text-2xl lg:text-3xl font-black text-synergy-beige mb-1 sm:mb-2">
                             {work.title}
                           </h3>
-                          <p className="text-synergy-beige/80">
+                          <p className="text-sm sm:text-base text-synergy-beige/80">
                             {work.description}
                           </p>
                         </div>
@@ -165,12 +165,12 @@ const StudentsWorksSection = () => {
           </div>
         </div>
 
-        <div className="mt-12 text-center">
-          <Card className="bg-synergy-beige border-2 border-synergy-red inline-block">
-            <CardContent className="p-6">
-              <div className="flex items-center gap-3 text-synergy-dark">
-                <Icon name="Award" size={24} className="text-synergy-red" />
-                <p className="text-lg font-bold">
+        <div className="mt-8 sm:mt-10 md:mt-12 text-center px-2">
+          <Card className="bg-synergy-beige border-2 border-synergy-red w-full sm:inline-block">
+            <CardContent className="p-4 sm:p-6">
+              <div className="flex items-start sm:items-center gap-3 text-synergy-dark">
+                <Icon name="Award" size={20} className="sm:w-6 sm:h-6 text-synergy-red flex-shrink-0 mt-0.5 sm:mt-0" />
+                <p className="text-sm sm:text-base md:text-lg font-bold text-left sm:text-center">
                   Это работы студентов, которые прошли обучение в школе «Хакни нейросети»
                 </p>
               </div>

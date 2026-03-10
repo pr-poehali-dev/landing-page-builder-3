@@ -8,7 +8,7 @@ interface CTASectionProps {
 const CTASection = ({ seatsLeft, scrollToForm }: CTASectionProps) => {
   return (
     <>
-      <section className="py-12 px-6 bg-synergy-red relative z-10 animate-on-scroll-scale">
+      <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 bg-synergy-red relative z-10 animate-on-scroll-scale">
         <div className="max-w-4xl mx-auto text-center px-4">
           <h2 className="font-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black mb-6 text-synergy-beige">
             НЕ УПУСТИ ВОЗМОЖНОСТЬ
@@ -43,7 +43,7 @@ const CTASection = ({ seatsLeft, scrollToForm }: CTASectionProps) => {
         </div>
       </section>
 
-      <footer className="py-8 px-6 bg-synergy-dark text-synergy-beige/60 text-center text-sm">
+      <footer className="py-6 sm:py-8 px-4 sm:px-6 bg-synergy-dark text-synergy-beige/60 text-center text-xs sm:text-sm">
         <p>© 2026 Школа «Хакни нейросети» | Владивосток</p>
         <p className="mt-2">Благотворительное мероприятие в поддержку КГКУ «Маяк»</p>
       </footer>

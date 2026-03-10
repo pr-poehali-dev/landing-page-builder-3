@@ -67,7 +67,7 @@ const AudienceSection = ({ id }: AudienceSectionProps) => {
                   <span className="flex-1">{item.title}</span>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className="text-synergy-beige/90 space-y-3 sm:space-y-4 pl-10 sm:pl-13 md:pl-16 text-sm sm:text-base">
+              <AccordionContent className="text-synergy-beige/90 space-y-3 sm:space-y-4 pl-8 sm:pl-12 md:pl-16 text-sm sm:text-base">
                 <div className="flex items-start gap-2 sm:gap-3">
                   <Icon name="User" size={14} className="sm:w-4 sm:h-4 text-synergy-red mt-1 flex-shrink-0 icon-glow" />
                   <div>

@@ -96,7 +96,7 @@ const PlenarySection = ({ id }: PlenarySectionProps) => {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-10 sm:mb-14 px-2">
-          <div className="inline-flex items-center gap-2 bg-synergy-red/20 border border-synergy-red/40 px-4 py-2 mb-6">
+          <div className="inline-flex flex-wrap items-center gap-2 bg-synergy-red/20 border border-synergy-red/40 px-3 sm:px-4 py-2 mb-6 max-w-full">
             <Icon name="Users" size={16} className="text-synergy-red" />
             <span className="text-synergy-red text-xs font-bold uppercase tracking-widest">
               Специальный формат

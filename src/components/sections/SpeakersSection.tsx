@@ -105,7 +105,7 @@ const SpeakersSection = ({ id }: SpeakersSectionProps) => {
         </div>
 
         <div className="mt-8 sm:mt-12 text-center px-2">
-          <Card className="bg-synergy-dark border-2 border-synergy-red inline-block max-w-full">
+          <Card className="bg-synergy-dark border-2 border-synergy-red w-full sm:inline-block sm:w-auto max-w-full">
             <CardContent className="p-4 sm:p-6">
               <div className="flex items-center gap-2 sm:gap-3 text-synergy-beige">
                 <Icon name="Star" size={20} className="sm:w-6 sm:h-6 text-synergy-red flex-shrink-0" />

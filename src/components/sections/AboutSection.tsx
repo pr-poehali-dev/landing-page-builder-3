@@ -57,12 +57,12 @@ const AboutSection = ({ id, scrollToForm }: AboutSectionProps) => {
         </div>
       </section>
 
-      <section className="py-16 px-6 bg-synergy-beige relative z-10 animate-on-scroll">
+      <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 bg-synergy-beige relative z-10 animate-on-scroll">
         <div className="max-w-5xl mx-auto">
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-5xl font-black text-center mb-8 sm:mb-12 text-synergy-dark px-4">
+          <h2 className="font-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black text-center mb-6 sm:mb-8 md:mb-12 text-synergy-dark px-2">
             ЧТО ПОЛУЧИШЬ НА МЕРОПРИЯТИИ
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             {[
               { 
                 icon: 'Wrench', 
@@ -106,7 +106,7 @@ const AboutSection = ({ id, scrollToForm }: AboutSectionProps) => {
         </div>
       </section>
 
-      <section className="py-16 px-6 bg-synergy-dark relative z-10 animate-on-scroll">
+      <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 bg-synergy-dark relative z-10 animate-on-scroll">
         <div className="max-w-4xl mx-auto">
           <Card className="bg-synergy-beige border-none">
             <CardContent className="p-6 sm:p-8">

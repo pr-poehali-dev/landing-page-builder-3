@@ -24,7 +24,7 @@ const RegistrationForm = ({
   onShowOffer,
 }: RegistrationFormProps) => {
   return (
-    <section className="py-16 px-6 bg-synergy-beige relative z-10 animate-on-scroll-scale">
+    <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 bg-synergy-beige relative z-10 animate-on-scroll-scale">
       <div className="max-w-2xl mx-auto">
         <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-center mb-6 text-synergy-dark px-4">
           ЗАБРОНИРОВАТЬ МЕСТО
