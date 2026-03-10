@@ -11,6 +11,7 @@ import ProgramSection from '@/components/sections/ProgramSection';
 import SpeakersSection from '@/components/sections/SpeakersSection';
 import SponsorsSection from '@/components/sections/SponsorsSection';
 import AudienceSection from '@/components/sections/AudienceSection';
+import PlenarySection from '@/components/sections/PlenarySection';
 import RegistrationSection from '@/components/sections/RegistrationSection';
 
 const Index = () => {
@@ -52,6 +53,7 @@ const Index = () => {
       <AboutSection id="about" scrollToForm={scrollToForm} />
       <ProgramSection id="program" />
       <SpeakersSection id="speakers" />
+      <PlenarySection id="plenary" />
       <SponsorsSection id="sponsors" />
       <RegistrationSection seatsLeft={seatsLeft} scrollToForm={scrollToForm} />
     </div>
