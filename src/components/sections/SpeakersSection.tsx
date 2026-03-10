@@ -28,7 +28,7 @@ const SpeakersSection = ({ id }: SpeakersSectionProps) => {
       name: 'Иван Линдберг',
       role: 'Наставник, трекер Сколково',
       description: 'Как компании получать лиды из нейросетей? GEO – новый канал маркетинга.',
-      photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/2666beb8-8b4d-4671-973a-117dec8b9542.png',
+      photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/7a227fd7-6fdc-4719-9631-88d42e111de1.jpg',
       topic: 'Клиенты из GEO'
     },
     {
