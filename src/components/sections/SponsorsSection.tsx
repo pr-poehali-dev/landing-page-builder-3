@@ -38,6 +38,18 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
     {
       name: 'Рейд Паллада',
       logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/ddec73b2-fe63-456b-a388-642006823c75.jpg'
+    },
+    {
+      name: 'Ягода',
+      logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/5272db74-bbd3-44f2-83bd-e53664c03f22.png'
+    },
+    {
+      name: 'Плёсы Песчаного',
+      logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/f6fcbda4-be54-46d7-a04b-eb84143078db.jpg'
+    },
+    {
+      name: 'Multi Chat',
+      logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/bf4df878-ef35-48ff-bef5-c4070ae60ac6.png'
     }
   ];
 
