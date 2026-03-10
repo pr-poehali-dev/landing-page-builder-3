@@ -25,7 +25,7 @@ const participants = [
     id: 1,
     name: 'Иван Трошин',
     role: 'Директор управления по цифровому развитию клиентов Дальневосточного Сбербанка',
-    photo: null,
+    photo: 'https://cdn.poehali.dev/files/f1d6ac71-c650-4de9-aa96-7d33d211b309.png',
   },
   {
     id: 2,
