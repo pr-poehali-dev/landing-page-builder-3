@@ -26,7 +26,7 @@ const HeroSection = ({ seatsLeft, scrollToForm }: HeroSectionProps) => {
             ИИ ШОУ БЕЗ ШИРМЫ
           </h1>
           <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-semibold mb-6 sm:mb-8 text-synergy-beige/90 max-w-3xl mx-auto px-2 sm:px-4 leading-relaxed">
-            250 предпринимателей, 8 инструментов ИИ, 1 день — и ты уже можешь зарабатывать. Без теории. Только реальные кейсы от тех, кто это делает прямо сейчас.
+            300 предпринимателей, 8 инструментов ИИ, 1 день — и ты уже можешь зарабатывать. Без теории. Только реальные кейсы от тех, кто это делает прямо сейчас.
           </p>
           <div className="mb-8 space-y-3 text-synergy-beige/80 px-4">
             <div className="flex items-center justify-center gap-2 text-sm sm:text-base md:text-lg flex-wrap">
