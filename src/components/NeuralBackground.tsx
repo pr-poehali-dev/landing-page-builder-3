@@ -135,7 +135,7 @@ const NeuralBackground = () => {
         const gradient = ctx.createRadialGradient(node.x, node.y, 0, node.x, node.y, node.radius * (4 + hoverBoost * 2));
         const alpha = 0.2 + node.brightness * 0.5 + hoverBoost * 0.4;
         
-        gradient.addColorStop(0, `${node.color}${Math.floor(alpha * 255).toString(16).padStart(2, '0')}`);
+        gradient.addColorStop(0, `${node.color}${Math.min(255, Math.floor(alpha * 255)).toString(16).padStart(2, '0')}`);
         gradient.addColorStop(0.4, `${node.color}44`);
         gradient.addColorStop(1, 'transparent');
 
