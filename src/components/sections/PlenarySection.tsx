@@ -10,7 +10,7 @@ const moderators = [
     id: 1,
     name: 'Сергей Черников',
     role: 'Основатель школы ИИ, эксперт по ИИ',
-    photo: null,
+    photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/32b3ca1a-64d1-425a-a048-6a1206eccb69.png',
   },
   {
     id: 2,
@@ -52,19 +52,25 @@ const PersonCard = ({
   role,
   badge,
   badgeColor,
+  photo,
 }: {
   name: string;
   role: string;
   badge: string;
   badgeColor: string;
+  photo?: string | null;
 }) => (
   <Card className="bg-synergy-dark text-synergy-beige overflow-hidden hover:scale-105 transition-transform duration-300 h-full">
     <CardContent className="p-0 flex flex-col h-full">
-      <div className="relative h-40 sm:h-48 bg-gradient-to-br from-synergy-beige/10 to-synergy-dark flex items-center justify-center border-b border-synergy-beige/10">
-        <div className="flex flex-col items-center gap-3 text-synergy-beige/30">
-          <Icon name="User" size={48} />
-          <span className="text-xs text-synergy-beige/40 uppercase tracking-widest">фото</span>
-        </div>
+      <div className="relative h-40 sm:h-48 bg-gradient-to-br from-synergy-beige/10 to-synergy-dark flex items-center justify-center border-b border-synergy-beige/10 overflow-hidden">
+        {photo ? (
+          <img src={photo} alt={name} className="w-full h-full object-cover object-top" />
+        ) : (
+          <div className="flex flex-col items-center gap-3 text-synergy-beige/30">
+            <Icon name="User" size={48} />
+            <span className="text-xs text-synergy-beige/40 uppercase tracking-widest">фото</span>
+          </div>
+        )}
         <div
           className={`absolute top-3 right-3 px-2 py-1 text-xs font-bold uppercase tracking-wide ${badgeColor}`}
         >
@@ -126,6 +132,7 @@ const PlenarySection = ({ id }: PlenarySectionProps) => {
                 role={person.role}
                 badge="Модератор"
                 badgeColor="bg-synergy-red text-synergy-beige"
+                photo={person.photo}
               />
             ))}
           </div>
