@@ -28,10 +28,6 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
       logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/b30d4627-edea-4d2b-8320-b463b2f8e429.png'
     },
     {
-      name: 'Центр Развития Предпринимательства',
-      logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/9c3835e7-37dc-461d-9d7b-fbbef265cdd4.png'
-    },
-    {
       name: 'БЗ 2022',
       logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/85bb1b0d-2e8f-45b8-89e4-d071c01f7ddf.png'
     },
