@@ -158,6 +158,7 @@ const PlenarySection = ({ id }: PlenarySectionProps) => {
                 role={person.role}
                 badge="Участник"
                 badgeColor="bg-synergy-beige/10 text-synergy-beige/60 border border-synergy-beige/20"
+                photo={person.photo}
               />
             ))}
           </div>
