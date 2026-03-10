@@ -50,6 +50,10 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
     {
       name: 'Multi Chat',
       logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/bf4df878-ef35-48ff-bef5-c4070ae60ac6.png'
+    },
+    {
+      name: 'Правительство Приморского края',
+      logo: 'https://cdn.poehali.dev/files/bba11447-b27d-4923-bfa5-a66cb576a971.png'
     }
   ];
 
@@ -82,7 +86,7 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
         <div className="text-center mb-8 sm:mb-12 px-2">
           <Icon name="Award" size={28} className="sm:w-9 sm:h-9 md:w-12 md:h-12 mx-auto mb-4 sm:mb-6 text-synergy-red icon-pulse" />
           <h2 className="font-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black text-synergy-beige">
-            СПОНСОРЫ МЕРОПРИЯТИЯ
+            БЛАГОДАРЯ ЭТИМ ОРГАНИЗАЦИЯМ<br />СОСТОИТСЯ КОНФЕРЕНЦИЯ. СПАСИБО!
           </h2>
         </div>
 
