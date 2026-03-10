@@ -31,7 +31,7 @@ const participants = [
     id: 2,
     name: 'Николай Стецко',
     role: 'Зампред правительства Приморья',
-    photo: null,
+    photo: 'https://cdn.poehali.dev/files/5084f4b2-8535-4dda-a43c-82eeea1397b2.png',
   },
   {
     id: 3,
