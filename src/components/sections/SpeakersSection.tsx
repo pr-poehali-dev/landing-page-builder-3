@@ -42,7 +42,7 @@ const SpeakersSection = ({ id }: SpeakersSectionProps) => {
     {
       id: 5,
       name: 'Роман Дремлюга',
-      role: 'Зам. директора по развитию Института математики и компьютерных технологий ДВФО РАН',
+      role: 'Зам. директора по развитию Института математики и компьютерных технологий ДВФУ РАН',
       description: 'Тема уточняется.',
       photo: 'https://cdn.poehali.dev/files/eea8541a-4cc4-4771-944f-6d51a71fd1ae.png',
       topic: 'ТЕМА УТОЧНЯЕТСЯ'
