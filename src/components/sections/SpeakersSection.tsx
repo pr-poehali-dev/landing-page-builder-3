@@ -18,7 +18,7 @@ const SpeakersSection = ({ id }: SpeakersSectionProps) => {
     {
       id: 2,
       name: 'Сергей Черников',
-      role: 'Основатель школы ИИ',
+      role: 'Основатель школы ИИ, CEO IT компании Super-SMM',
       description: 'Как заставить ИИ продавать потенциальным клиентам 24/7 практически без бюджета.',
       photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/f5bba851-01ee-4117-aa70-aa74ccb2b6a1.png',
       topic: 'Автоматизация отдела продаж'

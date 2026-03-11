@@ -9,7 +9,7 @@ const moderators = [
   {
     id: 1,
     name: 'Сергей Черников',
-    role: 'Основатель школы ИИ, эксперт по ИИ',
+    role: 'Основатель школы ИИ, CEO IT компании Super-SMM',
     photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/32b3ca1a-64d1-425a-a048-6a1206eccb69.png',
   },
   {
