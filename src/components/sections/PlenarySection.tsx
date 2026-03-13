@@ -45,6 +45,12 @@ const participants = [
     role: 'Зам. директора по развитию Института математики и компьютерных технологий ДВФУ РАН',
     photo: 'https://cdn.poehali.dev/files/2c7d8a05-3135-4257-8e8b-faf13e3d1f91.png',
   },
+  {
+    id: 5,
+    name: 'Иван Машунин',
+    role: 'Генеральный директор Автономной некоммерческой организации "Центр поддержки предпринимательства Приморского края"',
+    photo: 'https://cdn.poehali.dev/files/a83f2d46-1619-4e64-8d4d-aee6e7bdcc1b.png',
+  },
 ];
 
 const PersonCard = ({
