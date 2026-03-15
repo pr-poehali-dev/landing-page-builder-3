@@ -15,7 +15,7 @@ const moderators = [
   {
     id: 2,
     name: 'Игорь Ветрюк',
-    role: 'Председатель приморской Опоры России',
+    role: 'Председатель приморской Опоры России, Генеральный директор ООО «Велл Вей»',
     photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/1c24fca7-d277-4c93-83aa-c4ab679635bc.png',
   },
 ];
