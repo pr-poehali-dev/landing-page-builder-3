@@ -14,7 +14,7 @@ const AboutSection = ({ id, scrollToForm }: AboutSectionProps) => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <Icon name="Heart" size={28} className="sm:w-9 sm:h-9 md:w-12 md:h-12 mx-auto mb-4 sm:mb-6 text-synergy-beige icon-pulse" />
           <h2 className="font-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black mb-4 sm:mb-6 text-synergy-beige leading-tight px-2">
-            ЭТО БЛАГОТВОРИТЕЛЬНОЕ МЕРОПРИЯТИЕ
+            ЭТО БЛАГОТВОРИТЕЛЬНАЯ КОНФЕРЕНЦИЯ
           </h2>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-synergy-beige/90 mb-6 sm:mb-8 leading-relaxed px-2">
             Все собранные средства полностью передаются в <a href="https://ddvl4.ru" target="_blank" rel="noopener noreferrer" className="font-bold underline hover:text-synergy-beige">КГКУ «Маяк»</a> — комплексный центр помощи семье и детям.

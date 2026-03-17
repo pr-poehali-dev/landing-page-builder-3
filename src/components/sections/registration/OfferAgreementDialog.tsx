@@ -30,7 +30,7 @@ const OfferAgreementDialog = ({ open, onOpenChange }: OfferAgreementDialogProps)
           <div className="text-center space-y-2">
             <h3 className="font-heading text-xl font-black text-synergy-red">ДОГОВОР ОФЕРТА</h3>
             <p className="font-semibold">На предоставление услуги участия в благотворительном мероприятии</p>
-            <p className="font-bold text-synergy-red">БЛАГОТВОРИТЕЛЬНОЕ МЕРОПРИЯТИЕ<br />«ИИ ШОУ БЕЗ ШИРМЫ»</p>
+            <p className="font-bold text-synergy-red">БЛАГОТВОРИТЕЛЬНАЯ КОНФЕРЕНЦИЯ<br />«ИИ ШОУ БЕЗ ШИРМЫ»</p>
             <p>18 апреля 2026 г., 10:00–18:00<br />Отель «Экватор», ул. Набережная, д. 20, г. Владивосток</p>
           </div>
 

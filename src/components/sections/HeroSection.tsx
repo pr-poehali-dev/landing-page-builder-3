@@ -20,7 +20,7 @@ const HeroSection = ({ seatsLeft, scrollToForm }: HeroSectionProps) => {
       <div className="max-w-5xl mx-auto relative animate-fade-in w-full" style={{ zIndex: 2 }}>
         <div className="text-center mb-6 sm:mb-8">
           <div className="inline-block mb-3 sm:mb-4 px-3 sm:px-4 py-1.5 sm:py-2 bg-synergy-red text-synergy-beige font-bold text-xs sm:text-sm uppercase">
-            Благотворительное мероприятие
+            Благотворительная конференция
           </div>
           <h1 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-4 sm:mb-6 leading-tight text-synergy-beige px-2 sm:px-4">
             ИИ ШОУ БЕЗ ШИРМЫ
