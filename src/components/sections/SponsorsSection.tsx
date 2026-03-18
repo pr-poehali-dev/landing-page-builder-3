@@ -20,6 +20,10 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
       logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/d8ff5f6e-ffaa-480f-8783-9d2b5d6622b3.png'
     },
     {
+      name: 'ЭКО Центр',
+      logo: 'https://cdn.poehali.dev/files/8423e1e0-efce-4614-9287-18a3853fa1bc.png'
+    },
+    {
       name: 'Опора России',
       logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/b30d4627-edea-4d2b-8320-b463b2f8e429.png'
     },
