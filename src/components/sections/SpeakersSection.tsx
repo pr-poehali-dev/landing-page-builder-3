@@ -32,6 +32,22 @@ const SpeakersSection = ({ id }: SpeakersSectionProps) => {
       topic: 'Клиенты из GEO'
     },
     {
+      id: 6,
+      name: 'Секретный Спикер',
+      role: '',
+      description: 'Тема уточняется.',
+      photo: null,
+      topic: 'ТЕМА УТОЧНЯЕТСЯ'
+    },
+    {
+      id: 7,
+      name: 'Секретный Спикер',
+      role: '',
+      description: 'Тема уточняется.',
+      photo: null,
+      topic: 'ТЕМА УТОЧНЯЕТСЯ'
+    },
+    {
       id: 4,
       name: 'Денис Балюра',
       role: 'Основатель Tomoru.ru',
@@ -63,12 +79,19 @@ const SpeakersSection = ({ id }: SpeakersSectionProps) => {
               style={{ transitionDelay: `${idx * 0.1}s` }}
             >
               <CardContent className="p-0">
-                <div className="relative h-48 sm:h-56 md:h-64 bg-gradient-to-br from-synergy-red/20 to-synergy-dark overflow-hidden">
-                  <img 
-                    src={speaker.photo} 
-                    alt={speaker.name}
-                    className="w-full h-full object-contain opacity-90"
-                  />
+                <div className="relative h-48 sm:h-56 md:h-64 bg-gradient-to-br from-synergy-red/20 to-synergy-dark overflow-hidden flex items-center justify-center">
+                  {speaker.photo ? (
+                    <img 
+                      src={speaker.photo} 
+                      alt={speaker.name}
+                      className="w-full h-full object-contain opacity-90"
+                    />
+                  ) : (
+                    <div className="flex flex-col items-center gap-3 text-synergy-beige/30">
+                      <Icon name="UserX" size={56} />
+                      <span className="text-xs uppercase tracking-widest text-synergy-beige/40">скоро</span>
+                    </div>
+                  )}
                   <div className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-synergy-red px-2 sm:px-3 py-1 text-xs font-bold uppercase">
                     Спикер
                   </div>
