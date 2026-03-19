@@ -55,8 +55,13 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
                 time: '11:40–12:40',
                 icon: 'MessageSquare',
                 title: 'ПЛЕНАРНОЕ ЗАСЕДАНИЕ',
-                desc: 'Открытый диалог с:\nНиколаем Стецко — Зампред правительства Приморья\nИваном Машуниным — Генеральный директор АНО "Центр поддержки предпринимательства Приморского края"\nАндреем Клементьевым — Министр цифрового развития и связи Приморского края',
-                highlight: true
+                desc: 'Открытый диалог с представителями власти об ИИ в экономике Приморья.',
+                highlight: true,
+                people: [
+                  { name: 'Николай Стецко', role: 'Зампред правительства Приморья', photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/87cd7c50-fec9-49d9-a207-bf48d7377b27.png' },
+                  { name: 'Иван Машунин', role: 'Генеральный директор АНО "Центр поддержки предпринимательства Приморского края"', photo: 'https://cdn.poehali.dev/files/a83f2d46-1619-4e64-8d4d-aee6e7bdcc1b.png' },
+                  { name: 'Андрей Клементьев', role: 'Министр цифрового развития и связи Приморского края', photo: 'https://cdn.poehali.dev/files/76867e86-de6e-411a-b6b2-4c7a6686b49a.png' },
+                ]
               },
               {
                 time: '12:45–13:30',
@@ -141,6 +146,23 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
                       <p className={`${block.highlight ? 'text-synergy-dark/80' : 'text-synergy-beige/80'} text-xs sm:text-sm md:text-base leading-relaxed whitespace-pre-line`}>
                         {block.desc}
                       </p>
+                      {'people' in block && block.people && (
+                        <div className="mt-4 flex flex-wrap gap-3">
+                          {(block.people as {name: string; role: string; photo: string}[]).map((person) => (
+                            <div key={person.name} className="flex items-center gap-2">
+                              <img
+                                src={person.photo}
+                                alt={person.name}
+                                className="w-10 h-10 rounded-full object-cover object-top border-2 border-synergy-red flex-shrink-0"
+                              />
+                              <div>
+                                <p className="text-xs font-bold text-synergy-dark leading-tight">{person.name}</p>
+                                <p className="text-xs text-synergy-dark/60 leading-tight max-w-[160px]">{person.role}</p>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </CardContent>
