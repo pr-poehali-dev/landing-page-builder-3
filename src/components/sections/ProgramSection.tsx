@@ -55,7 +55,7 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
                 time: '11:40–12:40',
                 icon: 'MessageSquare',
                 title: 'ПЛЕНАРНОЕ ЗАСЕДАНИЕ',
-                desc: 'Открытый диалог с Министром экономики и Министром цифрового развития',
+                desc: 'Открытый диалог с:\nНиколаем Стецко — Зампред правительства Приморья\nИваном Машуниным — Генеральный директор АНО "Центр поддержки предпринимательства Приморского края"\nАндреем Клементьевым — Министр цифрового развития и связи Приморского края',
                 highlight: true
               },
               {
@@ -138,7 +138,7 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
                       <h3 className={`font-heading text-sm sm:text-base md:text-lg lg:text-xl font-black mb-2 ${block.highlight ? 'text-synergy-dark' : 'text-synergy-beige'}`}>
                         {block.title}
                       </h3>
-                      <p className={`${block.highlight ? 'text-synergy-dark/80' : 'text-synergy-beige/80'} text-xs sm:text-sm md:text-base leading-relaxed`}>
+                      <p className={`${block.highlight ? 'text-synergy-dark/80' : 'text-synergy-beige/80'} text-xs sm:text-sm md:text-base leading-relaxed whitespace-pre-line`}>
                         {block.desc}
                       </p>
                     </div>
