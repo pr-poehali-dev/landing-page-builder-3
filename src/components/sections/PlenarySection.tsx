@@ -144,16 +144,17 @@ const PlenarySection = ({ id }: PlenarySectionProps) => {
             </div>
             <div className="h-px flex-1 bg-synergy-beige/10" />
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
             {participants.map((person) => (
-              <PersonCard
-                key={person.id}
-                name={person.name}
-                role={person.role}
-                badge="Участник"
-                badgeColor="bg-synergy-dark text-synergy-beige border border-synergy-beige/40"
-                photo={person.photo}
-              />
+              <div key={person.id} className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] max-w-xs">
+                <PersonCard
+                  name={person.name}
+                  role={person.role}
+                  badge="Участник"
+                  badgeColor="bg-synergy-dark text-synergy-beige border border-synergy-beige/40"
+                  photo={person.photo}
+                />
+              </div>
             ))}
           </div>
         </div>
