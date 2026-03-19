@@ -39,14 +39,7 @@ const SpeakersSection = ({ id }: SpeakersSectionProps) => {
       photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/59d7440a-9175-40cf-b022-436eed5f9865.png',
       topic: 'Голосовые роботы'
     },
-    {
-      id: 5,
-      name: 'Роман Дремлюга',
-      role: 'Зам. директора по развитию Института математики и компьютерных технологий ДВФУ РАН',
-      description: 'Тема уточняется.',
-      photo: 'https://cdn.poehali.dev/files/eea8541a-4cc4-4771-944f-6d51a71fd1ae.png',
-      topic: 'ТЕМА УТОЧНЯЕТСЯ'
-    }
+
   ];
 
   return (
