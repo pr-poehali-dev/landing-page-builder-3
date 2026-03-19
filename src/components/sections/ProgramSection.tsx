@@ -98,9 +98,12 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
               {
                 time: '15:00–15:30',
                 icon: 'FileText',
-                title: 'КОНТЕНТ ЗАВОД',
-                desc: 'Live-демонстрация создания 3 типов контента за минимум времени.',
-                highlight: true
+                title: 'КЛИЕНТЫ ИЗ GEO',
+                desc: 'Как компании получать лиды из нейросетей? GEO – новый канал маркетинга.',
+                highlight: true,
+                people: [
+                  { name: 'Иван Линдберг', role: 'Наставник, трекер Сколково', photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/7a227fd7-6fdc-4719-9631-88d42e111de1.jpg' },
+                ]
               },
               {
                 time: '15:40–16:15',
