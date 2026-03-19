@@ -48,8 +48,11 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
                 time: '11:00–11:30',
                 icon: 'Mic',
                 title: 'ВСТУПИТЕЛЬНОЕ СЛОВО ОРГАНИЗАТОРА',
-                desc: 'Сергей Черников. О мероприятии, целях и возможностях ИИ для бизнеса.',
-                highlight: true
+                desc: 'О мероприятии, целях и возможностях ИИ для бизнеса.',
+                highlight: true,
+                people: [
+                  { name: 'Сергей Черников', role: 'Основатель школы ИИ, CEO IT компании Super-SMM', photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/f5bba851-01ee-4117-aa70-aa74ccb2b6a1.png' },
+                ]
               },
               {
                 time: '11:40–12:40',
