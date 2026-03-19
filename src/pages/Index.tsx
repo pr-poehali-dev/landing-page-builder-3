@@ -13,6 +13,7 @@ import SponsorsSection from '@/components/sections/SponsorsSection';
 import AudienceSection from '@/components/sections/AudienceSection';
 import PlenarySection from '@/components/sections/PlenarySection';
 import RegistrationSection from '@/components/sections/RegistrationSection';
+import CountdownSection from '@/components/sections/CountdownSection';
 
 const Index = () => {
   const [seatsLeft, setSeatsLeft] = useState(187);
@@ -47,13 +48,14 @@ const Index = () => {
       <BurgerMenu />
       <ScrollToTop />
       <HeroSection seatsLeft={seatsLeft} scrollToForm={scrollToForm} />
-      <CoOrganizerSection />
-      <AudienceSection id="audience" />
-      <BenefitsSection />
-      <AboutSection id="about" scrollToForm={scrollToForm} />
-      <ProgramSection id="program" />
+      <CountdownSection scrollToForm={scrollToForm} />
       <SpeakersSection id="speakers" />
       <PlenarySection id="plenary" />
+      <BenefitsSection />
+      <ProgramSection id="program" />
+      <AudienceSection id="audience" />
+      <AboutSection id="about" scrollToForm={scrollToForm} />
+      <CoOrganizerSection />
       <SponsorsSection id="sponsors" />
       <RegistrationSection seatsLeft={seatsLeft} scrollToForm={scrollToForm} />
     </div>
