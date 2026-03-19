@@ -61,6 +61,8 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
                 desc: 'Открытый диалог с представителями власти об ИИ в экономике Приморья.',
                 highlight: true,
                 people: [
+                  { name: 'Сергей Черников', role: 'Модератор. Основатель школы ИИ, CEO Super-SMM', photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/f5bba851-01ee-4117-aa70-aa74ccb2b6a1.png' },
+                  { name: 'Игорь Ветрюк', role: 'Модератор. Председатель приморской Опоры России', photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/1c24fca7-d277-4c93-83aa-c4ab679635bc.png' },
                   { name: 'Николай Стецко', role: 'Зампред правительства Приморья', photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/87cd7c50-fec9-49d9-a207-bf48d7377b27.png' },
                   { name: 'Иван Машунин', role: 'Генеральный директор АНО "Центр поддержки предпринимательства Приморского края"', photo: 'https://cdn.poehali.dev/files/a83f2d46-1619-4e64-8d4d-aee6e7bdcc1b.png' },
                   { name: 'Андрей Клементьев', role: 'Министр цифрового развития и связи Приморского края', photo: 'https://cdn.poehali.dev/files/76867e86-de6e-411a-b6b2-4c7a6686b49a.png' },
