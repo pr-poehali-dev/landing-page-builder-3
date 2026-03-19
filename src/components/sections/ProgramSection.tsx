@@ -117,7 +117,10 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
                 icon: 'Bot',
                 title: 'ИИ-АГЕНТЫ',
                 desc: 'Как создать отдел продаж, который работает вместо тебя 24/7.',
-                highlight: true
+                highlight: true,
+                people: [
+                  { name: 'Сергей Черников', role: 'Основатель школы ИИ, CEO IT компании Super-SMM', photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/f5bba851-01ee-4117-aa70-aa74ccb2b6a1.png' },
+                ]
               },
               {
                 time: '17:05–17:30',
