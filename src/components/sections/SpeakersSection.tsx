@@ -35,9 +35,9 @@ const SpeakersSection = ({ id }: SpeakersSectionProps) => {
       id: 4,
       name: 'Денис Балюра',
       role: 'Основатель Tomoru.ru',
-      description: 'Робот для найма, продаж и поддержки клиентов.',
+      description: 'Как ускорить рекрутинг в семь раз и сделать его в три раза дешевле.',
       photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/59d7440a-9175-40cf-b022-436eed5f9865.png',
-      topic: 'Голосовые роботы'
+      topic: 'ИИ платформа для найма'
     },
 
   ];
