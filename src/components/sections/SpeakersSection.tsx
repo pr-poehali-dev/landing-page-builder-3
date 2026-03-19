@@ -32,6 +32,14 @@ const SpeakersSection = ({ id }: SpeakersSectionProps) => {
       topic: 'Клиенты из GEO'
     },
     {
+      id: 4,
+      name: 'Денис Балюра',
+      role: 'Основатель Tomoru.ru',
+      description: 'Как ускорить рекрутинг в семь раз и сделать его в три раза дешевле.',
+      photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/59d7440a-9175-40cf-b022-436eed5f9865.png',
+      topic: 'ИИ платформа для найма'
+    },
+    {
       id: 6,
       name: 'Секретный Спикер',
       role: '',
@@ -46,14 +54,6 @@ const SpeakersSection = ({ id }: SpeakersSectionProps) => {
       description: 'Тема уточняется.',
       photo: null,
       topic: 'ТЕМА УТОЧНЯЕТСЯ'
-    },
-    {
-      id: 4,
-      name: 'Денис Балюра',
-      role: 'Основатель Tomoru.ru',
-      description: 'Как ускорить рекрутинг в семь раз и сделать его в три раза дешевле.',
-      photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/59d7440a-9175-40cf-b022-436eed5f9865.png',
-      topic: 'ИИ платформа для найма'
     },
 
   ];
@@ -71,47 +71,49 @@ const SpeakersSection = ({ id }: SpeakersSectionProps) => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {speakers.map((speaker, idx) => (
             <Card 
               key={speaker.id}
-              className="bg-synergy-dark text-synergy-beige overflow-hidden animate-on-scroll hover:scale-105 transition-transform duration-300"
-              style={{ transitionDelay: `${idx * 0.1}s` }}
+              className="bg-synergy-dark text-synergy-beige overflow-hidden animate-on-scroll hover:scale-[1.02] transition-transform duration-300 flex flex-col"
+              style={{ transitionDelay: `${idx * 0.08}s` }}
             >
-              <CardContent className="p-0">
-                <div className="relative h-48 sm:h-56 md:h-64 bg-gradient-to-br from-synergy-red/20 to-synergy-dark overflow-hidden flex items-center justify-center">
+              <CardContent className="p-0 flex flex-col flex-1">
+                <div className="relative h-52 sm:h-60 md:h-64 bg-gradient-to-br from-synergy-red/20 to-synergy-dark overflow-hidden flex items-center justify-center flex-shrink-0">
                   {speaker.photo ? (
                     <img 
                       src={speaker.photo} 
                       alt={speaker.name}
-                      className="w-full h-full object-contain opacity-90"
+                      className="w-full h-full object-cover object-top opacity-90"
                     />
                   ) : (
-                    <div className="flex flex-col items-center gap-3 text-synergy-beige/30">
-                      <Icon name="UserX" size={56} />
+                    <div className="flex flex-col items-center gap-3 text-synergy-beige/20">
+                      <span className="text-6xl">🕵️</span>
                       <span className="text-xs uppercase tracking-widest text-synergy-beige/40">скоро</span>
                     </div>
                   )}
-                  <div className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-synergy-red px-2 sm:px-3 py-1 text-xs font-bold uppercase">
+                  <div className="absolute top-3 right-3 bg-synergy-red px-2 py-1 text-xs font-bold uppercase tracking-wide">
                     Спикер
                   </div>
                 </div>
-                <div className="p-3 sm:p-4 md:p-5 lg:p-6">
-                  <h3 className="font-heading text-base sm:text-lg md:text-xl lg:text-2xl font-black mb-2 text-synergy-beige">
+                <div className="p-4 sm:p-5 flex flex-col flex-1">
+                  <h3 className="font-heading text-base sm:text-lg md:text-xl font-black mb-1 text-synergy-beige leading-tight">
                     {speaker.name}
                   </h3>
-                  <p className="text-synergy-red font-bold mb-2 sm:mb-3 text-xs sm:text-sm uppercase tracking-wide">
-                    {speaker.role}
-                  </p>
-                  <div className="mb-4 pb-4 border-b border-synergy-beige/20">
-                    <div className="flex items-start gap-2 mb-2">
-                      <Icon name="Mic" size={14} className="sm:w-4 sm:h-4 text-synergy-red mt-1 flex-shrink-0" />
-                      <p className="text-synergy-beige/90 text-xs sm:text-sm font-semibold">
+                  {speaker.role && (
+                    <p className="text-synergy-red font-bold mb-3 text-xs sm:text-sm leading-snug">
+                      {speaker.role}
+                    </p>
+                  )}
+                  <div className="mb-3 pb-3 border-b border-synergy-beige/20">
+                    <div className="flex items-start gap-2">
+                      <Icon name="Mic" size={13} className="text-synergy-red mt-0.5 flex-shrink-0" />
+                      <p className="text-synergy-beige/90 text-xs sm:text-sm font-semibold leading-snug">
                         {speaker.topic}
                       </p>
                     </div>
                   </div>
-                  <p className="text-synergy-beige/80 text-xs sm:text-sm leading-relaxed">
+                  <p className="text-synergy-beige/70 text-xs sm:text-sm leading-relaxed mt-auto">
                     {speaker.description}
                   </p>
                 </div>

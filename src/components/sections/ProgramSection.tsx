@@ -167,23 +167,23 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
                         {block.desc}
                       </p>
                       {'people' in block && block.people && (
-                        <div className="mt-4 flex flex-wrap gap-3">
+                        <div className="mt-4 flex flex-wrap gap-x-4 gap-y-3">
                           {(block.people as {name: string; role: string; photo: string | null; emoji?: boolean}[]).map((person) => (
-                            <div key={person.name} className="flex items-center gap-2">
+                            <div key={person.name} className="flex items-center gap-2 min-w-0 max-w-full sm:max-w-[48%]">
                               {person.emoji ? (
-                                <div className="w-10 h-10 rounded-full border-2 border-synergy-red flex-shrink-0 flex items-center justify-center bg-synergy-red/10 text-xl">
+                                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border-2 border-synergy-red flex-shrink-0 flex items-center justify-center bg-synergy-red/10 text-lg">
                                   🔥
                                 </div>
                               ) : (
                                 <img
                                   src={person.photo!}
                                   alt={person.name}
-                                  className="w-10 h-10 rounded-full object-cover object-top border-2 border-synergy-red flex-shrink-0"
+                                  className="w-9 h-9 sm:w-10 sm:h-10 rounded-full object-cover object-top border-2 border-synergy-red flex-shrink-0"
                                 />
                               )}
-                              <div>
-                                <p className="text-xs font-bold text-synergy-dark leading-tight">{person.name}</p>
-                                <p className="text-xs text-synergy-dark/60 leading-tight max-w-[160px]">{person.role}</p>
+                              <div className="min-w-0">
+                                <p className="text-xs font-bold text-synergy-dark leading-tight truncate">{person.name}</p>
+                                <p className="text-xs text-synergy-dark/60 leading-tight line-clamp-2">{person.role}</p>
                               </div>
                             </div>
                           ))}
