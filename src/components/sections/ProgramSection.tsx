@@ -95,9 +95,12 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
               {
                 time: '15:00–15:30',
                 icon: 'BarChart',
-                title: 'МАРКЕТИНГ И ПРОДАЖИ',
-                desc: 'Как ИИ создаёт стратегии и оптимизирует рекламные кампании.',
-                highlight: true
+                title: 'ИИ ПЛАТФОРМА ДЛЯ НАЙМА',
+                desc: 'Как ускорить рекрутинг в семь раз и сделать его в три раза дешевле.',
+                highlight: true,
+                people: [
+                  { name: 'Денис Балюра', role: 'Основатель Tomoru.ru', photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/59d7440a-9175-40cf-b022-436eed5f9865.png' },
+                ]
               },
               {
                 time: '15:40–16:15',
