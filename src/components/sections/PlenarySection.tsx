@@ -28,12 +28,6 @@ const participants = [
     photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/87cd7c50-fec9-49d9-a207-bf48d7377b27.png',
   },
   {
-    id: 3,
-    name: 'Андрей Блохин',
-    role: 'Министр экономического развития Приморья',
-    photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/799147e4-a0a6-4e61-b23d-258f39646f0b.png',
-  },
-  {
     id: 4,
     name: 'Роман Дремлюга',
     role: 'Зам. директора по развитию Института математики и компьютерных технологий ДВФУ РАН',
