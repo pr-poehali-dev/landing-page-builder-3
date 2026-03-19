@@ -71,9 +71,12 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
               {
                 time: '12:45–13:30',
                 icon: 'TrendingUp',
-                title: 'КЛИЕНТЫ НА АВТОМАТЕ',
-                desc: 'Как получать трафик с помощью ИИ, конкретные инструменты и схемы внедрения.',
-                highlight: true
+                title: 'ИИ В БИЗНЕС-ПРОЦЕССАХ',
+                desc: 'Умные помощники для сотрудников на базе GigaChat.',
+                highlight: true,
+                people: [
+                  { name: 'Иван Трошин', role: 'Директор управления по цифровому развитию клиентов Дальневосточного Сбербанка', photo: 'https://cdn.poehali.dev/files/d4cd930d-8e30-4cea-baec-79298a385011.png' },
+                ]
               },
               {
                 time: '13:30–14:00',
