@@ -80,10 +80,13 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
               },
               {
                 time: '13:30–14:00',
-                icon: 'FileText',
-                title: 'КОНТЕНТ ЗАВОД',
-                desc: 'Live-демонстрация создания 3 типов контента за минимум времени.',
-                highlight: true
+                icon: 'BarChart',
+                title: 'ИИ ПЛАТФОРМА ДЛЯ НАЙМА',
+                desc: 'Как ускорить рекрутинг в семь раз и сделать его в три раза дешевле.',
+                highlight: true,
+                people: [
+                  { name: 'Денис Балюра', role: 'Основатель Tomoru.ru', photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/59d7440a-9175-40cf-b022-436eed5f9865.png' },
+                ]
               },
               {
                 time: '14:00–15:00',
@@ -94,13 +97,10 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
               },
               {
                 time: '15:00–15:30',
-                icon: 'BarChart',
-                title: 'ИИ ПЛАТФОРМА ДЛЯ НАЙМА',
-                desc: 'Как ускорить рекрутинг в семь раз и сделать его в три раза дешевле.',
-                highlight: true,
-                people: [
-                  { name: 'Денис Балюра', role: 'Основатель Tomoru.ru', photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/59d7440a-9175-40cf-b022-436eed5f9865.png' },
-                ]
+                icon: 'FileText',
+                title: 'КОНТЕНТ ЗАВОД',
+                desc: 'Live-демонстрация создания 3 типов контента за минимум времени.',
+                highlight: true
               },
               {
                 time: '15:40–16:15',
