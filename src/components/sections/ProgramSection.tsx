@@ -128,7 +128,7 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
                       </Badge>
                       {block.icon && (
                         <Icon 
-                          name={block.icon as any} 
+                          name={block.icon as string} 
                           size={24} 
                           className={`sm:w-7 sm:h-7 ${block.highlight ? 'text-synergy-red' : 'text-synergy-beige'} icon-glow flex-shrink-0`} 
                         />
@@ -163,7 +163,7 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
                     ПРОГРАММА МЕРОПРИЯТИЯ В ПРОЦЕССЕ ДОРАБОТКИ
                   </h3>
                   <p className="text-synergy-beige/80 text-xs sm:text-sm md:text-base leading-relaxed">
-                    Следите за обновлениями — программа дополняется новыми блоками и спикерами.
+                    Следите за обновлениями — сейчас подтверждаются новые спикеры и темы их выступлений.
                   </p>
                 </div>
               </div>
