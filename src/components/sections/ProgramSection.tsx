@@ -107,10 +107,13 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
               },
               {
                 time: '15:40–16:15',
-                icon: 'Code',
-                title: 'САЙТЫ ЧЕРЕЗ ИИ',
-                desc: 'Создание рабочего сайта за 30 минут live на глазах аудитории.',
-                highlight: true
+                icon: 'Flame',
+                title: 'БИЗНЕС ПРОЖАРКА',
+                desc: 'Вызываем представителя бизнеса на сцену и устраиваем разбор.',
+                highlight: true,
+                people: [
+                  { name: '🔥🔥🔥', role: 'Горячий разбор вашего бизнеса прямо на сцене', photo: null, emoji: true },
+                ]
               },
               {
                 time: '16:20–17:00',
@@ -165,13 +168,19 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
                       </p>
                       {'people' in block && block.people && (
                         <div className="mt-4 flex flex-wrap gap-3">
-                          {(block.people as {name: string; role: string; photo: string}[]).map((person) => (
+                          {(block.people as {name: string; role: string; photo: string | null; emoji?: boolean}[]).map((person) => (
                             <div key={person.name} className="flex items-center gap-2">
-                              <img
-                                src={person.photo}
-                                alt={person.name}
-                                className="w-10 h-10 rounded-full object-cover object-top border-2 border-synergy-red flex-shrink-0"
-                              />
+                              {person.emoji ? (
+                                <div className="w-10 h-10 rounded-full border-2 border-synergy-red flex-shrink-0 flex items-center justify-center bg-synergy-red/10 text-xl">
+                                  🔥
+                                </div>
+                              ) : (
+                                <img
+                                  src={person.photo!}
+                                  alt={person.name}
+                                  className="w-10 h-10 rounded-full object-cover object-top border-2 border-synergy-red flex-shrink-0"
+                                />
+                              )}
                               <div>
                                 <p className="text-xs font-bold text-synergy-dark leading-tight">{person.name}</p>
                                 <p className="text-xs text-synergy-dark/60 leading-tight max-w-[160px]">{person.role}</p>
