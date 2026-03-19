@@ -11,9 +11,9 @@ const SpeakersSection = ({ id }: SpeakersSectionProps) => {
       id: 1,
       name: 'Иван Трошин',
       role: 'Директор управления по цифровому развитию клиентов Дальневосточного Сбербанка',
-      description: 'Тема уточняется.',
+      description: 'Умные помощники для сотрудников на базе GigaChat.',
       photo: 'https://cdn.poehali.dev/files/d4cd930d-8e30-4cea-baec-79298a385011.png',
-      topic: 'ТЕМА УТОЧНЯЕТСЯ'
+      topic: 'ИИ в бизнес-процессах'
     },
     {
       id: 2,
