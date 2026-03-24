@@ -55,14 +55,7 @@ const SpeakersSection = ({ id }: SpeakersSectionProps) => {
       photo: null,
       topic: 'ТЕМА УТОЧНЯЕТСЯ'
     },
-    {
-      id: 7,
-      name: 'Секретный Спикер',
-      role: '',
-      description: 'Тема уточняется.',
-      photo: null,
-      topic: 'ТЕМА УТОЧНЯЕТСЯ'
-    },
+
 
   ];
 
