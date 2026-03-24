@@ -58,6 +58,10 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
     {
       name: 'StaniStudio',
       logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/5adcbdb4-9077-4ecc-b1e1-56c3319d1f91.jpg'
+    },
+    {
+      name: 'Успех Авто',
+      logo: 'https://cdn.poehali.dev/files/28758759-9018-44d1-a6a5-0447be564d9c.png'
     }
   ];
 
