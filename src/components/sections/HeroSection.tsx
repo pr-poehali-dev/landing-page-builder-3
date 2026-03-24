@@ -23,15 +23,9 @@ const HeroSection = ({ seatsLeft, scrollToForm }: HeroSectionProps) => {
             <img
               src="https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/c26f604f-d2da-4860-84e7-5d8cb9f07456.jpg"
               alt="ИИ ШОУ БЕЗ ШИРМЫ"
-              className="h-24 sm:h-32 md:h-40 w-auto object-contain drop-shadow-2xl rounded-lg"
+              className="h-48 sm:h-64 md:h-80 w-auto object-contain drop-shadow-2xl rounded-lg"
             />
           </div>
-          <div className="inline-block mb-3 sm:mb-4 px-3 sm:px-4 py-1.5 sm:py-2 bg-synergy-red text-synergy-beige font-bold text-xs sm:text-sm uppercase">
-            Благотворительная конференция
-          </div>
-          <h1 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-4 sm:mb-6 leading-tight text-synergy-beige px-2 sm:px-4">
-            ИИ ШОУ БЕЗ ШИРМЫ
-          </h1>
           <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-semibold mb-6 sm:mb-8 text-synergy-beige/90 max-w-3xl mx-auto px-2 sm:px-4 leading-relaxed">
             300 предпринимателей, 8 инструментов ИИ, 1 день — и ты уже можешь зарабатывать. Без теории. Только реальные кейсы от тех, кто это делает прямо сейчас.
           </p>
