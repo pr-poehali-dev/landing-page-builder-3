@@ -51,6 +51,13 @@ const BurgerMenu = () => {
         isOpen ? 'translate-x-0' : 'translate-x-full'
       }`}>
         <div className="flex flex-col h-full p-4 sm:p-6 md:p-8 pt-16 sm:pt-20 md:pt-24">
+          <div className="flex justify-center mb-4 sm:mb-6">
+            <img
+              src="https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/c26f604f-d2da-4860-84e7-5d8cb9f07456.jpg"
+              alt="ИИ ШОУ БЕЗ ШИРМЫ"
+              className="h-14 sm:h-16 w-auto object-contain rounded-md"
+            />
+          </div>
           <nav className="flex-1 space-y-2 sm:space-y-3 md:space-y-4">
             {menuItems.map((item, idx) => (
               <button

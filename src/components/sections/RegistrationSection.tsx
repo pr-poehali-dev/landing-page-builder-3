@@ -27,6 +27,13 @@ const RegistrationSection = () => {
       </section>
 
       <footer className="py-6 sm:py-8 px-4 sm:px-6 bg-synergy-dark text-synergy-beige/60 text-center text-xs sm:text-sm">
+        <div className="flex justify-center mb-4">
+          <img
+            src="https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/c26f604f-d2da-4860-84e7-5d8cb9f07456.jpg"
+            alt="ИИ ШОУ БЕЗ ШИРМЫ"
+            className="h-10 sm:h-12 w-auto object-contain opacity-80 rounded-md"
+          />
+        </div>
         <p className="px-2">© 2026 Школа «Хакни нейросети» | Владивосток</p>
         <p className="mt-2 px-2">Благотворительное мероприятие в поддержку КГКУ «Маяк»</p>
       </footer>

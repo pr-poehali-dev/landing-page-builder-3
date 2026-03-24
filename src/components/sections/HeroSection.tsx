@@ -19,6 +19,13 @@ const HeroSection = ({ seatsLeft, scrollToForm }: HeroSectionProps) => {
       <div className="absolute inset-0 bg-synergy-dark/60 backdrop-blur-sm" style={{ zIndex: 1 }} />
       <div className="max-w-5xl mx-auto relative animate-fade-in w-full" style={{ zIndex: 2 }}>
         <div className="text-center mb-6 sm:mb-8">
+          <div className="flex justify-center mb-5 sm:mb-7">
+            <img
+              src="https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/c26f604f-d2da-4860-84e7-5d8cb9f07456.jpg"
+              alt="ИИ ШОУ БЕЗ ШИРМЫ"
+              className="h-24 sm:h-32 md:h-40 w-auto object-contain drop-shadow-2xl rounded-lg"
+            />
+          </div>
           <div className="inline-block mb-3 sm:mb-4 px-3 sm:px-4 py-1.5 sm:py-2 bg-synergy-red text-synergy-beige font-bold text-xs sm:text-sm uppercase">
             Благотворительная конференция
           </div>
