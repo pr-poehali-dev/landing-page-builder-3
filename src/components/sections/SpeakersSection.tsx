@@ -34,10 +34,10 @@ const SpeakersSection = ({ id }: SpeakersSectionProps) => {
     {
       id: 4,
       name: 'Денис Балюра',
-      role: 'Основатель Tomoru.ru',
-      description: 'Как ускорить рекрутинг в семь раз и сделать его в три раза дешевле.',
+      role: 'Основатель Tomoru.Team',
+      description: 'Как нанимать сильных людей без рекрутинга и тонны собеседований.',
       photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/59d7440a-9175-40cf-b022-436eed5f9865.png',
-      topic: 'ИИ платформа для найма'
+      topic: 'ИИ-платформа для найма нового поколения'
     },
     {
       id: 6,
