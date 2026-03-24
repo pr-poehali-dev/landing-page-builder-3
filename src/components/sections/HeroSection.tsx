@@ -23,7 +23,7 @@ const HeroSection = ({ seatsLeft, scrollToForm }: HeroSectionProps) => {
           <img
             src="https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/c26f604f-d2da-4860-84e7-5d8cb9f07456.jpg"
             alt="ИИ ШОУ БЕЗ ШИРМЫ"
-            className="h-40 sm:h-52 md:h-60 w-auto object-contain drop-shadow-2xl rounded-lg"
+            className="h-52 sm:h-64 md:h-72 w-auto object-contain drop-shadow-2xl rounded-lg"
           />
         </div>
 
