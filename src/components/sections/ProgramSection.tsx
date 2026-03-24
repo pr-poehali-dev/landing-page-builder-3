@@ -107,12 +107,12 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
               },
               {
                 time: '15:40–16:15',
-                icon: 'Flame',
-                title: 'БИЗНЕС ПРОЖАРКА',
-                desc: 'Вызываем представителя бизнеса на сцену и устраиваем разбор.',
+                icon: 'Brain',
+                title: 'ИИ РЕШЕНИЯ ДЛЯ БИЗНЕСА',
+                desc: 'Внедрение ИИ решений в предпринимательстве и социальной сфере. (кейсы большого бизнеса)',
                 highlight: true,
                 people: [
-                  { name: '🔥🔥🔥', role: 'Горячий разбор вашего бизнеса прямо на сцене', photo: null, emoji: true },
+                  { name: 'Роман Дремлюга', role: 'Руководитель Дальневосточного центра ИИ (ДВФУ и Сбер), профессор', photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/eeefda4a-dedb-4107-ba0b-4e0d3f56903d.jpg' },
                 ]
               },
               {
