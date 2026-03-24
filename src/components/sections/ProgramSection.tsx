@@ -112,7 +112,7 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
                 desc: 'Внедрение ИИ решений в предпринимательстве и социальной сфере. (кейсы большого бизнеса)',
                 highlight: true,
                 people: [
-                  { name: 'Роман Дремлюга', role: 'Руководитель Дальневосточного центра ИИ (ДВФУ и Сбер), профессор', photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/eeefda4a-dedb-4107-ba0b-4e0d3f56903d.jpg' },
+                  { name: 'Роман Дремлюга', role: 'Руководитель Дальневосточного центра ИИ (ДВФУ и Сбер), профессор', photo: 'https://cdn.poehali.dev/files/28758759-9018-44d1-a6a5-0447be564d9c.png' },
                 ]
               },
               {
