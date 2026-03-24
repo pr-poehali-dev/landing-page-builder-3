@@ -54,6 +54,10 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
     {
       name: 'Правительство Приморского края',
       logo: 'https://cdn.poehali.dev/files/bba11447-b27d-4923-bfa5-a66cb576a971.png'
+    },
+    {
+      name: 'StaniStudio',
+      logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/5adcbdb4-9077-4ecc-b1e1-56c3319d1f91.jpg'
     }
   ];
 
