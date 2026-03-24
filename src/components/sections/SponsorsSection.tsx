@@ -61,7 +61,7 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
     },
     {
       name: 'Успех Авто',
-      logo: 'https://cdn.poehali.dev/files/28758759-9018-44d1-a6a5-0447be564d9c.png'
+      logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/eeefda4a-dedb-4107-ba0b-4e0d3f56903d.jpg'
     }
   ];
 

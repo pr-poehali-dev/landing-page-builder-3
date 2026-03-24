@@ -44,7 +44,7 @@ const SpeakersSection = ({ id }: SpeakersSectionProps) => {
       name: 'Роман Дремлюга',
       role: 'Руководитель Дальневосточного центра ИИ (ДВФУ и Сбер), профессор, Заместитель директора Института математики и компьютерных технологий ДВФУ по развитию',
       description: 'Опыт по внедрению ИИ решений в бизнесе и социальной сфере.',
-      photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/eeefda4a-dedb-4107-ba0b-4e0d3f56903d.jpg',
+      photo: 'https://cdn.poehali.dev/files/28758759-9018-44d1-a6a5-0447be564d9c.png',
       topic: 'ИИ решения для бизнеса'
     },
     {
