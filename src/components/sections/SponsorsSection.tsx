@@ -68,6 +68,10 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
       logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/ceb2c09e-401d-475b-845d-49e81b649b74.jpg'
     },
     {
+      name: 'Пасифик Медиа',
+      logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/e14e6efe-47d1-409b-8fdc-45685ebd0bb0.jpg'
+    },
+    {
       name: 'Vizi Studio',
       logo: 'https://cdn.poehali.dev/files/057e47fe-3801-4675-bf40-51df7b6cc760.png'
     }
