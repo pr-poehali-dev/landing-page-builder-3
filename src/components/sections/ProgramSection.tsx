@@ -65,6 +65,7 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
                   { name: 'Игорь Ветрюк', role: 'Модератор. Председатель приморской Опоры России', photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/1c24fca7-d277-4c93-83aa-c4ab679635bc.png' },
                   { name: 'Николай Стецко', role: 'Зампред правительства Приморья', photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/87cd7c50-fec9-49d9-a207-bf48d7377b27.png' },
                   { name: 'Мария Широких', role: 'Заместитель генерального директора АНО "Центр поддержки предпринимательства Приморского края"', photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/9f2e7f7d-8a6c-48e5-8b0e-cb6a9d017fb9.png' },
+                  { name: 'Андрей Клементьев', role: 'Министр цифрового развития и связи Приморского края', photo: 'https://cdn.poehali.dev/files/76867e86-de6e-411a-b6b2-4c7a6686b49a.png' },
                 ]
               },
               {

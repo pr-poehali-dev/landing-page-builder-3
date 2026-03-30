@@ -33,6 +33,12 @@ const participants = [
     role: 'Заместитель генерального директора АНО "Центр поддержки предпринимательства Приморского края"',
     photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/9f2e7f7d-8a6c-48e5-8b0e-cb6a9d017fb9.png',
   },
+  {
+    id: 6,
+    name: 'Андрей Клементьев',
+    role: 'Министр цифрового развития и связи Приморского края',
+    photo: 'https://cdn.poehali.dev/files/76867e86-de6e-411a-b6b2-4c7a6686b49a.png',
+  },
 ];
 
 const PersonCard = ({
