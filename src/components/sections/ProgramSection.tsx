@@ -129,7 +129,7 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
                 time: '17:05–17:30',
                 icon: 'GraduationCap',
                 title: 'ПИТЧ ШКОЛЫ',
-                desc: 'Сергей Черников. Путь от новичка к специалисту в ИИ. Спецпредложение для участников.',
+                desc: 'Путь от новичка к специалисту в ИИ. Выступления выпускников школы',
                 highlight: true
               },
               {
