@@ -74,6 +74,10 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
     {
       name: 'Vizi Studio',
       logo: 'https://cdn.poehali.dev/files/057e47fe-3801-4675-bf40-51df7b6cc760.png'
+    },
+    {
+      name: 'Давыдовский ключ',
+      logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/34babf2c-531e-4323-bec9-d52cb608b9d8.jpg'
     }
   ];
 
