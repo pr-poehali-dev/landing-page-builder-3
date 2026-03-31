@@ -51,12 +51,12 @@ const Index = () => {
       <CountdownSection scrollToForm={scrollToForm} />
       <SpeakersSection id="speakers" />
       <PlenarySection id="plenary" />
+      <SponsorsSection id="sponsors" />
       <BenefitsSection />
       <ProgramSection id="program" />
       <AudienceSection id="audience" />
       <AboutSection id="about" scrollToForm={scrollToForm} />
       <CoOrganizerSection />
-      <SponsorsSection id="sponsors" />
       <RegistrationSection seatsLeft={seatsLeft} scrollToForm={scrollToForm} />
     </div>
   );
