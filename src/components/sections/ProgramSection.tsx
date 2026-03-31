@@ -19,15 +19,15 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
           <div className="mb-6 sm:mb-8 flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 text-synergy-beige/90 text-xs sm:text-sm md:text-base px-2">
             <div className="flex items-center gap-2">
               <Icon name="Clock" size={20} className="icon-rotate-hover" />
-              <span className="font-semibold">Регистрация: 10:30</span>
+              <span className="font-semibold">Регистрация: 10:00</span>
             </div>
             <div className="flex items-center gap-2">
               <Icon name="PlayCircle" size={20} className="icon-rotate-hover" />
-              <span className="font-semibold">Начало: 11:00</span>
+              <span className="font-semibold">Начало: 11:15</span>
             </div>
             <div className="flex items-center gap-2">
               <Icon name="Coffee" size={20} className="icon-rotate-hover" />
-              <span className="font-semibold">Обед: 14:00–15:00</span>
+              <span className="font-semibold">Обед: 13:45–14:45</span>
             </div>
             <div className="flex items-center gap-2">
               <Icon name="Clock" size={20} className="icon-rotate-hover" />
@@ -38,24 +38,14 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
           <div className="space-y-4">
             {[
               {
-                time: '10:30–11:00',
+                time: '10:00',
                 icon: 'Users',
                 title: 'РЕГИСТРАЦИЯ',
                 desc: 'Приход гостей, регистрация, кофе-брейк',
                 highlight: false
               },
               {
-                time: '11:00–11:30',
-                icon: 'Mic',
-                title: 'ВСТУПИТЕЛЬНОЕ СЛОВО ОРГАНИЗАТОРА',
-                desc: 'О мероприятии, целях и возможностях ИИ для бизнеса.',
-                highlight: true,
-                people: [
-                  { name: 'Сергей Черников', role: 'Основатель школы ИИ, CEO IT компании Super-SMM', photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/f5bba851-01ee-4117-aa70-aa74ccb2b6a1.png' },
-                ]
-              },
-              {
-                time: '11:40–12:40',
+                time: '11:15–12:15',
                 icon: 'MessageSquare',
                 title: 'ПЛЕНАРНОЕ ЗАСЕДАНИЕ',
                 desc: 'Открытый диалог с представителями власти об ИИ в экономике Приморья.',
@@ -69,7 +59,7 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
                 ]
               },
               {
-                time: '12:45–13:30',
+                time: '12:20–13:00',
                 icon: 'TrendingUp',
                 title: 'ИИ В БИЗНЕС-ПРОЦЕССАХ',
                 desc: 'Умные помощники для сотрудников на базе GigaChat.',
@@ -79,7 +69,7 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
                 ]
               },
               {
-                time: '13:30–14:00',
+                time: '13:05–13:40',
                 icon: 'BarChart',
                 title: 'ИИ ПЛАТФОРМА ДЛЯ НАЙМА',
                 desc: 'Как ускорить рекрутинг в семь раз и сделать его в три раза дешевле.',
@@ -89,14 +79,14 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
                 ]
               },
               {
-                time: '14:00–15:00',
+                time: '13:45–14:45',
                 icon: 'Utensils',
                 title: 'ОБЕД + НЕТВОРКИНГ',
                 desc: 'Обеденный перерыв (60 мин). нетворкинг, обмен контактами.',
                 highlight: false
               },
               {
-                time: '15:00–15:30',
+                time: '14:50–15:20',
                 icon: 'FileText',
                 title: 'КЛИЕНТЫ ИЗ GEO',
                 desc: 'Как компании получать лиды из нейросетей? GEO – новый канал маркетинга.',
@@ -106,7 +96,7 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
                 ]
               },
               {
-                time: '15:40–16:15',
+                time: '15:25–16:00',
                 icon: 'Brain',
                 title: 'ИИ РЕШЕНИЯ ДЛЯ БИЗНЕСА',
                 desc: 'Внедрение ИИ решений в предпринимательстве и социальной сфере. (кейсы большого бизнеса)',
@@ -116,27 +106,37 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
                 ]
               },
               {
-                time: '16:20–17:00',
+                time: '16:05–16:45',
                 icon: 'Bot',
                 title: 'ИИ-АГЕНТЫ',
-                desc: 'Как создать отдел продаж, который работает вместо тебя 24/7.',
+                desc: 'Как создать сайт и отдел продаж, который работает вместо тебя 24/7 за 40 минут',
                 highlight: true,
                 people: [
                   { name: 'Сергей Черников', role: 'Основатель школы ИИ, CEO IT компании Super-SMM', photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/f5bba851-01ee-4117-aa70-aa74ccb2b6a1.png' },
                 ]
               },
               {
-                time: '17:05–17:30',
+                time: '16:50–17:20',
+                icon: 'Layers',
+                title: 'ИИ ДЛЯ РОССИЙСКОГО БИЗНЕСА',
+                desc: 'ИИ не как игрушка для энтузиастов, а как управленческий слой: меньше хаоса, больше контроля, быстрее решения.',
+                highlight: true,
+                people: [
+                  { name: 'Евгений Шестаков', role: 'Эксклюзивный Партнер Сервиса Komanda.AI', photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/5fb75dc4-3098-40c3-9190-eebcf5760ce6.jpg' },
+                ]
+              },
+              {
+                time: '17:25–17:50',
                 icon: 'GraduationCap',
                 title: 'ПИТЧ ШКОЛЫ',
                 desc: 'Путь от новичка к специалисту в ИИ. Выступления выпускников школы',
                 highlight: true
               },
               {
-                time: '17:30–18:00',
+                time: '17:50–18:00',
                 icon: 'Gift',
-                title: 'ЗАКРЫТИЕ, ПРИЗЫ, БЛАГОТВОРИТЕЛЬНОСТЬ',
-                desc: 'Объявление призов, совместное фото.',
+                title: 'ЗАКРЫТИЕ, ПРИЗЫ, СОВМЕСТНОЕ ФОТО',
+                desc: 'Розыгрыш призов от спонсоров',
                 highlight: true
               }
             ].map((block, idx) => (
