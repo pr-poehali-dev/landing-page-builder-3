@@ -78,6 +78,14 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
     {
       name: 'Давыдовский ключ',
       logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/34babf2c-531e-4323-bec9-d52cb608b9d8.jpg'
+    },
+    {
+      name: 'R Студия',
+      logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/f08a0b88-bc92-4b6a-9482-0339d8c91ca4.jpg'
+    },
+    {
+      name: 'Дорогое удовольствие',
+      logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/6f421310-bd49-4546-9bd8-acb5cc07c183.jpg'
     }
   ];
 
