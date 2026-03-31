@@ -49,11 +49,11 @@ const SpeakersSection = ({ id }: SpeakersSectionProps) => {
     },
     {
       id: 6,
-      name: 'Секретный Спикер',
-      role: '',
-      description: 'Тема уточняется.',
-      photo: null,
-      topic: 'ТЕМА УТОЧНЯЕТСЯ'
+      name: 'Евгений Шестаков',
+      role: 'Эксклюзивный Партнер Сервиса Komanda.AI',
+      description: 'ИИ не как игрушка для энтузиастов, а как управленческий слой: меньше хаоса, больше контроля, быстрее решения.',
+      photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/5fb75dc4-3098-40c3-9190-eebcf5760ce6.jpg',
+      topic: 'ИИ для российского бизнеса'
     },
 
 
