@@ -14,13 +14,18 @@ const GeneralSponsorSection = ({ id }: GeneralSponsorSectionProps) => {
         </div>
 
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-14 bg-white/5 border border-white/10 rounded-2xl p-8 sm:p-10 md:p-14">
-          <div className="flex-shrink-0 w-48 sm:w-56 md:w-64">
+          <a
+            href="https://insoft-motors.ru/?ysclid=mni2j3x30744915871"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-shrink-0 w-48 sm:w-56 md:w-64 hover:opacity-80 transition-opacity duration-200"
+          >
             <img
               src="https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/1eaef9a9-80dd-4c3d-ae08-941ecd300e20.jpg"
               alt="Insoft Motors"
               className="w-full h-auto object-contain rounded-xl"
             />
-          </div>
+          </a>
 
           <div className="text-center md:text-left">
             <h3 className="font-heading text-2xl sm:text-3xl md:text-4xl font-black text-synergy-beige mb-4 leading-tight">
