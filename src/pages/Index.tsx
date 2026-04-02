@@ -10,6 +10,7 @@ import AboutSection from '@/components/sections/AboutSection';
 import ProgramSection from '@/components/sections/ProgramSection';
 import SpeakersSection from '@/components/sections/SpeakersSection';
 import SponsorsSection from '@/components/sections/SponsorsSection';
+import GeneralSponsorSection from '@/components/sections/GeneralSponsorSection';
 import AudienceSection from '@/components/sections/AudienceSection';
 import PlenarySection from '@/components/sections/PlenarySection';
 import RegistrationSection from '@/components/sections/RegistrationSection';
@@ -51,6 +52,7 @@ const Index = () => {
       <CountdownSection scrollToForm={scrollToForm} />
       <SpeakersSection id="speakers" />
       <PlenarySection id="plenary" />
+      <GeneralSponsorSection id="general-sponsor" />
       <SponsorsSection id="sponsors" />
       <BenefitsSection />
       <ProgramSection id="program" />
