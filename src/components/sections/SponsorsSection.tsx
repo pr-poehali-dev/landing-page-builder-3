@@ -89,7 +89,7 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
     },
     {
       name: 'DAP 86',
-      logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/4461ccfa-2eb9-4658-b0ee-5b49c926acb5.jpg'
+      logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/d906ca87-7fec-4b34-aab3-8490f377d1b5.jpg'
     },
     {
       name: 'S.U.N. Group',
