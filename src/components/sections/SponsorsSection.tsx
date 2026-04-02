@@ -86,6 +86,10 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
     {
       name: 'Дорогое удовольствие',
       logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/6f421310-bd49-4546-9bd8-acb5cc07c183.jpg'
+    },
+    {
+      name: 'DAP 86',
+      logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/4461ccfa-2eb9-4658-b0ee-5b49c926acb5.jpg'
     }
   ];
 
