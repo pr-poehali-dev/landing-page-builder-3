@@ -92,6 +92,10 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
       logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/d906ca87-7fec-4b34-aab3-8490f377d1b5.jpg'
     },
     {
+      name: 'Миллиметры',
+      logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/8183f958-f954-4b7a-b587-2ea61139bcde.jpg'
+    },
+    {
       name: 'S.U.N. Group',
       logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/3e0fdee0-37ed-4287-b350-d9570fe86f61.png'
     }
