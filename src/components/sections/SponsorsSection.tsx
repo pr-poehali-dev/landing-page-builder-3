@@ -106,6 +106,10 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
     {
       name: 'Город ОК',
       logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/24e3ce9c-6715-4303-9c8b-ac85923e0c5c.jpg'
+    },
+    {
+      name: 'Русское Радио',
+      logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/adc5d8aa-93cf-4f5b-a448-ea18e7e02c3e.png'
     }
   ];
 
