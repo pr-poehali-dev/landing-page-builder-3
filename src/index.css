@@ -316,11 +316,11 @@
 
   /* Sponsors carousel animation */
   .animate-scroll-right-fast {
-    animation: scroll-right 30s linear infinite;
+    animation: scroll-right 45s linear infinite;
   }
 
   .animate-scroll-left-fast {
-    animation: scroll-left 30s linear infinite;
+    animation: scroll-left 45s linear infinite;
   }
 
   @keyframes scroll-right {
