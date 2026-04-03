@@ -25,7 +25,7 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
     },
     {
       name: 'Опора России',
-      logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/b30d4627-edea-4d2b-8320-b463b2f8e429.png'
+      logo: 'https://cdn.poehali.dev/files/8d442847-c5eb-4dfd-b9fe-b84c879cdcb2.png'
     },
     {
       name: 'БЗ 2022',
