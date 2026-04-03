@@ -98,6 +98,14 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
     {
       name: 'S.U.N. Group',
       logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/3e0fdee0-37ed-4287-b350-d9570fe86f61.png'
+    },
+    {
+      name: 'Новое Радио',
+      logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/2c8a4d15-aaf1-4b31-95b4-7579cc7c53a7.jpg'
+    },
+    {
+      name: 'Город ОК',
+      logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/24e3ce9c-6715-4303-9c8b-ac85923e0c5c.jpg'
     }
   ];
 
