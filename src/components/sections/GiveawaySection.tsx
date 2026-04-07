@@ -21,6 +21,20 @@ const GiveawaySection = ({ scrollToForm }: GiveawaySectionProps) => {
               ВЫИГРАЙ ОБУЧЕНИЕ<br />НЕЙРОСЕТЯМ
             </h2>
 
+            <a
+              href="https://chernikovgpt.ru/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mb-6 hover:opacity-80 transition-opacity duration-300"
+            >
+              <img
+                src="https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/24f0d856-9bc6-4d2d-bc8e-34853e1eedba.png"
+                alt="Хакни Нейросети"
+                className="h-20 sm:h-24 w-auto mx-auto"
+                style={{ filter: 'brightness(0) invert(1)' }}
+              />
+            </a>
+
             <p className="text-synergy-beige/70 text-sm sm:text-base mb-8">
               Школа <span className="text-synergy-red font-bold">Хакни Нейросети</span> разыгрывает бесплатный курс среди гостей конференции
             </p>
