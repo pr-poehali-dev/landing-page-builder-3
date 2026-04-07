@@ -102,7 +102,7 @@ const GiveawaySection = ({ scrollToForm }: GiveawaySectionProps) => {
                   <img
                     src="https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/24f0d856-9bc6-4d2d-bc8e-34853e1eedba.png"
                     alt="Хакни Нейросети"
-                    className="h-12 sm:h-14 w-auto"
+                    className="h-24 sm:h-28 w-auto"
                     style={{ filter: 'brightness(0) invert(1)' }}
                   />
                 </a>
