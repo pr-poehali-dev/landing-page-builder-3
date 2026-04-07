@@ -15,6 +15,7 @@ import AudienceSection from '@/components/sections/AudienceSection';
 import PlenarySection from '@/components/sections/PlenarySection';
 import RegistrationSection from '@/components/sections/RegistrationSection';
 import CountdownSection from '@/components/sections/CountdownSection';
+import GiveawaySection from '@/components/sections/GiveawaySection';
 
 const Index = () => {
   const [seatsLeft, setSeatsLeft] = useState(187);
@@ -54,6 +55,7 @@ const Index = () => {
       <PlenarySection id="plenary" />
       <GeneralSponsorSection id="general-sponsor" />
       <SponsorsSection id="sponsors" />
+      <GiveawaySection scrollToForm={scrollToForm} />
       <BenefitsSection />
       <ProgramSection id="program" />
       <AudienceSection id="audience" />
