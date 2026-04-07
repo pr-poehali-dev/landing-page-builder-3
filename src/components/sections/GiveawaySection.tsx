@@ -6,7 +6,7 @@ interface GiveawaySectionProps {
 
 const GiveawaySection = ({ scrollToForm }: GiveawaySectionProps) => {
   return (
-    <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-synergy-beige relative z-10 overflow-hidden animate-on-scroll">
+    <section id="giveaway" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-synergy-beige relative z-10 overflow-hidden animate-on-scroll">
       <div className="max-w-4xl mx-auto">
         <div className="relative rounded-2xl overflow-hidden border-2 border-synergy-red">
           <div className="absolute inset-0 bg-synergy-dark opacity-95" />

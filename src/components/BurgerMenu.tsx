@@ -11,6 +11,7 @@ const BurgerMenu = () => {
     { label: 'Спикеры', href: '#speakers' },
     { label: 'Пленарное заседание', href: '#plenary' },
     { label: 'Спонсоры', href: '#sponsors' },
+    { label: 'Розыгрыш', href: '#giveaway' },
     { label: 'Для кого', href: '#audience' },
   ];
 
