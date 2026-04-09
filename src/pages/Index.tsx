@@ -18,7 +18,7 @@ import CountdownSection from '@/components/sections/CountdownSection';
 import GiveawaySection from '@/components/sections/GiveawaySection';
 
 const Index = () => {
-  const [seatsLeft, setSeatsLeft] = useState(187);
+  const [seatsLeft, setSeatsLeft] = useState(117);
 
   useScrollAnimation();
 
