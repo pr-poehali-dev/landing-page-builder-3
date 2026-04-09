@@ -110,6 +110,14 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
     {
       name: 'Русское Радио',
       logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/adc5d8aa-93cf-4f5b-a448-ea18e7e02c3e.png'
+    },
+    {
+      name: 'Юлия Левицкая',
+      logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/24bf54a1-8430-43c8-9851-397549f21299.jpg'
+    },
+    {
+      name: 'HR Group',
+      logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/ccffc9d6-9bd4-4571-a037-d36489cf53c9.jpg'
     }
   ];
 
