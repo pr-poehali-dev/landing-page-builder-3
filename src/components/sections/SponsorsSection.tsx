@@ -26,7 +26,8 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
     },
     {
       name: 'Опора России',
-      logo: 'https://cdn.poehali.dev/files/8d442847-c5eb-4dfd-b9fe-b84c879cdcb2.png'
+      logo: 'https://cdn.poehali.dev/files/8d442847-c5eb-4dfd-b9fe-b84c879cdcb2.png',
+      href: 'https://primopora.ru/'
     },
     {
       name: 'БЗ 2022',
