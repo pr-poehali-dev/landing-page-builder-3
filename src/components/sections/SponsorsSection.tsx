@@ -21,7 +21,8 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
     },
     {
       name: 'ЭКО Центр',
-      logo: 'https://cdn.poehali.dev/files/8423e1e0-efce-4614-9287-18a3853fa1bc.png'
+      logo: 'https://cdn.poehali.dev/files/8423e1e0-efce-4614-9287-18a3853fa1bc.png',
+      href: 'https://www.ecocentergroup.ru/'
     },
     {
       name: 'Опора России',
@@ -131,18 +132,22 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
     el.scrollBy({ left: delta, behavior: 'smooth' });
   }, []);
 
-  const SponsorCard = ({ sponsor }: { sponsor: typeof sponsors[0] }) => (
-    <div
-      className="flex-shrink-0 flex items-center justify-center bg-white rounded-xl p-4"
-      style={{ width: `${CARD_WIDTH}px`, height: '130px', minWidth: `${CARD_WIDTH}px` }}
-    >
-      <img
-        src={sponsor.logo}
-        alt={sponsor.name}
-        className="w-full h-full object-contain"
-      />
-    </div>
-  );
+  const SponsorCard = ({ sponsor }: { sponsor: typeof sponsors[0] }) => {
+    const content = (
+      <img src={sponsor.logo} alt={sponsor.name} className="w-full h-full object-contain" />
+    );
+    const baseClass = "flex-shrink-0 flex items-center justify-center bg-white rounded-xl p-4";
+    const style = { width: `${CARD_WIDTH}px`, height: '130px', minWidth: `${CARD_WIDTH}px` };
+
+    if (sponsor.href) {
+      return (
+        <a href={sponsor.href} target="_blank" rel="noopener noreferrer" className={`${baseClass} hover:opacity-80 transition-opacity duration-200`} style={style}>
+          {content}
+        </a>
+      );
+    }
+    return <div className={baseClass} style={style}>{content}</div>;
+  };
 
   return (
     <section id={id} className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 bg-synergy-dark relative z-10 overflow-hidden animate-on-scroll">
