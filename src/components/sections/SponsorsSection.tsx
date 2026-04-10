@@ -47,7 +47,8 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
     },
     {
       name: 'Плёсы Песчаного',
-      logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/f6fcbda4-be54-46d7-a04b-eb84143078db.jpg'
+      logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/f6fcbda4-be54-46d7-a04b-eb84143078db.jpg',
+      href: 'https://plesbaza.ru/'
     },
     {
       name: 'Multi Chat',
