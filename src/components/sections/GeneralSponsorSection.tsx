@@ -14,11 +14,16 @@ const sponsors = [
       <>
         Автомобили из-за рубежа от официальных дилеров и{' '}
         <span className="text-synergy-beige font-semibold uppercase">ключевых авторынков мира</span>
+        <span className="flex flex-wrap justify-center md:justify-start gap-2 mt-3">
+          {['Бизнес-класс', 'Премиум', 'Коммерческий транспорт'].map((tag) => (
+            <span key={tag} className="text-xs font-semibold text-synergy-red border border-synergy-red/40 rounded px-2 py-0.5 uppercase tracking-wide">{tag}</span>
+          ))}
+        </span>
       </>
     ),
   },
   {
-    href: null,
+    href: "https://vladivostok.t2.ru/",
     logo: "https://cdn.poehali.dev/files/d21358ad-e9ec-4991-a874-46a47002e5e3.jpg",
     alt: "Т2",
     logoBg: true,
@@ -51,11 +56,11 @@ const GeneralSponsorSection = ({ id }: GeneralSponsorSectionProps) => {
               className="flex flex-col items-center gap-5 bg-white/5 border border-white/10 rounded-2xl p-8 text-center"
             >
               {s.href ? (
-                <a href={s.href} target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity duration-200">
+                <a href={s.href} target="_blank" rel="noopener noreferrer" className={`hover:opacity-80 transition-opacity duration-200 ${s.logoBg ? 'flex items-center justify-center bg-white rounded-xl p-4' : ''}`}>
                   <img src={s.logo} alt={s.alt} className="w-40 h-28 object-contain rounded-xl" />
                 </a>
               ) : (
-                <div className={`flex items-center justify-center rounded-xl p-4 ${s.logoBg ? 'bg-white' : ''}`}>
+                <div className="flex items-center justify-center rounded-xl p-4">
                   <img src={s.logo} alt={s.alt} className="w-40 h-28 object-contain" />
                 </div>
               )}
