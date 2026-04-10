@@ -53,7 +53,7 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
     {
       name: 'Multi Chat',
       logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/bf4df878-ef35-48ff-bef5-c4070ae60ac6.png',
-      href: 'https://t.me/multichgpt_bot/ref?start=A00030'
+      href: 'https://app.multi-chat.com.ru/reg/A00030'
     },
     {
       name: 'Правительство Приморского края',
