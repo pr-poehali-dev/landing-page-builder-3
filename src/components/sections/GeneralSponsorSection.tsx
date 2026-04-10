@@ -1,3 +1,5 @@
+import Icon from '@/components/ui/icon';
+
 interface GeneralSponsorSectionProps {
   id?: string;
 }
@@ -59,9 +61,14 @@ const GeneralSponsorSection = ({ id }: GeneralSponsorSectionProps) => {
                 href={s.href ?? undefined}
                 target={s.href ? "_blank" : undefined}
                 rel={s.href ? "noopener noreferrer" : undefined}
-                className={`flex items-center justify-center w-full h-36 bg-white rounded-xl p-5 ${s.href ? 'hover:opacity-80 transition-opacity duration-200' : 'cursor-default'}`}
+                className={`relative flex items-center justify-center w-full h-36 bg-white rounded-xl p-5 group ${s.href ? 'cursor-pointer' : 'cursor-default'}`}
               >
-                <img src={s.logo} alt={s.alt} className="max-w-full max-h-full object-contain" />
+                <img src={s.logo} alt={s.alt} className={`max-w-full max-h-full object-contain ${s.href ? 'group-hover:opacity-80 transition-opacity duration-200' : ''}`} />
+                {s.href && (
+                  <span className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-synergy-dark/80 rounded-md p-1">
+                    <Icon name="ExternalLink" size={14} className="text-synergy-beige" />
+                  </span>
+                )}
               </a>
 
               <div>
