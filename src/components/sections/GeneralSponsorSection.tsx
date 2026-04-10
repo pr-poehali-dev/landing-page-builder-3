@@ -55,15 +55,14 @@ const GeneralSponsorSection = ({ id }: GeneralSponsorSectionProps) => {
               key={s.alt}
               className="flex flex-col items-center gap-5 bg-white/5 border border-white/10 rounded-2xl p-8 text-center"
             >
-              {s.href ? (
-                <a href={s.href} target="_blank" rel="noopener noreferrer" className={`hover:opacity-80 transition-opacity duration-200 ${s.logoBg ? 'flex items-center justify-center bg-white rounded-xl p-4' : ''}`}>
-                  <img src={s.logo} alt={s.alt} className="w-40 h-28 object-contain rounded-xl" />
-                </a>
-              ) : (
-                <div className="flex items-center justify-center rounded-xl p-4">
-                  <img src={s.logo} alt={s.alt} className="w-40 h-28 object-contain" />
-                </div>
-              )}
+              <a
+                href={s.href ?? undefined}
+                target={s.href ? "_blank" : undefined}
+                rel={s.href ? "noopener noreferrer" : undefined}
+                className={`flex items-center justify-center w-full h-36 bg-white rounded-xl p-5 ${s.href ? 'hover:opacity-80 transition-opacity duration-200' : 'cursor-default'}`}
+              >
+                <img src={s.logo} alt={s.alt} className="max-w-full max-h-full object-contain" />
+              </a>
 
               <div>
                 <h3 className="font-heading text-2xl sm:text-3xl font-black text-synergy-beige mb-2 leading-tight">
