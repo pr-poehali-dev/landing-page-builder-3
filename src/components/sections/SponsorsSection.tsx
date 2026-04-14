@@ -126,6 +126,10 @@ const SponsorsSection = ({ id }: SponsorsSectionProps) => {
     {
       name: 'Radik Sharapov',
       logo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/59e7c2c6-d9ec-4f19-9cfc-5319f4921fda.jpg'
+    },
+    {
+      name: 'Мира Типография',
+      logo: 'https://cdn.poehali.dev/files/b4761776-3c26-4c9e-806f-1f062e5e2ebf.png'
     }
   ];
 
