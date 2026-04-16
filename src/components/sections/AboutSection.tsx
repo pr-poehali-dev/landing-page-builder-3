@@ -110,9 +110,16 @@ const AboutSection = ({ id, scrollToForm }: AboutSectionProps) => {
         <div className="max-w-4xl mx-auto">
           <Card className="bg-synergy-beige border-none">
             <CardContent className="p-6 sm:p-8">
-              <h3 className="font-heading text-xl sm:text-2xl md:text-3xl font-black mb-4 text-synergy-dark">
-                Организатор события — Школа «Хакни нейросети»
-              </h3>
+              <div className="flex flex-col items-center mb-6">
+                <img
+                  src="https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/c9bb9526-e84b-4dc2-9ebe-aed8c4b42a95.jpg"
+                  alt="Хакни нейросети"
+                  className="w-full max-w-sm rounded-xl mb-4"
+                />
+                <h3 className="font-heading text-xl sm:text-2xl md:text-3xl font-black text-synergy-dark text-center">
+                  Организатор события — Школа «Хакни нейросети»
+                </h3>
+              </div>
               <p className="text-base sm:text-lg text-synergy-dark/80 leading-relaxed mb-6">
                 Единственная офлайн-школа в городе Владивостоке, где преподаватель и студенты создают это событие. 
               </p>
