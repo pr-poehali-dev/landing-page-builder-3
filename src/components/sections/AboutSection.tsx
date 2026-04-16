@@ -111,11 +111,13 @@ const AboutSection = ({ id, scrollToForm }: AboutSectionProps) => {
           <Card className="bg-synergy-beige border-none">
             <CardContent className="p-6 sm:p-8">
               <div className="flex flex-col items-center mb-6">
-                <img
-                  src="https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/c9bb9526-e84b-4dc2-9ebe-aed8c4b42a95.jpg"
-                  alt="Хакни нейросети"
-                  className="w-full max-w-sm rounded-xl mb-4"
-                />
+                <a href="https://chernikovgpt.ru" target="_blank" rel="noopener noreferrer">
+                  <img
+                    src="https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/c9bb9526-e84b-4dc2-9ebe-aed8c4b42a95.jpg"
+                    alt="Хакни нейросети"
+                    className="w-full max-w-sm rounded-xl mb-4 hover:opacity-90 transition-opacity cursor-pointer"
+                  />
+                </a>
                 <h3 className="font-heading text-xl sm:text-2xl md:text-3xl font-black text-synergy-dark text-center">
                   Организатор события — Школа «Хакни нейросети»
                 </h3>
