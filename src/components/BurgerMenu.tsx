@@ -54,24 +54,24 @@ const BurgerMenu = () => {
       <div className={`fixed top-0 right-0 h-full w-full sm:w-80 md:w-96 bg-synergy-dark z-40 shadow-2xl transform transition-transform duration-500 ease-out ${
         isOpen ? 'translate-x-0' : 'translate-x-full'
       }`}>
-        <div className="flex flex-col h-full p-4 sm:p-6 md:p-8 pt-16 sm:pt-20 md:pt-24">
-          <div className="flex justify-center mb-4 sm:mb-6">
+        <div className="flex flex-col h-full pt-16 sm:pt-18">
+          <div className="flex justify-center px-4 py-3">
             <img
               src="https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/c26f604f-d2da-4860-84e7-5d8cb9f07456.jpg"
               alt="ИИ ШОУ БЕЗ ШИРМЫ"
-              className="h-14 sm:h-16 w-auto object-contain rounded-md"
+              className="h-10 sm:h-12 w-auto object-contain rounded-md"
             />
           </div>
-          <nav className="flex-1 space-y-2 sm:space-y-3 md:space-y-4">
+          <nav className="flex-1 overflow-y-auto px-4 sm:px-6 py-2">
             {menuItems.map((item, idx) => (
               <button
-                key={item.href}
+                key={item.label}
                 onClick={() => scrollToSection(item.href)}
-                className={`block w-full text-left text-synergy-beige hover:text-synergy-red font-heading text-base sm:text-lg md:text-xl font-bold uppercase transition-all py-2 sm:py-3 border-b border-synergy-beige/20 ${
+                className={`block w-full text-left text-synergy-beige hover:text-synergy-red font-heading text-sm sm:text-base font-bold uppercase transition-all py-2 border-b border-synergy-beige/20 ${
                   isOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
                 }`}
                 style={{ 
-                  transitionDelay: isOpen ? `${idx * 80 + 100}ms` : '0ms',
+                  transitionDelay: isOpen ? `${idx * 60 + 80}ms` : '0ms',
                   transitionDuration: '400ms'
                 }}
               >
@@ -80,16 +80,18 @@ const BurgerMenu = () => {
             ))}
           </nav>
 
-          <Button
-            onClick={scrollToRegistration}
-            className={`w-full bg-synergy-red hover:bg-synergy-red/90 text-synergy-beige font-heading text-sm sm:text-base md:text-lg font-black uppercase py-4 sm:py-5 md:py-6 mt-4 sm:mt-6 transition-all duration-500 flex items-center justify-center ${
-              isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
-            style={{ transitionDelay: isOpen ? '600ms' : '0ms' }}
-          >
-            <Icon name="Ticket" size={20} className="sm:w-6 sm:h-6 mr-2 flex-shrink-0" />
-            <span className="leading-tight text-left">Купить билет<br />и изменить жизнь</span>
-          </Button>
+          <div className="px-4 sm:px-6 py-3 flex-shrink-0">
+            <Button
+              onClick={scrollToRegistration}
+              className={`w-full bg-synergy-red hover:bg-synergy-red/90 text-synergy-beige font-heading text-sm font-black uppercase py-3 transition-all duration-500 flex items-center justify-center ${
+                isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}
+              style={{ transitionDelay: isOpen ? '700ms' : '0ms' }}
+            >
+              <Icon name="Ticket" size={18} className="mr-2 flex-shrink-0" />
+              <span className="leading-tight">Купить билет и изменить жизнь</span>
+            </Button>
+          </div>
         </div>
       </div>
     </>
