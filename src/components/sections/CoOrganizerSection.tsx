@@ -2,7 +2,7 @@ import { Card, CardContent } from '@/components/ui/card';
 
 const CoOrganizerSection = () => {
   return (
-    <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 bg-synergy-beige relative z-10 animate-on-scroll">
+    <section id="coorganizer" className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 bg-synergy-beige relative z-10 animate-on-scroll">
       <div className="max-w-4xl mx-auto">
         <Card className="bg-synergy-dark border-none">
           <CardContent className="p-4 sm:p-6 md:p-8">

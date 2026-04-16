@@ -14,6 +14,8 @@ const BurgerMenu = () => {
     { label: 'Спонсоры', href: '#sponsors' },
     { label: 'Розыгрыш', href: '#giveaway' },
     { label: 'Для кого', href: '#audience' },
+    { label: 'Организатор', href: '#about' },
+    { label: 'Соорганизатор', href: '#coorganizer' },
   ];
 
   const scrollToSection = (href: string) => {
