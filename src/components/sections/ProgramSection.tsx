@@ -27,7 +27,7 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
             </div>
             <div className="flex items-center gap-2">
               <Icon name="Coffee" size={20} className="icon-rotate-hover" />
-              <span className="font-semibold">Обед: 13:45–14:45</span>
+              <span className="font-semibold">Обед: 15:00</span>
             </div>
             <div className="flex items-center gap-2">
               <Icon name="Clock" size={20} className="icon-rotate-hover" />
@@ -79,10 +79,20 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
                 ]
               },
               {
-                time: '13:45–14:45',
+                time: '13:45–15:00',
+                icon: 'Shield',
+                title: 'КАК ЗАЩИТИТЬ БИЗНЕС В ЦИФРОВОЙ СРЕДЕ',
+                desc: '',
+                highlight: true,
+                people: [
+                  { name: 'Марченко Вадим', role: 'Руководитель департамента по развитию корпоративного бизнеса', photo: 'https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/files/229781c3-5614-4e22-a46e-7978e6fbaa49.jpg', isLogo: true },
+                ]
+              },
+              {
+                time: '15:00',
                 icon: 'Utensils',
                 title: 'ОБЕД + НЕТВОРКИНГ',
-                desc: 'Обеденный перерыв (60 мин). нетворкинг, обмен контактами.',
+                desc: 'Обеденный перерыв, нетворкинг, обмен контактами.',
                 highlight: false
               },
               {
@@ -174,6 +184,12 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
                                 <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border-2 border-synergy-red flex-shrink-0 flex items-center justify-center bg-synergy-red/10 text-lg">
                                   🔥
                                 </div>
+                              ) : (person as {name: string; role: string; photo: string | null; emoji?: boolean; isLogo?: boolean}).isLogo ? (
+                                <img
+                                  src={person.photo!}
+                                  alt={person.name}
+                                  className="w-12 h-9 sm:w-14 sm:h-10 rounded-md object-contain border-2 border-synergy-red flex-shrink-0 bg-white p-0.5"
+                                />
                               ) : (
                                 <img
                                   src={person.photo!}
