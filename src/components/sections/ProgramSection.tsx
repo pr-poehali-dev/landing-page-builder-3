@@ -31,7 +31,7 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
             </div>
             <div className="flex items-center gap-2">
               <Icon name="Clock" size={20} className="icon-rotate-hover" />
-              <span className="font-semibold">Конец: 18:00</span>
+              <span className="font-semibold">Конец: 19:00</span>
             </div>
           </div>
           
@@ -96,7 +96,7 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
                 highlight: false
               },
               {
-                time: '14:50–15:20',
+                time: '15:50–16:20',
                 icon: 'FileText',
                 title: 'КЛИЕНТЫ ИЗ GEO',
                 desc: 'Как компании получать лиды из нейросетей? GEO – новый канал маркетинга.',
@@ -106,7 +106,7 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
                 ]
               },
               {
-                time: '15:25–16:00',
+                time: '16:25–17:00',
                 icon: 'Brain',
                 title: 'ИИ РЕШЕНИЯ ДЛЯ БИЗНЕСА',
                 desc: 'Внедрение ИИ решений в предпринимательстве и социальной сфере. (кейсы большого бизнеса)',
@@ -116,7 +116,7 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
                 ]
               },
               {
-                time: '16:05–16:45',
+                time: '17:05–17:45',
                 icon: 'Bot',
                 title: 'ИИ-АГЕНТЫ',
                 desc: 'Как создать сайт и отдел продаж, который работает вместо тебя 24/7 за 40 минут',
@@ -126,7 +126,7 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
                 ]
               },
               {
-                time: '16:50–17:20',
+                time: '17:50–18:20',
                 icon: 'Layers',
                 title: 'ИИ ДЛЯ РОССИЙСКОГО БИЗНЕСА',
                 desc: 'ИИ не как игрушка для энтузиастов, а как управленческий слой: меньше хаоса, больше контроля, быстрее решения.',
@@ -136,14 +136,14 @@ const ProgramSection = ({ id }: ProgramSectionProps) => {
                 ]
               },
               {
-                time: '17:25–17:50',
+                time: '18:25–18:50',
                 icon: 'GraduationCap',
                 title: 'ПИТЧ ШКОЛЫ',
                 desc: 'Путь от новичка к специалисту в ИИ. Выступления выпускников школы',
                 highlight: true
               },
               {
-                time: '17:50–18:00',
+                time: '18:50–19:00',
                 icon: 'Gift',
                 title: 'ЗАКРЫТИЕ, ПРИЗЫ, СОВМЕСТНОЕ ФОТО',
                 desc: 'Розыгрыш призов от спонсоров',
