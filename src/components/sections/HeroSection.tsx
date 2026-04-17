@@ -19,13 +19,48 @@ const HeroSection = ({ seatsLeft, scrollToForm }: HeroSectionProps) => {
       <div className="absolute inset-0 bg-synergy-dark/60 backdrop-blur-sm" style={{ zIndex: 1 }} />
       <div className="max-w-5xl mx-auto relative animate-fade-in w-full flex flex-col flex-1" style={{ zIndex: 2 }}>
         
-        <div className="flex justify-center pt-6 sm:pt-8">
+        <div className="flex justify-center pt-6 sm:pt-8 relative">
           <img
             src="https://cdn.poehali.dev/projects/157f105d-82af-4a61-ac36-1c778148612d/bucket/c26f604f-d2da-4860-84e7-5d8cb9f07456.jpg"
             alt="ИИ ШОУ БЕЗ ШИРМЫ"
             className="h-72 sm:h-80 md:h-96 w-auto object-contain drop-shadow-2xl rounded-lg"
           />
+          <div className="absolute -top-2 -right-2 sm:top-2 sm:right-0 md:-right-8 flex flex-col items-center">
+            <div
+              className="relative flex items-center justify-center"
+              style={{
+                animation: 'soldout-pop 0.6s cubic-bezier(0.34,1.56,0.64,1) both'
+              }}
+            >
+              <div
+                className="absolute inset-0 rounded-full bg-synergy-red"
+                style={{ animation: 'soldout-ring 1.4s ease-in-out infinite' }}
+              />
+              <div
+                className="relative z-10 rounded-full bg-synergy-red border-4 border-synergy-beige shadow-2xl flex flex-col items-center justify-center w-24 h-24 sm:w-28 sm:h-28"
+                style={{ animation: 'soldout-wiggle 3s ease-in-out infinite 0.6s' }}
+              >
+                <span className="font-heading font-black text-synergy-beige text-xs sm:text-sm leading-none tracking-widest uppercase">SOLD</span>
+                <span className="font-heading font-black text-synergy-beige text-xl sm:text-2xl leading-none tracking-wider">OUT</span>
+                <span className="text-synergy-beige/80 text-[9px] sm:text-[10px] font-bold mt-0.5 tracking-wide">ВСЕ МЕСТА</span>
+              </div>
+            </div>
+          </div>
         </div>
+        <style>{`
+          @keyframes soldout-pop {
+            0% { transform: scale(0) rotate(-20deg); opacity: 0; }
+            100% { transform: scale(1) rotate(0deg); opacity: 1; }
+          }
+          @keyframes soldout-ring {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.35); opacity: 0; }
+          }
+          @keyframes soldout-wiggle {
+            0%, 100% { transform: rotate(-3deg) scale(1); }
+            50% { transform: rotate(3deg) scale(1.05); }
+          }
+        `}</style>
 
         <div className="text-center flex flex-col justify-end flex-1 pb-6 sm:pb-8 gap-3 sm:gap-4">
           <p className="text-sm sm:text-base md:text-lg font-semibold text-synergy-beige/90 max-w-2xl mx-auto px-2 leading-snug">
