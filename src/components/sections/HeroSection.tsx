@@ -78,24 +78,19 @@ const HeroSection = ({ seatsLeft, scrollToForm }: HeroSectionProps) => {
           </div>
           <div className="flex justify-center px-4">
             <div className="relative w-full max-w-sm">
-              <div className="btn-glow-pulse" />
               <Button 
-                size="lg" 
-                onClick={scrollToForm}
-                className="hero-cta-button relative z-10 w-full text-sm sm:text-base md:text-lg px-6 sm:px-8 py-3 sm:py-4 h-auto font-black bg-synergy-red text-synergy-beige hover:bg-synergy-red border-4 border-synergy-beige shadow-2xl flex items-center justify-center"
+                size="lg"
+                disabled
+                className="relative z-10 w-full text-sm sm:text-base md:text-lg px-6 sm:px-8 py-3 sm:py-4 h-auto font-black bg-synergy-dark/80 text-synergy-beige/50 border-4 border-synergy-beige/30 shadow-2xl flex items-center justify-center cursor-not-allowed"
               >
-                <Icon name="Zap" size={16} className="mr-2 animate-pulse flex-shrink-0" />
-                <span className="uppercase tracking-wide leading-tight">ДА, Я ХОЧУ РАЗОБРАТЬСЯ В ИИ</span>
-                <Icon name="ArrowRight" size={16} className="ml-2 flex-shrink-0" />
+                <Icon name="Lock" size={16} className="mr-2 flex-shrink-0" />
+                <span className="uppercase tracking-wide leading-tight">РЕГИСТРАЦИЯ ЗАКРЫТА</span>
               </Button>
             </div>
           </div>
           <div className="flex items-center justify-center gap-2 sm:gap-3 flex-wrap px-4">
             <Badge className="text-xs sm:text-sm px-3 py-1.5 bg-synergy-dark border-2 border-synergy-beige text-synergy-beige whitespace-nowrap">
-              Осталось {seatsLeft} мест из 300
-            </Badge>
-            <Badge className="text-xs sm:text-sm px-3 py-1.5 bg-synergy-red text-synergy-beige whitespace-nowrap">
-              Цена: от 1,000 ₽
+              Мест не осталось — все 300 заняты
             </Badge>
           </div>
           <p className="text-synergy-beige/70 text-xs sm:text-sm max-w-2xl mx-auto px-4 text-center">

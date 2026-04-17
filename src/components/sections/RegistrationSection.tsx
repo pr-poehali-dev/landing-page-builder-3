@@ -11,16 +11,19 @@ const RegistrationSection = () => {
       <section id="registration" className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 bg-synergy-red relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black mb-6 sm:mb-8 text-synergy-beige px-2">
-            ЗАБРОНИРОВАТЬ МЕСТО
+            РЕГИСТРАЦИЯ ЗАКРЫТА
           </h2>
+          <p className="text-synergy-beige/80 text-base sm:text-lg mb-6">
+            Все 300 мест заняты. До встречи на мероприятии!
+          </p>
           <div className="flex justify-center px-2">
             <Button 
-              size="lg" 
-              onClick={handleBuyTicket}
-              className="w-full sm:w-auto bg-synergy-dark text-synergy-beige hover:bg-synergy-dark/90 font-bold uppercase text-lg sm:text-xl md:text-2xl lg:text-3xl px-8 sm:px-12 md:px-16 py-6 sm:py-8 md:py-10 flex items-center justify-center animate-pulse hover:animate-none transition-all cursor-pointer"
+              size="lg"
+              disabled
+              className="w-full sm:w-auto bg-synergy-dark/50 text-synergy-beige/40 font-bold uppercase text-lg sm:text-xl md:text-2xl lg:text-3xl px-8 sm:px-12 md:px-16 py-6 sm:py-8 md:py-10 flex items-center justify-center cursor-not-allowed border-2 border-synergy-beige/20"
             >
-              <Icon name="MousePointerClick" size={36} className="mr-3 sm:mr-4 animate-pulse flex-shrink-0" />
-              <span className="leading-tight">УЧАСТВОВАТЬ</span>
+              <Icon name="Lock" size={36} className="mr-3 sm:mr-4 flex-shrink-0" />
+              <span className="leading-tight">МЕСТ НЕТ</span>
             </Button>
           </div>
         </div>
