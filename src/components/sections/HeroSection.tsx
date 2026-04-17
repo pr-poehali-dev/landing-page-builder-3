@@ -17,6 +17,49 @@ const HeroSection = ({ seatsLeft, scrollToForm }: HeroSectionProps) => {
       }}
     >
       <div className="absolute inset-0 bg-synergy-dark/60 backdrop-blur-sm" style={{ zIndex: 1 }} />
+
+      {/* Bouncing SOLD OUT badge */}
+      <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 5 }}>
+        <div style={{ animation: 'so-bounce-x 3.7s ease-in-out infinite alternate, so-bounce-y 2.9s ease-in-out infinite alternate', position: 'absolute', top: 0, left: 0 }}>
+          <div style={{ animation: 'so-pop 0.7s cubic-bezier(0.34,1.56,0.64,1) both', display: 'inline-block' }}>
+            <div style={{ animation: 'so-spin 8s linear infinite', display: 'inline-block' }}>
+              <div className="relative flex items-center justify-center">
+                <div className="absolute inset-0 rounded-full bg-synergy-red" style={{ animation: 'so-ring 1.2s ease-in-out infinite' }} />
+                <div className="relative rounded-full bg-synergy-red border-[6px] border-synergy-beige shadow-2xl flex flex-col items-center justify-center"
+                  style={{ width: 180, height: 180 }}>
+                  <span className="font-heading font-black text-synergy-beige leading-none tracking-widest uppercase" style={{ fontSize: 22 }}>SOLD</span>
+                  <span className="font-heading font-black text-synergy-beige leading-none tracking-wider" style={{ fontSize: 52 }}>OUT</span>
+                  <span className="text-synergy-beige/90 font-black tracking-wide uppercase" style={{ fontSize: 13, marginTop: 2 }}>ВСЕ БИЛЕТЫ</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <style>{`
+        @keyframes so-pop {
+          0% { transform: scale(0) rotate(-30deg); opacity: 0; }
+          100% { transform: scale(1) rotate(0deg); opacity: 1; }
+        }
+        @keyframes so-bounce-x {
+          0%   { left: 5%; }
+          100% { left: calc(100% - 200px); }
+        }
+        @keyframes so-bounce-y {
+          0%   { top: 5%; }
+          100% { top: calc(100% - 200px); }
+        }
+        @keyframes so-ring {
+          0%, 100% { transform: scale(1); opacity: 0.6; }
+          50% { transform: scale(1.4); opacity: 0; }
+        }
+        @keyframes so-spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+      `}</style>
+
       <div className="max-w-5xl mx-auto relative animate-fade-in w-full flex flex-col flex-1" style={{ zIndex: 2 }}>
         
         <div className="flex justify-center pt-6 sm:pt-8 relative">
@@ -25,42 +68,7 @@ const HeroSection = ({ seatsLeft, scrollToForm }: HeroSectionProps) => {
             alt="ИИ ШОУ БЕЗ ШИРМЫ"
             className="h-72 sm:h-80 md:h-96 w-auto object-contain drop-shadow-2xl rounded-lg"
           />
-          <div className="absolute -top-2 -right-2 sm:top-2 sm:right-0 md:-right-8 flex flex-col items-center">
-            <div
-              className="relative flex items-center justify-center"
-              style={{
-                animation: 'soldout-pop 0.6s cubic-bezier(0.34,1.56,0.64,1) both'
-              }}
-            >
-              <div
-                className="absolute inset-0 rounded-full bg-synergy-red"
-                style={{ animation: 'soldout-ring 1.4s ease-in-out infinite' }}
-              />
-              <div
-                className="relative z-10 rounded-full bg-synergy-red border-4 border-synergy-beige shadow-2xl flex flex-col items-center justify-center w-24 h-24 sm:w-28 sm:h-28"
-                style={{ animation: 'soldout-wiggle 3s ease-in-out infinite 0.6s' }}
-              >
-                <span className="font-heading font-black text-synergy-beige text-xs sm:text-sm leading-none tracking-widest uppercase">SOLD</span>
-                <span className="font-heading font-black text-synergy-beige text-xl sm:text-2xl leading-none tracking-wider">OUT</span>
-                <span className="text-synergy-beige/80 text-[9px] sm:text-[10px] font-bold mt-0.5 tracking-wide">ВСЕ МЕСТА</span>
-              </div>
-            </div>
-          </div>
         </div>
-        <style>{`
-          @keyframes soldout-pop {
-            0% { transform: scale(0) rotate(-20deg); opacity: 0; }
-            100% { transform: scale(1) rotate(0deg); opacity: 1; }
-          }
-          @keyframes soldout-ring {
-            0%, 100% { transform: scale(1); opacity: 0.5; }
-            50% { transform: scale(1.35); opacity: 0; }
-          }
-          @keyframes soldout-wiggle {
-            0%, 100% { transform: rotate(-3deg) scale(1); }
-            50% { transform: rotate(3deg) scale(1.05); }
-          }
-        `}</style>
 
         <div className="text-center flex flex-col justify-end flex-1 pb-6 sm:pb-8 gap-3 sm:gap-4">
           <p className="text-sm sm:text-base md:text-lg font-semibold text-synergy-beige/90 max-w-2xl mx-auto px-2 leading-snug">
