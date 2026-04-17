@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import NeuralBackground from '@/components/NeuralBackground';
 import BurgerMenu from '@/components/BurgerMenu';
@@ -18,26 +18,12 @@ import CountdownSection from '@/components/sections/CountdownSection';
 import GiveawaySection from '@/components/sections/GiveawaySection';
 
 const Index = () => {
-  const [seatsLeft, setSeatsLeft] = useState(117);
+  const seatsLeft = 0;
 
   useScrollAnimation();
 
   useEffect(() => {
     document.title = 'ИИ ШОУ БЕЗ ШИРМЫ | Владивосток';
-  }, []);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setSeatsLeft((prev) => {
-        if (prev <= 1) {
-          clearInterval(interval);
-          return prev;
-        }
-        return prev - 1;
-      });
-    }, 3000);
-
-    return () => clearInterval(interval);
   }, []);
 
   const scrollToForm = () => {
