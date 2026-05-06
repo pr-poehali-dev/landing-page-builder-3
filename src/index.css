@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Inter:wght@400;500;600;700;900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,88 +6,43 @@
 
 @layer base {
   :root {
-    --background: 38 42% 88%;
-    --foreground: 0 0% 16%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
 
-    --card: 38 42% 92%;
-    --card-foreground: 0 0% 16%;
+    --card: 0 0% 98%;
+    --card-foreground: 0 0% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 16%;
+    --popover-foreground: 0 0% 10%;
 
-    --primary: 5 79% 52%;
-    --primary-foreground: 38 42% 88%;
+    --primary: 0 0% 10%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 16%;
-    --secondary-foreground: 38 42% 88%;
+    --secondary: 50 95% 55%;
+    --secondary-foreground: 0 0% 10%;
 
-    --muted: 38 25% 80%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 0 0% 94%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 5 79% 52%;
-    --accent-foreground: 38 42% 88%;
+    --accent: 350 90% 55%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 5 79% 52%;
-    --destructive-foreground: 38 42% 88%;
+    --destructive: 350 90% 55%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 38 30% 85%;
-    --input: 38 30% 85%;
-    --ring: 5 79% 52%;
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 0 0% 10%;
 
-    --radius: 0rem;
+    --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
@@ -98,9 +53,8 @@
   }
 
   body {
-    @apply bg-background text-foreground;
-    font-family: "Roboto", sans-serif;
-    background: #ede3c0;
+    @apply bg-white text-gray-900;
+    font-family: "Inter", sans-serif;
   }
 
   h1,
@@ -109,250 +63,112 @@
   h4,
   h5,
   h6 {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
   }
 }
 
 @layer utilities {
-  .synergy-button {
-    border: 1px solid #ede0be;
-    background: transparent;
-    transition: all 0.3s ease;
-  }
-
-  .synergy-button:hover {
-    background: #ef4444;
-    border-color: #ef4444;
-    color: #ede3c0;
-  }
-
-  .synergy-card {
-    background: #282828;
-    border-radius: 0;
-    border: none;
-    box-shadow: none;
-  }
-
-  .synergy-text-accent {
-    color: #ef4444;
-  }
-
-  .synergy-bg-dark {
-    background: #282828;
-  }
-
-  /* Scroll animations */
-  .animate-on-scroll {
-    opacity: 0;
-    transform: translateY(30px);
-    transition:
-      opacity 0.6s ease-out,
-      transform 0.6s ease-out;
-  }
-
-  .animate-on-scroll.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .animate-on-scroll-left {
-    opacity: 0;
-    transform: translateX(-50px);
-    transition:
-      opacity 0.6s ease-out,
-      transform 0.6s ease-out;
-  }
-
-  .animate-on-scroll-left.visible {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  .animate-on-scroll-right {
-    opacity: 0;
-    transform: translateX(50px);
-    transition:
-      opacity 0.6s ease-out,
-      transform 0.6s ease-out;
-  }
-
-  .animate-on-scroll-right.visible {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  .animate-on-scroll-scale {
-    opacity: 0;
-    transform: scale(0.9);
-    transition:
-      opacity 0.6s ease-out,
-      transform 0.6s ease-out;
-  }
-
-  .animate-on-scroll-scale.visible {
-    opacity: 1;
-    transform: scale(1);
-  }
-
-  /* Icon animations */
-  .icon-glow {
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    filter: drop-shadow(0 0 0px transparent);
-  }
-
-  .icon-glow:hover {
-    transform: scale(1.15) rotate(5deg);
-    filter: drop-shadow(0 0 12px currentColor)
-      drop-shadow(0 0 20px currentColor);
-  }
-
-  .icon-pulse {
-    animation: icon-pulse-animation 3s ease-in-out infinite;
-  }
-
-  @keyframes icon-pulse-animation {
+  /* doodle shake animation */
+  @keyframes doodle-shake {
     0%,
     100% {
-      transform: scale(1);
-      filter: drop-shadow(0 0 4px currentColor);
+      transform: rotate(-1deg) translateX(0px);
+    }
+    25% {
+      transform: rotate(1.5deg) translateX(1px);
     }
     50% {
-      transform: scale(1.08);
-      filter: drop-shadow(0 0 16px currentColor)
-        drop-shadow(0 0 24px currentColor);
+      transform: rotate(-0.5deg) translateX(-1px);
+    }
+    75% {
+      transform: rotate(1deg) translateX(0.5px);
     }
   }
 
-  .icon-float {
-    animation: icon-float-animation 4s ease-in-out infinite;
-  }
-
-  @keyframes icon-float-animation {
+  @keyframes doodle-float {
     0%,
     100% {
-      transform: translateY(0px);
+      transform: translateY(0px) rotate(var(--rot, 0deg));
     }
-    50% {
-      transform: translateY(-8px);
+    33% {
+      transform: translateY(-6px) rotate(calc(var(--rot, 0deg) + 2deg));
     }
-  }
-
-  .icon-rotate-hover {
-    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-
-  .icon-rotate-hover:hover {
-    transform: rotate(360deg) scale(1.2);
-    filter: drop-shadow(0 0 10px currentColor);
-  }
-
-  /* Hero CTA Button Animation */
-  .hero-cta-button {
-    animation: hero-button-float 3s ease-in-out infinite;
-    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-    position: relative;
-    overflow: visible;
-  }
-
-  @media (min-width: 640px) {
-    .hero-cta-button:hover {
-      transform: scale(1.08) translateY(-4px);
-      box-shadow:
-        0 20px 60px rgba(239, 68, 68, 0.6),
-        0 0 40px rgba(239, 68, 68, 0.4),
-        inset 0 0 20px rgba(255, 255, 255, 0.2);
+    66% {
+      transform: translateY(3px) rotate(calc(var(--rot, 0deg) - 1deg));
     }
   }
 
-  .hero-cta-button:active {
-    transform: scale(0.98);
-  }
-
-  @keyframes hero-button-float {
-    0%,
+  @keyframes sticker-pop {
+    0% {
+      transform: scale(0) rotate(-15deg);
+      opacity: 0;
+    }
+    70% {
+      transform: scale(1.1) rotate(3deg);
+    }
     100% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-8px);
-    }
-  }
-
-  /* Glowing pulse effect behind button */
-  .btn-glow-pulse {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 120%;
-    height: 140%;
-    background: radial-gradient(
-      circle,
-      rgba(239, 68, 68, 0.4) 0%,
-      rgba(239, 68, 68, 0.2) 40%,
-      transparent 70%
-    );
-    border-radius: 12px;
-    animation: btn-pulse-glow 2s ease-in-out infinite;
-    z-index: 0;
-    pointer-events: none;
-    filter: blur(20px);
-  }
-
-  @keyframes btn-pulse-glow {
-    0%,
-    100% {
-      opacity: 0.6;
-      transform: translate(-50%, -50%) scale(1);
-    }
-    50% {
+      transform: scale(1) rotate(var(--sticker-rot, -2deg));
       opacity: 1;
-      transform: translate(-50%, -50%) scale(1.15);
     }
   }
 
-  /* Sponsors carousel animation */
-  .animate-scroll-right-fast {
-    animation: scroll-right 45s linear infinite;
-  }
-
-  .animate-scroll-left-fast {
-    animation: scroll-left 45s linear infinite;
-  }
-
-  @keyframes scroll-right {
+  @keyframes title-draw {
     0% {
-      transform: translateX(0);
+      opacity: 0;
+      transform: translateX(-8px) skewX(3deg);
     }
     100% {
-      transform: translateX(-50%);
+      opacity: 1;
+      transform: translateX(0) skewX(0deg);
     }
   }
 
-  @keyframes scroll-left {
-    0% {
-      transform: translateX(-50%);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
-
-  /* Scroll to top button animation */
-  .scroll-to-top-float {
-    animation: scroll-float 3s ease-in-out infinite;
-  }
-
-  @keyframes scroll-float {
+  @keyframes handmade-pulse {
     0%,
     100% {
-      transform: translateY(0px);
+      transform: scale(1) rotate(-1deg);
+      box-shadow: 4px 4px 0 #1a1a1a;
+    }
+    40% {
+      transform: scale(1.04) rotate(0.5deg);
+      box-shadow: 6px 6px 0 #1a1a1a;
+    }
+    70% {
+      transform: scale(0.98) rotate(-0.5deg);
+      box-shadow: 3px 3px 0 #1a1a1a;
+    }
+  }
+
+  @keyframes arrow-wobble {
+    0%,
+    100% {
+      transform: translateX(0) rotate(var(--rot, 0deg));
     }
     50% {
-      transform: translateY(-6px);
+      transform: translateX(4px) rotate(calc(var(--rot, 0deg) + 5deg));
     }
+  }
+
+  .doodle-shake {
+    animation: doodle-shake 3s ease-in-out infinite;
+  }
+  .doodle-float {
+    animation: doodle-float 4s ease-in-out infinite;
+  }
+  .arrow-wobble {
+    animation: arrow-wobble 1.8s ease-in-out infinite;
+  }
+
+  .sticker {
+    animation: sticker-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .sticker:hover {
+    transform: scale(1.12) rotate(calc(var(--sticker-rot, -2deg) * -1)) !important;
+  }
+
+  .btn-handmade {
+    animation: handmade-pulse 2.4s ease-in-out infinite;
   }
 }
