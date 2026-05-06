@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Inter:wght@400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -8,6 +8,7 @@
   :root {
     --background: 0 0% 100%;
     --foreground: 0 0% 10%;
+    --green: #7cc400;
 
     --card: 0 0% 98%;
     --card-foreground: 0 0% 10%;
@@ -69,106 +70,86 @@
 }
 
 @layer utilities {
-  /* doodle shake animation */
-  @keyframes doodle-shake {
-    0%,
-    100% {
-      transform: rotate(-1deg) translateX(0px);
-    }
-    25% {
-      transform: rotate(1.5deg) translateX(1px);
-    }
-    50% {
-      transform: rotate(-0.5deg) translateX(-1px);
-    }
-    75% {
-      transform: rotate(1deg) translateX(0.5px);
-    }
-  }
-
   @keyframes doodle-float {
     0%,
     100% {
       transform: translateY(0px) rotate(var(--rot, 0deg));
     }
-    33% {
-      transform: translateY(-6px) rotate(calc(var(--rot, 0deg) + 2deg));
+    40% {
+      transform: translateY(-7px) rotate(calc(var(--rot, 0deg) + 2deg));
     }
-    66% {
+    70% {
       transform: translateY(3px) rotate(calc(var(--rot, 0deg) - 1deg));
     }
   }
-
-  @keyframes sticker-pop {
-    0% {
-      transform: scale(0) rotate(-15deg);
-      opacity: 0;
-    }
-    70% {
-      transform: scale(1.1) rotate(3deg);
-    }
-    100% {
-      transform: scale(1) rotate(var(--sticker-rot, -2deg));
-      opacity: 1;
-    }
-  }
-
-  @keyframes title-draw {
-    0% {
-      opacity: 0;
-      transform: translateX(-8px) skewX(3deg);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0) skewX(0deg);
-    }
-  }
-
-  @keyframes handmade-pulse {
+  @keyframes doodle-shake {
     0%,
     100% {
-      transform: scale(1) rotate(-1deg);
-      box-shadow: 4px 4px 0 #1a1a1a;
+      transform: rotate(var(--rot, 0deg));
     }
-    40% {
-      transform: scale(1.04) rotate(0.5deg);
-      box-shadow: 6px 6px 0 #1a1a1a;
+    25% {
+      transform: rotate(calc(var(--rot, 0deg) + 3deg)) translateX(1px);
     }
-    70% {
-      transform: scale(0.98) rotate(-0.5deg);
-      box-shadow: 3px 3px 0 #1a1a1a;
+    75% {
+      transform: rotate(calc(var(--rot, 0deg) - 2deg)) translateX(-1px);
     }
   }
-
+  @keyframes node-pulse {
+    0%,
+    100% {
+      opacity: 0.5;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+  }
+  @keyframes btn-bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-3px);
+    }
+  }
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
   @keyframes arrow-wobble {
     0%,
     100% {
-      transform: translateX(0) rotate(var(--rot, 0deg));
+      transform: rotate(var(--rot, 0deg)) translateX(0);
     }
     50% {
-      transform: translateX(4px) rotate(calc(var(--rot, 0deg) + 5deg));
+      transform: rotate(calc(var(--rot, 0deg) + 6deg)) translateX(3px);
     }
   }
 
-  .doodle-shake {
-    animation: doodle-shake 3s ease-in-out infinite;
-  }
   .doodle-float {
     animation: doodle-float 4s ease-in-out infinite;
   }
+  .doodle-shake {
+    animation: doodle-shake 3.5s ease-in-out infinite;
+  }
+  .node-pulse {
+    animation: node-pulse 2.2s ease-in-out infinite;
+  }
+  .btn-bounce {
+    animation: btn-bounce 2.5s ease-in-out infinite;
+  }
+  .fade-up {
+    animation: fade-up 0.55s ease-out both;
+  }
   .arrow-wobble {
     animation: arrow-wobble 1.8s ease-in-out infinite;
-  }
-
-  .sticker {
-    animation: sticker-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
-    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
-  }
-  .sticker:hover {
-    transform: scale(1.12) rotate(calc(var(--sticker-rot, -2deg) * -1)) !important;
-  }
-
-  .btn-handmade {
-    animation: handmade-pulse 2.4s ease-in-out infinite;
   }
 }

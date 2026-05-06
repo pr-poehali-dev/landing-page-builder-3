@@ -50,13 +50,13 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// New doodle palette
-				ink: '#1a1a1a',
-				paper: '#ffffff',
-				yellow: '#FACC15',
-				coral: '#F43F5E',
-				blue: '#3B82F6',
-				mint: '#10B981',
+				// Project palette
+				ink:           '#1a1a1a',
+				paper:         '#ffffff',
+				green:         '#7CC400',
+				'green-light': '#E8F5C8',
+				gray:          '#6b7280',
+				'gray-light':  '#f5f5f5',
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],

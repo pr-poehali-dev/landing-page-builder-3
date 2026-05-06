@@ -1,250 +1,227 @@
-import { useEffect, useRef } from 'react';
-
 interface HeroSectionProps {
   scrollToForm: () => void;
 }
 
-const DoodleCamera = ({ className, style }: { className?: string; style?: React.CSSProperties }) => (
-  <svg className={className} style={style} viewBox="0 0 80 60" fill="none" stroke="#1a1a1a" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-    <rect x="5" y="18" width="70" height="38" rx="5" />
-    <circle cx="40" cy="37" r="12" />
-    <circle cx="40" cy="37" r="7" />
-    <rect x="25" y="10" width="20" height="10" rx="3" />
-    <circle cx="65" cy="26" r="3" />
-  </svg>
-);
+// Neural network doodle illustration (right side) — SVG inline
+const NeuralIllustration = () => (
+  <svg viewBox="0 0 420 420" fill="none" className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+    {/* Network lines */}
+    <g stroke="#7CC400" strokeWidth="1.5" opacity="0.55">
+      <line x1="210" y1="210" x2="100" y2="130" />
+      <line x1="210" y1="210" x2="320" y2="120" />
+      <line x1="210" y1="210" x2="340" y2="230" />
+      <line x1="210" y1="210" x2="300" y2="330" />
+      <line x1="210" y1="210" x2="110" y2="310" />
+      <line x1="210" y1="210" x2="80"  y2="220" />
+      <line x1="100" y1="130" x2="320" y2="120" />
+      <line x1="320" y1="120" x2="340" y2="230" />
+      <line x1="340" y1="230" x2="300" y2="330" />
+      <line x1="300" y1="330" x2="110" y2="310" />
+      <line x1="110" y1="310" x2="80"  y2="220" />
+      <line x1="80"  y1="220" x2="100" y2="130" />
+    </g>
 
-const DoodleStar = ({ className, style }: { className?: string; style?: React.CSSProperties }) => (
-  <svg className={className} style={style} viewBox="0 0 50 50" fill="none" stroke="#1a1a1a" strokeWidth="2.5" strokeLinecap="round">
-    <line x1="25" y1="5" x2="25" y2="45" />
-    <line x1="5" y1="25" x2="45" y2="25" />
-    <line x1="11" y1="11" x2="39" y2="39" />
-    <line x1="39" y1="11" x2="11" y2="39" />
-  </svg>
-);
+    {/* Center person — simple doodle */}
+    {/* Body */}
+    <ellipse cx="210" cy="310" rx="38" ry="55" fill="none" stroke="#1a1a1a" strokeWidth="2.5" strokeLinecap="round"/>
+    {/* Head */}
+    <circle cx="210" cy="215" r="32" fill="none" stroke="#1a1a1a" strokeWidth="2.5"/>
+    {/* Face — minimal */}
+    <circle cx="200" cy="212" r="3" fill="#1a1a1a"/>
+    <circle cx="220" cy="212" r="3" fill="#1a1a1a"/>
+    <path d="M200 226 Q210 234 220 226" stroke="#1a1a1a" strokeWidth="2" fill="none" strokeLinecap="round"/>
+    {/* Arms */}
+    <path d="M172 295 Q148 310 138 340" stroke="#1a1a1a" strokeWidth="2.5" strokeLinecap="round" fill="none"/>
+    <path d="M248 295 Q272 310 282 340" stroke="#1a1a1a" strokeWidth="2.5" strokeLinecap="round" fill="none"/>
+    {/* Colorful sleeve detail on right arm */}
+    <path d="M252 305 Q264 318 270 335" stroke="#7CC400" strokeWidth="6" strokeLinecap="round" opacity="0.7"/>
+    <path d="M258 308 Q268 322 274 338" stroke="#F43F5E" strokeWidth="3" strokeLinecap="round" opacity="0.5"/>
+    <path d="M255 312 Q262 328 266 342" stroke="#3B82F6" strokeWidth="3" strokeLinecap="round" opacity="0.5"/>
+    {/* Crossed arms line */}
+    <path d="M172 305 Q210 290 248 305" stroke="#1a1a1a" strokeWidth="2" fill="none" strokeLinecap="round"/>
 
-const DoodlePlay = ({ className, style }: { className?: string; style?: React.CSSProperties }) => (
-  <svg className={className} style={style} viewBox="0 0 60 60" fill="none" stroke="#1a1a1a" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-    <circle cx="30" cy="30" r="26" />
-    <polygon points="24,18 24,42 46,30" fill="#1a1a1a" />
-  </svg>
-);
+    {/* Network nodes with labels */}
+    {/* ChatGPT node */}
+    <g className="node-pulse" style={{ animationDelay: '0s' }}>
+      <circle cx="100" cy="130" r="22" fill="white" stroke="#7CC400" strokeWidth="2"/>
+      <text x="100" y="126" textAnchor="middle" fontSize="8" fill="#1a1a1a" fontFamily="Inter" fontWeight="600">Chat</text>
+      <text x="100" y="137" textAnchor="middle" fontSize="8" fill="#1a1a1a" fontFamily="Inter" fontWeight="600">GPT</text>
+    </g>
+    <text x="100" y="108" textAnchor="middle" fontSize="10" fill="#1a1a1a" fontFamily="Inter" fontWeight="700">ChatGPT</text>
 
-const DoodleArrow = ({ className, style }: { className?: string; style?: React.CSSProperties }) => (
-  <svg className={className} style={style} viewBox="0 0 80 40" fill="none" stroke="#1a1a1a" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M5 20 Q30 5 60 20" />
-    <polyline points="52,12 62,20 52,28" />
-  </svg>
-);
+    {/* Midjourney node */}
+    <g className="node-pulse" style={{ animationDelay: '0.4s' }}>
+      <circle cx="330" cy="118" r="22" fill="white" stroke="#7CC400" strokeWidth="2"/>
+      <text x="330" y="114" textAnchor="middle" fontSize="7" fill="#1a1a1a" fontFamily="Inter" fontWeight="600">Mid</text>
+      <text x="330" y="125" textAnchor="middle" fontSize="7" fill="#1a1a1a" fontFamily="Inter" fontWeight="600">journey</text>
+    </g>
+    <text x="330" y="96" textAnchor="middle" fontSize="10" fill="#1a1a1a" fontFamily="Inter" fontWeight="700">Midjourney</text>
 
-const DoodleLaptop = ({ className, style }: { className?: string; style?: React.CSSProperties }) => (
-  <svg className={className} style={style} viewBox="0 0 90 70" fill="none" stroke="#1a1a1a" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-    <rect x="10" y="10" width="70" height="42" rx="4" />
-    <rect x="18" y="17" width="54" height="28" rx="2" />
-    <line x1="2" y1="58" x2="88" y2="58" />
-    <path d="M35 52 L55 52 L58 58 L32 58 Z" />
-  </svg>
-);
+    {/* DALL-E node */}
+    <g className="node-pulse" style={{ animationDelay: '0.8s' }}>
+      <circle cx="78" cy="222" r="22" fill="white" stroke="#7CC400" strokeWidth="2"/>
+      <text x="78" y="218" textAnchor="middle" fontSize="8" fill="#1a1a1a" fontFamily="Inter" fontWeight="600">DALL</text>
+      <text x="78" y="229" textAnchor="middle" fontSize="8" fill="#1a1a1a" fontFamily="Inter" fontWeight="600">·E</text>
+    </g>
+    <text x="44" y="222" textAnchor="middle" fontSize="10" fill="#1a1a1a" fontFamily="Inter" fontWeight="700">DALL-E</text>
 
-const DoodlePerson = ({ className, style }: { className?: string; style?: React.CSSProperties }) => (
-  <svg className={className} style={style} viewBox="0 0 50 80" fill="none" stroke="#1a1a1a" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-    <circle cx="25" cy="14" r="10" />
-    <path d="M10 35 Q25 28 40 35 L38 62 L25 58 L12 62 Z" />
-    <line x1="10" y1="36" x2="4" y2="52" />
-    <line x1="40" y1="36" x2="46" y2="52" />
-    <line x1="19" y1="62" x2="16" y2="78" />
-    <line x1="31" y1="62" x2="34" y2="78" />
-  </svg>
-);
+    {/* Kling node */}
+    <g className="node-pulse" style={{ animationDelay: '1.2s' }}>
+      <circle cx="345" cy="232" r="22" fill="white" stroke="#7CC400" strokeWidth="2"/>
+      <text x="345" y="228" textAnchor="middle" fontSize="8" fill="#1a1a1a" fontFamily="Inter" fontWeight="600">Kling</text>
+      <text x="345" y="239" textAnchor="middle" fontSize="7" fill="#1a1a1a" fontFamily="Inter">AI</text>
+    </g>
+    <text x="380" y="232" textAnchor="middle" fontSize="10" fill="#1a1a1a" fontFamily="Inter" fontWeight="700">Kling</text>
 
-const DoodleCassette = ({ className, style }: { className?: string; style?: React.CSSProperties }) => (
-  <svg className={className} style={style} viewBox="0 0 100 65" fill="none" stroke="#1a1a1a" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-    <rect x="5" y="8" width="90" height="50" rx="6" />
-    <path d="M20 30 Q50 20 80 30" />
-    <circle cx="28" cy="38" r="10" />
-    <circle cx="72" cy="38" r="10" />
-    <line x1="38" y1="38" x2="62" y2="38" />
-    <rect x="35" y="10" width="30" height="12" rx="2" />
-  </svg>
-);
+    {/* Sora node */}
+    <g className="node-pulse" style={{ animationDelay: '1.6s' }}>
+      <circle cx="305" cy="335" r="22" fill="white" stroke="#7CC400" strokeWidth="2"/>
+      <text x="305" y="331" textAnchor="middle" fontSize="8" fill="#1a1a1a" fontFamily="Inter" fontWeight="600">Sora</text>
+      <text x="305" y="342" textAnchor="middle" fontSize="7" fill="#1a1a1a" fontFamily="Inter">AI</text>
+    </g>
+    <text x="340" y="360" textAnchor="middle" fontSize="10" fill="#1a1a1a" fontFamily="Inter" fontWeight="700">Sora</text>
 
-const DoodlePhoto = ({ className, style }: { className?: string; style?: React.CSSProperties }) => (
-  <svg className={className} style={style} viewBox="0 0 70 80" fill="none" stroke="#1a1a1a" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-    <rect x="5" y="5" width="60" height="70" rx="3" />
-    <rect x="12" y="12" width="46" height="46" rx="2" />
-    <circle cx="35" cy="35" r="12" />
-    <line x1="5" y1="65" x2="65" y2="65" />
+    {/* Veo node */}
+    <g className="node-pulse" style={{ animationDelay: '2s' }}>
+      <circle cx="108" cy="312" r="22" fill="white" stroke="#7CC400" strokeWidth="2"/>
+      <text x="108" y="308" textAnchor="middle" fontSize="8" fill="#1a1a1a" fontFamily="Inter" fontWeight="600">Veo</text>
+      <text x="108" y="319" textAnchor="middle" fontSize="7" fill="#1a1a1a" fontFamily="Inter">3</text>
+    </g>
+    <text x="72" y="355" textAnchor="middle" fontSize="10" fill="#1a1a1a" fontFamily="Inter" fontWeight="700">Veo</text>
   </svg>
-);
-
-const Sticker = ({
-  text,
-  bg,
-  rot,
-  delay,
-  className,
-  textColor = 'text-ink',
-}: {
-  text: string;
-  bg: string;
-  rot: number;
-  delay: number;
-  className?: string;
-  textColor?: string;
-}) => (
-  <div
-    className={`sticker absolute px-3 py-1.5 font-doodle font-bold border-2 border-ink text-xs sm:text-sm shadow-[3px_3px_0_#1a1a1a] ${textColor} ${className}`}
-    style={{
-      background: bg,
-      '--sticker-rot': `${rot}deg`,
-      transform: `rotate(${rot}deg)`,
-      animationDelay: `${delay}s`,
-    } as React.CSSProperties}
-  >
-    {text}
-  </div>
 );
 
 const HeroSection = ({ scrollToForm }: HeroSectionProps) => {
-  const titleRef = useRef<HTMLHeadingElement>(null);
-
-  useEffect(() => {
-    const el = titleRef.current;
-    if (!el) return;
-    el.style.opacity = '0';
-    const timer = setTimeout(() => {
-      el.style.opacity = '1';
-    }, 80);
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
-    <section className="relative bg-white overflow-hidden min-h-screen flex flex-col">
+    <section className="relative bg-white overflow-hidden min-h-screen">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-10">
 
-      {/* Doodle background decorations */}
-      <div className="pointer-events-none select-none absolute inset-0 overflow-hidden">
-        <DoodleCamera className="absolute w-16 sm:w-20 doodle-float opacity-20" style={{ top: '5%', left: '2%', transform: 'rotate(-8deg)' }} />
-        <DoodleStar className="absolute w-8 sm:w-10 doodle-shake opacity-25" style={{ top: '10%', left: '16%' }} />
-        <DoodlePlay className="absolute w-14 sm:w-16 doodle-float opacity-18" style={{ top: '7%', right: '5%', transform: 'rotate(5deg)' }} />
-        <DoodleStar className="absolute w-6 doodle-shake opacity-20" style={{ top: '20%', right: '12%' }} />
-        <DoodlePerson className="absolute w-10 sm:w-12 doodle-float opacity-18" style={{ top: '32%', left: '0.5%', transform: 'rotate(4deg)' }} />
-        <DoodleArrow className="absolute w-16 arrow-wobble opacity-18" style={{ top: '48%', left: '4%', transform: 'rotate(-10deg) scaleX(-1)' }} />
-        <DoodleLaptop className="absolute w-16 sm:w-20 doodle-float opacity-18" style={{ bottom: '20%', right: '2%', transform: 'rotate(6deg)' }} />
-        <DoodleCassette className="absolute w-20 sm:w-24 doodle-float opacity-18" style={{ bottom: '8%', left: '3%', transform: 'rotate(-5deg)' }} />
-        <DoodlePhoto className="absolute w-12 doodle-shake opacity-22" style={{ top: '58%', right: '7%' }} />
-        <DoodleStar className="absolute w-5 doodle-shake opacity-25" style={{ bottom: '32%', left: '20%' }} />
-        <DoodleArrow className="absolute w-20 arrow-wobble opacity-15" style={{ bottom: '16%', right: '16%', transform: 'rotate(15deg)' }} />
-        <DoodleStar className="absolute w-7 doodle-shake opacity-18" style={{ top: '72%', left: '44%' }} />
-      </div>
-
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-14 flex flex-col flex-1">
-
-        {/* Micro label */}
-        <div className="flex justify-center mb-5">
-          <span className="font-doodle text-base sm:text-lg text-ink/55 border-b-2 border-dashed border-ink/25 pb-0.5">
-            двухдневный офлайн-воркшоп во Владивостоке
+        {/* Top label */}
+        <div className="mb-6 fade-up" style={{ animationDelay: '0s' }}>
+          <span
+            className="inline-block border-2 border-[#7CC400] text-[#1a1a1a] text-xs sm:text-sm font-semibold px-3 py-1.5 rounded-full"
+          >
+            ДВУХДНЕВНЫЙ ОФЛАЙН-ВОРКШОП ВО ВЛАДИВОСТОКЕ
           </span>
         </div>
 
-        {/* Main content */}
-        <div className="flex flex-col items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-4 items-center">
 
-          {/* Title */}
-          <h1
-            ref={titleRef}
-            className="font-doodle font-bold text-center leading-[0.95] text-ink mb-8 transition-opacity duration-300"
-            style={{ fontSize: 'clamp(3.5rem, 12vw, 8rem)' }}
-          >
-            <span className="block" style={{ animation: 'title-draw 0.55s ease-out 0.15s both', transform: 'rotate(-1.5deg)', display: 'inline-block' }}>
-              Картиночки
-            </span>
-            <span className="block" style={{ animation: 'title-draw 0.55s ease-out 0.45s both', transform: 'rotate(1deg)', display: 'inline-block', color: '#F43F5E' }}>
-              и Видосики
-            </span>
-          </h1>
+          {/* LEFT — text content */}
+          <div className="flex flex-col">
 
-          {/* Collage visual block */}
-          <div className="relative w-full max-w-2xl mx-auto mb-10 h-56 sm:h-64">
-            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-72 sm:w-80 h-44 sm:h-52 border-2 border-ink rotate-1 shadow-[5px_5px_0_#1a1a1a]" style={{ background: '#FACC1533' }} />
-
-            <div className="absolute left-[10%] top-[4%] w-28 sm:w-32 h-28 sm:h-32 border-2 border-ink -rotate-3 shadow-[4px_4px_0_#1a1a1a] flex items-center justify-center" style={{ background: '#3B82F622' }}>
-              <DoodleCamera className="w-14 opacity-55" />
-            </div>
-
-            <div className="absolute right-[8%] top-[6%] w-24 sm:w-28 h-24 sm:h-28 border-2 border-ink rotate-2 shadow-[4px_4px_0_#1a1a1a] flex items-center justify-center" style={{ background: '#10B98122' }}>
-              <DoodlePhoto className="w-12 opacity-55" />
-            </div>
-
-            <div className="absolute left-[26%] bottom-[0%] w-40 sm:w-44 h-24 sm:h-28 border-2 border-ink -rotate-1 shadow-[4px_4px_0_#1a1a1a] flex items-center justify-center" style={{ background: '#F43F5E22' }}>
-              <DoodlePlay className="w-12 opacity-55" />
-            </div>
-
-            <div className="absolute right-[4%] bottom-[4%] w-20 sm:w-24 h-16 sm:h-20 bg-white border-2 border-ink rotate-3 shadow-[3px_3px_0_#1a1a1a] flex items-center justify-center">
-              <DoodleLaptop className="w-14 opacity-45" />
-            </div>
-
-            {/* Stickers */}
-            <Sticker text="без скучной теории" bg="#FACC15" rot={-3} delay={0.7} className="top-[0%] left-[1%] z-20" />
-            <Sticker text="оффлайн" bg="#F43F5E" rot={4} delay={1.0} className="top-[3%] right-[-1%] z-20" textColor="text-white" />
-            <Sticker text="с первого дня практика" bg="#3B82F6" rot={-2} delay={1.3} className="bottom-[-2%] left-[-1%] z-20" textColor="text-white" />
-            <Sticker text="для новичков и креаторов" bg="#10B981" rot={2} delay={1.6} className="bottom-[-2%] right-[-1%] z-20" textColor="text-white" />
-          </div>
-
-          {/* Subtitle */}
-          <p className="font-sans text-base sm:text-lg text-ink/70 text-center max-w-2xl leading-relaxed mb-8 px-2">
-            Два дня живой практики по визуальным нейросетям и AI-видео, где ты наконец поймёшь, как делать картинки, нейрофотосессии, карточки товаров, постеры и видео-контент — а не просто смотреть, как это делают другие.
-          </p>
-
-          {/* Bullets */}
-          <div className="flex flex-col gap-3 mb-10 w-full max-w-lg">
-            {[
-              { icon: '📅', text: '2 дня обучения, с 11:00 до 18:00' },
-              { icon: '🎨', text: 'День 1 — промт-инжиниринг, фото и визуальные нейросети' },
-              { icon: '🎬', text: 'День 2 — видео через Kling, Veo, Seedance 2 и другие инструменты' },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="flex items-start gap-3 bg-white border-2 border-ink px-4 py-3 shadow-[3px_3px_0_#1a1a1a]"
-                style={{ transform: `rotate(${i % 2 === 0 ? -0.3 : 0.3}deg)` }}
+            {/* Main heading */}
+            <h1
+              className="font-doodle font-bold leading-[0.9] mb-5 fade-up text-[#1a1a1a]"
+              style={{
+                fontSize: 'clamp(3.8rem, 10vw, 7rem)',
+                animationDelay: '0.1s',
+              }}
+            >
+              <span className="block" style={{ transform: 'rotate(-1deg)', display: 'inline-block' }}>
+                Картиночки
+              </span>
+              <span
+                className="block"
+                style={{
+                  transform: 'rotate(0.8deg)',
+                  display: 'inline-block',
+                  color: '#7CC400',
+                }}
               >
-                <span className="text-lg flex-shrink-0">{item.icon}</span>
-                <span className="font-sans text-sm sm:text-base text-ink font-semibold">{item.text}</span>
-              </div>
-            ))}
+                и Видосики
+              </span>
+            </h1>
+
+            {/* Subtitle */}
+            <p
+              className="text-[#1a1a1a]/70 text-base sm:text-lg leading-relaxed mb-7 max-w-lg fade-up"
+              style={{ animationDelay: '0.2s' }}
+            >
+              Два дня живой практики по визуальным нейросетям и AI-видео, где ты наконец поймёшь, как делать картинки, нейрофотосессии, карточки товаров, постеры и видео-контент — а не просто смотреть, как это делают другие.
+            </p>
+
+            {/* Bullet icons */}
+            <div
+              className="flex flex-col sm:flex-row gap-3 sm:gap-6 mb-8 fade-up"
+              style={{ animationDelay: '0.3s' }}
+            >
+              {[
+                { icon: '🗓', label: '2 дня', sub: 'с 11:00 до 18:00' },
+                { icon: '🎨', label: 'День 1', sub: 'фото и нейросети' },
+                { icon: '🎬', label: 'День 2', sub: 'AI-видео' },
+              ].map((item) => (
+                <div key={item.label} className="flex items-center gap-2">
+                  <span className="text-2xl">{item.icon}</span>
+                  <div>
+                    <div className="font-bold text-sm text-[#1a1a1a] leading-tight">{item.label}</div>
+                    <div className="text-xs text-[#1a1a1a]/55 leading-tight">{item.sub}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* CTA buttons */}
+            <div
+              className="flex flex-col sm:flex-row gap-3 mb-5 fade-up"
+              style={{ animationDelay: '0.4s' }}
+            >
+              <button
+                onClick={scrollToForm}
+                className="btn-bounce inline-flex items-center justify-center gap-2 bg-[#7CC400] text-white font-bold text-base px-7 py-4 rounded-full border-2 border-[#7CC400] hover:bg-[#6aaa00] hover:border-[#6aaa00] transition-colors duration-200 shadow-sm"
+              >
+                Забронировать место
+              </button>
+              <button
+                onClick={scrollToForm}
+                className="inline-flex items-center justify-center gap-2 bg-white text-[#1a1a1a] font-semibold text-base px-7 py-4 rounded-full border-2 border-[#1a1a1a]/20 hover:border-[#7CC400] transition-colors duration-200"
+              >
+                {/* Play icon */}
+                <span className="inline-flex items-center justify-center w-8 h-8 rounded-full border-2 border-[#1a1a1a]/30 flex-shrink-0">
+                  <svg viewBox="0 0 16 16" className="w-3.5 h-3.5 ml-0.5" fill="#1a1a1a">
+                    <polygon points="4,2 14,8 4,14" />
+                  </svg>
+                </span>
+                Получить программу
+              </button>
+            </div>
+
+            {/* Sub-note */}
+            <p
+              className="text-[#1a1a1a]/40 text-sm fade-up"
+              style={{ animationDelay: '0.5s' }}
+            >
+              Подходит даже тем, кто пока только "что-то слышал про нейросети"
+            </p>
+
+            {/* Stats row */}
+            <div
+              className="flex gap-8 mt-10 pt-8 border-t border-[#1a1a1a]/10 fade-up"
+              style={{ animationDelay: '0.6s' }}
+            >
+              {[
+                { num: '2', label: 'дня практики' },
+                { num: '8+', label: 'AI-инструментов' },
+                { num: '1', label: 'город — Владивосток' },
+              ].map((s) => (
+                <div key={s.label}>
+                  <div className="font-doodle font-bold text-3xl sm:text-4xl text-[#7CC400] leading-none">{s.num}</div>
+                  <div className="text-xs sm:text-sm text-[#1a1a1a]/55 leading-snug mt-0.5">{s.label}</div>
+                </div>
+              ))}
+            </div>
           </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md mb-5">
-            <button
-              onClick={scrollToForm}
-              className="btn-handmade flex-1 bg-ink text-white font-sans font-bold text-base sm:text-lg px-6 py-4 border-2 border-ink shadow-[4px_4px_0_#1a1a1a] hover:shadow-[6px_6px_0_#1a1a1a] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all duration-150 uppercase tracking-wide"
-            >
-              Забронировать место
-            </button>
-            <button
-              onClick={scrollToForm}
-              className="flex-1 font-sans font-bold text-base sm:text-lg px-6 py-4 border-2 border-ink shadow-[4px_4px_0_#1a1a1a] hover:shadow-[6px_6px_0_#1a1a1a] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all duration-150 uppercase tracking-wide text-ink"
-              style={{ background: '#FACC15', transform: 'rotate(0.4deg)' }}
-            >
-              Получить программу
-            </button>
+          {/* RIGHT — neural illustration */}
+          <div
+            className="relative flex items-center justify-center h-72 sm:h-96 lg:h-[480px] fade-up"
+            style={{ animationDelay: '0.2s' }}
+          >
+            <NeuralIllustration />
           </div>
-
-          {/* Sub-button note */}
-          <p className="font-doodle text-base sm:text-lg text-ink/45 text-center">
-            Подходит даже тем, кто пока только "что-то слышал про нейросети" 👋
-          </p>
 
         </div>
       </div>
-
-      <style>{`
-        @keyframes title-draw {
-          0%   { opacity: 0; transform: rotate(var(--r, 0deg)) translateX(-10px) skewX(4deg); }
-          60%  { opacity: 1; transform: rotate(var(--r, 0deg)) translateX(2px) skewX(-1deg); }
-          100% { opacity: 1; transform: rotate(var(--r, 0deg)) translateX(0) skewX(0); }
-        }
-      `}</style>
     </section>
   );
 };
